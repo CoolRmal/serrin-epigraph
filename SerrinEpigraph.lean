@@ -92,3 +92,4 @@ public import SerrinEpigraph.RadialFlux
 
 public import SerrinEpigraph.RadialIntegral
 public import SerrinEpigraph.RadialFixedPoint
+public import SerrinEpigraph.RadialReactionExtension

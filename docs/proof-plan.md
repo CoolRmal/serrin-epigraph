@@ -285,9 +285,14 @@ radius interval. For globally Lipschitz forcing and a sufficiently small radius,
 it proves existence and uniqueness of an integral solution. It produces a
 continuous real-valued extension with the prescribed initial value, zero center
 derivative, and the averaged radial derivative formula throughout the interval.
-Still required: extend the original reaction from its value interval, recover
-the second-order radial equation, continue solutions, construct Dirichlet ball
-and annulus profiles, and prove their large-radius limits.
+`RadialReactionExtension.lean` now connects this construction to the original
+reaction hypotheses. Constant endpoint extension is globally Lipschitz for a
+reaction that is C¹ on a compact value interval. A positive contraction radius
+exists, and continuity allows shrinking it so the constructed profile remains
+strictly inside the original value interval. The averaged derivative equation
+then uses the original reaction, without an extra global Lipschitz assumption.
+Still required: recover the second-order radial equation, continue solutions,
+construct Dirichlet ball and annulus profiles, and prove their large-radius limits.
 
 ## Acceptance
 

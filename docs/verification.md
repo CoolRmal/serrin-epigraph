@@ -615,3 +615,18 @@ theorems were audited with `#print axioms` and use only `propext`,
 `Classical.choice`, and `Quot.sound`. No new proof holes were introduced.
 The second-order equation, connection to the original reaction, large-radius
 profiles, both rigidity proofs, full Comparator, and Palomar registration remain.
+
+## Local profiles under the original reaction assumptions
+
+`RadialReactionExtension.lean` proves six theorems: agreement and Lipschitz
+control of the constant endpoint reaction extension, existence of such a
+Lipschitz bound for a C¹ reaction on a compact interval, existence of a positive
+contraction radius, a local averaged radial solution remaining inside the
+original value interval, and specialization to the project's `Hypotheses`
+with any central value strictly between zero and one.
+All six theorems have clean diagnostics and use only `propext`,
+`Classical.choice`, and `Quot.sound`, as checked by `#print axioms`.
+The full build passed (3703 jobs). Neither main theorem was altered and no
+new proof holes were added. The second-order radial equation, global profiles
+and asymptotics, both rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.
