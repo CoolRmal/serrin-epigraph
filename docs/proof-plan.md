@@ -2,6 +2,14 @@
 
 ## Geometric classification after minimality
 
+`PartitionTotalEnergy.lean` integrates the complete energy-defect identity and
+combines any established kinetic and potential error bounds into a full
+phase-energy comparison. The principal term is `(1 + ε)` times the sum of
+weighted patch energies, plus the two additive errors. Kinetic density is
+bounded by phase energy also at zero phase. This assembly does not yet bound
+the principal weighted sum by graph area: the sharp weighted graph recovery
+estimate and geometric parameter construction remain outstanding.
+
 `RecoveryPositivePhase.lean` proves that extended profiles are positive exactly
 at positive times, and that their convex graph mixture has the same epigraph
 as positive phase wherever weights sum to one. It separates normalized phase

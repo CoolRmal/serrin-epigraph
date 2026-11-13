@@ -1,5 +1,15 @@
 # Verification record
 
+## Complete integrated partition energy comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3918 jobs).
+All three theorems in `PartitionTotalEnergy.lean` have clean diagnostics and use
+only the standard three axioms. The full integral comparison follows from the
+kinetic and potential defect bounds with the patch weights retained. It still
+requires a sharp bound for the principal weighted sum and geometric parameter
+selection. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Positive phases and complete energy defect
 
 The `SerrinEpigraph Challenge Solution` build passed (3917 jobs).
