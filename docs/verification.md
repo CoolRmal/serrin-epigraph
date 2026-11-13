@@ -1,5 +1,27 @@
 # Verification record
 
+## Uniform rescaled phase energy
+
+`RescaledPhaseEnergy.lean` defines the actual gradient-based density
+
+$$
+e_R(v)=1_{\{v>0\}}\left(\frac{|\nabla v|^2}{2R}+R W(v)\right).
+$$
+
+It proves the gradient dilation formula and the exact change of variables
+
+$$
+\int_{\overline B_r} e_R(U(R\cdot))
+=R^{-m}\int_{\overline B_{Rr}} e(U)
+\le C r^m\qquad(R>0,\ Rr\ge1).
+$$
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3804 jobs).
+Diagnostics are clean; the final bound's transitive axiom audit uses only
+`propext`, `Classical.choice`, and `Quot.sound`. No compactness or interface
+classification is assumed. Both rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Surface-order phase-energy growth
 
 `UnitShellVolume.lean` proves real Euclidean ball-volume scaling, bounds the

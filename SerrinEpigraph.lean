@@ -153,3 +153,4 @@ public import SerrinEpigraph.EpigraphRescaling
 public import SerrinEpigraph.RadialCutoffCompetitor
 public import SerrinEpigraph.PhaseEnergyShellBound
 public import SerrinEpigraph.UnitShellVolume
+public import SerrinEpigraph.RescaledPhaseEnergy

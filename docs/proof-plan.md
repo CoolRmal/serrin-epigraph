@@ -11,6 +11,10 @@ one-dimensional solution. The roadmap is informed by
 These results are not imported as assumptions or axioms, and neither main
 rigidity theorem is currently proved.
 
+`RescaledPhaseEnergy.lean` proves the exact energy change of variables and
+a uniform bound on each fixed rescaled ball. Extracting convergent interfaces
+and identifying their geometry remain necessary.
+
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
 so any pointwise graph limit inherits a homogeneous one-sided cone bound.
