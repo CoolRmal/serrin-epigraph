@@ -34,8 +34,14 @@ for globally Lipschitz functions using dominated differentiation and Rademacher,
 applies Lebesgue differentiation to their derivatives, and localizes through
 real-valued Lipschitz extensions on a countable ball cover. Thus normalized
 mollification gradients converge almost everywhere for every locally Lipschitz
-competitor. Next connect these results to the calibration integral limit and
-minimality; gradient convergence alone does not establish that comparison.
+competitor. `LipschitzCalibration.lean` now proves convergence and integrability
+of the calibration density and preservation of its integral under compact
+locally Lipschitz perturbations. `LipschitzMinimality.lean` integrates the
+pointwise energy comparison, transfers it to any compact set containing the
+perturbation support, and removes the energy shift. Thus every locally Lipschitz
+competitor valued in [0,1), equal to the zero extension outside a compact set,
+has no smaller phase energy. Allowing the endpoint value one and completing
+the geometric classification are still necessary.
 
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
@@ -371,8 +377,8 @@ the pointwise bound and transfers the comparison from the construction ball
 to every compact set containing the perturbation support. Thus the shifted
 phase energy is minimal against compact C¹ perturbations with values in
 [0,1), even across the original boundary. `UnshiftedMinimality.lean` now removes
-the shift using the proved boundary energy identity. This still does not cover
-all Lipschitz competitors.
+the shift using the proved boundary energy identity. `LipschitzMinimality.lean`
+extends this comparison to locally Lipschitz competitors valued in [0,1).
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

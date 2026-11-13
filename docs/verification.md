@@ -1,5 +1,19 @@
 # Verification record
 
+## Minimality for locally Lipschitz competitors below equilibrium
+
+`LipschitzCalibration.lean` establishes the calibration integral limit,
+integrability, and invariance for compact locally Lipschitz perturbations.
+`LipschitzMinimality.lean` derives energy comparison on enclosing balls and
+arbitrary compact sets containing the support. Its final theorem applies
+directly to any locally Lipschitz competitor valued in [0,1), with compactly
+supported difference from the zero extension, and uses the unshifted energy.
+Both modules have clean diagnostics. The final theorem's transitive audit uses
+only `propext`, `Classical.choice`, and `Quot.sound`, with no source warnings.
+Endpoint value one is not yet covered. Both rigidity targets, full Comparator,
+and Palomar registration remain incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3771 jobs).
+
 ## Gradient convergence for locally Lipschitz competitors
 
 `LipschitzMollificationDerivative.lean` proves differentiation under the

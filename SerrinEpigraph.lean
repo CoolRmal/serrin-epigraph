@@ -144,3 +144,5 @@ public import SerrinEpigraph.AnnularSlopeComparison
 public import SerrinEpigraph.UnshiftedMinimality
 public import SerrinEpigraph.LipschitzCompetitorEnergy
 public import SerrinEpigraph.LipschitzMollificationDerivative
+public import SerrinEpigraph.LipschitzCalibration
+public import SerrinEpigraph.LipschitzMinimality
