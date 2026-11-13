@@ -156,3 +156,4 @@ public import SerrinEpigraph.UnitShellVolume
 public import SerrinEpigraph.RescaledPhaseEnergy
 public import SerrinEpigraph.RescaledPotential
 public import SerrinEpigraph.TransitionVolume
+public import SerrinEpigraph.PhaseIndicatorApproximation

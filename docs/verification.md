@@ -1,5 +1,25 @@
 # Verification record
 
+## Local integral approximation by phase indicators
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3807 jobs).
+
+`PhaseIndicatorApproximation.lean` proves local integrability of the absolute
+error between the dilated zero extension and its positive-phase indicator.
+Splitting at any fixed level a in [0,1) gives the bound
+
+$$
+\int_{\overline B_r}|1_{\{U(Rx)>0\}}-U(Rx)|\,dx
+\le |\{0<U(Rx)\le a\}\cap\overline B_r|+(1-a)|\overline B_r|.
+$$
+
+Taking a sufficiently close to one and using vanishing transition volume proves
+that the left side tends to zero for every fixed positive radius. Diagnostics
+are clean and the transitive axiom audit uses only the three standard axioms.
+This compares two scale-dependent functions; it does not assert existence of a
+limiting region. Phase compactness, both rigidity proofs, full Comparator, and
+Palomar registration remain incomplete.
+
 ## Vanishing intermediate-phase volume
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3806 jobs).

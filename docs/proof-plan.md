@@ -18,6 +18,8 @@ proves that the positive-phase potential integral tends to zero on every fixed
 positive-radius ball, with an explicit inverse-scale bound.
 `TransitionVolume.lean` converts this into vanishing local volume of every
 intermediate positive-phase region with a fixed level below equilibrium.
+`PhaseIndicatorApproximation.lean` proves local integral convergence of the
+difference between the dilated solution and its phase indicator to zero.
 Compactness of the phase indicators is still to be proved.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
