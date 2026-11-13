@@ -216,3 +216,16 @@ Both declarations were audited individually and use only `propext`,
 `lake build SerrinEpigraph Challenge Solution` passed (3593 jobs).
 The two main rigidity proofs remain unfinished; full Comparator acceptance and
 Palomar registration have not been obtained.
+
+## Foliation gradient and pointwise energy comparison
+
+`LevelGradient.lean` defines the level point and gradient field, proves their
+C²/C¹ regularity, their recovery of the original solution point and gradient,
+strict positivity of the vertical gradient component, and explicit differential
+formulas. The affine energy expression lies below the energy density and attains
+it on the original solution. All eleven new theorem declarations were audited
+individually: only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`lake build SerrinEpigraph Challenge Solution` passed (3594 jobs).
+The divergence identity and integrated minimization argument are not yet proved.
+The two main rigidity theorems, full Comparator acceptance, and Palomar
+registration remain unfinished.

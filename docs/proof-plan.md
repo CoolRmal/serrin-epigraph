@@ -172,7 +172,10 @@ with derivative the reciprocal of the positive vertical derivative.
 `LevelHeightSmooth.lean` now proves joint C² regularity by the implicit function
 theorem, identifying the local implicit solution with the globally unique
 level height. Its explicit differential solves the differentiated level equation.
-The calibration identities remain to be proved.
+`LevelGradient.lean` defines the gradient along the vertical foliation, proves
+its joint C¹ regularity and explicit differential, and proves the pointwise
+affine energy bound with equality on the original solution. The divergence
+identity and the integrated calibration argument remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
