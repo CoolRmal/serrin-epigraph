@@ -1,5 +1,19 @@
 # Verification record
 
+## Smooth extension and zero-state local flow
+
+`ReactionSmoothExtension.lean` extends the continuous right derivative constantly
+across zero and integrates it. The resulting reaction is globally continuously
+differentiable and agrees with the original on every nonnegative argument.
+`exists_radial_system_from_zero` then gives a local radial solution with zero
+initial value and arbitrary initial slope at every positive radius. The original
+radial equation holds wherever the local solution is nonnegative.
+The local-flow theorem's transitive axiom audit reports only `propext`,
+`Classical.choice`, and `Quot.sound`; source diagnostics are clean. The complete
+build passed (3740 jobs). Continuation to value one, exterior comparison, the
+reverse energy bound, and both rigidity proofs remain open. Full Comparator and
+Palomar registration are not complete.
+
 ## Increasing annular segment estimates
 
 `AnnularEnergy.lean` introduces explicit increasing radial ODE segment data and

@@ -21,6 +21,11 @@ decreasing slope, curvature energy loss bounded by value increase, a preserved
 positive slope margin, and a finite length bound. These are conditional ODE
 estimates; construction of the annular barrier and its comparison with the
 epigraph solution remain to be done.
+`ReactionSmoothExtension.lean` constructs a globally continuously differentiable
+reaction agreeing with the original on nonnegative states, and uses it to start
+the radial initial value problem at zero at any positive radius. Next restrict
+a positive-slope solution to a short increasing segment, then continue it using
+the annular energy bounds until its value reaches one.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
