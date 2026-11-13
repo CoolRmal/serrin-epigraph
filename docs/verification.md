@@ -1,5 +1,22 @@
 # Verification record
 
+## Bounded testing of the primitive limit
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3829 jobs).
+
+`IntegralLimitTesting.lean` proves convergence of integrals against bounded
+measurable scalar tests from integral-norm convergence, and transfer of uniform
+bounds on the tested integrals. The application theorem supplies one primitive
+subsequence and one measurable phase set simultaneously valid for every bounded
+measurable test on every integer-radius ball.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. This is a limit-passage result, not yet
+a perimeter estimate: integration by parts and the actual derivative-test
+bounds still need to be established. Interface minimality and classification,
+both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Common local limit of solutions and phase indicators
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3828 jobs).

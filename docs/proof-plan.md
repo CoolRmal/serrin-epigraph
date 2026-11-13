@@ -67,7 +67,11 @@ and identifies the rescaled positive phase exactly with the rescaled epigraph.
 Thus the rescaled epigraph indicators converge locally along the subsequence.
 `SolutionPhaseConvergence.lean` proves that the scaled zero-extended solutions
 converge locally in integral norm to the same measurable phase indicator.
-Limiting-interface minimality and the geometric classification remain.
+`IntegralLimitTesting.lean` proves convergence against bounded measurable
+tests and transfer of uniform tested-integral bounds to the limit. It applies
+this to the primitive subsequence with a common phase set for every local
+bounded test. Integration by parts and the resulting perimeter bound,
+limiting-interface minimality, and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

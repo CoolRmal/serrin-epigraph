@@ -177,3 +177,4 @@ public import SerrinEpigraph.TwoPhaseLimit
 public import SerrinEpigraph.GlobalPhaseSet
 public import SerrinEpigraph.PhaseSetConvergence
 public import SerrinEpigraph.SolutionPhaseConvergence
+public import SerrinEpigraph.IntegralLimitTesting
