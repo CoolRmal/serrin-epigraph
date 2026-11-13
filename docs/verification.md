@@ -1,5 +1,18 @@
 # Verification record
 
+## Exterior contact directional derivatives
+
+`AnnularContactDerivative.lean` proves the directional derivative comparison
+at an exterior tangent point for every vector in the positive tangent cone of
+the closed epigraph. It also derives the Neumann upper bound by the inner
+radial slope assuming inward-normal cone membership. That membership is an
+explicit hypothesis of this intermediate result and remains to be proved;
+it has not been added to either rigidity target. Diagnostics are clean, and
+the final intermediate theorem's transitive axiom audit uses only `propext`,
+`Classical.choice`, and `Quot.sound`. The unconditional upper Neumann energy
+bound, both rigidity targets, full Comparator, and Palomar remain unfinished.
+The complete `SerrinEpigraph Challenge Solution` build passed (3764 jobs).
+
 ## Exterior annular comparison without a shift
 
 `TangentAnnularComparison.lean` proves the upper comparison for an unshifted

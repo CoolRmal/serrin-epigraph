@@ -7,7 +7,12 @@ for every positive downward shift of an exterior ball. The comparison domain
 may be disconnected. `TangentAnnularComparison.lean` passes to zero downward
 shift using continuity of the radial profile on its closed interval, then
 extends the inequality to the closure of the comparison domain. Comparing
-contact derivatives remains necessary for the upper Neumann energy bound.
+contact derivatives is now implemented in `AnnularContactDerivative.lean` for
+every direction in the closed-domain positive tangent cone. Cauchy–Schwarz and
+the Neumann condition give an upper bound by the inner radial slope, conditional
+on the inward normal belonging to that cone. The remaining geometric step is
+to establish this cone membership from the differentiability of the graph;
+the final energy upper bound still needs arbitrary-radius exterior contact.
 
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
