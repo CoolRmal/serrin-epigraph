@@ -1,5 +1,16 @@
 # Verification record
 
+## Exterior annular comparison without a shift
+
+`TangentAnnularComparison.lean` proves the upper comparison for an unshifted
+exterior ball, on the closure of the epigraph/outer-ball intersection. The proof
+passes to zero positive downward shift within the radial interval and extends
+the interior inequality by continuity. Lean diagnostics are clean; its
+transitive axiom audit uses only `propext`, `Classical.choice`, and `Quot.sound`.
+The complete `SerrinEpigraph Challenge Solution` build passed (3763 jobs).
+Contact derivative comparison and the upper Neumann energy bound remain open,
+as do both rigidity targets, full Comparator, and Palomar registration.
+
 ## Shifted exterior annular comparison
 
 `AnnularComparison.lean` proves comparison on the closure of the intersection

@@ -137,3 +137,4 @@ public import SerrinEpigraph.AnnularRegularity
 public import SerrinEpigraph.ComponentComparison
 public import SerrinEpigraph.ExteriorBallGeometry
 public import SerrinEpigraph.AnnularComparison
+public import SerrinEpigraph.TangentAnnularComparison
