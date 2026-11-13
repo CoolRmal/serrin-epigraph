@@ -457,3 +457,18 @@ Uniform compact gradient bounds, convergence of gradients, and support control
 for comparison pairs remain to be proved before applying calibration stability.
 Free-boundary energy minimality, both rigidity proofs, full Comparator acceptance,
 and Palomar registration remain unfinished.
+
+## Uniform compact bounds for the smooth approximations
+
+`MollificationBounds.lean` proves a translated-difference estimate for averaging,
+then shows that a Lipschitz bound on a larger closed ball controls all averages
+on the smaller ball. The normalization contraction preserves this bound.
+Applied to the locally Lipschitz zero extension, this gives a common gradient
+bound for every approximation on each compact set. A separate local averaging
+estimate and the extreme value theorem provide a common level bound strictly
+below one on each compact set.
+All seven new theorems were individually audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The full build passed (3692 jobs).
+Almost-everywhere gradient convergence and support control for comparison pairs
+remain. Free-boundary energy minimality, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain unfinished.
