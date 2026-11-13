@@ -69,6 +69,15 @@ standard permitted axioms. The full build passed (3574 jobs). This does not yet
 establish regularity or the equation for a translation limit, or either rigidity
 classification.
 
+## Measurable horizontal profile
+
+`LimitProfile.lean` constructs a horizontal profile from the proved ray limits,
+proves it measurable using continuous graph sections, and proves pointwise
+convergence of ambient vertical translates and their reactions. Each of its
+seven theorems was individually audited: only the standard three permitted
+axioms occur. The full build passed (3575 jobs). No limit equation or constancy
+of the profile has been assumed; those steps and both main rigidity proofs remain.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

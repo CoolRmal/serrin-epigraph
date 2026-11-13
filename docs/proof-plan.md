@@ -129,6 +129,11 @@ fixed compact set inside the epigraph. Strict vertical monotonicity and the
 positive minimum of one fixed translate provide a common positive lower bound
 on that compact set for every later translate. These facts prepare the domain
 exhaustion and nonvanishing steps of the translation-limit argument.
+`LimitProfile.lean` selects the proved ray limits as a horizontal function,
+proves its measurability by continuous graph sections at increasing integer
+heights, and proves pointwise convergence of ambient vertical translates and
+of their nonlinear reactions. Passing the weak equation to this profile and
+identifying it with one remain necessary steps.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
