@@ -1,5 +1,16 @@
 # Verification record
 
+## Weighted graph integration and recovery energy
+
+The `SerrinEpigraph Challenge Solution` build passed (3919 jobs).
+All four theorems in `WeightedGraphIntegral.lean` have clean diagnostics and
+use only the standard three axioms. They prove measure preservation of graph
+coordinates, exact weighted integration and layer mass, and a single-patch
+weighted recovery-energy bound with slopes controlled only where the weight
+is positive. Summation against graph area and geometric parameter selection
+remain unfinished. Both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Complete integrated partition energy comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3918 jobs).

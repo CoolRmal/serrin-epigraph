@@ -239,3 +239,4 @@ public import SerrinEpigraph.GraphOverlapIntegral
 public import SerrinEpigraph.PartitionKineticIntegral
 public import SerrinEpigraph.RecoveryPositivePhase
 public import SerrinEpigraph.PartitionTotalEnergy
+public import SerrinEpigraph.WeightedGraphIntegral

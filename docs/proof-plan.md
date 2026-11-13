@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`WeightedGraphIntegral.lean` proves exact integration with horizontal weights
+through Euclidean graph flattening and positive vertical scaling. It applies
+this to the regularized layer action and bounds weighted graph recovery energy
+by `(∫ w) * L * action`, requiring the slope bound only where the base weight
+is positive. This supplies the previously missing single-patch weighted bound.
+Summing the coefficients against the area density, constructing compatible
+overlapping patches, and choosing all parameters remain necessary for the
+sharp recovery sequence.
+
 `PartitionTotalEnergy.lean` integrates the complete energy-defect identity and
 combines any established kinetic and potential error bounds into a full
 phase-energy comparison. The principal term is `(1 + ε)` times the sum of
