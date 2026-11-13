@@ -2,6 +2,14 @@
 
 ## Geometric classification after minimality
 
+`VaryingRecoveryLimit.lean` proves compact-set L1 convergence of graph recovery
+mixtures with varying finite index types, continuous nonnegative weights summing
+to one on the compact set, uniformly bounded positive graph scales, and vanishing
+transition thickness. Dominated convergence uses the normalized range and the
+eventual exact phase values from `RecoveryDiagonalScale.lean`. This supplies
+integral convergence for the refining partitions; constructing the complete
+sequence together with its sharp energy bound remains unfinished.
+
 `RecoveryDiagonalScale.lean` chooses diagonal integer scales for any family of
 nonnegative kinetic errors tending to zero along each fixed row and any
 nonnegative sequence of transition lengths. The selected scales tend to infinity

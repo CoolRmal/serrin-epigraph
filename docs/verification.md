@@ -1,5 +1,16 @@
 # Verification record
 
+## Local L1 convergence of varying recovery partitions
+
+The `SerrinEpigraph Challenge Solution` build passed (3925 jobs).
+`RigidityHypotheses.varying_graphRecovery_integral_limit` in
+`VaryingRecoveryLimit.lean` has clean diagnostics and uses only `propext`,
+`Classical.choice`, and `Quot.sound`. The result allows varying finite index
+types and weights and proves integral convergence on a compact set from uniform
+scale bounds and vanishing transition thickness. It does not yet construct the
+full sequence with a sharp energy bound. Main still has two rigidity proof holes;
+full Comparator and Palomar registration remain incomplete.
+
 ## Diagonal recovery scales and varying partitions
 
 The `SerrinEpigraph Challenge Solution` build passed (3924 jobs).
