@@ -1,5 +1,20 @@
 # Verification record
 
+## Compatibility and bounded annular extension radii
+
+`AnnularBranches.lean` defines `AnnularExtension` of a fixed increasing seed.
+`AnnularExtension.compatible` proves that any two extensions agree in both
+components on their full closed overlap. The earlier width estimate gives a
+uniform finite upper bound for every extension radius under a positive energy
+margin. `value_eq_one_of_radius_eq_sup` proves that an extension attaining the
+supremum of these radii has outer value one, since otherwise the extension
+theorem contradicts the supremum.
+Compatibility and the supremal endpoint theorem passed individual transitive
+axiom audits with only `propext`, `Classical.choice`, and `Quot.sound`, and no
+source warnings. The complete build passed (3744 jobs). Existence of an extension
+attaining that supremum is not yet proved. The remaining rigidity work, full
+Comparator acceptance, and Palomar registration remain unfinished.
+
 ## Glued extension of annular segments
 
 `AnnularContinuation.lean` proves `IncreasingRadialSegment.exists_extension`:

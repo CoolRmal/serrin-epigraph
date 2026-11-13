@@ -128,3 +128,4 @@ public import SerrinEpigraph.ReactionSmoothExtension
 public import SerrinEpigraph.AnnularLocal
 public import SerrinEpigraph.AnnularEndpoint
 public import SerrinEpigraph.AnnularContinuation
+public import SerrinEpigraph.AnnularBranches

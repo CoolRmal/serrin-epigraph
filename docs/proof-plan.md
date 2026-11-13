@@ -36,7 +36,11 @@ values between zero and one when the endpoint has those strict bounds.
 segment, preserving both components on the original closed interval and checking
 the radial equations at the junction. A positive energy margin suffices for this
 extension whenever the outer value is below one. The maximal continuation and
-finite endpoint completion argument remain.
+finite endpoint completion argument remain. `AnnularBranches.lean` defines the
+extensions of a fixed seed, proves compatibility on their closed overlaps and a
+uniform finite upper bound on their radii, and shows that an extension attaining
+the supremal radius must have endpoint value one. Constructing that supremal
+extension from the compatible union is the next obligation.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
