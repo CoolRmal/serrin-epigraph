@@ -42,6 +42,14 @@ standard permitted axioms. `normalizedPotential` is exposed for use in subsequen
 modules; its mathematical definition is unchanged. Both main rigidity proofs
 remain unfinished.
 
+## Two-sided potential comparison
+
+`PotentialComparison.lean` completes the upper quadratic bound and combines it
+with the lower bound on the full closed solution range. Its four declarations
+were individually checked for axiom dependencies: only `propext`,
+`Classical.choice`, and `Quot.sound` occur. The full project build passed (3572
+jobs). The two rigidity target holes remain and still prevent full acceptance.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

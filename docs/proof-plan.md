@@ -115,7 +115,12 @@ to equilibrium from below. The remaining potential work includes a suitable
 extension beyond the solution range. `QuadraticPotential.lean` now integrates
 the linear reaction lower bound and combines it with compactness away from one
 to prove a uniform positive quadratic lower bound on the entire interval from
-zero to one. Continuity at zero is proved using the interval primitive theorem. The monotone-solution
+zero to one. Continuity at zero is proved using the interval primitive theorem.
+`PotentialComparison.lean` supplies the matching upper bound: a compact bound
+on the reaction derivative on the upper half interval gives a linear reaction
+bound and hence a quadratic potential bound. A compact potential bound controls
+the remaining interval. The resulting two-sided comparison holds on the full
+closed solution range, with no additional hypotheses. The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
