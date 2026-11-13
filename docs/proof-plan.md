@@ -3,8 +3,9 @@
 ## Geometric classification after minimality
 
 The analytic reduction to closed-range Lipschitz phase-energy minimality is now
-proved. The remaining classification is substantial: compactness of rescaled
-interfaces, identification of limiting minimizing geometry, flatness of the
+proved. Local integral compactness of the rescaled phase indicators and
+solutions is also proved below. The remaining classification is substantial:
+identification of limiting minimizing geometry, flatness of the
 relevant limits, and an improvement-of-flatness argument recovering the original
 one-dimensional solution. The roadmap is informed by
 [Wang–Wei, Sections 3–4 and Theorem 1.6](https://arxiv.org/html/1502.04680).
@@ -12,8 +13,8 @@ These results are not imported as assumptions or axioms, and neither main
 rigidity theorem is currently proved.
 
 `RescaledPhaseEnergy.lean` proves the exact energy change of variables and
-a uniform bound on each fixed rescaled ball. Extracting convergent interfaces
-and identifying their geometry remain necessary. `RescaledPotential.lean` also
+a uniform bound on each fixed rescaled ball. Local indicator compactness is
+now proved below; identifying the limiting interface geometry remains necessary. `RescaledPotential.lean` also
 proves that the positive-phase potential integral tends to zero on every fixed
 positive-radius ball, with an explicit inverse-scale bound.
 `TransitionVolume.lean` converts this into vanishing local volume of every
@@ -27,17 +28,17 @@ rule everywhere for the totalized gradient, including the zero phase, and
 obtains the uniform primitive-gradient integral bound.
 `PhasePrimitiveRegularity.lean` proves Lipschitz regularity of the primitive on
 the closed normalized range and local Lipschitz regularity of its composite
-with the zero extension across the free boundary. Compactness of the phase
-indicators remains to be proved. `PrimitiveIndicatorApproximation.lean` proves
+with the zero extension across the free boundary. The compactness argument
+for phase indicators is completed in the later modules described below. `PrimitiveIndicatorApproximation.lean` proves
 that the local integral error between the phase primitive and its two-phase
-indicator approximation tends to zero, linking their future compactness arguments.
+indicator approximation tends to zero, linking their compactness arguments.
 `MollificationFamilyBounds.lean` gives a dilation-independent local Lipschitz
 constant for the primitive family at each fixed mollification index. Subsequence
 extraction for a fixed ball and fixed index is now proved in
 `MollifiedPrimitiveCompactness.lean` using Arzelà–Ascoli. A common diagonal
 subsequence is now proved in `SimultaneousMollifiedCompactness.lean` for all
 mollification indices and positive integer-radius balls simultaneously.
-Uniform control of the mollification error remains necessary.
+Uniform control of the mollification error is supplied by the next modules.
 `SegmentGradientEstimate.lean` starts its translation estimate with the exact
 segment integral formula and gradient bound for continuously differentiable
 functions. `TranslationIntegral.lean` completes spatial integration and bounds
@@ -64,6 +65,8 @@ weighted indicator on every integer-radius ball. `PhaseSetConvergence.lean`
 removes the positive primitive weight using the vanishing approximation error
 and identifies the rescaled positive phase exactly with the rescaled epigraph.
 Thus the rescaled epigraph indicators converge locally along the subsequence.
+`SolutionPhaseConvergence.lean` proves that the scaled zero-extended solutions
+converge locally in integral norm to the same measurable phase indicator.
 Limiting-interface minimality and the geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact

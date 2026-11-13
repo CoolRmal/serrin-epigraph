@@ -1,5 +1,21 @@
 # Verification record
 
+## Common local limit of solutions and phase indicators
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3828 jobs).
+
+`SolutionPhaseConvergence.lean` uses the vanishing solution-to-phase-indicator
+error and the integral triangle inequality to transfer local indicator
+convergence to the rescaled zero-extended solutions. It packages one common
+subsequence and one measurable phase set for both local integral limits on
+every positive integer-radius ball.
+
+Diagnostics and the final theorem's transitive axiom audit are clean, using
+only the standard three axioms. The proof roadmap now distinguishes established
+integral compactness from the remaining interface minimality and flatness
+arguments. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Local convergence of rescaled epigraph indicators
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3827 jobs).
