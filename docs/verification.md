@@ -59,6 +59,16 @@ All four declarations use only the standard three axioms. The complete build
 passed (3573 jobs). Neither equality of the ray limits nor their identification
 with one is claimed; the two main rigidity proofs are still unfinished.
 
+## Compact translated domains
+
+`TranslatedDomain.lean` proves eventual inclusion of each compact set under
+upward translation, monotonicity between interior translates, and a positive
+lower bound uniform over all sufficiently high translates on that compact set.
+All four declarations were individually audited and depend only on the three
+standard permitted axioms. The full build passed (3574 jobs). This does not yet
+establish regularity or the equation for a translation limit, or either rigidity
+classification.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

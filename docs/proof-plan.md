@@ -124,6 +124,11 @@ closed solution range, with no additional hypotheses. `VerticalLimit.lean` now d
 from its directional derivative and proves that each ray has a positive limit
 at most one. Every finite interior value is strictly smaller than its ray limit.
 This does not yet identify the limits across rays or prove they equal one.
+`TranslatedDomain.lean` proves that upward translations eventually place any
+fixed compact set inside the epigraph. Strict vertical monotonicity and the
+positive minimum of one fixed translate provide a common positive lower bound
+on that compact set for every later translate. These facts prepare the domain
+exhaustion and nonvanishing steps of the translation-limit argument.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
