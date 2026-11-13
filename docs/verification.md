@@ -1,5 +1,17 @@
 # Verification record
 
+## Rescaled local minimality
+
+The `SerrinEpigraph Challenge Solution` build passed (3872 jobs).
+`RescaledMinimality.lean` proves support transport under inverse dilation,
+closed-range locally Lipschitz minimality for the rescaled energy, and its
+application to cutoff-glued competitors. The change of variables uses the
+positive surface-scale factor, preserving the energy inequality.
+File diagnostics are clean; the final comparison theorem's transitive axiom
+audit contains only the standard three axioms. Recovery and transition-error
+estimates remain open, as do both Main rigidity proofs, full Comparator, and
+Palomar registration.
+
 ## Total rescaled gluing energy
 
 The `SerrinEpigraph Challenge Solution` build passed (3871 jobs).

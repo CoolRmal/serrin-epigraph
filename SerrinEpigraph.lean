@@ -192,3 +192,4 @@ public import SerrinEpigraph.GluedCompetitor
 public import SerrinEpigraph.GluingGradientEnergy
 public import SerrinEpigraph.GluingPotentialEnergy
 public import SerrinEpigraph.GluingTotalEnergy
+public import SerrinEpigraph.RescaledMinimality

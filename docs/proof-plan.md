@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`RescaledMinimality.lean` transports closed-range Lipschitz minimality to every
+positive dilation, including the perturbation's topological support. It also
+provides the direct comparison with a cutoff-glued competitor in the scaled
+ball. These comparisons now use exactly the energy controlled by the gluing
+estimates and the perimeter lower bound. Recovery profiles and quantitative
+control of their transition errors are still required to deduce perimeter minimality.
+
 `GluingTotalEnergy.lean` combines the kinetic and phase-potential estimates into
 an almost-everywhere total rescaled gluing-energy bound for locally Lipschitz
 inputs in the closed unit interval. The gradient term is correctly included
