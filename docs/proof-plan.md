@@ -24,9 +24,11 @@ lemma gives a squared-gradient cost of at most one, and a compact potential
 bound gives an energy-density increase of at most 1/2+M.
 `PhaseEnergyShellBound.lean` now integrates on the unit shell and cancels the
 original shell energy using minimality. A single positive constant controls
-every ball energy by the outer unit-shell volume. Next estimate that volume
-by a constant times the radius to the ambient dimension minus one, then use
-the growth estimate in the rescaling compactness argument.
+every ball energy by the outer unit-shell volume. `UnitShellVolume.lean` now
+uses Euclidean ball-volume scaling and the difference-of-powers estimate to
+bound the shell volume by surface order. Consequently the phase energy in
+every centered ball of radius R at least one is bounded by C times R to the
+ambient dimension minus one. The rescaling compactness argument remains next.
 
 ## Completed analytic reduction
 

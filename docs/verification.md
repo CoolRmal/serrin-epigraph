@@ -1,5 +1,22 @@
 # Verification record
 
+## Surface-order phase-energy growth
+
+`UnitShellVolume.lean` proves real Euclidean ball-volume scaling, bounds the
+unit increment of a power, and obtains a surface-order unit-shell volume bound.
+Combining this with the integrated cutoff comparison proves a single positive
+constant C such that
+
+$$
+\int_{\overline B_R} e(U)\le C R^m\qquad(R\ge1)
+$$
+
+in ambient dimension m+1. Diagnostics and the final growth theorem's transitive
+axiom audit are clean, using only `propext`, `Classical.choice`, and `Quot.sound`.
+Rescaling compactness and geometric classification remain open; both rigidity
+targets, full Comparator, and Palomar registration are still incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3803 jobs).
+
 ## Integrated unit-shell energy bound
 
 `PhaseEnergyShellBound.lean` splits both original and competitor energies into
