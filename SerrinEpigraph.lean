@@ -115,3 +115,4 @@ public import SerrinEpigraph.RadialSpatial
 public import SerrinEpigraph.RadialCenter
 public import SerrinEpigraph.RadialSlopeRatio
 public import SerrinEpigraph.RadialHessianCenter
+public import SerrinEpigraph.RadialHessian

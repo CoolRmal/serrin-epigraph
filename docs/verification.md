@@ -925,3 +925,14 @@ clean diagnostics and only the standard three axioms. The full build passed
 comparison/Hopf arguments, annulus construction, both final rigidity proofs,
 full Comparator acceptance, and Palomar registration remain unfinished.
 
+## Spatial equation throughout the ball
+
+`RadialHessian.lean` proves six theorems: differentiation of radial vector
+fields, the slope-ratio derivative, the off-center spatial Hessian, its trace,
+the off-center semilinear equation, and the equation on the entire open ball.
+All six passed diagnostics and axiom verification with only the standard
+three axioms. The full build passed (3731 jobs). Full second-order continuity,
+boundary regularity, comparison/Hopf arguments, annulus construction, both
+final rigidity proofs, full Comparator acceptance, and Palomar registration
+remain unfinished.
+

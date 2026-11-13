@@ -405,6 +405,12 @@ gradient, and uses it to establish the semilinear PDE at the center.
 The off-center Hessian/PDE formula and full second-order continuity are
 still required for the classical comparison-solution package.
 
+`RadialHessian.lean` proves the off-center radial Hessian and its trace,
+then establishes the original semilinear equation throughout the open ball
+by combining the off-center computation with the center theorem. Full
+second-order continuity and boundary regularity remain to be packaged before
+the classical comparison and boundary derivative arguments.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard
