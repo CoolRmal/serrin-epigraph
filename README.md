@@ -24,6 +24,12 @@ half-line. For every solution, the reaction is nonnegative on its range and the
 solution is superharmonic. These consequences retain the original hypotheses;
 the two rigidity proofs remain incomplete.
 
+Under the restored rigidity assumptions, **the solution converges to one along
+every vertical ray**. `BallLowerBound.lean` and `LimitOne.lean` prove this using
+an explicit polynomial comparison on large interior balls, compact contact,
+and the reaction quotient condition. This is a proved prerequisite for the
+remaining rigidity argument, not a proof of either classification theorem.
+
 An [informal variational reduction](docs/variational-reduction.md) now derives a
 common vertical limit and minimization of the general free-boundary energy.
 This argument has not been formalized in Lean. The [reaction-regime audit](docs/rigidity-regimes.md)

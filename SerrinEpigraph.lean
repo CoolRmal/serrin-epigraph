@@ -1,6 +1,7 @@
 module
 
 public import SerrinEpigraph.Main
+public import SerrinEpigraph.BallLowerBound
 public import SerrinEpigraph.BallCutoff
 public import SerrinEpigraph.Barrier
 public import SerrinEpigraph.Boundary
@@ -22,6 +23,7 @@ public import SerrinEpigraph.FixedWidthCutoff
 public import SerrinEpigraph.Geometry
 public import SerrinEpigraph.GradientPowerTests
 public import SerrinEpigraph.IntegrationByParts
+public import SerrinEpigraph.LimitOne
 public import SerrinEpigraph.LimitEquation
 public import SerrinEpigraph.LocalMinimum
 public import SerrinEpigraph.LimitProfile

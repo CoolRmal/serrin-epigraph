@@ -123,7 +123,7 @@ the remaining interval. The resulting two-sided comparison holds on the full
 closed solution range, with no additional hypotheses. `VerticalLimit.lean` now derives strict monotonicity of each vertical section
 from its directional derivative and proves that each ray has a positive limit
 at most one. Every finite interior value is strictly smaller than its ray limit.
-This does not yet identify the limits across rays or prove they equal one.
+The identification with one is now proved by `LimitOne.lean`, as described below.
 `TranslatedDomain.lean` proves that upward translations eventually place any
 fixed compact set inside the epigraph. Strict vertical monotonicity and the
 positive minimum of one fixed translate provide a common positive lower bound
@@ -141,8 +141,8 @@ compact test at sufficiently large heights. `LimitEquation.lean` proves continui
 Laplacian, restricts the integrals to the compact test support, and combines the
 established limits with uniqueness of limits. The lifted horizontal profile now
 satisfies the semilinear equation in distributions and is distributionally
-superharmonic. Identifying this profile with one still remains; the argument
-must use the reaction structure, not merely bounded superharmonicity.
+superharmonic. The identification with one uses the reaction structure and the
+classical comparison argument below, not merely bounded superharmonicity.
 `PolynomialBarrier.lean` now constructs the squared quadratic on a ball,
 computes its first and second derivatives and exact Laplacian, and proves its
 positive interior values, zero sphere values, and an explicit inverse-radius-
@@ -154,8 +154,13 @@ compact optimization is now proved in `CompactContact.lean`: maximizing the
 comparison-to-solution quotient produces an interior contact with a scale
 strictly between zero and one. Combining this with the differential contradiction
 proves comparison on compact sets under a strict coefficient gap. Applying the
-comparison theorem to the polynomial on large translated balls, then identifying
-the ray limits with one, still remains.
+comparison theorem to the polynomial is completed in `BallLowerBound.lean`:
+the solution exceeds any positive threshold at the center once the ball's
+coefficient is below the reaction quotient at that threshold. `LimitOne.lean`
+then uses upward domain exhaustion to prove that every vertical ray limit equals
+one. This proof uses the classical original solution directly and does not
+assume extra regularity of the limit profile. The remaining work includes the
+variational minimization argument and the dimension/geometric classification.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

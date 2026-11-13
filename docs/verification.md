@@ -133,6 +133,16 @@ Both public declarations use only the three standard permitted axioms. The
 full build passed (3582 jobs). Applying this comparison to the polynomial ball
 barrier, proving the ray limits equal one, and the rigidity classifications remain.
 
+## Vertical limits equal one
+
+`BallLowerBound.lean` applies compact comparison to the scaled polynomial on an
+interior ball. `LimitOne.lean` chooses a sufficiently large radius and translates
+the ball upward to prove every ray limit equals one. All five public declarations
+in these two modules were individually audited and use only the three standard
+permitted axioms. The full build passed (3584 jobs). This closes identification
+of the vertical limit; variational minimization, the two main rigidity proofs,
+full Comparator acceptance, and Palomar registration remain unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
