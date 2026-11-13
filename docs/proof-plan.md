@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`RecoveryScaleMismatch.lean` proves that profiles with positive graph scales
+L and M differ only inside their larger transition layer. The integral of
+their absolute difference multiplied by the blow-down scale R is bounded by
+the profile speed bound times `(T * max L M)^2 * |L⁻¹ - M⁻¹|`, independently
+of R. The Euclidean graph-cylinder version multiplies this bound by projected
+base volume. For fixed regularization, this controls potential errors as patch
+scales approach one another. A finite-cover overlap estimate and a diagonal
+choice of cover, regularization, and blow-down scale remain to be assembled.
+
 `PartitionGradientEnergy.lean` bounds the squared norm of a weighted gradient
 by the weighted squared norms, with total weight at most one. The recovery
 kinetic estimate has an arbitrarily small multiplicative loss and the separate

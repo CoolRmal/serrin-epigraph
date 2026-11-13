@@ -1,5 +1,16 @@
 # Verification record
 
+## Scale mismatch on graph cylinders
+
+The `SerrinEpigraph Challenge Solution` build passed (3913 jobs).
+All four theorems in `RecoveryScaleMismatch.lean` have clean diagnostics and
+use only the standard three axioms. They localize the mismatch to a thin layer,
+bound its amplitude, prove integrability with an R-independent integral bound,
+and transfer the bound to Euclidean graph cylinders using projected base volume.
+The constant depends on the regularization and graph scales. Summation over
+overlaps and the required parameter choices remain unfinished, as do both
+Main rigidity proofs, full Comparator, and Palomar registration.
+
 ## Finite partition kinetic and potential bounds
 
 The `SerrinEpigraph Challenge Solution` build passed (3912 jobs).
