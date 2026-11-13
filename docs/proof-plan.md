@@ -1,6 +1,25 @@
 # Proof obligations
 
-## Geometric classification after minimality
+## Current remaining proof obligations
+
+Both rigidity proofs in `Main.lean` remain unfinished. The current construction
+reaches a comparison of a fixed limiting phase against C1 graph competitors:
+`GraphCompetitorComparison.lean` proves an interior perimeter bound by competitor
+graph area over a compact base neighborhood when the phases agree in an annulus.
+It uses recovery functions along the originally prescribed diverging scales,
+not a separately chosen limit. `GraphRecoverySubsequence.lean` supplies this scale
+compatibility. `RecoveryMinimality.lean` derives the annular energy bounds from
+surface growth and the convergent recovery bound, then applies gluing and PDE
+minimality to the same sequences.
+
+This is not yet full perimeter minimality: graph area must be localized and
+identified with the required competitor perimeter, and the competitor class
+must be sufficient for the geometric argument. Minimal-cone classification,
+the applicable flatness results, and transfer of rigidity to the original
+solution remain substantial unproved steps. No reduction in the two Main proof
+holes is claimed by the supporting comparison results.
+
+## Earlier construction milestones (historical obligations)
 
 `RecoveryPerimeter.lean` connects the assembled recovery sequence to variational
 perimeter. Normalized L1 convergence passes through the Lipschitz phase primitive;

@@ -1,5 +1,20 @@
 # Verification record
 
+## Fixed-limit comparison with graph competitors
+
+The `SerrinEpigraph Challenge Solution` build passed (3931 jobs). The six new
+theorems across `RecoveryMinimality.lean`, `GraphRecoverySubsequence.lean`,
+`GraphCompetitorComparison.lean`, and the prescribed-scale addition to
+`RecoveryDiagonalScale.lean` have clean diagnostics and use only `propext`,
+`Classical.choice`, and `Quot.sound`. Recovery now selects indices tending to
+infinity in a supplied scale sequence, preserving a supplied phase limit.
+The annular comparison derives its energy bound from surface growth and a
+convergent recovery bound. Combining these with a graph recovery sequence proves
+an interior perimeter bound for that fixed phase by competitor graph area on a
+compact base neighborhood, under annular phase agreement. This is not full
+perimeter minimality or geometric classification. The two rigidity proof holes
+in Main remain; full Comparator and Palomar registration are still incomplete.
+
 ## Recovery sequences bound graph perimeter
 
 The `SerrinEpigraph Challenge Solution` build passed (3928 jobs).
