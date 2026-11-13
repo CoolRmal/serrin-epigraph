@@ -94,6 +94,21 @@ Consequently unbounded solutions require nonnegative reaction everywhere on
 the nonnegative half-line, and all solutions are superharmonic. See the
 [complete argument and Lean declarations](reaction-reduction.md).
 
+The next [variational reduction](variational-reduction.md) is a complete
+informal argument, not a Lean implementation: entire-space Liouville and
+Harnack compactness give a common vertical limit; a foliation calibration
+proves general one-phase minimization, including the phase cost; comparison
+on large zero-phase balls makes the normalized potential nonnegative. In the
+unbounded branch this forces a finite reaction primitive, and in the bounded
+branch the potential vanishes at the limiting equilibrium. The proof uses
+classical analytic ingredients not yet implemented in this project.
+
+This does not close the classification step. The exact hypotheses still
+admit infinitely flat finite equilibria, negative-power potential tails, and
+the harmonic problem in ambient dimension eight. The [newer-literature and
+scaling audit](rigidity-regimes.md) identifies the additional results that
+would be needed; it does not assert a classification or a counterexample.
+
 The supplied citations do not currently discharge either rigidity obligation.
 The Allen–Cahn assumptions in Wang–Wei and Beuvin–Farina are not among the common
 image hypotheses. The zero reaction is a concrete admissible edge case that

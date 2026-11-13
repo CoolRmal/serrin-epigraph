@@ -224,8 +224,23 @@ neither the harmonic minimization theorem nor its blowdown dichotomy applies
 directly. Establishing an appropriate general variational reduction and
 classification remains necessary for this route to prove the exact targets.
 
-The examined local proofs and cited primary sources do not supply the missing
-general reduction. No counterexample satisfying all target assumptions has
+The examined local proofs and cited primary sources do not supply the full
+general classification. No counterexample satisfying all target assumptions has
 been established in this audit. A complete proof must establish that broader
 rigidity result or another argument. Adding
 Allen–Cahn hypotheses would change the requested statements and is not done.
+
+## Subsequent general variational reduction
+
+The [variational argument](variational-reduction.md) now supplies a common
+vertical limit and free-boundary minimization under the exact hypotheses.
+It is an informal proof using additional classical analytic ingredients,
+not a Lean theorem. It addresses the minimization issue identified above,
+including the phase cost, without extending the cited Allen–Cahn theorems.
+
+The remaining step is classification of these general minimizers. The
+[reaction-regime audit](rigidity-regimes.md) checks newer primary results
+and explicit admissible examples: the bounded branch allows infinitely flat
+wells, and unbounded branches have several distinct energy scalings. None
+of the checked classification theorems covers all of these cases. The
+harmonic dimension-eight case remains a separate unresolved proof obligation.

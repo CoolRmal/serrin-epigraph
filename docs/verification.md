@@ -6,9 +6,9 @@ registration.
 
 ## Public snapshot checked
 
-Commit: [`4b1b13ef839e9766ed4605b482138e8b07bd154c`](https://github.com/CoolRmal/serrin-epigraph/commit/4b1b13ef839e9766ed4605b482138e8b07bd154c).
+Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
 
-On 2026-11-13 the [independent monotonicity job](https://github.com/CoolRmal/serrin-epigraph/actions/runs/43377717405/job/131728003364)
+On 2026-11-13 the [independent monotonicity job](https://github.com/CoolRmal/serrin-epigraph/actions/runs/43381524241/job/131740132434)
 passed using the Linux sandbox and `comparator-monotonicity.json`.
 This configuration checks exactly `SerrinEpigraph.verticalDerivative_pos`
 against the independent `Challenge.lean` statement, with only the standard

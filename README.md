@@ -23,6 +23,12 @@ half-line. For every solution, the reaction is nonnegative on its range and the
 solution is superharmonic. These consequences retain the original hypotheses;
 the two rigidity proofs remain incomplete.
 
+An [informal variational reduction](docs/variational-reduction.md) now derives a
+common vertical limit and minimization of the general free-boundary energy.
+This argument has not been formalized in Lean. The [reaction-regime audit](docs/rigidity-regimes.md)
+explains why newer results on degenerate wells and unbounded minimizers still
+do not provide the missing general classification.
+
 ## Statements
 
 Let
