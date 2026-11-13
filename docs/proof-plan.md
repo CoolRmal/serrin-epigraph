@@ -237,8 +237,13 @@ gradient bound on each compact set. It also supplies a uniform compact level
 bound strictly below one. `MollificationSupport.lean` proves uniform support control for jointly
 smoothing compact comparison pairs and additivity of the normalized
 convolution. The calibration integrals of each smoothed pair agree on one
-fixed ball for all indices. Almost-everywhere convergence of the gradients
-remains necessary to pass this identity to the original pair.
+fixed ball for all indices. `MollificationDerivative.lean` proves gradient convergence on open C¹
+regions by compact localization and locality of convolution. The null
+boundary then gives almost-everywhere gradient convergence for the zero
+extension. Combined with the established bounds, the explicit sequence’s
+calibration integrals converge to the original phase energy, without extra
+approximation assumptions. The analogous limiting argument for the perturbed
+comparison function remains before passing the pair identity to the limit.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

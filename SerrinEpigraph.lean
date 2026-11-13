@@ -83,3 +83,4 @@ public import SerrinEpigraph.CalibrationConvergence
 public import SerrinEpigraph.Mollification
 public import SerrinEpigraph.MollificationBounds
 public import SerrinEpigraph.MollificationSupport
+public import SerrinEpigraph.MollificationDerivative

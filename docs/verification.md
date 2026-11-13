@@ -486,3 +486,20 @@ All five new theorems were audited individually and use only `propext`,
 Almost-everywhere gradient convergence remains necessary to pass the integral
 identity to the original pair. Free-boundary energy minimality, both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Gradient convergence and recovery of the original phase energy
+
+`MollificationDerivative.lean` proves commutation of differentiation and
+averaging for compactly supported C¹ functions, convergence of their averaged
+derivatives, and locality of mollification. Compact localization extends
+gradient convergence to every point of an open C¹ region. Applied to the
+zero extension in the interior and exterior, with the already-null frontier
+removed, this yields almost-everywhere convergence of the explicit normalized
+mollification gradients. The established compact bounds now imply convergence
+of its calibration integrals to the original phase energy, with no additional
+approximation hypotheses.
+All eleven new theorems were individually audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The complete build passed (3694 jobs).
+The analogous limit for the perturbed comparison function remains before the
+pair identity yields free-boundary energy minimality. Both rigidity proofs,
+full Comparator acceptance, and Palomar registration remain unfinished.
