@@ -1,5 +1,22 @@
 # Verification record
 
+## Directional derivative test bounds
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3830 jobs).
+
+`DirectionalTestBound.lean` restricts compactly supported directional integration
+by parts to any containing compact set. For a smooth coefficient it bounds
+the integral against a derivative of a unit-bounded test function by the
+direction norm times the local gradient mass. A further theorem passes this
+bound through integral convergence of smooth approximations when their gradient
+masses converge.
+
+Diagnostics and both bound theorems' transitive axiom audits are clean, using
+only the standard three axioms. Applying the transfer theorem to locally
+Lipschitz mollification and obtaining the limiting phase perimeter bound remain.
+Interface minimality, geometric classification, both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Bounded testing of the primitive limit
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3829 jobs).

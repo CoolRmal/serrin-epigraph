@@ -178,3 +178,4 @@ public import SerrinEpigraph.GlobalPhaseSet
 public import SerrinEpigraph.PhaseSetConvergence
 public import SerrinEpigraph.SolutionPhaseConvergence
 public import SerrinEpigraph.IntegralLimitTesting
+public import SerrinEpigraph.DirectionalTestBound

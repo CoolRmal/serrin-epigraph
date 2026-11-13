@@ -70,8 +70,12 @@ converge locally in integral norm to the same measurable phase indicator.
 `IntegralLimitTesting.lean` proves convergence against bounded measurable
 tests and transfer of uniform tested-integral bounds to the limit. It applies
 this to the primitive subsequence with a common phase set for every local
-bounded test. Integration by parts and the resulting perimeter bound,
-limiting-interface minimality, and geometric classification remain.
+bounded test. `DirectionalTestBound.lean` proves compact-set integration by
+parts and bounds unit-bounded directional tests by gradient mass for smooth
+functions, then passes the bound through smooth integral approximations with
+convergent gradient masses. Applying this to locally Lipschitz mollification,
+assembling the perimeter bound, limiting-interface minimality, and geometric
+classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
