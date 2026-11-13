@@ -82,8 +82,11 @@ the same measurable limiting phase and removes the positive primitive weight.
 The indicator itself now satisfies surface-order directional bounds.
 `PhaseVectorTestBound.lean` combines scalar components in any orthonormal basis
 and obtains the full vector divergence test bound, with the dimension factor
-absorbed into the constant. Packaging perimeter via its variational definition,
-interface minimality, and geometric classification remain.
+absorbed into the constant. `VariationalPerimeter.lean` defines the extended
+nonnegative variational perimeter using the supremum of compact C¹ unit-field
+divergence pairings, proves domain monotonicity, and packages finite
+surface-order perimeter bounds on integer-radius balls for the same phase
+limit. Interface minimality and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

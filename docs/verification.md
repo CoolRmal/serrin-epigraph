@@ -1,5 +1,22 @@
 # Verification record
 
+## Variational perimeter bounds
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3834 jobs).
+
+`VariationalPerimeter.lean` defines the divergence in an orthonormal basis and
+an extended-nonnegative variational perimeter as the supremum of absolute
+pairings against compactly supported C¹ unit vector fields. It proves domain
+monotonicity, transfers containing-set test bounds to perimeter bounds, and
+excludes infinite perimeter under a finite real bound. Applied to the common
+phase limit, it gives surface-order perimeter bounds on every positive
+integer-radius open ball, for each orthonormal basis.
+
+Diagnostics are clean and the application theorem's transitive axiom audit
+uses only the standard three axioms. Interface minimality and geometric
+classification remain unproved. Both Main rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Vector divergence test bound for the phase limit
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3833 jobs).
