@@ -3,8 +3,10 @@
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
 `RadialBallProfile.spatial_le_solution` applies it to every closed ball contained
-in the epigraph. Next extend this comparison to an interior tangent ball by
-upward translations and passage to the limit, then compare boundary derivatives.
+in the epigraph. `TangentBallComparison.lean` extends the inequality to closed
+balls contained in the closed epigraph, using upward translations and the
+solution's continuity on the closure. Next compare boundary derivatives at an
+interior tangent point and combine with the large-ball boundary-energy limit.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

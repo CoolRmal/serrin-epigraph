@@ -1,5 +1,18 @@
 # Verification record
 
+## Tangent-ball comparison
+
+`TangentBallComparison.lean` proves that every positive upward translation of a
+closed ball in the closed epigraph lies inside the open epigraph. Applying the
+interior-ball comparison to the translated ball and passing to zero translation
+gives `RadialBallProfile.spatial_le_solution_of_closedBall_subset_closure`.
+The theorem covers boundary contact without requiring positivity on that
+boundary. Its transitive axiom audit reports only `propext`, `Classical.choice`,
+and `Quot.sound`, with no source warnings. The full build passed (3737 jobs).
+Boundary slope comparison, Bernoulli normalization, and the final rigidity
+classifications remain unfinished. Full Comparator acceptance and Palomar
+registration are not yet achieved.
+
 ## Compact-domain and interior-ball comparison
 
 `nonlinear_comparison_of_compact_closure` proves boundary-to-interior comparison
