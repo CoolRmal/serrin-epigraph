@@ -4,10 +4,18 @@ A Lean 4 project depending on Mathlib, targeting the three statements in the
 [source images](docs/source) together with the original conversation and notes.
 The [restored reaction assumptions](docs/scope-correction.md) apply to both rigidity targets.
 
-**Status: one of three theorems proved.** The strict vertical monotonicity theorem
-is complete under the original assumptions. The two rigidity proofs remain open.
+**Lean status: one of three theorems proved.** The strict vertical monotonicity theorem
+is complete under the original assumptions. The two Lean rigidity proofs remain open.
 A successful `lake build` is not a certificate for all three: the full Comparator
 configuration must still reject the two proof holes. No Palomar registration is claimed.
+
+The [detailed mathematical proofs of both rigidity theorems](docs/rigidity-proof/theorems.md)
+and [formalization execution plan](docs/rigidity-proof/formalization-plan.md)
+expand the remaining geometric regularity, cone classification, diffuse flatness
+improvement, and final free-boundary comparison. See the
+[chapter index and review notes](docs/rigidity-proof/README.md).
+These documents have undergone mathematical cross-review; they are not yet
+Lean-verified proofs and do not change the formal status above.
 
 **Proved:** `SerrinEpigraph.verticalDerivative_pos` establishes strict vertical
 monotonicity. Its proof includes boundary geometry, weak linearization with only
@@ -34,7 +42,7 @@ The **Modica gradient estimate** and **surface-scaled ball-energy monotonicity**
 are also proved under the original rigidity assumptions. The proof obtains a
 global gradient bound by a weak Bernstein argument and controls maxima escaping
 to infinity by quadratic penalization. It requires no extra regularity or
-assumed gradient estimate. The geometric classification and transfer of flatness
+assumed gradient estimate. The Lean geometric classification and transfer of flatness
 to the original solution remain unfinished.
 
 An [informal variational reduction](docs/variational-reduction.md) now derives a
@@ -45,7 +53,7 @@ minimality against **arbitrary measurable competitors** agreeing with the limit
 outside a smaller concentric closed ball. Agreement may hold almost everywhere.
 That same phase is invariant almost everywhere under each positive dilation,
 has finite local perimeter and vertical order, and both phases have positive
-measure; see the [proof obligations](docs/proof-plan.md). Geometric regularity,
+measure; see the [proof obligations](docs/proof-plan.md). The Lean geometric regularity,
 half-space classification, and transfer of flatness remain open.
 Along one common sequence, potential and kinetic energies balance locally, and
 diffuse energy agrees asymptotically with primitive gradient mass. On every
@@ -55,7 +63,7 @@ General finite-perimeter recovery is proved: smooth phase averages, positive
 variable transition widths, and threshold averaging give competitors with the
 sharp asymptotic action-perimeter bound along the original scale sequence's
 subsequences. Under either one-sided cone constraint, a nontrivial phase cannot
-be invariant under all vertical translations. The geometric classification
+be invariant under all vertical translations. The Lean geometric classification
 and transfer of flatness to the original solution remain open.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
