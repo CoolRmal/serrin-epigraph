@@ -198,6 +198,10 @@ epigraph. Its vertical component agrees with the Neumann boundary formula.
 `BoundaryGradient.lean` proves the full boundary gradient is minus κ times
 the outward unit normal, hence has norm κ. The calibration energy component
 converges to κ²/2 − W(0); this constant has not been proved to vanish.
+`ZeroExtension.lean` constructs the whole-space extension, proves continuity,
+identifies its positive phase, preserves vertical monotonicity and the limit
+one, and establishes the original PDE and gradient identities in the interior.
+No differentiability at the free boundary is asserted.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

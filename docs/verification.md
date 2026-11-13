@@ -333,3 +333,16 @@ been assumed. All eight declarations were audited individually and use only
 `lake build SerrinEpigraph Challenge Solution` passed (3603 jobs).
 Cross-boundary comparison and both rigidity proofs remain unfinished, as do
 full Comparator acceptance and Palomar registration.
+
+## Whole-space zero extension
+
+`ZeroExtension.lean` constructs the solution extended by zero outside the
+epigraph. It proves global continuity, nonnegativity, the exact positive phase,
+the upper bound by one, interior and exterior gradient identities, vertical
+monotonicity and limit one, and the original PDE in the positive phase.
+All fifteen new declarations were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3604 jobs).
+No boundary differentiability or cross-boundary energy minimality is claimed.
+Both rigidity proofs, full Comparator acceptance, and Palomar registration
+remain unfinished.
