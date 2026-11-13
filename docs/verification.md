@@ -1,5 +1,22 @@
 # Verification record
 
+## Local two-phase identification
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3825 jobs).
+
+`TwoPhaseLimit.lean` proves that integral limits of two-valued functions remain
+two-valued almost everywhere. The proof integrates the minimum distance to
+the two values and forces that nonnegative integral to vanish. A transfer
+lemma handles vanishing integral approximation error. Applied to the actual
+weighted phase indicators, this proves that every local primitive limit along
+diverging dilations takes only zero and the primitive value at one almost
+everywhere.
+
+The application theorem's transitive axiom audit uses only the standard three
+axioms, and diagnostics are clean. Global phase-set packaging, interface
+minimality and geometric classification remain. Both rigidity proofs, full
+Comparator, and Palomar registration remain incomplete.
+
 ## Global representative of the local primitive limits
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3824 jobs).

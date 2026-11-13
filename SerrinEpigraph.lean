@@ -173,3 +173,4 @@ public import SerrinEpigraph.IntegralCauchyApproximation
 public import SerrinEpigraph.LocalPrimitiveLimits
 public import SerrinEpigraph.LocalLimitCompatibility
 public import SerrinEpigraph.GlobalPrimitiveLimit
+public import SerrinEpigraph.TwoPhaseLimit
