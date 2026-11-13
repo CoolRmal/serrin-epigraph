@@ -503,3 +503,20 @@ All eleven new theorems were individually audited and use only `propext`,
 The analogous limit for the perturbed comparison function remains before the
 pair identity yields free-boundary energy minimality. Both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Calibration identity for perturbed zero extensions
+
+`PerturbedCalibration.lean` proves almost-everywhere convergence of the
+averaged gradients of a smooth perturbation of the zero extension. It provides
+uniform compact gradient and level bounds and hence convergence of the
+competitor's calibration integrals. Passing the smoothed-pair identities to
+the limit shows that a compact C¹ perturbation with values in [0,1) has the
+same calibration integral as the original phase energy. The conclusion
+explicitly includes containment of the original perturbation support in the
+integration ball; perturbations may cross the original boundary.
+All seven new theorems were individually audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The complete build passed (3695 jobs).
+Integrability of the competitor phase energy and integration of the pointwise
+energy inequality remain before claiming free-boundary minimality. Both
+rigidity proofs, full Comparator acceptance, and Palomar registration remain
+unfinished.

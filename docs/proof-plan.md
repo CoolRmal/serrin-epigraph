@@ -242,8 +242,12 @@ regions by compact localization and locality of convolution. The null
 boundary then gives almost-everywhere gradient convergence for the zero
 extension. Combined with the established bounds, the explicit sequence’s
 calibration integrals converge to the original phase energy, without extra
-approximation assumptions. The analogous limiting argument for the perturbed
-comparison function remains before passing the pair identity to the limit.
+approximation assumptions. `PerturbedCalibration.lean` completes the analogous bounds and limiting
+argument for a smooth compact perturbation whose values stay in [0,1). The
+calibration integral of that perturbed zero extension equals the original
+phase energy on a ball explicitly containing the perturbation support.
+Integrability of the competitor phase energy and the integrated energy
+inequality remain before asserting free-boundary minimality.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
