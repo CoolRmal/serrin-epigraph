@@ -1,5 +1,15 @@
 # Verification record
 
+## Recovery thickness and phase convergence
+
+The `SerrinEpigraph Challenge Solution` build passed (3893 jobs).
+`RecoveryThickness.lean` proves the transition-time bound 1/√(2δ), vanishing
+scaled thickness under the explicit scale condition, eventual equality to one
+at positive distances, and pointwise convergence to the positive half-line
+indicator. Diagnostics are clean and the convergence theorem uses only the
+standard three axioms. Multidimensional recovery energy estimates, both Main
+rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Recovery action limit
 
 The `SerrinEpigraph Challenge Solution` build passed (3892 jobs).

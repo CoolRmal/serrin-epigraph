@@ -213,3 +213,4 @@ public import SerrinEpigraph.RecoveryProfileRegularity
 public import SerrinEpigraph.RecoveryProfileExtension
 public import SerrinEpigraph.RecoveryAction
 public import SerrinEpigraph.RecoveryActionBounds
+public import SerrinEpigraph.RecoveryThickness

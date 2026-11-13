@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`RecoveryThickness.lean` bounds the transition time by 1/√(2δ), derives
+vanishing scaled thickness under the corresponding scale condition, and
+proves pointwise convergence of the scaled profiles to the positive half-line
+indicator. Positive signed distances eventually have profile exactly one;
+nonpositive signed distances have profile exactly zero. Composition with
+geometric distance functions and multidimensional energy estimates remain.
+
 `RecoveryActionBounds.lean` bounds the action between the interface constant
 and that constant plus √(2δ), then proves convergence for every positive
 regularization sequence tending to zero. The next obligation is the
