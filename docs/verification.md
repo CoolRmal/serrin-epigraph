@@ -1,5 +1,21 @@
 # Verification record
 
+## Annular solution existence completed
+
+`AnnularMaximal.lean` completes the compatible union and proves that it is an
+extension of the seed at the supremal radius, including agreement at the seed's
+outer endpoint by continuity. The maximality criterion then forces outer value
+one. `RigidityHypotheses.exists_increasing_annular_profile` assembles this with
+local existence and the energy-margin choice: every positive initial slope with
+squared value greater than twice the potential drop is realized by a radial
+zero-to-one solution at every sufficiently large inner radius, with strictly
+positive slope throughout its closed interval.
+The final theorem's transitive axiom audit reports only `propext`,
+`Classical.choice`, and `Quot.sound`, with clean source diagnostics. The full
+build passed (3747 jobs). Spatial annulus regularity, exterior comparison, the
+reverse Neumann energy inequality, and both rigidity classifications remain
+unfinished. Full Comparator and Palomar registration have not been achieved.
+
 ## Finite annular endpoint limits and completion
 
 `AnnularLimits.lean` bounds the union's slope by the common initial slope and

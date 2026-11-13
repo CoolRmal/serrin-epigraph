@@ -48,6 +48,11 @@ slope. `AnnularLimits.lean` now proves finite value and slope limits of this
 union, and separately proves that filling such limits creates a closed increasing
 segment. The next step is to assemble the completed supremal extension, including
 agreement with the seed at its outer endpoint, and apply the value-one criterion.
+This assembly is now completed in `AnnularMaximal.lean`: for every positive
+initial slope whose squared value exceeds twice the potential drop, all
+sufficiently large inner radii admit an increasing radial solution from zero to
+one with that prescribed inner slope and positive slope throughout. Next lift
+this profile to an annulus in Euclidean space and prove the exterior comparison.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
