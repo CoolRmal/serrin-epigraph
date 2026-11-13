@@ -180,3 +180,4 @@ public import SerrinEpigraph.SolutionPhaseConvergence
 public import SerrinEpigraph.IntegralLimitTesting
 public import SerrinEpigraph.DirectionalTestBound
 public import SerrinEpigraph.LipschitzDirectionalTest
+public import SerrinEpigraph.LimitingPhaseDirectionalBound

@@ -1,5 +1,21 @@
 # Verification record
 
+## Directional bounds inherited by the limiting phase
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3832 jobs).
+
+`LimitingPhaseDirectionalBound.lean` passes the actual rescaled primitive's
+uniform directional test estimates to the same measurable phase obtained by
+local integral compactness. Dividing by the strictly positive primitive value
+at one yields surface-order bounds for the unweighted phase indicator. The
+result retains the common subsequence and its local integral convergence, and
+holds simultaneously for every direction and admissible compact scalar test.
+
+The final theorem's transitive axiom audit uses only the standard three axioms.
+The build has no new warnings or proof holes. Full vector-test perimeter
+control, interface minimality, geometric classification, both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Locally Lipschitz directional tests and the actual rescaled primitive
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3831 jobs).
