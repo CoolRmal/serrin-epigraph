@@ -1,5 +1,18 @@
 # Verification record
 
+## Unshifted free-boundary minimality for smooth perturbations
+
+`UnshiftedMinimality.lean` combines the exact Neumann energy identity with
+`CrossBoundaryMinimality.lean`. It proves that the phase-energy shift vanishes
+and gives unshifted energy comparison on every compact set containing the
+support of a C¹ perturbation, and on an enclosing ball. Competitors may change
+positive phase but must still take values in [0,1). This does not assert
+minimality for arbitrary Lipschitz competitors or complete either rigidity
+target. Lean diagnostics are clean; the compact-set theorem's transitive axiom
+audit uses only `propext`, `Classical.choice`, and `Quot.sound`, with no source
+warnings. Full Comparator and Palomar registration remain incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3767 jobs).
+
 ## Exact Neumann energy identity
 
 `InwardTangent.lean` proves that right-hand velocities of curves in a set belong

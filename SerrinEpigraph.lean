@@ -141,3 +141,4 @@ public import SerrinEpigraph.TangentAnnularComparison
 public import SerrinEpigraph.AnnularContactDerivative
 public import SerrinEpigraph.InwardTangent
 public import SerrinEpigraph.AnnularSlopeComparison
+public import SerrinEpigraph.UnshiftedMinimality
