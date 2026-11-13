@@ -1,5 +1,18 @@
 # Verification record
 
+## Existing limiting phases and one-sided cone inclusions
+
+The `SerrinEpigraph Challenge Solution` build passed (3933 jobs).
+The theorem in `LimitingGraphComparison.lean` and all five theorems in
+`OneSidedPhaseLimit.lean` have clean diagnostics and depend only on `propext`,
+`Classical.choice`, and `Quot.sound`. The PDE assumptions now produce a fixed
+measurable phase with convergence on every compact set and graph competitor
+comparison bounds. Both one-sided graph bounds pass to global almost-everywhere
+cone inclusions in a genuine phase limit, without assuming pointwise graph
+convergence. This does not prove dilation invariance, full perimeter minimality,
+or geometric classification. The two Main rigidity proof holes remain, and full
+Comparator and Palomar registration are incomplete.
+
 ## Fixed-limit comparison with graph competitors
 
 The `SerrinEpigraph Challenge Solution` build passed (3931 jobs). The six new

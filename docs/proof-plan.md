@@ -2,6 +2,16 @@
 
 ## Current remaining proof obligations
 
+`LimitingGraphComparison.lean` now obtains the fixed phase and all compact-set
+solution convergence directly from the PDE assumptions, and gives graph
+competitor comparisons for that phase. `OneSidedPhaseLimit.lean` passes both
+one-sided graph bounds to actual measurable phase limits: the lower bound gives
+almost-everywhere containment above the lower homogeneous cone, and the upper
+bound gives almost-everywhere inclusion of the open upper cone in the phase.
+It constructs a phase subsequence with these properties without assuming a
+pointwise graph limit. Cone inclusion is not dilation invariance or minimal-cone
+classification; those remain unproved.
+
 Both rigidity proofs in `Main.lean` remain unfinished. The current construction
 reaches a comparison of a fixed limiting phase against C1 graph competitors:
 `GraphCompetitorComparison.lean` proves an interior perimeter bound by competitor

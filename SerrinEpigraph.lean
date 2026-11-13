@@ -250,3 +250,4 @@ public import SerrinEpigraph.GraphRecoverySequence
 public import SerrinEpigraph.CompetitorPrimitiveBound
 public import SerrinEpigraph.RecoveryPerimeter
 public import SerrinEpigraph.GraphCompetitorComparison
+public import SerrinEpigraph.OneSidedPhaseLimit
