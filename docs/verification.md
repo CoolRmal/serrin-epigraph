@@ -630,3 +630,19 @@ The full build passed (3703 jobs). Neither main theorem was altered and no
 new proof holes were added. The second-order radial equation, global profiles
 and asymptotics, both rigidity proofs, full Comparator acceptance, and Palomar
 registration remain unfinished.
+
+## Second-order radial system
+
+`RadialEquation.lean` proves six theorems: the weighted rescaling identity,
+the primitive formula for the slope, its derivative formula for continuous
+forcing, the corresponding local-interval derivative formula, slope continuity
+on the closed radius interval, and existence of a local radial value/slope
+system under the original project hypotheses. The system satisfies the
+second-order radial equation away from zero, has the prescribed central value
+and zero central slope, and remains strictly between zero and one locally.
+All six declarations have clean diagnostics and standard axioms only
+(`propext`, `Classical.choice`, `Quot.sound`). The complete build passed
+(3704 jobs). No main statement changed and no new proof holes were added.
+This is a local initial-value construction: the Dirichlet boundary condition,
+large-radius profiles and limits, both rigidity proofs, full Comparator, and
+Palomar registration remain outstanding.

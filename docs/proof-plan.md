@@ -291,8 +291,13 @@ reaction that is C¹ on a compact value interval. A positive contraction radius
 exists, and continuity allows shrinking it so the constructed profile remains
 strictly inside the original value interval. The averaged derivative equation
 then uses the original reaction, without an extra global Lipschitz assumption.
-Still required: recover the second-order radial equation, continue solutions,
-construct Dirichlet ball and annulus profiles, and prove their large-radius limits.
+`RadialEquation.lean` recovers the second-order radial system by rescaling the
+average to a weighted primitive and differentiating away from the center.
+It proves slope continuity on the closed radius interval and constructs a local
+value/slope pair satisfying the original reaction equation, with central value
+in (0,1), zero central slope, and values in (0,1).
+Still required: continue solutions, construct Dirichlet ball and annulus
+profiles, and prove their large-radius limits.
 
 ## Acceptance
 
