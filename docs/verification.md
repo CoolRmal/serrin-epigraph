@@ -1,5 +1,15 @@
 # Verification record
 
+## Assembled graph recovery bound
+
+The `SerrinEpigraph Challenge Solution` build passed (3905 jobs).
+`GraphRecoveryBound.lean` proves unit-Lipschitz normalized height for globally
+controlled graph slopes, the Euclidean energy bound with projected-volume
+coefficient, and compact-local L1 convergence to the epigraph indicator.
+Diagnostics are clean and the energy theorem uses only the standard three
+axioms. Sharp perimeter localization, both Main rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Euclidean coordinate-volume transfer
 
 The `SerrinEpigraph Challenge Solution` build passed (3904 jobs).

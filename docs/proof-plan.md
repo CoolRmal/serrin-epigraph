@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GraphRecoveryBound.lean` assembles unit-Lipschitz normalized graph coordinates,
+the Euclidean distribution bound, and recovery energy into an actual energy
+upper bound: normalization scale times projected base volume times action.
+The same competitors converge locally in L1 to the epigraph indicator.
+Localizing the slope factor to obtain perimeter, and extending this to the
+required geometric competitors, remain unfinished.
+
 `EuclideanProductVolume.lean` proves volume preservation under the horizontal/
 last-coordinate decomposition, then transfers normalized graph-height
 distribution bounds from product coordinates to actual Euclidean volume.
