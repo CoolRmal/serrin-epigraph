@@ -1,5 +1,27 @@
 # Verification record
 
+## Exact graph perimeter and localized graph-competitor minimality
+
+The `SerrinEpigraph Challenge Solution` build passed (3944 jobs).
+All five new modules have clean diagnostics. The two final theorems
+`graph_perimeter_eq_area` and
+`RigidityHypotheses.exists_limiting_phase_with_graph_minimality`, including
+their transitive proof dependencies, use only `propext`, `Classical.choice`,
+and `Quot.sound`.
+
+The perimeter identity holds for C1 graphs on every open domain, including
+infinite area. Ambient Lipschitz cutoffs now localize the complete graph recovery
+construction, with an explicit thickness error disappearing along prescribed
+scales. The PDE assumptions produce one phase limit with L1 convergence on all
+compact sets and perimeter comparison in the same ball against every C1 graph
+epigraph agreeing outside a smaller concentric closed ball. The proof constructs
+its cutoffs, base neighborhoods, partitions, and recovery scales internally.
+
+The competitor class is still restricted to graph epigraphs; full finite-perimeter
+minimality and geometric classification are not asserted. The two Main rigidity
+proof holes and the three Challenge specification holes remain unchanged.
+Full Comparator and Palomar registration remain incomplete.
+
 ## Continuous normal tests and weighted lower graph area bound
 
 The `SerrinEpigraph Challenge Solution` build passed (3939 jobs).

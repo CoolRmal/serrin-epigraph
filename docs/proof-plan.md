@@ -2,61 +2,45 @@
 
 ## Current remaining proof obligations
 
-The two Main rigidity holes are substantial mathematical dependencies, not
-pending compiler repairs. The source note proves the implication by invoking
-Wang–Wei and related geometric rigidity results; those results do not yet have
-Lean proofs in this development. Restoring the reaction assumptions resolved a
-statement error, but did not supply these proofs. The remaining shared chain is:
+Both Main rigidity holes remain substantial mathematical dependencies, not
+pending compiler repairs. The source note invokes Wang–Wei and related geometric
+rigidity results; their classification and flatness proofs are not yet formalized
+here. The restored reaction assumptions remain unchanged.
 
-1. Localize perimeter-area identification and establish the limiting phase's
-   minimizing property for the competitor class required by the geometric argument.
-2. Prove the geometric classification applicable in dimensions at most eight,
-   and the classification under either one-sided linear bound in higher dimensions.
-3. Prove the flatness/rigidity implication from the classified limit back to the
-   original epigraph and solution, yielding `IsAffineOneDimensional`.
+`GraphPerimeter.lean` proves exact variational perimeter equals graph area on
+every open ambient domain for C1 graphs, allowing infinite area. Its lower bound
+uses compact normal tests and inner regularity; the upper bound uses the exact
+graph divergence formula.
 
-The current supporting work should not be reported as closing either Main hole.
-`UnitFieldApproximation.lean` and `GraphPerimeterLower.lean` now prove the reverse
-graph-area inequality with continuous compact cutoffs in the test domain.
-Continuous unit normal fields are approximated by C1 unit fields preserving
-support, so C1 graph regularity suffices. Removing the cutoff and matching the
-localized perimeter identity remain to be assembled.
+`LocalizedGraphRecovery.lean`, `LocalizedGraphComparison.lean`, and
+`LocalizedGraphSubsequence.lean` localize recovery energy to the trace of an
+ambient cutoff on the graph. The cutoff displacement error is bounded by its
+Lipschitz constant times layer thickness, and vanishes in the prescribed-scale
+diagonal construction. Thus the area bound no longer counts the entire horizontal
+projection when the graph lies outside the integration region.
 
-`GraphVerticalFlux.lean`, `GraphHorizontalFlux.lean`, and `GraphDivergence.lean`
-prove the exact divergence theorem for C1 graph epigraphs and compact C1 vector
-fields. Fubini in ordinary and flattened graph coordinates gives the vertical
-and horizontal fluxes, which sum to the outward unnormalized normal flux. Its
-norm equals the graph area density, yielding an upper bound weighted by the
-field's actual boundary trace. No PDE or recovery-sequence assumption is needed
-for these formulas. Saturating the variational supremum and the subsequent
-minimality/classification arguments remain outstanding.
+`LocalizedPerimeterComparison.lean` assembles this with annular gluing and PDE
+minimality. It constructs one measurable phase limit with L1 convergence on all
+compact sets and proves perimeter comparison in the same ball against every C1
+graph epigraph agreeing outside a smaller concentric closed ball. All cutoffs,
+partitions, and recovery scales are constructed internally. This is minimality
+within that graph competitor class; it does not assert minimality against all
+finite-perimeter sets. The one-sided phase-limit cone inclusions established
+previously remain available.
 
-`LimitingGraphComparison.lean` now obtains the fixed phase and all compact-set
-solution convergence directly from the PDE assumptions, and gives graph
-competitor comparisons for that phase. `OneSidedPhaseLimit.lean` passes both
-one-sided graph bounds to actual measurable phase limits: the lower bound gives
-almost-everywhere containment above the lower homogeneous cone, and the upper
-bound gives almost-everywhere inclusion of the open upper cone in the phase.
-It constructs a phase subsequence with these properties without assuming a
-pointwise graph limit. Cone inclusion is not dilation invariance or minimal-cone
-classification; those remain unproved.
+The remaining shared chain is:
 
-Both rigidity proofs in `Main.lean` remain unfinished. The current construction
-reaches a comparison of a fixed limiting phase against C1 graph competitors:
-`GraphCompetitorComparison.lean` proves an interior perimeter bound by competitor
-graph area over a compact base neighborhood when the phases agree in an annulus.
-It uses recovery functions along the originally prescribed diverging scales,
-not a separately chosen limit. `GraphRecoverySubsequence.lean` supplies this scale
-compatibility. `RecoveryMinimality.lean` derives the annular energy bounds from
-surface growth and the convergent recovery bound, then applies gluing and PDE
-minimality to the same sequences.
+1. Establish the geometric structure of the limiting phase and sufficient
+   competitor approximation/comparison for the classification argument. In
+   particular, graph-competitor minimality does not itself prove dilation
+   invariance or full perimeter minimality.
+2. Prove the classification applicable in dimensions at most eight, and under
+   either one-sided linear bound in higher dimensions.
+3. Prove the flatness/rigidity implication back to the original epigraph and
+   solution, yielding `IsAffineOneDimensional`.
 
-This is not yet full perimeter minimality: graph area must be localized and
-identified with the required competitor perimeter, and the competitor class
-must be sufficient for the geometric argument. Minimal-cone classification,
-the applicable flatness results, and transfer of rigidity to the original
-solution remain substantial unproved steps. No reduction in the two Main proof
-holes is claimed by the supporting comparison results.
+No reduction in the two Main proof holes is claimed by the supporting results.
+Full Comparator acceptance and Palomar registration remain incomplete.
 
 ## Earlier construction milestones (historical obligations)
 
