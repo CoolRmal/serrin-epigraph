@@ -141,6 +141,63 @@ $$R^2\log R.$$
 These examples already have the desired rigidity. They disprove proposed
 intermediate reductions, not the target conclusions.
 
+## The perimeter energy estimate is not automatic
+
+The admissible flat example
+
+$$
+f(s)=(1+s)^{-3},\qquad U(t)=\sqrt{1+2t}-1,\qquad \kappa=1
+$$
+
+also obstructs extending the cited perimeter-blowdown proof unchanged. The
+structural remainder is positive, and its square mass has polynomial growth:
+
+$$
+f(s)-sf'(s)=\frac{1+4s}{(1+s)^4}>0,\qquad U(t)^2\leq2t.
+$$
+
+Nevertheless, the potential normalized by the boundary gradient and the
+one-dimensional energy density are
+
+$$
+W_\kappa(s)=\frac{\kappa^2}{2}-\int_0^s f(r)\,dr
+=\frac1{2(1+s)^2},\qquad
+\frac12U'(t)^2+W_\kappa(U(t))=\frac1{1+2t}.
+$$
+
+Integration in the vertical variable gives
+
+$$
+\int_0^T\left(\frac12U'(t)^2+W_\kappa(U(t))\right)dt
+=\frac12\log(1+2T).
+$$
+
+Bounding the horizontal cross-sections above by their radius at height zero,
+and below by their radius at height half the ball radius, consequently gives
+
+$$
+E(B_R\cap\Omega)\asymp R^{n-1}\log R.
+$$
+
+Thus a uniform energy bound proportional to boundary area does not follow
+from the pictured hypotheses, even when the primitive of the reaction is
+finite and both linear graph bounds hold. Beuvin–Farina's perimeter-phase
+compactness argument needs replacement in this regime. The example is flat;
+it refutes that proposed intermediate estimate, not either rigidity target.
+
+The structural inequality does make the fixed-domain energy convex after
+writing the squared solution as the dependent variable: if the derivative of
+the primitive is the reaction, then
+
+$$
+\frac{d^2}{ds^2}\bigl[-F(\sqrt s)\bigr]
+=\frac{f(t)-tf'(t)}{4t^3}\geq0,\qquad t=\sqrt s.
+$$
+
+The free-boundary energy additionally has the positive phase-cost term. The
+fixed-domain convexity alone does not prove the free-boundary minimization
+needed in the cited geometric classification.
+
 ## A route for the harmonic one-sided case
 
 There is a concrete proof route for the harmonic subclass of the third image.

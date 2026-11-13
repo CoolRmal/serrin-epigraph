@@ -14,6 +14,7 @@ the stated regularity, the quotient energy estimate, cutoff moments, Hölder
 interpolation, the mass-growth contradiction, and a weak strong-maximum principle
 proved using cubic comparison tests and exponential annular barriers. The entire
 chain uses only `propext`, `Classical.choice`, and `Quot.sound`, with no proof holes.
+Its [sandboxed three-kernel Comparator check passed](docs/verification.md).
 
 ## Statements
 

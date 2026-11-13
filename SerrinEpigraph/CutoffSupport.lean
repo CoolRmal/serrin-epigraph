@@ -58,7 +58,8 @@ theorem eventually_negativeQuotient_eq_zero_on_epigraph_of_mem_frontier
 theorem compact_interior_support_negativeQuotient_mul (h : Hypotheses g u f κ)
     {χ : Space (m + 1) → ℝ} (hχ : HasCompactSupport χ) :
     IsCompact (closure (epigraph g ∩ Function.support (fun x ↦ negativeQuotient u x * χ x))) ∧
-      closure (epigraph g ∩ Function.support (fun x ↦ negativeQuotient u x * χ x)) ⊆ epigraph g := by
+      closure (epigraph g ∩ Function.support (fun x ↦ negativeQuotient u x * χ x)) ⊆
+        epigraph g := by
   apply isCompact_closure_inter_support_subset_of_locally_zero_on_frontier
     hχ.mul_left
   intro x hx

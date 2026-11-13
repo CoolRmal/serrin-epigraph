@@ -52,7 +52,7 @@ theorem positive_of_halfBall_propagation {Ω : Set E} {v : E → ℝ}
     ring
   exact fun x hx ↦ (hconn.subset_of_closure_inter_subset hP hnonempty hclosed hx).2
 
-/-- A continuous potential can be absorbed into a positive constant on each compact interior ball. -/
+/-- A continuous potential is absorbed into a positive constant on compact interior balls. -/
 theorem exists_weakSupersolution_on_ball {Ω : Set E} {v a : E → ℝ}
     (hv : ContDiffOn ℝ 1 v Ω) (ha : ContinuousOn a Ω) (hv0 : ∀ x ∈ Ω, 0 ≤ v x)
     (heq : ∀ φ : E → ℝ, ContDiff ℝ 1 φ → HasCompactSupport φ → tsupport φ ⊆ Ω →
