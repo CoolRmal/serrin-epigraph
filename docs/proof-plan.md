@@ -229,8 +229,11 @@ compact-set dominated-convergence step: almost-everywhere convergence of
 levels and vector fields implies convergence of calibration integrals under
 uniform level bounds below one and uniform vector bounds. Its specialization
 to smooth approximations of the zero extension recovers the phase energy.
-The required approximation sequence and its gradient convergence are not yet
-constructed.
+`Mollification.lean` constructs an explicit normalized convolution sequence
+for the zero extension. Every term is smooth, nonnegative, and strictly below
+one, and the sequence converges pointwise to the extension. Uniform compact
+gradient bounds and gradient convergence for this sequence are still needed,
+as is support control for jointly smoothing compact comparison pairs.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

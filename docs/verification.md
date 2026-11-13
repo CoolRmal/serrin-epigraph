@@ -442,3 +442,18 @@ Both new theorems were audited and use only `propext`, `Classical.choice`, and
 The approximation sequence and its gradient convergence have not yet been
 constructed. Free-boundary energy minimality, both rigidity proofs, full
 Comparator acceptance, and Palomar registration remain unfinished.
+
+## Explicit smooth approximation of the zero extension
+
+`Mollification.lean` defines normalized smooth averaging kernels with outer
+radius 1/(n+1), their convolution with a continuous function, and a contraction
+by 1-1/(n+2). It proves smoothness, preservation of nonnegativity and constant
+upper bounds, and pointwise convergence. Applied to the zero extension, the
+contracted sequence consists of smooth functions valued in [0,1) and converges
+to the extension at every point.
+All nine new theorems were audited and use only `propext`, `Classical.choice`,
+and `Quot.sound`. The complete build passed (3691 jobs).
+Uniform compact gradient bounds, convergence of gradients, and support control
+for comparison pairs remain to be proved before applying calibration stability.
+Free-boundary energy minimality, both rigidity proofs, full Comparator acceptance,
+and Palomar registration remain unfinished.

@@ -80,3 +80,4 @@ public import SerrinEpigraph.BoundaryCalibration
 public import SerrinEpigraph.BoundaryCalibrationIntegral
 public import SerrinEpigraph.ClosedCalibrationPath
 public import SerrinEpigraph.CalibrationConvergence
+public import SerrinEpigraph.Mollification
