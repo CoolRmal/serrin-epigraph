@@ -1,5 +1,16 @@
 # Verification record
 
+## Weighted recovery convergence and derivative error
+
+The `SerrinEpigraph Challenge Solution` build passed (3910 jobs).
+All five theorems in `PartitionRecovery.lean` have clean diagnostics and use
+only `propext`, `Classical.choice`, and `Quot.sound`. They establish the normalized
+range, common-phase local L1 convergence, the gradient decomposition, a uniform
+weight-gradient bound, and vanishing scaled integral of its square.
+Sharp potential and profile-gradient estimates are not established by this
+result. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Smooth weights for finite graph covers
 
 The `SerrinEpigraph Challenge Solution` build passed (3909 jobs).

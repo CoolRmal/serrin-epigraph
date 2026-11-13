@@ -2,6 +2,14 @@
 
 ## Geometric classification after minimality
 
+`PartitionRecovery.lean` defines finite weighted recovery competitors, proves
+their normalized range and common-phase local L1 convergence, and separates
+their gradient into profile and weight contributions. For fixed C1 weights,
+the integral of the squared weight-gradient contribution divided by the
+blow-down scale tends to zero on every compact set. The potential need not be
+convex: a sharp bound for the potential of a weighted mixture is still needed,
+as are weighted profile-gradient estimates and perimeter identification.
+
 `GraphPartition.lean` constructs smooth compactly supported weights subordinate
 to the finite half-radius ball cover. They are nonnegative, sum to one on the
 compact base, and sum to at most one everywhere. The construction also handles
