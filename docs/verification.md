@@ -15,6 +15,14 @@ rigidity proofs. This local build is not a new full Comparator acceptance or
 Palomar registration. The earlier successful Comparator snapshot below predates
 the correction and verifies only monotonicity.
 
+## Normalized potential development
+
+The subsequent `NormalizedPotential.lean` addition builds in the complete project
+(3556 jobs). Its positivity, nonnegativity, unique-zero, first derivative, second
+derivative, and positive equilibrium curvature proofs were individually audited;
+each uses only `propext`, `Classical.choice`, and `Quot.sound`. This verifies the
+potential lemmas, not the two still unfinished rigidity classifications.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

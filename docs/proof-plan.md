@@ -104,9 +104,14 @@ branch the potential vanishes at the limiting equilibrium. The proof uses
 classical analytic ingredients not yet implemented in this project.
 
 For the corrected targets, the equilibrium is nondegenerate and the solution lies
-strictly between zero and one. The next obligations are the normalized potential
-conditions, the monotone-solution minimization argument, and the low-dimensional
-or one-sided-graph rigidity classification. These must be proved in Lean; citing
+strictly between zero and one. `NormalizedPotential.lean` now defines the potential as the integral of the
+reaction from the argument to one. It proves strict positivity on the interval
+from zero up to one, the unique zero at one, the derivative formulas on the
+positive half-line, and the strictly positive second derivative at one.
+The remaining potential work includes a suitable extension beyond the solution
+range and uniform estimates near the equilibrium. The monotone-solution
+minimization argument and the low-dimensional or one-sided-graph rigidity
+classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
 
 ## Acceptance

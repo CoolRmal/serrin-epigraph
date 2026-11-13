@@ -24,6 +24,7 @@ public import SerrinEpigraph.MassGrowth
 public import SerrinEpigraph.MomentInterpolation
 public import SerrinEpigraph.Monotonicity
 public import SerrinEpigraph.Nonnegative
+public import SerrinEpigraph.NormalizedPotential
 public import SerrinEpigraph.NormalizedReaction
 public import SerrinEpigraph.PowerEnergy
 public import SerrinEpigraph.PowerIntegrability
