@@ -337,6 +337,11 @@ the differential equations at positive radii are unaffected.
 `RadialBallProfile`, preserving value and slope before the endpoint. The
 combined alternative now yields either a ball profile with strictly negative
 boundary slope and the strict energy bound, or a normalized extension.
+`RadialUnion.lean` constructs the union of an arbitrary compatible family of
+central profiles. It preserves branch values, central data, continuity,
+normalized range, and the differential equations. For bounded branch radii,
+the union domain ends at their supremum. Constructing a maximal compatible
+family and resolving the infinite-radius alternative remain outstanding.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

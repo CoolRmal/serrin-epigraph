@@ -104,3 +104,4 @@ public import SerrinEpigraph.RadialContinuation
 public import SerrinEpigraph.RadialDecrease
 public import SerrinEpigraph.RadialNormalizedContinuation
 public import SerrinEpigraph.RadialZeroEndpoint
+public import SerrinEpigraph.RadialUnion

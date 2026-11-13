@@ -792,3 +792,17 @@ proof holes or main-statement changes were added. This remains conditional
 on a finite zero endpoint; maximal profiles, first-zero existence and radius
 control, large-radius comparisons, both rigidity proofs, full Comparator,
 and Palomar registration remain incomplete.
+
+## Unions of compatible central radial profiles
+
+`RadialUnion.lean` defines a branch-selected union and proves eight theorems:
+agreement on each branch, local agreement at positive radii, continuity on
+the whole union including the center, preservation of the radial system,
+central values and normalized range, and identification of both half-open
+and positive union domains with the interval ending at the radius supremum
+when the radii are bounded. Compatibility is an explicit input here.
+All eight declarations have clean diagnostics and standard axioms only,
+checked by `#print axioms`. The full build passed (3720 jobs). No new proof
+holes or main-statement changes were introduced. A maximal compatible family,
+first-zero existence/radius control, large-radius comparisons, both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain incomplete.
