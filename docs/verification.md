@@ -1,5 +1,19 @@
 # Verification record
 
+## Closed-range Lipschitz free-boundary minimality
+
+`CappedEnergy.lean` proves uniform compact gradient bounds for the cap family,
+pointwise phase-energy convergence including the zero phase, and dominated
+energy-integral convergence. `ClosedLipschitzMinimality.lean` passes the existing
+comparison to the limit. The resulting theorem covers every locally Lipschitz
+competitor valued in [0,1] whose difference from the zero extension has support
+inside the compact integration set. Both new files have clean diagnostics;
+the final minimality theorem's transitive axiom audit uses only `propext`,
+`Classical.choice`, and `Quot.sound`, with no source warnings.
+The geometric classification, both rigidity targets, full Comparator, and
+Palomar registration remain unfinished.
+The complete `SerrinEpigraph Challenge Solution` build passed (3774 jobs).
+
 ## Endpoint competitor cap and gradient convergence
 
 `CappedCompetitor.lean` constructs a ceiling between the reference solution and

@@ -147,3 +147,5 @@ public import SerrinEpigraph.LipschitzMollificationDerivative
 public import SerrinEpigraph.LipschitzCalibration
 public import SerrinEpigraph.LipschitzMinimality
 public import SerrinEpigraph.CappedCompetitor
+public import SerrinEpigraph.CappedEnergy
+public import SerrinEpigraph.ClosedLipschitzMinimality

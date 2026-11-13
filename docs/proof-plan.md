@@ -40,8 +40,9 @@ locally Lipschitz perturbations. `LipschitzMinimality.lean` integrates the
 pointwise energy comparison, transfers it to any compact set containing the
 perturbation support, and removes the energy shift. Thus every locally Lipschitz
 competitor valued in [0,1), equal to the zero extension outside a compact set,
-has no smaller phase energy. Allowing the endpoint value one and completing
-the geometric classification are still necessary.
+has no smaller phase energy. `ClosedLipschitzMinimality.lean` now includes the
+endpoint value one using the cap construction below. The geometric
+classification remains to be proved.
 
 `CappedCompetitor.lean` constructs the endpoint approximation
 
@@ -53,8 +54,11 @@ where U is the zero extension. It preserves the positive phase and the compact
 support of the difference from U, is locally Lipschitz, and is strictly below
 one. Its gradients converge at differentiability points of U, including on
 the set where v equals one (where the totalized gradient of v vanishes by the
-maximum principle for derivatives). The dominated energy-integral limit and
-the resulting closed-range minimality are still to be completed.
+maximum principle for derivatives). `CappedEnergy.lean` proves a parameter-uniform
+compact gradient bound, pointwise phase-energy convergence, and dominated
+energy-integral convergence. `ClosedLipschitzMinimality.lean` passes the energy
+comparison to the limit and proves minimality for all locally Lipschitz
+competitors valued in [0,1] whose difference from U has compact support.
 
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
