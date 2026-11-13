@@ -107,3 +107,96 @@ The remaining precise step is to exclude the nonflat cylindrical blowdown
 alternative for this eight-dimensional entire-graph problem, or to construct
 an entire graph realizing it. None of the checked primary statements does
 either. No Lean theorem, hypothesis, or target was changed by this audit.
+
+## A stronger harmonic consequence: a bound along a sequence suffices
+
+The following is an informal deduction from
+[Engelstein–Fernández-Real–Yu, Lemma 2.8](https://arxiv.org/html/2212.08847)
+and [Edelen–Li–Zhu, Theorem 2.2](https://arxiv.org/html/2606.01715v1#S2.SS1).
+It has not been formalized in Lean and is not a general-reaction theorem.
+
+Define the extrema of the continuous graph on horizontal balls by
+
+$$
+M_+(R)=\max_{|x'|\leq R}g(x'),\qquad
+M_-(R)=\min_{|x'|\leq R}g(x').
+$$
+
+A nonflat entire graphical harmonic Bernoulli solution must satisfy
+
+$$
+\frac{M_+(R)}R\longrightarrow+\infty,
+\qquad
+\frac{M_-(R)}R\longrightarrow-\infty.
+$$
+
+Indeed, suppose instead that some sequence tending to infinity satisfies
+
+$$M_+(R_j)\leq C R_j.$$
+
+The normalized zero extensions rescaled as
+
+$$v_j(x)=\frac{v(R_jx)}{R_j}$$
+
+are harmonic on the fixed connected cylinder
+
+$$D=B'_1\times(C,\infty).$$
+
+By the cited compactness and dichotomy, a subsequence converges locally
+uniformly to a nonzero, nonnegative, one-homogeneous minimizer whose vertical
+translations leave it unchanged. The limit is harmonic on the whole of
+this cylinder, including any points at which it vanishes. Homogeneity gives
+its value zero at the origin; vertical invariance gives its value zero at
+the interior point with horizontal coordinate zero and height greater than
+the cylinder's lower endpoint. The strong maximum principle forces the
+limit to vanish throughout the cylinder. Vertical invariance and homogeneity
+then force it to vanish everywhere, a contradiction.
+
+If instead a sequence satisfies
+
+$$M_-(R_j)\geq-C R_j,$$
+
+the rescaled zero extensions vanish on
+
+$$B'_1\times(-\infty,-C).$$
+
+Their limit does too; vertical invariance and homogeneity again force the
+limit to be identically zero. This proves both necessary divergence
+conditions. In particular, either one-sided linear bound in Image 3 excludes
+the nonflat alternative in the harmonic specialization, in every dimension.
+The argument for the upper bound uses harmonic convergence and the strong
+maximum principle, so it does not need an inference from positivity of each
+rescaled function to positivity of its limit.
+
+## Why smoothness and positive vertical derivative do not add a uniform bound
+
+[De Silva–Jerison, Theorem 1.1, pp. 1–2](https://math.mit.edu/~jerison/gbf.finaldraft.pdf)
+proves smoothness of monotone minimizing free-boundary graphs. Its local
+graph-gradient estimate depends on the cylinder height and the clearance
+from its top and bottom. Together with the graphical minimization and
+monotonicity results above, this makes smoothness automatic for continuous
+entire graphical Bernoulli solutions. The target's local regularity therefore
+does not supply an additional scale-independent estimate. After rescaling
+a horizontal radius to one, the relevant cylinder height is controlled by
+the graph's oscillation divided by that radius; the polynomial square-mass
+bound for the solution does not bound this quantity.
+
+On a smooth graph, the constant normal derivative gives the exact identity
+
+$$
+u_n(x',g(x'))=\frac{\kappa}{\sqrt{1+|\nabla g(x')|^2}}.
+$$
+
+Thus nondegeneracy of the full boundary gradient and strict positivity of
+its vertical component do not give a uniform positive lower bound on that
+component when graph slopes are unbounded. Under rescaling,
+
+$$
+\partial_n\!\left(\frac{u(Rx)}R\right)=u_n(Rx),
+$$
+
+so pointwise positivity can be lost in a blowdown. Excluding that loss,
+or deriving either subsequential height bound above from the exact
+dimension-eight hypotheses, remains an additional mathematical step.
+These observations do not construct a counterexample and do not settle
+the dimension-eight target.

@@ -1,8 +1,10 @@
 # A negative reaction value forces boundedness
 
-This is a self-contained **informal mathematical proof**, not a Lean-verified
-result. It is a useful reduction for the remaining rigidity targets, but does
-not prove either target or justify applying an Allen–Cahn classification.
+This reduction is proved in
+[`ReactionReduction.lean`](../SerrinEpigraph/ReactionReduction.lean), under the
+unchanged common image hypotheses, with no proof holes and only the standard
+Lean axioms. It does not prove either rigidity target or justify applying an
+Allen–Cahn classification.
 
 Assume the common hypotheses from the images. Write
 
@@ -19,7 +21,8 @@ s_0>0,\quad f(s_0)<0
 u(x)\leq s_0\quad\text{for every }x\in\Omega.
 $$
 
-In particular, an unbounded solution under the common hypotheses requires
+The declaration is `Hypotheses.solution_le_of_reaction_neg`. In particular,
+`Hypotheses.reaction_nonneg_of_unbounded` proves that an unbounded solution requires
 
 $$
 f(s)\geq0\qquad\text{for every }s\geq0.
@@ -55,65 +58,74 @@ w=(u-s_0)_+\quad\text{in }\Omega,\qquad
 w=0\quad\text{outside }\Omega.
 $$
 
-The zero extension of the solution is continuous because its boundary trace
-is zero. On any fixed compact set, the support of the excess is therefore
-contained in a compact subset of the domain: on that support the solution is
-at least the strictly positive level used above. In particular, the excess
-belongs locally to the Sobolev space with one square-integrable derivative,
-and its gradient in the domain is
+The zero trace and continuity make the excess vanish in an interior
+neighborhood of every boundary point. Multiplying it by a compactly supported
+cutoff therefore gives support in a compact subset of the domain. To obtain
+continuously differentiable tests, define, for a positive parameter,
 
 $$
-\nabla w=\mathbf1_{\{u>s_0\}}\nabla u
-\qquad\text{almost everywhere}.
+T_\varepsilon(t)=\frac{t_+^2}{t_++\varepsilon},\qquad
+T_\varepsilon'(t)=\frac{t_+(t_++2\varepsilon)}{(t_++\varepsilon)^2}.
 $$
 
-For any compactly supported Lipschitz cutoff, the weak equation may thus be
-tested with the excess times the square of the cutoff. This test is justified
-by smooth approximation inside its compact support in the domain. The usual
-Sobolev chain rule, or smooth approximation of the positive part, gives
+`SmoothExcess.lean` proves these formulas, continuous differentiability,
+convergence to the positive part, and
 
 $$
-\int\eta^2|\nabla w|^2
-+2\int w\eta\,\nabla w\cdot\nabla\eta
-=\int_\Omega f(u)w\eta^2
-\leq-\lambda\int w^2\eta^2.
+0\le T_\varepsilon(t)\le t_+,\qquad
+0\le T_\varepsilon'(t)\le1,\qquad
+T_\varepsilon(t)^2\le T_\varepsilon'(t)t_+^2.
 $$
 
-Here the reaction bound is used only where the excess is positive, and the
-solution is at least its excess there. Completing the square yields
+Test the weak equation with the zero extension of
 
 $$
-\lambda\int w^2\eta^2
-+\int|\nabla(w\eta)|^2
-\leq\int w^2|\nabla\eta|^2.
+T_\varepsilon(u-s_0)\eta^2.
 $$
 
-All integrals without an indicated domain are over the ambient Euclidean
-space. Compactness and the stated regularity make them finite.
+The derivative inequality gives the pointwise Young estimate needed to
+absorb the mixed gradient term. The negative reaction tail then implies
+
+$$
+\lambda\int_\Omega T_\varepsilon(u-s_0)^2\eta^2
+\le\int_\Omega w^2|\nabla\eta|^2.
+$$
+
+Dominated convergence removes the smoothing parameter. The resulting theorem
+`Hypotheses.excess_coercive_estimate` in `CoerciveEstimate.lean` is
+
+$$
+\lambda\int_\Omega w^2\eta^2\le\int_\Omega w^2|\nabla\eta|^2.
+$$
+
+`Excess.lean` proves all test-support, regularity, and integrability facts used
+here. In particular the estimate controls the squared excess, so the original
+square-mass assumption suffices without a fourth-moment bound.
 
 ## 3. Fixed-width cutoffs force exponential square mass
 
 Set
 
 $$
-W(R)=\int_{B_R}w^2,\qquad
-L=\sqrt{\frac2\lambda}>0,
+W(R)=\int_{B_R}w^2.
 $$
 
-and, for each positive radius, choose
+`FixedWidthCutoff.lean` constructs a positive universal constant and, for every
+positive radius and width, a compactly supported continuously differentiable
+cutoff satisfying
 
 $$
-\eta_R(x)=
-\min\left\{1,\frac{(R+L-|x|)_+}{L}\right\}.
+0\le\eta_R\le1,\quad
+\eta_R=1\text{ on }B_R,\quad
+\operatorname{supp}\eta_R\subset B_{R+L},\quad
+|\nabla\eta_R|\le\frac C L.
 $$
 
-This cutoff equals one on the ball of radius under consideration, is zero
-outside the ball with radius increased by the fixed width, and has gradient
-norm at most the reciprocal width almost everywhere. The preceding estimate
-therefore implies
+Choose a fixed width large enough. `ExcessGrowth.lean` proves
 
 $$
-\lambda W(R)\leq L^{-2}W(R+L),\qquad
+L=\frac{2C}{\sqrt\lambda},\qquad
+\lambda W(R)\leq\frac{C^2}{L^2}W(R+L),\qquad
 W(R+L)\geq2W(R).
 $$
 
@@ -144,13 +156,29 @@ V(R)\geq W(R),\qquad
 \geq\frac{\log2}{L}>0.
 $$
 
-This contradicts the exact mass hypothesis. The excess is therefore zero,
-which proves the asserted bound. The conclusion about an unbounded solution
-follows by contraposition for positive arguments and continuity at zero.
+`CoerciveGrowth.lean` proves the contradiction with the exact extended-real
+liminf hypothesis using an eventual exponential lower bound. The excess is
+therefore zero, which proves the asserted bound. The conclusion about an
+unbounded solution follows by contraposition for positive arguments;
+`reaction_nonneg_zero` also proves nonnegativity at zero directly from the
+reaction structure and continuity.
 
-The proof uses the structural inequality, the equation, the zero Dirichlet
+## 4. Nonnegativity throughout the solution range
+
+If the reaction were negative at an interior solution value, the bound just
+proved would make that point a global maximum in the domain. Fermat's theorem
+would give zero gradient there, contradicting strict vertical monotonicity.
+The final two corollaries, `Hypotheses.reaction_nonneg_on_solution` and
+`Hypotheses.laplacian_nonpos`, establish
+
+$$
+f(u(x))\ge0,\qquad \Delta u(x)\le0\qquad(x\in\Omega).
+$$
+
+The boundedness argument uses the structural inequality, the equation, the zero Dirichlet
 trace, and the mass hypothesis. It does not use the constant Neumann datum or
-the established strict vertical monotonicity. In the remaining unbounded,
+the established strict vertical monotonicity. The solution-range corollary does
+use that proved monotonicity theorem. In the remaining unbounded,
 nonnegative-reaction case, this reduction supplies neither integrability of
 the reaction on the positive half-line nor the finite surface tension needed
 by the cited perimeter argument; see [the rigidity audit](rigidity-gap.md).

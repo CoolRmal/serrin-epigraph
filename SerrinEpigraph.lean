@@ -6,11 +6,16 @@ public import SerrinEpigraph.Barrier
 public import SerrinEpigraph.Boundary
 public import SerrinEpigraph.CauchyEnergy
 public import SerrinEpigraph.Connectedness
+public import SerrinEpigraph.CoerciveEstimate
+public import SerrinEpigraph.CoerciveGrowth
 public import SerrinEpigraph.CutoffDerivative
 public import SerrinEpigraph.CutoffMoments
 public import SerrinEpigraph.CutoffSupport
 public import SerrinEpigraph.Energy
+public import SerrinEpigraph.Excess
+public import SerrinEpigraph.ExcessGrowth
 public import SerrinEpigraph.FirstMoment
+public import SerrinEpigraph.FixedWidthCutoff
 public import SerrinEpigraph.Geometry
 public import SerrinEpigraph.GradientPowerTests
 public import SerrinEpigraph.IntegrationByParts
@@ -25,6 +30,9 @@ public import SerrinEpigraph.Quotient
 public import SerrinEpigraph.QuotientRegularity
 public import SerrinEpigraph.QuotientTests
 public import SerrinEpigraph.Reaction
+public import SerrinEpigraph.ReactionReduction
+public import SerrinEpigraph.ReactionTail
+public import SerrinEpigraph.SmoothExcess
 public import SerrinEpigraph.SparseMoments
 public import SerrinEpigraph.StrongMaximum
 public import SerrinEpigraph.StrongPositivity

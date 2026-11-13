@@ -16,6 +16,13 @@ proved using cubic comparison tests and exponential annular barriers. The entire
 chain uses only `propext`, `Classical.choice`, and `Quot.sound`, with no proof holes.
 Its [sandboxed three-kernel Comparator check passed](docs/verification.md).
 
+The [reaction reduction](docs/reaction-reduction.md) is also proved: any positive
+argument with negative reaction value bounds the solution from above. Thus an
+unbounded solution requires nonnegative reaction on the entire nonnegative
+half-line. For every solution, the reaction is nonnegative on its range and the
+solution is superharmonic. These consequences retain the original hypotheses;
+the two rigidity proofs remain incomplete.
+
 ## Statements
 
 Let

@@ -86,6 +86,14 @@ third classical derivative of the original solution.
 
 ## Rigidity
 
+One reduction is now fully proved in `ReactionReduction.lean`: a negative
+reaction value at any positive threshold forces a global upper bound at that
+threshold. The proof uses a smooth positive-part test, an exact squared-excess
+estimate, fixed-width radial cutoffs, and an exponential growth contradiction.
+Consequently unbounded solutions require nonnegative reaction everywhere on
+the nonnegative half-line, and all solutions are superharmonic. See the
+[complete argument and Lean declarations](reaction-reduction.md).
+
 The supplied citations do not currently discharge either rigidity obligation.
 The Allen–Cahn assumptions in Wang–Wei and Beuvin–Farina are not among the common
 image hypotheses. The zero reaction is a concrete admissible edge case that
