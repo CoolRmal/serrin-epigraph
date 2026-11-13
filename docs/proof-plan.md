@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`IntegratedGluing.lean` integrates the localized comparison and combines it
+with cutoff selection. The resulting competitor has energy bounded by the
+cutoff-weighted input energies plus 1/N of the ambient gluing majorant, with
+gradient parameter C N/t. This is an actual integrated competitor estimate;
+vanishing errors and a recovery sequence still require scale selection and
+geometric construction.
+
 `GluingCostIntegral.lean` establishes local integrability and nonnegativity of
 the explicit energy/mismatch majorant, separates its integral into input
 energies and squared mismatch, and selects a smooth cutoff using that actual

@@ -1,5 +1,16 @@
 # Verification record
 
+## Integrated selected gluing comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3878 jobs).
+`IntegratedGluing.lean` proves the integrated localized energy bound and selects
+a smooth cutoff giving weighted input energies plus 1/N of the ambient gluing
+majorant. All integral comparisons include explicit integrability proofs.
+Diagnostics are clean; the selected comparison's transitive audit contains
+only the standard three axioms. The error has not yet been shown to vanish.
+Both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Integrable majorant and its selected cutoff
 
 The `SerrinEpigraph Challenge Solution` build passed (3877 jobs).
