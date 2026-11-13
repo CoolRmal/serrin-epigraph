@@ -87,6 +87,15 @@ and reaction specializations. All three declarations depend only on `propext`,
 translated distributional equation has not yet been established; the two main
 rigidity proofs and full Comparator acceptance remain outstanding.
 
+## Distributional and translated equations
+
+`DistributionalEquation.lean` proves second integration by parts, the PDE with
+both derivatives on the test, translation covariance of the Laplacian, and the
+eventual translated identity for each fixed compact test. All five public
+theorems were individually axiom-audited and use only the three permitted
+standard axioms. The full build passed (3577 jobs). The limit equation and the
+two main rigidity proofs remain unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

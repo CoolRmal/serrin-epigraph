@@ -12,6 +12,7 @@ public import SerrinEpigraph.CutoffDerivative
 public import SerrinEpigraph.CutoffMoments
 public import SerrinEpigraph.CutoffSupport
 public import SerrinEpigraph.EquilibriumEstimates
+public import SerrinEpigraph.DistributionalEquation
 public import SerrinEpigraph.Energy
 public import SerrinEpigraph.Excess
 public import SerrinEpigraph.ExcessGrowth

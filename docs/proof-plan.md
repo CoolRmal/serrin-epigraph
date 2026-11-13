@@ -135,9 +135,12 @@ heights, and proves pointwise convergence of ambient vertical translates and
 of their nonlinear reactions. `TranslateIntegrals.lean` now proves convergence
 of compact weighted integrals for every continuous observable on the solution
 range, including the solution and reaction. It uses eventual compact-domain
-inclusion, compact bounds, and filter dominated convergence. Establishing the
-translated distributional identity and using it to identify the limit with one
-remain necessary steps.
+inclusion, compact bounds, and filter dominated convergence. `DistributionalEquation.lean` now proves the second integration-by-parts
+identity, the distributional equation, and its translated form for every fixed
+compact test at sufficiently large heights. The next step is to restrict both
+integrands to the compact test support, verify the Laplacian weight's continuity
+and support, and combine the established limits. Identifying the resulting
+limit profile with one still remains.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
