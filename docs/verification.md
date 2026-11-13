@@ -1,5 +1,24 @@
 # Verification record
 
+## Exact Neumann energy identity
+
+`InwardTangent.lean` proves that right-hand velocities of curves in a set belong
+to its positive tangent cone, constructs such curves above the graph tangent
+hyperplane, and establishes inward-normal cone membership. Consequently
+`AnnularSlopeComparison.lean` removes the intermediate geometric hypothesis,
+applies arbitrary-radius exterior tangent balls, and proves
+
+$$
+\kappa^2\le 2W(0),\qquad \kappa^2=2W(0).
+$$
+
+Both new modules have clean Lean diagnostics. The energy identity's transitive
+axiom audit uses only `propext`, `Classical.choice`, and `Quot.sound`, with no
+source warnings. Both rigidity targets, full Comparator, and Palomar registration
+remain unfinished. Subsequent work must remove the energy shift in minimality
+and prove the required geometric classification.
+The complete `SerrinEpigraph Challenge Solution` build passed (3766 jobs).
+
 ## Exterior contact directional derivatives
 
 `AnnularContactDerivative.lean` proves the directional derivative comparison

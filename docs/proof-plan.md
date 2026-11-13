@@ -9,10 +9,19 @@ shift using continuity of the radial profile on its closed interval, then
 extends the inequality to the closure of the comparison domain. Comparing
 contact derivatives is now implemented in `AnnularContactDerivative.lean` for
 every direction in the closed-domain positive tangent cone. Cauchy–Schwarz and
-the Neumann condition give an upper bound by the inner radial slope, conditional
-on the inward normal belonging to that cone. The remaining geometric step is
-to establish this cone membership from the differentiability of the graph;
-the final energy upper bound still needs arbitrary-radius exterior contact.
+the Neumann condition give an upper bound by the inner radial slope.
+`InwardTangent.lean` proves inward-normal cone membership by constructing a
+differentiable curve in the closed epigraph. `AnnularSlopeComparison.lean`
+applies arbitrary-radius exterior contact and the annular existence theorem to
+prove the upper energy bound, then combines it with the lower bound to obtain
+
+$$
+\kappa^2=2W(0)=2\int_0^1 f(s)\,ds.
+$$
+
+This identity is proved without additional hypotheses. Next use it to remove
+the energy shift from the existing compact C¹ comparison, extend minimality to
+the required competitor class, and complete the geometric rigidity arguments.
 
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
@@ -28,13 +37,11 @@ $$
 2W(0)\le\kappa^2.
 $$
 
-The opposite inequality, needed to remove the energy shift in minimality, remains
-to be proved (the exterior tangent-ball/annulus comparison route).
+The opposite inequality is now proved by the exterior tangent-ball/annulus route.
 `AnnularEnergy.lean` now supplies the increasing-segment estimates for that route:
 decreasing slope, curvature energy loss bounded by value increase, a preserved
 positive slope margin, and a finite length bound. These are conditional ODE
-estimates; construction of the annular barrier and its comparison with the
-epigraph solution remain to be done.
+estimates used by the now completed annular barrier construction and comparison.
 `ReactionSmoothExtension.lean` constructs a globally continuously differentiable
 reaction agreeing with the original on nonnegative states, and uses it to start
 the radial initial value problem at zero at any positive radius.

@@ -139,3 +139,5 @@ public import SerrinEpigraph.ExteriorBallGeometry
 public import SerrinEpigraph.AnnularComparison
 public import SerrinEpigraph.TangentAnnularComparison
 public import SerrinEpigraph.AnnularContactDerivative
+public import SerrinEpigraph.InwardTangent
+public import SerrinEpigraph.AnnularSlopeComparison
