@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`RecoveryPositivePhase.lean` proves that extended profiles are positive exactly
+at positive times, and that their convex graph mixture has the same epigraph
+as positive phase wherever weights sum to one. It separates normalized phase
+energy into a full kinetic term and an indicated potential term. The full
+mixture energy defect then equals the kinetic defect plus the ordinary potential
+defect: below the graph, the otherwise nonzero potential at zero cancels because
+the weights sum to one. This identity connects the preceding integral estimates;
+their assembly and the sharp weighted principal recovery bound remain to be done.
+
 `PartitionKineticIntegral.lean` proves local Lipschitz regularity of finite
 partition recovery and integrates its kinetic bound with the principal patch
 weights retained. For fixed C1 weights and normalized profiles, diverging

@@ -237,3 +237,4 @@ public import SerrinEpigraph.RecoveryScaleMismatch
 public import SerrinEpigraph.PartitionOverlap
 public import SerrinEpigraph.GraphOverlapIntegral
 public import SerrinEpigraph.PartitionKineticIntegral
+public import SerrinEpigraph.RecoveryPositivePhase

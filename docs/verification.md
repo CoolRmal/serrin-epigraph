@@ -1,5 +1,16 @@
 # Verification record
 
+## Positive phases and complete energy defect
+
+The `SerrinEpigraph Challenge Solution` build passed (3917 jobs).
+All five theorems in `RecoveryPositivePhase.lean` have clean diagnostics and use
+only the standard three axioms. They identify the common positive phase of
+graph recovery mixtures, separate kinetic energy from the phase indicator,
+and express the complete energy defect as kinetic plus ordinary potential
+defects, including the cancellation below the graph. Integrated assembly and
+sharp weighted principal recovery remain unfinished. Both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Integrated partition kinetic comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3916 jobs).
