@@ -203,3 +203,4 @@ public import SerrinEpigraph.GluingScaleChoice
 public import SerrinEpigraph.GluingMismatchConvergence
 public import SerrinEpigraph.AnnularTransitionCost
 public import SerrinEpigraph.AnnularGluingSequence
+public import SerrinEpigraph.GluedLimit

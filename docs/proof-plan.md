@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluedLimit.lean` proves that the glued function's L1 distance to the candidate
+is bounded by the input mismatch outside the region where the cutoff is one.
+Consequently, vanishing annular L1 mismatch preserves the candidate's limit
+on the whole outer domain. Together with annular gluing energy control, this
+provides both convergence and energy tools for a recovery competitor once its
+unmodified input sequence has been constructed.
+
 `AnnularGluingSequence.lean` combines annular cutoff selection, the integrated
 comparison, and the scale choice into a sequence-level gluing theorem with an
 error tending to zero. The input energy bound and common local L1 limit are

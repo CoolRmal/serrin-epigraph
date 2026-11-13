@@ -1,5 +1,15 @@
 # Verification record
 
+## Preservation of candidate limits
+
+The `SerrinEpigraph Challenge Solution` build passed (3883 jobs).
+`GluedLimit.lean` bounds the glued/candidate difference pointwise and in local
+integral norm, then proves candidate-limit preservation from vanishing mismatch
+outside the cutoff's inner region. Diagnostics are clean; the convergence
+theorem's transitive audit contains only the standard three axioms. Recovery
+construction and geometric classification remain unfinished, as do both Main
+rigidity proofs, full Comparator, and Palomar registration.
+
 ## Annular gluing sequence with vanishing error
 
 The `SerrinEpigraph Challenge Solution` build passed (3882 jobs).
