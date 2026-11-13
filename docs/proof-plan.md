@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`RecoveryEnergyLocalization.lean` proves zero energy at pure phases, including
+transition endpoints, and localizes the density bound to the open transition
+layer. For a one-Lipschitz coordinate, it integrates this bound on compact
+sets using almost-everywhere differentiability. Estimating the resulting
+layer integral by geometric perimeter remains the next recovery obligation.
+
 `GeometricRecoveryEnergy.lean` proves the extended-profile ODE on the open
 transition interval, the spatial gradient chain rule, and the interior
 rescaled energy bound R(2W(v)+δ) when the coordinate gradient has norm at

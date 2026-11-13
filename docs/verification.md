@@ -1,5 +1,15 @@
 # Verification record
 
+## Localized recovery energy integral
+
+The `SerrinEpigraph Challenge Solution` build passed (3896 jobs).
+`RecoveryEnergyLocalization.lean` proves zero energy at both pure phases,
+localization to the open transition layer, and the compact-set integral bound
+for one-Lipschitz coordinates. Diagnostics are clean; the integral theorem's
+transitive audit uses only the standard three axioms. The geometric perimeter
+upper bound, both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Interior geometric recovery energy
 
 The `SerrinEpigraph Challenge Solution` build passed (3895 jobs).

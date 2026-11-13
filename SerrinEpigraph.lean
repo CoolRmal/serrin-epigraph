@@ -216,3 +216,4 @@ public import SerrinEpigraph.RecoveryActionBounds
 public import SerrinEpigraph.RecoveryThickness
 public import SerrinEpigraph.GeometricRecoveryProfile
 public import SerrinEpigraph.GeometricRecoveryEnergy
+public import SerrinEpigraph.RecoveryEnergyLocalization
