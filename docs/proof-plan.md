@@ -317,7 +317,12 @@ bounded to the right of any interior radius. Both left endpoint limits then
 exist, and the value limit lies in [0,1]. `RadialEndpointDerivative.lean`
 completes both components by their endpoint limits and proves both radial
 equations as left derivatives there, including when the value limit is zero.
-Continuation beyond a finite endpoint remains to be proved.
+`RadialContinuation.lean` now splices the original solution to a local
+solution through a positive completed endpoint and proves the full derivative
+at the junction. The resulting interval is strictly larger. It proves the
+alternative that a normalized radial solution has zero endpoint value or
+continues past the finite endpoint. This does not yet construct maximal
+profiles or prove that a first zero occurs at a desired radius.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

@@ -735,3 +735,17 @@ The full build passed (3715 jobs), and `#print axioms` audits report only
 `propext`, `Classical.choice`, and `Quot.sound`. No new proof holes were added.
 Cross-endpoint continuation, large-radius comparisons, both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain incomplete.
+
+## Continuation beyond a finite positive endpoint
+
+`RadialContinuation.lean` proves five theorems: local agreement with each
+splice branch, differentiability at the splice from matching one-sided
+and full derivatives, actual extension beyond a positive completed endpoint,
+and the zero-limit-or-continuation alternative for normalized radial systems.
+The new system preserves both original components throughout the old interval
+and satisfies both equations at the junction, not only away from it.
+All five declarations have clean diagnostics and only standard axioms, checked
+with `#print axioms`. The full build passed (3716 jobs). No new proof holes
+or main-statement changes were introduced. Maximal profiles, prescribed-radius
+Dirichlet solutions and large-radius comparisons, both rigidity proofs, full
+Comparator acceptance, and Palomar registration remain incomplete.
