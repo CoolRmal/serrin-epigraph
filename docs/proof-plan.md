@@ -143,6 +143,12 @@ established limits with uniqueness of limits. The lifted horizontal profile now
 satisfies the semilinear equation in distributions and is distributionally
 superharmonic. Identifying this profile with one still remains; the argument
 must use the reaction structure, not merely bounded superharmonicity.
+`PolynomialBarrier.lean` now constructs the squared quadratic on a ball,
+computes its first and second derivatives and exact Laplacian, and proves its
+positive interior values, zero sphere values, and an explicit inverse-radius-
+squared bound for the negative Laplacian relative to the polynomial. The next
+comparison step is to rule out interior first contact with the classical
+solution, then use large translated balls to identify the ray limits with one.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

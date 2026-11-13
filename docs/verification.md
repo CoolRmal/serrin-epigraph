@@ -106,6 +106,15 @@ three permitted axioms. The full build passed (3578 jobs). Constancy of the
 profile, both main rigidity classifications, full Comparator acceptance, and
 Palomar registration remain unfinished.
 
+## Polynomial ball comparison function
+
+`PolynomialBarrier.lean` constructs a smooth squared quadratic, computes its
+first and second directional derivatives and Laplacian, and proves its center,
+sphere, positivity, and negative-Laplacian bounds. All eight public theorems use
+only the standard three axioms. The full build passed (3579 jobs). Comparison
+with the solution and the resulting identification of its ray limits remain
+to be formalized; no main rigidity target has been closed by this addition.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

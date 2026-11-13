@@ -30,6 +30,7 @@ public import SerrinEpigraph.Monotonicity
 public import SerrinEpigraph.Nonnegative
 public import SerrinEpigraph.NormalizedPotential
 public import SerrinEpigraph.NormalizedReaction
+public import SerrinEpigraph.PolynomialBarrier
 public import SerrinEpigraph.PotentialComparison
 public import SerrinEpigraph.PowerEnergy
 public import SerrinEpigraph.PowerIntegrability
