@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`EuclideanProductVolume.lean` proves volume preservation under the horizontal/
+last-coordinate decomposition, then transfers normalized graph-height
+distribution bounds from product coordinates to actual Euclidean volume.
+Combining this with gradient normalization gives the next local recovery
+energy estimate; global perimeter identification and chart assembly remain.
+
 `GraphHeightGradient.lean` computes the differential and Euclidean gradient of
 graph height, proves its squared norm is 1 plus the squared graph-gradient
 norm, and verifies unit-gradient control after normalization by a positive

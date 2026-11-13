@@ -1,5 +1,14 @@
 # Verification record
 
+## Euclidean coordinate-volume transfer
+
+The `SerrinEpigraph Challenge Solution` build passed (3904 jobs).
+`EuclideanProductVolume.lean` verifies the volume-preserving horizontal/vertical
+split and the normalized graph-height measure bound for Euclidean subsets.
+Diagnostics are clean and the measure-bound theorem uses only the standard
+three axioms. Local recovery energy assembly and perimeter estimates, both
+Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Euclidean graph-height gradient
 
 The `SerrinEpigraph Challenge Solution` build passed (3903 jobs).
