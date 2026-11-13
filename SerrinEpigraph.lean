@@ -66,3 +66,4 @@ public import SerrinEpigraph.LevelGradient
 public import SerrinEpigraph.FoliationEquation
 public import SerrinEpigraph.VectorIntegrationByParts
 public import SerrinEpigraph.FoliationPullback
+public import SerrinEpigraph.CalibrationVariation

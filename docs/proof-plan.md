@@ -179,8 +179,11 @@ of the spatial divergence with the level derivative of the calibration energy
 component. `VectorIntegrationByParts.lean` supplies the compact-test vector
 integration identity. `FoliationPullback.lean` proves the comparison field
 regularity, divergence formula, and resulting integrated identity for arbitrary
-C¹ comparison functions taking values in (0,1). Constancy of the calibrated
-energy along comparison paths and the energy inequality remain to be proved.
+C¹ comparison functions taking values in (0,1). `CalibrationVariation.lean`
+defines the calibrated density, proves its derivative along differentiable
+level/gradient paths, and proves that its integrated first variation vanishes
+for compact variations. Differentiation under the integral, constancy of the
+calibrated energy along comparison paths, and the energy inequality remain.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

@@ -254,3 +254,17 @@ only `propext`, `Classical.choice`, and `Quot.sound` occur.
 Constancy of calibrated energy along comparison paths and local energy
 minimization remain unproved. The two rigidity theorems, complete Comparator
 acceptance, and Palomar registration remain unfinished.
+
+## Vanishing integrated first variation
+
+`CalibrationVariation.lean` defines the calibrated density, proves its chain
+rule along differentiable level/gradient paths, and proves its integrated first
+variation is zero for compact variations. Its pointwise upper bound by the
+ordinary energy and equality on the solution are recorded as named lemmas.
+`VectorIntegrationByParts.lean` also now proves the integrable sum form of the
+vector first-variation identity. All five new public theorem declarations were
+audited individually: only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`lake build SerrinEpigraph Challenge Solution` passed (3598 jobs).
+Differentiation under the integral and constancy along comparison paths remain
+to be established. Both rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.

@@ -88,4 +88,32 @@ theorem integral_inner_field_gradient_eq_zero {F : E → E} {φ : E → ℝ} {Ω
   rw [he]
   simp
 
+/-- The sum of the field-test pairing and its trace term has zero integral. -/
+theorem integral_field_variation_eq_zero {F : E → E} {φ : E → ℝ} {Ω : Set E}
+    (hΩ : IsOpen Ω) (hF : ContDiffOn ℝ 1 F Ω) (hφ : ContDiff ℝ 1 φ)
+    (hφc : HasCompactSupport φ) (hsub : tsupport φ ⊆ Ω)
+    {ι : Type*} [Fintype ι] (b : OrthonormalBasis ι ℝ E) :
+    (∫ x, inner ℝ (F x) (gradient φ x) +
+      (∑ i, inner ℝ (fderiv ℝ F x (b i)) (b i)) * φ x ∂μ) = 0 := by
+  have hg : Continuous (gradient φ) :=
+    (toDual ℝ E).symm.continuous.comp (hφ.continuous_fderiv one_ne_zero)
+  have hleft : Integrable (fun x ↦ inner ℝ (F x) (gradient φ x)) μ := by
+    apply compact_integrable hφc
+      ((hF.continuousOn.mono hsub).inner hg.continuousOn)
+    intro x hx
+    by_contra hn
+    have hz : gradient φ x = 0 := by
+      simp [gradient, fderiv_of_notMem_tsupport ℝ hn]
+    exact hx (by simp [hz])
+  have hright : Integrable
+      (fun x ↦ (∑ i, inner ℝ (fderiv ℝ F x (b i)) (b i)) * φ x) μ := by
+    have hd := (hF.continuousOn_fderiv_of_isOpen hΩ le_rfl).mono hsub
+    apply compact_integrable hφc
+    · exact (continuousOn_finsetSum _ (fun i _ ↦
+        (hd.clm_apply continuousOn_const).inner continuousOn_const)).mul
+          hφ.continuous.continuousOn
+    · exact (Function.support_mul_subset_right _ _).trans (subset_tsupport φ)
+  rw [integral_add hleft hright, integral_inner_field_gradient hΩ hF hφ hφc hsub b]
+  ring
+
 end SerrinEpigraph
