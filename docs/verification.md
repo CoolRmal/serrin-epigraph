@@ -720,3 +720,18 @@ No new proof holes or main-statement changes were introduced. These results
 do not yet give the differential equation at the endpoint or an extension
 past it. Those steps, large-radius comparisons, both rigidity proofs, full
 Comparator acceptance, and Palomar registration remain unfinished.
+
+## Differential equations at a completed finite endpoint
+
+`RadialEndpointDerivative.lean` proves four theorems: changing an endpoint
+value preserves derivatives elsewhere, completion by a left limit has the
+limiting left derivative, both radial equations hold from the left for
+completed components, and normalized radial systems under the original
+hypotheses admit such completed endpoints. The final result includes endpoint
+value zero; it uses reaction continuity within the nonnegative half-line
+rather than assuming continuity from negative values.
+All four declarations have clean diagnostics and standard axioms only.
+The full build passed (3715 jobs), and `#print axioms` audits report only
+`propext`, `Classical.choice`, and `Quot.sound`. No new proof holes were added.
+Cross-endpoint continuation, large-radius comparisons, both rigidity proofs,
+full Comparator acceptance, and Palomar registration remain incomplete.

@@ -314,8 +314,10 @@ regularity and obtains the limits through Lipschitz extensions.
 `RadialBounds.lean` removes the slope-bound assumption for solutions valued
 in (0,1): energy decreases on positive-radius convex domains, so slope is
 bounded to the right of any interior radius. Both left endpoint limits then
-exist, and the value limit lies in [0,1]. Endpoint differential equations and
-continuation beyond a finite endpoint remain to be proved.
+exist, and the value limit lies in [0,1]. `RadialEndpointDerivative.lean`
+completes both components by their endpoint limits and proves both radial
+equations as left derivatives there, including when the value limit is zero.
+Continuation beyond a finite endpoint remains to be proved.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 
