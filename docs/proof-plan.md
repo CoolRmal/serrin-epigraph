@@ -22,8 +22,10 @@ intermediate positive-phase region with a fixed level below equilibrium.
 difference between the dilated solution and its phase indicator to zero.
 `WeightedGradient.lean` supplies uniform potential-weighted gradient integral
 bounds. `PhasePrimitive.lean` gives the primitive derivative and separates the
-two equilibrium values. The spatial chain rule and compactness of the phase
-indicators are still to be proved.
+two equilibrium values. `PhasePrimitiveGradient.lean` proves the spatial chain
+rule everywhere for the totalized gradient, including the zero phase, and
+obtains the uniform primitive-gradient integral bound. Local Lipschitz regularity
+of this composite and compactness of the phase indicators remain to be proved.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

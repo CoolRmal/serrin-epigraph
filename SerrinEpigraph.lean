@@ -159,3 +159,4 @@ public import SerrinEpigraph.TransitionVolume
 public import SerrinEpigraph.PhaseIndicatorApproximation
 public import SerrinEpigraph.WeightedGradient
 public import SerrinEpigraph.PhasePrimitive
+public import SerrinEpigraph.PhasePrimitiveGradient

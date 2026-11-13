@@ -1,5 +1,31 @@
 # Verification record
 
+## Spatial chain rule and primitive gradient bound
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3810 jobs).
+
+`PhasePrimitiveGradient.lean` proves the spatial gradient identity
+
+$$
+\nabla\Phi(U)=\sqrt{2W(U)}\,\nabla U,\qquad
+\Phi(s)=\int_0^s\sqrt{2W(t)}\,dt.
+$$
+
+This identity holds everywhere for Mathlib's totalized gradient: the interior
+uses the ordinary chain rule, while the zero phase (including the boundary)
+uses the local-minimum derivative theorem and the nonnegativity of the primitive.
+Taking norms and applying dilation yields
+
+$$
+\int_{\overline B_r}|\nabla(\Phi(U(R\cdot)))|\le C r^m
+\qquad(R>0,\ Rr\ge1).
+$$
+
+Diagnostics and the transitive audit are clean, with only the standard three
+axioms. Local Lipschitz regularity of the composite, compactness, and geometric
+classification still need completion. The two rigidity targets, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Weighted gradient and phase primitive
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3809 jobs).
