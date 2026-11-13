@@ -70,6 +70,32 @@ theorem isWeakSupersolution_of_weak_equation {Ω : Set E} {v a : E → ℝ} {M :
   · have hz : φ x = 0 := Function.notMem_support.mp fun hy ↦ hx (hs (subset_tsupport φ hy))
     simp [hz]
 
+/-- A classical supersolution satisfies the corresponding weak inequality. -/
+theorem isWeakSupersolution_of_classical {Ω : Set E} {v : E → ℝ} {M : ℝ}
+    (hΩ : IsOpen Ω) (hv : ContDiffOn ℝ 2 v Ω)
+    (hpde : ∀ x ∈ Ω, 0 ≤ -(Δ v) x + M * v x) :
+    IsWeakSupersolution μ Ω M v := by
+  intro φ hφ hc hs hφ0
+  have hpair := integrable_inner_gradient_of_hasCompactSupport (μ := μ) hΩ
+    (hv.of_le (by norm_num)) hφ hc hs
+  have hmul : Integrable (fun x ↦ M * v x * φ x) μ :=
+    integrable_mul_of_tsupport_subset (continuousOn_const.mul hv.continuousOn)
+      hφ.continuous hc hs
+  have hlap : Integrable (fun x ↦ -((Δ v) x * φ x)) μ := by
+    simpa only [Pi.neg_def] using
+      (integrable_laplacian_mul_of_hasCompactSupport (μ := μ) hΩ hv hφ hc hs).neg
+  rw [integral_add hpair hmul,
+    integral_inner_gradient_eq_neg_laplacian_mul hΩ hv hφ hc hs, ← integral_neg,
+    ← integral_add hlap hmul]
+  apply integral_nonneg
+  intro x
+  change 0 ≤ -((Δ v) x * φ x) + M * v x * φ x
+  by_cases hx : x ∈ Ω
+  · have hh := mul_nonneg (hpde x hx) (hφ0 x)
+    nlinarith
+  · have hz : φ x = 0 := Function.notMem_support.mp fun hy ↦ hx (hs (subset_tsupport φ hy))
+    simp [hz]
+
 /-- Subtracting a classical subsolution and adding a nonnegative constant preserves comparison. -/
 theorem IsWeakSupersolution.sub_classical_add_const {Ω : Set E} {v b : E → ℝ} {M δ : ℝ}
     (hweak : IsWeakSupersolution μ Ω M v) (hΩ : IsOpen Ω)

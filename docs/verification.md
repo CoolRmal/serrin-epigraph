@@ -1,5 +1,18 @@
 # Verification record
 
+## Strong comparison infrastructure
+
+Added `isWeakSupersolution_of_classical`, `IsWeakSupersolution.positive`, and
+`IsWeakSupersolution.eq_zero_of_zero`. These convert classical differential
+inequalities into weak inequalities and rule out an interior zero for a
+nonnegative supersolution having a positive value on a connected open domain.
+The classical conversion and zero-propagation theorem were individually audited:
+only `propext`, `Classical.choice`, and `Quot.sound` occur. The complete command
+`lake build SerrinEpigraph Challenge Solution` passed (3734 jobs).
+This supplies the strong maximum principle needed for the ball comparison;
+the nonlinear ball comparison and the two rigidity targets remain unfinished.
+No full Comparator acceptance or Palomar registration is claimed.
+
 The strict monotonicity theorem is proved. The two rigidity theorems remain
 unproved, so this is not a completed three-theorem formalization or a Palomar
 registration.

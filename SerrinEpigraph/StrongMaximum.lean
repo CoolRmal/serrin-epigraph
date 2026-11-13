@@ -52,6 +52,30 @@ theorem positive_of_halfBall_propagation {Ω : Set E} {v : E → ℝ}
     ring
   exact fun x hx ↦ (hconn.subset_of_closure_inter_subset hP hnonempty hclosed hx).2
 
+/-- A nonnegative weak supersolution with one positive value is positive throughout a
+connected open domain. -/
+theorem IsWeakSupersolution.positive {Ω : Set E} {v : E → ℝ} {M : ℝ}
+    (hweak : IsWeakSupersolution μ Ω M v) (hΩ : IsOpen Ω)
+    (hconn : IsPreconnected Ω) (hv : ContDiffOn ℝ 1 v Ω)
+    (hv0 : ∀ x ∈ Ω, 0 ≤ v x) (hM : 0 < M) (hex : ∃ x ∈ Ω, 0 < v x) :
+    ∀ x ∈ Ω, 0 < v x := by
+  apply positive_of_halfBall_propagation hΩ hconn hv.continuousOn hex
+  intro c R hR hball hc x hx
+  apply hweak.pos_on_ball hΩ hv hv0 hM hR hball hc x
+  exact (ball_subset_ball (by linarith : R / 2 ≤ R)) hx
+
+/-- An interior zero forces a nonnegative weak supersolution to vanish on a connected domain. -/
+theorem IsWeakSupersolution.eq_zero_of_zero {Ω : Set E} {v : E → ℝ} {M : ℝ}
+    (hweak : IsWeakSupersolution μ Ω M v) (hΩ : IsOpen Ω)
+    (hconn : IsPreconnected Ω) (hv : ContDiffOn ℝ 1 v Ω)
+    (hv0 : ∀ x ∈ Ω, 0 ≤ v x) (hM : 0 < M)
+    {x : E} (hx : x ∈ Ω) (hz : v x = 0) : ∀ y ∈ Ω, v y = 0 := by
+  intro y hy
+  by_contra hne
+  have hypos : 0 < v y := lt_of_le_of_ne (hv0 y hy) (Ne.symm hne)
+  have hxpos := hweak.positive hΩ hconn hv hv0 hM ⟨y, hy, hypos⟩ x hx
+  simpa [hz] using hxpos
+
 /-- A continuous potential is absorbed into a positive constant on compact interior balls. -/
 theorem exists_weakSupersolution_on_ball {Ω : Set E} {v a : E → ℝ}
     (hv : ContDiffOn ℝ 1 v Ω) (ha : ContinuousOn a Ω) (hv0 : ∀ x ∈ Ω, 0 ≤ v x)

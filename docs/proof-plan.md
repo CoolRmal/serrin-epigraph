@@ -1,5 +1,10 @@
 # Proof obligations
 
+The ball comparison now has a proved strong maximum principle for nonnegative
+weak supersolutions and a classical-to-weak conversion. Next, apply these to
+the nonnegative difference between a scaled epigraph solution and a radial ball
+solution, using the reaction quotient inequality to exclude interior contact.
+
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
 assumptions restored from the source context; see [scope correction](scope-correction.md).
