@@ -1,5 +1,22 @@
 # Verification record
 
+## Uniformly convergent subsequences of mollified primitives
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3815 jobs).
+
+`MollifiedPrimitiveCompactness.lean` applies Arzelà–Ascoli to a uniformly
+Lipschitz sequence of bounded continuous functions on a compact metric space,
+then extracts a strictly increasing subsequence with uniform convergence.
+It applies this result to any sequence of dilations of the phase primitive,
+restricted to any fixed closed ball and mollified at any fixed index. The
+limit is a bounded continuous function on that ball.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. The subsequence may depend on the ball
+and mollification index; a simultaneous diagonal choice and uniform removal
+of mollification are still needed. Both rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Uniform Lipschitz bounds for fixed mollification
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3813 jobs).

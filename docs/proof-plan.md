@@ -33,7 +33,9 @@ that the local integral error between the phase primitive and its two-phase
 indicator approximation tends to zero, linking their future compactness arguments.
 `MollificationFamilyBounds.lean` gives a dilation-independent local Lipschitz
 constant for the primitive family at each fixed mollification index. Subsequence
-extraction and uniform control of the mollification error remain necessary.
+extraction for a fixed ball and fixed index is now proved in
+`MollifiedPrimitiveCompactness.lean` using Arzelà–Ascoli. A common diagonal
+subsequence and uniform control of the mollification error remain necessary.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
