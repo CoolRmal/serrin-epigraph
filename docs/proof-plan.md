@@ -328,6 +328,11 @@ regular central profiles, with strictly negative slope at every positive
 radius. It packages a decreasing local initial-value solution, propagates
 strict decrease to half-open intervals, and shows a finite endpoint limit
 is strictly below the central value. No prescribed boundary value is used.
+`RadialNormalizedContinuation.lean` strengthens the continuation alternative:
+the extended solution stays in (0,1), preserves both original components
+including their center values, and remains continuous up to the center.
+It repairs the center by updating the extended components and verifies that
+the differential equations at positive radii are unaffected.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

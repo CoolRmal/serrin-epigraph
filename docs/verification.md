@@ -762,3 +762,17 @@ with `#print axioms`. The complete build passed (3717 jobs). No proof holes
 or main-statement changes were added. Maximal profiles, first-zero/radius
 control and large-radius comparisons, both rigidity proofs, full Comparator
 acceptance, and Palomar registration remain incomplete.
+
+## Normalized continuation preserving the central data
+
+`RadialNormalizedContinuation.lean` proves three theorems: continuation with
+values in (0,1) when the endpoint value is interior, continuity of a center
+update on the enlarged interval, and the zero-limit-or-normalized-continuation
+alternative for regular central profiles. The final theorem preserves value
+and slope on the full old half-open interval, including the center, and
+proves continuity of both components on the enlarged half-open interval.
+All three declarations have clean diagnostics and standard axioms only,
+verified by `#print axioms`. The full build passed (3718 jobs). No new proof
+holes or main-statement changes were introduced. Maximal positive profiles,
+first-zero/radius control, large-radius comparisons, both rigidity proofs,
+full Comparator acceptance, and Palomar registration remain incomplete.
