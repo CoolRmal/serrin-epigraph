@@ -63,3 +63,4 @@ public import SerrinEpigraph.WeakQuotient
 public import SerrinEpigraph.LevelHeightDerivative
 public import SerrinEpigraph.LevelHeightSmooth
 public import SerrinEpigraph.LevelGradient
+public import SerrinEpigraph.FoliationEquation

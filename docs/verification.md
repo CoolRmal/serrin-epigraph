@@ -229,3 +229,15 @@ individually: only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The divergence identity and integrated minimization argument are not yet proved.
 The two main rigidity theorems, full Comparator acceptance, and Palomar
 registration remain unfinished.
+
+## Foliation equation and calibration cancellation
+
+`FoliationEquation.lean` proves the differential along a solution leaf, the
+Laplacian trace formula, and the chain-rule equation for the foliation gradient.
+Combining it with the level derivative of the energy component gives the
+calibration divergence cancellation identity. All five declarations were
+audited individually and use only `propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3595 jobs).
+This does not yet prove integrated calibration or local energy minimization.
+Both rigidity proofs, full Comparator acceptance, and Palomar registration
+remain unfinished.
