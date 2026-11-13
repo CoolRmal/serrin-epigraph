@@ -16,6 +16,11 @@ $$
 
 The opposite inequality, needed to remove the energy shift in minimality, remains
 to be proved (the exterior tangent-ball/annulus comparison route).
+`AnnularEnergy.lean` now supplies the increasing-segment estimates for that route:
+decreasing slope, curvature energy loss bounded by value increase, a preserved
+positive slope margin, and a finite length bound. These are conditional ODE
+estimates; construction of the annular barrier and its comparison with the
+epigraph solution remain to be done.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

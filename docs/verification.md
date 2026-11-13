@@ -1,5 +1,23 @@
 # Verification record
 
+## Increasing annular segment estimates
+
+`AnnularEnergy.lean` introduces explicit increasing radial ODE segment data and
+proves slope monotonicity and the estimate
+
+$$
+E(a)-E(r)\le \frac{m}{a}p(a)q(r).
+$$
+
+Consequently, if the initial energy after this curvature allowance is at least
+half the square of a positive constant, the slope stays above that constant and
+the segment length is at most its reciprocal. `IncreasingRadialSegment.width_le`
+and its dependencies passed the transitive axiom audit with only `propext`,
+`Classical.choice`, and `Quot.sound`; no source warnings were reported. The full
+build passed (3739 jobs). No annular solution existence is assumed or claimed:
+these estimates are conditional on the displayed ODE data. The reverse Neumann
+energy inequality, rigidity proofs, full Comparator, and Palomar remain open.
+
 ## Neumann energy lower bound
 
 `BallSlopeComparison.lean` proves the tangent-ball boundary slope inequality,

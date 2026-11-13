@@ -123,3 +123,4 @@ public import SerrinEpigraph.ScaledComparison
 public import SerrinEpigraph.CompactComparison
 public import SerrinEpigraph.TangentBallComparison
 public import SerrinEpigraph.BallSlopeComparison
+public import SerrinEpigraph.AnnularEnergy
