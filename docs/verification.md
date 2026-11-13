@@ -1,5 +1,14 @@
 # Verification record
 
+## Flat-cylinder layer measure
+
+The `SerrinEpigraph Challenge Solution` build passed (3900 jobs).
+`FlatLayerMeasure.lean` verifies the exact projected measure and layer mass
+for flat cylinders, together with the upper bound on arbitrary subsets.
+Diagnostics are clean and the subset integral theorem uses only the standard
+three axioms. Curved-chart measure estimates and perimeter identification,
+both Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Recovery bound from coordinate-measure domination
 
 The `SerrinEpigraph Challenge Solution` build passed (3899 jobs).

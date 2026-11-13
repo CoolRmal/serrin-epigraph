@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`FlatLayerMeasure.lean` proves the coordinate-distribution formula for flat
+cylinders with product Lebesgue measure, domination for arbitrary cylinder
+subsets, and the exact layer integral equal to base volume times action.
+Passing to curved boundary charts with controlled volume distortion, and
+identifying their area with variational perimeter, remain geometric obligations.
+
 `RecoveryMeasureBound.lean` connects the analytic recovery construction to
 geometry: domination of the pushed-forward transition-layer volume by P
 times length implies energy at most P times the exact regularized action.
