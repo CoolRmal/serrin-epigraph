@@ -348,10 +348,13 @@ supremal radius and must complete to a Dirichlet ball profile: the alternative
 extension would contradict the supremum. `RadialGlobal.lean` constructs
 the union on the whole nonnegative half-line when extension radii are
 unbounded. Thus each central value in (0,1) gives either a finite Dirichlet
-ball profile or a global normalized positive radial system. Ruling out the
-latter using the reaction structure remains outstanding.
-Still required: construct Dirichlet ball and annulus profiles and prove their
-large-radius limits.
+ball profile or a global normalized positive radial system. `RadialRiccati.lean`
+rules out the latter: the negative logarithmic derivative satisfies a Riccati
+equation whose arctangent eventually has a strictly positive lower derivative
+bound, contradicting boundedness of arctangent. Thus every central value in
+(0,1) yields a finite positive Dirichlet ball profile.
+Still required: control these radii as the central value tends to one,
+construct annulus profiles, and prove the large-radius boundary-slope limits.
 
 ## Acceptance
 

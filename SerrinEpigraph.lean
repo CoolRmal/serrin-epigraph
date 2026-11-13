@@ -107,3 +107,4 @@ public import SerrinEpigraph.RadialZeroEndpoint
 public import SerrinEpigraph.RadialUnion
 public import SerrinEpigraph.RadialBranches
 public import SerrinEpigraph.RadialGlobal
+public import SerrinEpigraph.RadialRiccati

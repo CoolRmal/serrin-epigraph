@@ -736,6 +736,18 @@ The full build passed (3715 jobs), and `#print axioms` audits report only
 Cross-endpoint continuation, large-radius comparisons, both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain incomplete.
 
+## Finite radial Dirichlet existence
+
+`RadialRiccati.lean` proves the logarithmic-slope equation, an arctangent
+derivative bound, nonexistence of global positive normalized radial systems,
+and existence of a finite Dirichlet ball profile for every central value in
+(0,1). All five theorem declarations were checked with `#print axioms`;
+their only axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+The full build passed (3723 jobs). The two main rigidity proofs still contain
+`sorry`; the three independent Challenge declarations are statement placeholders.
+Radius control, large-radius comparisons, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain incomplete.
+
 ## Continuation beyond a finite positive endpoint
 
 `RadialContinuation.lean` proves five theorems: local agreement with each
