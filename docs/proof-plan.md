@@ -195,6 +195,9 @@ minimization allowing changes to the positive phase. `LevelBoundary.lean` proves
 joint continuity of inverse heights and level points at level zero, and the
 trace of the interior foliation gradient as the gradient within the closed
 epigraph. Its vertical component agrees with the Neumann boundary formula.
+`BoundaryGradient.lean` proves the full boundary gradient is minus κ times
+the outward unit normal, hence has norm κ. The calibration energy component
+converges to κ²/2 − W(0); this constant has not been proved to vanish.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

@@ -321,3 +321,15 @@ All ten new theorem declarations were audited and use only `propext`,
 `lake build SerrinEpigraph Challenge Solution` passed (3602 jobs).
 Cross-boundary energy comparison and the two rigidity proofs remain unfinished,
 as do full Comparator acceptance and Palomar registration.
+
+## Full boundary gradient and calibration energy trace
+
+`BoundaryGradient.lean` proves that the outward normal is a unit vector and
+that the complete boundary gradient is minus κ times that normal. Its norm is
+therefore κ. The energy component of the foliation field converges to the
+constant κ²/2 − W(0) at level zero; no identity making this constant vanish has
+been assumed. All eight declarations were audited individually and use only
+`propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3603 jobs).
+Cross-boundary comparison and both rigidity proofs remain unfinished, as do
+full Comparator acceptance and Palomar registration.

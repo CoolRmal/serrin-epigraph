@@ -71,3 +71,4 @@ public import SerrinEpigraph.CalibrationIntegral
 public import SerrinEpigraph.CalibrationPath
 public import SerrinEpigraph.ClosedRangeMinimality
 public import SerrinEpigraph.LevelBoundary
+public import SerrinEpigraph.BoundaryGradient
