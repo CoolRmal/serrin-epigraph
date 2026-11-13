@@ -411,6 +411,12 @@ by combining the off-center computation with the center theorem. Full
 second-order continuity and boundary regularity remain to be packaged before
 the classical comparison and boundary derivative arguments.
 
+`RadialRegularity.lean` packages differentiability of the spatial gradient
+throughout the ball and proves the spatial function is C1 there. It also
+proves Hessian continuity away from the center and C2 regularity on the
+punctured ball. Central Hessian continuity and boundary regularity are the
+remaining regularity steps for classical ball comparison.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

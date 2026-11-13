@@ -936,3 +936,14 @@ boundary regularity, comparison/Hopf arguments, annulus construction, both
 final rigidity proofs, full Comparator acceptance, and Palomar registration
 remain unfinished.
 
+## Spatial C1 and punctured-ball C2 regularity
+
+`RadialRegularity.lean` proves five theorems: differentiability of the gradient
+on the ball, continuity of the spatial derivative, C1 regularity on the ball,
+off-center Hessian continuity, and C2 regularity on the punctured ball.
+All five have clean diagnostics and only the standard three axioms.
+The full build passed (3732 jobs). Central Hessian continuity, boundary
+regularity, comparison/Hopf arguments, annulus construction, both final
+rigidity proofs, full Comparator acceptance, and Palomar registration remain
+unfinished.
+
