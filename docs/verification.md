@@ -661,3 +661,17 @@ The full build passed (3710 jobs), with no new proof holes. This does not yet
 prove uniqueness/gluing or global continuation of an existing profile.
 Large-radius comparisons, both rigidity proofs, full Comparator acceptance,
 and Palomar registration remain incomplete.
+
+## Radial uniqueness on common connected domains
+
+`RadialUniqueness.lean` proves four theorems: local uniqueness for a C¹
+autonomous field, local uniqueness of the radial value/slope system, its
+specialization to the original hypotheses at positive states, and agreement
+throughout a connected open domain when two radial states agree at one point.
+The last proof uses local uniqueness to make the equality set open and
+continuity to make it closed. This is agreement of both values and slopes.
+All four declarations have clean diagnostics and only `propext`,
+`Classical.choice`, and `Quot.sound` in their axiom audits. The full build
+passed (3711 jobs). No target signatures or proof holes were changed.
+Actual gluing and continuation, large-radius comparisons, both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain unfinished.

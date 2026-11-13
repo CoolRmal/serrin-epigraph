@@ -300,8 +300,11 @@ in (0,1), zero central slope, and values in (0,1).
 positive value, with arbitrary initial slope, under the original reaction
 hypotheses. It uses the autonomous radius/value/slope field and proves that
 the radius coordinate equals time. A smaller neighborhood preserves positive
-radius and positive value. This supplies the local restart step; uniqueness,
-gluing, and a continuation argument are still needed to extend existing profiles.
+radius and positive value. `RadialUniqueness.lean` proves local uniqueness
+through a matching radial value/slope state, and propagates agreement over
+any connected open set of positive radii and positive values. This supplies
+the consistency needed for the restart step. Gluing and a continuation
+argument are still needed to extend existing profiles.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 
