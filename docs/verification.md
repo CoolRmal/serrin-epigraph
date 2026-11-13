@@ -1,5 +1,21 @@
 # Verification record
 
+## Lower semicontinuity of variational perimeter
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3864 jobs).
+
+`PerimeterLowerSemicontinuity.lean` proves continuity and support localization
+of divergence, passes local integral convergence of measurable phase indicators
+to each compact divergence pairing, and obtains the full variational-perimeter
+liminf inequality. Perimeters are extended nonnegative values; no finite
+perimeter assumption is imposed on the approximating sets.
+
+Diagnostics and the liminf theorem's transitive axiom audit are clean, using
+only the standard three axioms. This lower bound does not itself supply the
+competitor recovery and energy comparison needed for interface minimality.
+Interface minimality, geometric classification, both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Intrinsic perimeter and representative invariance
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3863 jobs).
