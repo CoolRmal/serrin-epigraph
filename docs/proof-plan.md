@@ -2,6 +2,11 @@
 
 ## Geometric classification after minimality
 
+`FiniteGraphCover.lean` extracts finitely many buffered patches covering any
+compact graph base. Each closed half-radius patch retains the local recovery
+area bound with the prescribed error. This supplies finite data for gluing;
+it does not yet construct a glued competitor or control overlap energy.
+
 `GraphAreaDensity.lean` proves continuity and local oscillation control of the
 graph area density. On sufficiently small patches it improves the recovery
 coefficient to the area-density integral plus an arbitrarily small base-volume

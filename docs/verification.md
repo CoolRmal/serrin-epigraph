@@ -1,5 +1,14 @@
 # Verification record
 
+## Finite buffered graph cover
+
+The `SerrinEpigraph Challenge Solution` build passed (3908 jobs).
+`FiniteGraphCover.lean` proves existence of a finite buffered cover retaining
+the local area recovery bounds on every closed half-radius patch. Diagnostics
+are clean and the cover theorem uses only the standard three axioms. Gluing
+and overlap control, variational perimeter identification, both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Local graph-area recovery coefficient
 
 The `SerrinEpigraph Challenge Solution` build passed (3907 jobs).
