@@ -20,7 +20,10 @@ positive-radius ball, with an explicit inverse-scale bound.
 intermediate positive-phase region with a fixed level below equilibrium.
 `PhaseIndicatorApproximation.lean` proves local integral convergence of the
 difference between the dilated solution and its phase indicator to zero.
-Compactness of the phase indicators is still to be proved.
+`WeightedGradient.lean` supplies uniform potential-weighted gradient integral
+bounds. `PhasePrimitive.lean` gives the primitive derivative and separates the
+two equilibrium values. The spatial chain rule and compactness of the phase
+indicators are still to be proved.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

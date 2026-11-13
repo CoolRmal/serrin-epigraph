@@ -1,5 +1,31 @@
 # Verification record
 
+## Weighted gradient and phase primitive
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3809 jobs).
+
+`WeightedGradient.lean` proves the pointwise Young inequality
+
+$$
+\sqrt{2W(U)}|\nabla U|\le e(U),
+$$
+
+including the zero phase, using the proved vanishing gradient of the zero
+extension outside the epigraph. It establishes local integrability and the
+uniform rescaled bound
+
+$$
+\int_{\overline B_r}\sqrt{2W(U(Rx))}|\nabla(U(R\cdot))(x)|\,dx\le C r^m
+\quad(R>0,\ Rr\ge1).
+$$
+
+`PhasePrimitive.lean` defines the integral of the square-root potential, proves
+its derivative at every value strictly between zero and one, and proves its
+value at one is strictly positive while its value at zero vanishes. Diagnostics
+and transitive audits are clean and use only the standard three axioms.
+The spatial chain rule and compactness argument still need completion; neither
+rigidity theorem, full Comparator, nor Palomar registration is complete.
+
 ## Local integral approximation by phase indicators
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3807 jobs).

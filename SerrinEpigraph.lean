@@ -157,3 +157,5 @@ public import SerrinEpigraph.RescaledPhaseEnergy
 public import SerrinEpigraph.RescaledPotential
 public import SerrinEpigraph.TransitionVolume
 public import SerrinEpigraph.PhaseIndicatorApproximation
+public import SerrinEpigraph.WeightedGradient
+public import SerrinEpigraph.PhasePrimitive
