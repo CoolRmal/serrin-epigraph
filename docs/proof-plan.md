@@ -340,8 +340,13 @@ boundary slope and the strict energy bound, or a normalized extension.
 `RadialUnion.lean` constructs the union of an arbitrary compatible family of
 central profiles. It preserves branch values, central data, continuity,
 normalized range, and the differential equations. For bounded branch radii,
-the union domain ends at their supremum. Constructing a maximal compatible
-family and resolving the infinite-radius alternative remain outstanding.
+the union domain ends at their supremum. `RadialBranches.lean` supplies the
+family of all normalized extensions of a fixed seed and proves automatic
+compatibility by uniqueness at a shared positive radius. The family is
+nonempty. If its radii are bounded, their union is an extension at the
+supremal radius and must complete to a Dirichlet ball profile: the alternative
+extension would contradict the supremum. Resolving the infinite-radius
+alternative remains outstanding.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

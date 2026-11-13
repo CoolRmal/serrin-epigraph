@@ -806,3 +806,19 @@ checked by `#print axioms`. The full build passed (3720 jobs). No new proof
 holes or main-statement changes were introduced. A maximal compatible family,
 first-zero existence/radius control, large-radius comparisons, both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain incomplete.
+
+## The bounded maximal-radius branch
+
+`RadialBranches.lean` defines normalized central branches and extensions of
+a fixed seed, proves seed existence from the original reaction assumptions,
+and proves every pair of seed extensions agrees on its full common domain.
+The extension family is nonempty. For bounded radii, it constructs the union
+as an extension at their supremum and proves existence of a Dirichlet ball
+profile there by ruling out further extension. The resulting ball profile
+preserves both seed components on the entire seed interval.
+All four theorem declarations and both explicit construction definitions were
+audited; only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Diagnostics are clean and the full build passed (3721 jobs). No new proof
+holes or main-statement changes were introduced. The unbounded-radius
+alternative, first-zero radius control, large-radius comparisons, both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain incomplete.
