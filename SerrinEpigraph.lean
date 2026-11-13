@@ -257,3 +257,4 @@ public import SerrinEpigraph.LocalizedPerimeterComparison
 public import SerrinEpigraph.LimitingPhaseGeometry
 public import SerrinEpigraph.DilationStationarity
 public import SerrinEpigraph.EnergyScaleMonotonicity
+public import SerrinEpigraph.GradientExcessMaximum

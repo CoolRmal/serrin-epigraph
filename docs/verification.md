@@ -1,5 +1,24 @@
 # Verification record
 
+## Weak Bochner identity and local excess maximum tests
+
+`WeakBochner.lean`, `GradientExcess.lean`, `WeakViscosity.lean`, and
+`GradientExcessMaximum.lean` have clean diagnostics. The
+`SerrinEpigraph Challenge Solution` build passed (3961 jobs). After that build,
+the weak Bochner identity, the weak excess equation, the weak-to-viscosity
+theorem, the excess upper-test inequality, the local-maximum bound, and the zero
+boundary trace were each checked to depend only on `propext`, `Classical.choice`,
+and `Quot.sound`.
+
+The proof uses C1 tests and the original C2 solution regularity; no C3 assumption
+is introduced. For a positive quadratic perturbation of the discrepancy, every
+interior local maximum is bounded by the perturbation parameter. The closed
+excess is continuous and vanishes on the graph. These facts do not control a
+maximizing sequence escaping to infinity. A global gradient bound or another
+global maximum argument remains necessary to prove the Modica estimate.
+Both Main rigidity holes, full Comparator acceptance, and Palomar registration
+remain unfinished.
+
 ## Exact scale derivative and sharp-ball monotonicity
 
 `ScaledRadialWeight.lean`, `RadialEnergyIdentity.lean`, `SharpRadialLimit.lean`,

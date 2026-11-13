@@ -41,6 +41,20 @@ including its control near boundary points escaping to infinity. The weaker
 Dirichlet-scaled monotonicity does not substitute for surface-scaled monotonicity
 in the cone argument. No cone structure or rigidity conclusion is asserted.
 
+`WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
+tests and only the original C2 regularity of the solution. `GradientExcess.lean`
+proves the weak equation and the Hessian inequality for the perturbed discrepancy
+
+$$P_\varepsilon=\frac12|\nabla u|^2-W(u)+\varepsilon u^2.$$
+
+`WeakViscosity.lean` derives the second-order upper-test inequality for any C1
+function with continuous weak Laplacian, using the existing strong maximum
+principle. `GradientExcessMaximum.lean` applies it to the discrepancy, proves its
+continuous boundary extension and zero graph trace, and shows that an interior
+local maximum cannot exceed epsilon when epsilon is positive. This is a local
+maximum result. A global bound or control of maximizing sequences on the
+unbounded epigraph is still required; the Modica estimate is not yet proved.
+
 `GraphPerimeter.lean` proves exact variational perimeter equals graph area on
 every open ambient domain for C1 graphs, allowing infinite area. Its lower bound
 uses compact normal tests and inner regularity; the upper bound uses the exact
