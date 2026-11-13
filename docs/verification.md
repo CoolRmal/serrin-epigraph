@@ -1,5 +1,15 @@
 # Verification record
 
+## Inverse regularized recovery profile
+
+The `SerrinEpigraph Challenge Solution` build passed (3888 jobs).
+`RecoveryProfileCore.lean` defines the inverse travel-time profile and proves
+its normalized range, inverse identities, endpoint values, and strict
+monotonicity. Diagnostics are clean and the inverse monotonicity theorem uses
+only the standard three axioms. Inverse regularity and recovery energy remain
+unfinished, as do both Main rigidity proofs, full Comparator, and Palomar
+registration.
+
 ## Regularized recovery travel time
 
 The `SerrinEpigraph Challenge Solution` build passed (3887 jobs).

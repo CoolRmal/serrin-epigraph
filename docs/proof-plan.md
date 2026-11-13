@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`RecoveryProfileCore.lean` constructs the inverse of regularized travel time
+on the finite transition interval. It proves the travel-time image is exactly
+that interval, the inverse is normalized, both inverse identities hold, the
+endpoint values are zero and one, and the profile is strictly increasing.
+Inverse regularity, constant-phase extension, and its energy formula remain
+to be established before geometric recovery.
+
 `RecoveryTravelTime.lean` starts the one-dimensional recovery construction
 using the reciprocal speed of the potential regularized by a positive δ.
 The travel-time coordinate is continuous and strictly increasing on [0,1],
