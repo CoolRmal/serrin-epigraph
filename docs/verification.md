@@ -1,5 +1,19 @@
 # Verification record
 
+## Supremal annular system on the half-open interval
+
+`AnnularUnion.lean` defines a union of compatible radial segments, proves local
+agreement and continuity, passes both radial equations to the union, and
+identifies its domain with the interval ending at the supremum of bounded radii.
+`IncreasingRadialSegment.exists_supremal_system` applies this construction to all
+extensions of the seed and preserves its half-open initial segment, normalized
+values, positive interior values, and nonnegative slope.
+The theorem's transitive axiom audit reports only `propext`, `Classical.choice`,
+and `Quot.sound`, with no source warnings. The complete build passed (3745 jobs).
+This constructs the solution before the supremal endpoint, not at that endpoint;
+finite endpoint completion is still needed. Rigidity, full Comparator acceptance,
+and Palomar registration remain unfinished.
+
 ## Compatibility and bounded annular extension radii
 
 `AnnularBranches.lean` defines `AnnularExtension` of a fixed increasing seed.

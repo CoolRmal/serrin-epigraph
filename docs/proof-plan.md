@@ -41,6 +41,10 @@ extensions of a fixed seed, proves compatibility on their closed overlaps and a
 uniform finite upper bound on their radii, and shows that an extension attaining
 the supremal radius must have endpoint value one. Constructing that supremal
 extension from the compatible union is the next obligation.
+`AnnularUnion.lean` now constructs that union on the half-open interval ending at
+the supremum, with both continuous components, the radial equations on the open
+interval, the original seed values, normalized value bounds, and nonnegative
+slope. Completion at the finite outer endpoint remains.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
