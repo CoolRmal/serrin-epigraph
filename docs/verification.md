@@ -1,5 +1,22 @@
 # Verification record
 
+## Adjustable quadratic energy cost of gluing
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3869 jobs).
+
+`GluingGradientEnergy.lean` proves parameterized Young and convex-square
+inequalities, then bounds the glued gradient square by the convex combination
+of the original gradient squares with factor one plus an arbitrary positive
+parameter, together with an explicit mismatch-cutoff error. Division by twice
+the scale gives the kinetic part of diffuse energy. The final theorem proves
+this inequality almost everywhere for locally Lipschitz inputs.
+
+Diagnostics and the final theorem's transitive axiom audit are clean, using
+only the standard three axioms. Potential-energy control, recovery profiles,
+and vanishing transition errors remain; interface minimality does not yet
+follow. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Admissible cutoff gluing of competitors
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3868 jobs).

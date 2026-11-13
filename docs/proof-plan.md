@@ -105,8 +105,12 @@ phase and subsequence on every integer-radius ball. `GluedCompetitor.lean`
 constructs cutoff interpolation, proves its closed-range and local Lipschitz
 admissibility, support control, exact gradient formula, and transition-gradient
 bound, and applies the existing phase-energy minimality theorem to it.
-Recovery profiles, quantitative transition-energy control, interface minimality,
-and geometric classification remain.
+`GluingGradientEnergy.lean` derives the adjustable quadratic estimate: the
+principal gradient terms incur a factor of one plus an arbitrary positive
+parameter, while the mismatch-cutoff term is explicit. The inverse-scale
+kinetic version holds almost everywhere for locally Lipschitz inputs.
+Potential-energy control, recovery profiles, vanishing transition errors,
+interface minimality, and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
