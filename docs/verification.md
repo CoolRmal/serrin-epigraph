@@ -1,5 +1,17 @@
 # Verification record
 
+## Full energy comparison for a fixed graph partition
+
+The `SerrinEpigraph Challenge Solution` build passed (3923 jobs).
+`RigidityHypotheses.exists_graphRecovery_energy_error` in
+`GraphRecoveryComparison.lean` has clean diagnostics and uses only `propext`,
+`Classical.choice`, and `Quot.sound`. It bounds the actual partition recovery
+energy by graph area times regularized action, an explicit overlap cost, and a
+nonnegative kinetic error tending to zero. Regularization, partition precision,
+and kinetic loss are still fixed in this theorem; their diagonal limit remains
+to be proved. Main still contains two rigidity proof holes, Challenge contains
+three specification holes, and full Comparator and Palomar remain incomplete.
+
 ## Uniform graph scales and partition precision
 
 The `SerrinEpigraph Challenge Solution` build passed (3922 jobs).

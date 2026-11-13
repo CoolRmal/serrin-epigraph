@@ -2,6 +2,16 @@
 
 ## Geometric classification after minimality
 
+`GraphRecoveryComparison.lean` assembles the full energy estimate for a fixed
+compatible graph partition. Its upper bound consists of the weighted graph-area
+action with arbitrarily small multiplicative kinetic loss, an explicit overlap
+cost proportional to partition precision, and a nonnegative kinetic error
+tending to zero as the blow-down scale tends to infinity. This applies to the
+actual partition recovery functions and includes their common positive phase.
+Selecting the blow-down scale after the regularization and partition, proving
+the resulting sharp recovery limit, and the subsequent geometric rigidity
+arguments remain unfinished.
+
 `BoundedGraphPartition.lean` supplies one scale bound valid for every compatible
 partition with precision at most one on the fixed compact neighborhood. It
 also chooses positive precisions tending to zero while their products with
