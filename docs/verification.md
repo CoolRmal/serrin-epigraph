@@ -1,5 +1,25 @@
 # Verification record
 
+## Local integral translation estimate
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3818 jobs).
+
+`TranslationIntegral.lean` first controls the integral of a translated
+nonnegative continuous function by its integral over an enlarged ball.
+It then integrates the segment gradient inequality, proves product
+integrability on compact sets, exchanges the two integrals, and obtains
+
+$$
+\int_{\overline B_r}|v(x+z)-v(x)|\,dx
+\le |z|\int_{\overline B_{r+|z|}}|\nabla v|\,dx
+$$
+
+for every continuously differentiable real function on Euclidean space.
+Diagnostics and the transitive axiom audit are clean, using only the standard
+three axioms. The locally Lipschitz extension and uniform mollification error
+bound remain necessary. Both rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Segment gradient estimate for translation control
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3817 jobs).
