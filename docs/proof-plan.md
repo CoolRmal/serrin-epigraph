@@ -210,6 +210,11 @@ energy dissipation formula, monotonicity through the center-to-boundary
 interval, boundary slope bounds, and the integrated energy loss away from
 the origin. These are conditional estimates for a supplied radial profile;
 existence of the profile is not assumed as an axiom or proved yet.
+`RadialFlux.lean` removes the singular radial drift by multiplying by the
+radial volume weight. It proves the flux integral identity including the
+center, nonpositive slopes, decreasing values, a positive central value, and
+a strictly negative boundary slope. These conclusions still require a
+supplied radial profile.
 `ZeroExtension.lean` constructs the whole-space extension, proves continuity,
 identifies its positive phase, preserves vertical monotonicity and the limit
 one, and establishes the original PDE and gradient identities in the interior.

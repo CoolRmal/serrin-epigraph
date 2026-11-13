@@ -572,3 +572,19 @@ All six new theorems were audited individually and use only `propext`,
 Radial profile existence, large-radius limits, boundary slope comparisons,
 Bernoulli normalization, both rigidity proofs, full Comparator acceptance,
 and Palomar registration remain unfinished.
+
+## Weighted radial flux and decreasing profiles
+
+`RadialFlux.lean` proves that multiplication by the radial volume weight
+cancels the singular drift term, yielding a flux identity integrated from
+the center. The weighted flux is nonincreasing; consequently slopes are
+nonpositive, values decrease toward the boundary, and the central value is
+positive. The mean value theorem and flux monotonicity give a strictly
+negative boundary slope.
+All seven theorems are conditional on the explicit radial profile data;
+profile existence is not inferred from these estimates. Each declaration
+was audited and uses only `propext`, `Classical.choice`, and `Quot.sound`.
+The full build passed (3700 jobs).
+Radial existence and large-radius limits, boundary comparison, Bernoulli
+normalization, both rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.
