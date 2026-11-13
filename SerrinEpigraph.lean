@@ -197,3 +197,4 @@ public import SerrinEpigraph.GluingTransition
 public import SerrinEpigraph.TransitionLayerSelection
 public import SerrinEpigraph.SelectedTransitionCutoff
 public import SerrinEpigraph.GluingCostBound
+public import SerrinEpigraph.GluingCostIntegral

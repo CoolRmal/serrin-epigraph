@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingCostIntegral.lean` establishes local integrability and nonnegativity of
+the explicit energy/mismatch majorant, separates its integral into input
+energies and squared mismatch, and selects a smooth cutoff using that actual
+majorant. Its transition integral is bounded by 1/N of the ambient integral,
+with gradient bound C N/t. Integrating the localized gluing comparison and
+choosing the scale-dependent layer count are the next analytic steps.
+
 `GluingCostBound.lean` gives a majorant independent of the chosen cutoff except
 through its gradient bound G: a fixed multiple of the two input energies plus
 the squared mismatch times G²/R + 4 R W(0). Its localized version incurs this

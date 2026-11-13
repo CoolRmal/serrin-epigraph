@@ -1,5 +1,16 @@
 # Verification record
 
+## Integrable majorant and its selected cutoff
+
+The `SerrinEpigraph Challenge Solution` build passed (3877 jobs).
+`GluingCostIntegral.lean` proves local integrability of normalized rescaled
+energies and their gluing majorant, nonnegativity, the exact integral formula,
+and existence of a smooth cutoff selected by this actual majorant. Diagnostics
+are clean and the cutoff theorem's transitive audit uses only the standard
+three axioms. The integrated energy comparison and vanishing-error argument
+are not yet complete. Both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Explicit transition-energy majorant
 
 The `SerrinEpigraph Challenge Solution` build passed (3876 jobs).
