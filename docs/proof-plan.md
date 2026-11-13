@@ -211,7 +211,12 @@ boundary point from the nonzero Neumann slope. Consequently the frontier has
 zero ambient volume. `PhaseEnergy.lean` defines positive-phase energy with an
 explicit additive constant, proves local integrability of the zero extension’s
 squared gradient and phase energy, and identifies the whole-space integral
-with the original interior integral.
+with the original interior integral. `BoundaryCalibration.lean` shifts the closed
+calibration by the actual boundary energy constant. It vanishes at zero level
+and zero gradient, bounds the phase energy of every nonnegative competitor
+pointwise, and agrees with that energy on the zero extension. The deficit in
+the positive phase is half the squared gradient mismatch. The integrated
+cross-boundary calibration comparison is not yet proved.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

@@ -383,3 +383,17 @@ use only `propext`, `Classical.choice`, and `Quot.sound`.
 `lake build SerrinEpigraph Challenge Solution` passed (3684 jobs).
 Cross-boundary energy minimality, both rigidity proofs, full Comparator
 acceptance, and Palomar registration remain unfinished.
+
+## Calibration inequality across the zero phase
+
+`BoundaryCalibration.lean` shifts the closed foliation calibration by the
+actual boundary energy constant. It proves that this density vanishes at
+zero level and zero gradient, that its deficit from the shifted energy is
+half the squared gradient mismatch, and that it bounds the positive-phase
+energy of every globally nonnegative competitor pointwise. The original
+zero extension attains equality everywhere, including outside the epigraph.
+No identity setting the energy offset to zero is assumed.
+All four theorem declarations were audited and depend only on `propext`,
+`Classical.choice`, and `Quot.sound`. The complete build passed (3685 jobs).
+The integrated cross-boundary comparison, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain unfinished.
