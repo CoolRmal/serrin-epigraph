@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`GraphOverlapIntegral.lean` integrates the common transition-layer bound over
+Euclidean graph cylinders. For a finite mixture, the potential defect multiplied
+by R has integral at most the projected base volume times
+`C * sqrt(2 * (W(0) + δ)) * (Tδ * H)^2 * ε`, where C is the potential Lipschitz
+constant and ε bounds inverse-scale oscillation on active overlaps. The estimate
+is independent of R and the number of patches. Weighted principal energy bounds,
+construction of suitable overlapping scales, and a joint parameter choice are
+still needed to assemble sharp graph recovery.
+
 `PartitionOverlap.lean` sums pairwise profile differences with the partition
 weights, preserving their total mass one rather than introducing a patch-count
 factor. Only pairs whose weights are both positive need a discrepancy estimate.

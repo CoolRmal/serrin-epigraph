@@ -1,5 +1,16 @@
 # Verification record
 
+## Integrated finite-mixture potential defect
+
+The `SerrinEpigraph Challenge Solution` build passed (3915 jobs).
+Both theorems in `GraphOverlapIntegral.lean` have clean diagnostics and use only
+the standard three axioms. They prove cancellation of scale and layer thickness,
+and an integrated finite-mixture potential-defect bound linear in active-overlap
+inverse-scale oscillation, independent of R and patch count. Its constant still
+depends on regularization and the bound on graph scales. Weighted energy assembly
+and parameter construction remain unfinished, as do both Main rigidity proofs,
+full Comparator, and Palomar registration.
+
 ## Finite overlap potential bound
 
 The `SerrinEpigraph Challenge Solution` build passed (3914 jobs).
