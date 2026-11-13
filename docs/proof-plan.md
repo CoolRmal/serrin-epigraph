@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`GraphLayerMeasure.lean` proves that vertical flattening of a measurable graph
+preserves product volume. It computes graph-strip height distributions and
+bounds vertical layer integrals by projected base volume times action.
+Vertical height is not unit-speed signed distance: controlling its gradient
+factor and relating local projected area to perimeter remain necessary.
+
 `FlatLayerMeasure.lean` proves the coordinate-distribution formula for flat
 cylinders with product Lebesgue measure, domination for arbitrary cylinder
 subsets, and the exact layer integral equal to base volume times action.

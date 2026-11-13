@@ -1,5 +1,14 @@
 # Verification record
 
+## Vertical graph-layer measure
+
+The `SerrinEpigraph Challenge Solution` build passed (3901 jobs).
+`GraphLayerMeasure.lean` proves measure preservation under vertical graph
+flattening, the exact height-distribution formula, and the vertical layer
+integral bound. Diagnostics are clean and the integral theorem uses only the
+standard three axioms. Gradient normalization and perimeter identification,
+both Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Flat-cylinder layer measure
 
 The `SerrinEpigraph Challenge Solution` build passed (3900 jobs).
