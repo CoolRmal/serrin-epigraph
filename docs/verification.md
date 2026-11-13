@@ -1,5 +1,23 @@
 # Verification record
 
+## A common subsequence for all mollifications and integer balls
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3816 jobs).
+
+`SimultaneousMollifiedCompactness.lean` proves a countable-family version of
+uniform subsequence extraction. It takes the compact closure of each bounded
+Lipschitz family and uses sequential compactness of their countable product.
+Applied to the phase primitive, one strictly increasing subsequence gives
+uniform convergence for every mollification index on every ball of positive
+integer radius. This is a single shared subsequence, not independently chosen
+subsequences for different indices or balls.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. Uniform control of the mollification
+error and the resulting unsmoothed local integral convergence remain to be
+proved. The two rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Uniformly convergent subsequences of mollified primitives
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3815 jobs).

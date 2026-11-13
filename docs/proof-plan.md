@@ -35,7 +35,9 @@ indicator approximation tends to zero, linking their future compactness argument
 constant for the primitive family at each fixed mollification index. Subsequence
 extraction for a fixed ball and fixed index is now proved in
 `MollifiedPrimitiveCompactness.lean` using Arzelà–Ascoli. A common diagonal
-subsequence and uniform control of the mollification error remain necessary.
+subsequence is now proved in `SimultaneousMollifiedCompactness.lean` for all
+mollification indices and positive integer-radius balls simultaneously.
+Uniform control of the mollification error remains necessary.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
