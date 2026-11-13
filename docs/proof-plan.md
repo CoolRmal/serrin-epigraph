@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`CompatibleGraphPartition.lean` constructs finite smooth compactly supported
+weights for a compact base inside a compact neighborhood. Weights sum to one
+on the base and at most one everywhere, and each active scale lies between
+the area density and that density plus ε. The same bounds imply both the
+recovery slope condition and inverse-scale closeness on overlaps. This supplies
+compatible geometric data for the preceding weighted-energy and potential-error
+estimates. Their quantitative assembly, uniform scale bounds, and parameter
+selection remain to produce the full sharp recovery sequence.
+
 `WeightedGraphArea.lean` sums the principal weighted recovery bounds against
 graph area without a multiplicity factor. Nonnegative weights supported in a
 compact base and summing to at most one give the area integral plus ε times

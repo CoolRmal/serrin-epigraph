@@ -1,5 +1,16 @@
 # Verification record
 
+## Compatible smooth graph partition
+
+The `SerrinEpigraph Challenge Solution` build passed (3921 jobs).
+All four theorems in `CompatibleGraphPartition.lean` have clean diagnostics and
+use only the standard three axioms. The finite smooth partition has compact
+support in the prescribed neighborhood and active scales within ε above local
+area density. These scale bounds imply slope control and close inverse scales
+on overlaps. Quantitative recovery assembly and parameter choices remain
+unfinished. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Weighted principal energy bounded by graph area
 
 The `SerrinEpigraph Challenge Solution` build passed (3920 jobs).
