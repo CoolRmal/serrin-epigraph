@@ -185,3 +185,4 @@ public import SerrinEpigraph.PhaseVectorTestBound
 public import SerrinEpigraph.VariationalPerimeter
 public import SerrinEpigraph.PerimeterInvariance
 public import SerrinEpigraph.PerimeterLowerSemicontinuity
+public import SerrinEpigraph.SharpDivergenceBound

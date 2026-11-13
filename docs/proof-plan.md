@@ -91,7 +91,11 @@ linear trace, proves orthonormal-basis independence of perimeter, and proves
 invariance under almost-everywhere changes of the phase inside the test domain.
 `PerimeterLowerSemicontinuity.lean` proves convergence of compact divergence
 pairings from local integral convergence of measurable indicators and obtains
-the full extended-nonnegative perimeter liminf inequality. Interface minimality
+the full extended-nonnegative perimeter liminf inequality.
+`SharpDivergenceBound.lean` proves exact vector integration by parts and bounds
+a unit-field divergence pairing by gradient mass with no dimension factor,
+including bounded nonnegative locally Lipschitz coefficients via mollification.
+The sharp diffuse-energy lower bound, competitor recovery, interface minimality,
 and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact

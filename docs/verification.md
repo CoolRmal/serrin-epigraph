@@ -1,5 +1,22 @@
 # Verification record
 
+## Exact gradient-mass control of divergence tests
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3865 jobs).
+
+`SharpDivergenceBound.lean` proves exact compact vector integration by parts,
+then controls a unit-field divergence pairing by the gradient mass with
+coefficient one. Normalized mollification and convergence of both coefficients
+and gradient masses extend the estimate to bounded nonnegative locally
+Lipschitz functions. This removes the dimension loss in the earlier component
+bounds, as required for the precise surface-energy lower bound.
+
+Diagnostics and the locally Lipschitz theorem's transitive axiom audit are
+clean, using only the standard three axioms. The sharp diffuse-energy liminf
+bound, competitor recovery, interface minimality, geometric classification,
+both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Lower semicontinuity of variational perimeter
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3864 jobs).
