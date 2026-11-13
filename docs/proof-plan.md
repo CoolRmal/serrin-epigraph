@@ -31,8 +31,12 @@ the potential drop. Next continue this segment using the annular energy bounds
 until its value reaches one.
 `AnnularEndpoint.lean` now establishes both left endpoint differential equations,
 positivity of the outer value, and a local restart retaining positive slope and
-values between zero and one when the endpoint has those strict bounds. Gluing
-the restart to the old segment and the maximal continuation argument remain.
+values between zero and one when the endpoint has those strict bounds.
+`AnnularContinuation.lean` now glues the restart to a strictly longer increasing
+segment, preserving both components on the original closed interval and checking
+the radial equations at the junction. A positive energy margin suffices for this
+extension whenever the outer value is below one. The maximal continuation and
+finite endpoint completion argument remain.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

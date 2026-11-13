@@ -127,3 +127,4 @@ public import SerrinEpigraph.AnnularEnergy
 public import SerrinEpigraph.ReactionSmoothExtension
 public import SerrinEpigraph.AnnularLocal
 public import SerrinEpigraph.AnnularEndpoint
+public import SerrinEpigraph.AnnularContinuation

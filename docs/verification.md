@@ -1,5 +1,18 @@
 # Verification record
 
+## Glued extension of annular segments
+
+`AnnularContinuation.lean` proves `IncreasingRadialSegment.exists_extension`:
+positive endpoint slope and value below one give a strictly longer increasing
+segment agreeing with both old components on the entire original closed
+interval. The splice satisfies both differential equations at the junction,
+not merely on its two sides. `exists_extension_of_energy_margin` supplies the
+endpoint slope from the earlier energy estimate. Its transitive axiom audit
+reports only `propext`, `Classical.choice`, and `Quot.sound`, with no source
+warnings. The full build passed (3743 jobs). The maximal annular continuation,
+reverse Neumann energy inequality, and rigidity classifications remain open;
+full Comparator acceptance and Palomar registration are still outstanding.
+
 ## Annular endpoint derivatives and local restart
 
 `AnnularEndpoint.lean` proves that increasing radial segments are nondecreasing,
