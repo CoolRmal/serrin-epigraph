@@ -371,6 +371,14 @@ is less than exp(-KT). This supplies fixed-radius value control and the
 quantitative radius divergence criterion. The boundary-slope limit still
 needs to combine this control with the outer-region energy-loss estimate.
 
+`RadialBoundaryEnergy.lean` completes that combination. It proves a uniform
+epsilon estimate for the boundary energy as the center approaches one,
+then combines finite existence, radius control, and this estimate to produce
+balls of arbitrarily large radius with boundary energy arbitrarily close
+to the one-dimensional value. The next comparison steps require realizing
+these profiles as classical spatial PDE solutions, comparison/Hopf arguments
+at tangent balls, and the complementary exterior-annulus construction.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

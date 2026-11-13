@@ -869,3 +869,15 @@ and an explicit criterion forcing the radius above any prescribed threshold.
 All five have clean diagnostics and standard axioms only, verified with
 the Lean axiom checker. The full build passed (3725 jobs). Both final rigidity
 proofs, full Comparator acceptance, and Palomar registration remain unfinished.
+## Arbitrarily large balls with asymptotically sharp boundary energy
+
+`RadialBoundaryEnergy.lean` proves four theorems: the boundary-energy deficit
+bound by an inner potential and outer loss, its exponential version, uniform
+epsilon control as the central value approaches one, and existence of
+arbitrarily large ball profiles with arbitrarily small boundary-energy error.
+All four passed diagnostics and axiom verification using only `propext`,
+`Classical.choice`, and `Quot.sound`. The full build passed (3726 jobs).
+This is an ODE comparison-profile result; the spatial PDE comparison and
+Hopf steps, the annulus construction, both final rigidity proofs, full
+Comparator acceptance, and Palomar registration remain incomplete.
+

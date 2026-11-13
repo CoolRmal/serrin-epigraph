@@ -110,3 +110,4 @@ public import SerrinEpigraph.RadialGlobal
 public import SerrinEpigraph.RadialRiccati
 public import SerrinEpigraph.RadialSlopeBound
 public import SerrinEpigraph.RadialEquilibrium
+public import SerrinEpigraph.RadialBoundaryEnergy
