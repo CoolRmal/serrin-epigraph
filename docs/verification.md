@@ -32,6 +32,16 @@ Individual axiom inspection of all three new declarations reports only
 `propext`, `Classical.choice`, and `Quot.sound`. The two main rigidity proof holes
 remain; this is not full Comparator acceptance.
 
+## Quadratic potential bound
+
+`QuadraticPotential.lean` proves the exact linear integral, a local quadratic
+potential lower bound, continuity on the closed solution interval, and a uniform
+quadratic lower bound on that whole interval. The complete build passed (3571
+jobs); individual axiom inspection of all four declarations found only the three
+standard permitted axioms. `normalizedPotential` is exposed for use in subsequent
+modules; its mathematical definition is unchanged. Both main rigidity proofs
+remain unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

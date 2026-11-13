@@ -112,7 +112,10 @@ positive half-line, and the strictly positive second derivative at one.
 positive lower bound on the second derivative in a full neighborhood. It also
 proves a positive linear lower bound for the reaction in terms of the distance
 to equilibrium from below. The remaining potential work includes a suitable
-extension beyond the solution range and the integrated quadratic energy bounds. The monotone-solution
+extension beyond the solution range. `QuadraticPotential.lean` now integrates
+the linear reaction lower bound and combines it with compactness away from one
+to prove a uniform positive quadratic lower bound on the entire interval from
+zero to one. Continuity at zero is proved using the interval primitive theorem. The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

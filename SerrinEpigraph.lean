@@ -29,6 +29,7 @@ public import SerrinEpigraph.NormalizedPotential
 public import SerrinEpigraph.NormalizedReaction
 public import SerrinEpigraph.PowerEnergy
 public import SerrinEpigraph.PowerIntegrability
+public import SerrinEpigraph.QuadraticPotential
 public import SerrinEpigraph.Quotient
 public import SerrinEpigraph.QuotientRegularity
 public import SerrinEpigraph.QuotientTests

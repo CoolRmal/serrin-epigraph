@@ -20,7 +20,7 @@ open scoped Topology
 namespace SerrinEpigraph
 
 /-- The potential normalized to vanish at the positive equilibrium. -/
-def normalizedPotential (f : ℝ → ℝ) (s : ℝ) : ℝ := ∫ t in s..1, f t
+@[expose] def normalizedPotential (f : ℝ → ℝ) (s : ℝ) : ℝ := ∫ t in s..1, f t
 
 variable {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ}
   {f : ℝ → ℝ} {κ : ℝ}
