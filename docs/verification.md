@@ -241,3 +241,16 @@ audited individually and use only `propext`, `Classical.choice`, and `Quot.sound
 This does not yet prove integrated calibration or local energy minimization.
 Both rigidity proofs, full Comparator acceptance, and Palomar registration
 remain unfinished.
+
+## Integrated identity along comparison functions
+
+`VectorIntegrationByParts.lean` proves vector integration by parts near a compact
+test support and its zero-divergence consequence. `FoliationPullback.lean` proves
+regularity, the derivative and trace formula, and the resulting integral
+identity for the foliation gradient evaluated along an arbitrary C¹ comparison
+function with values in (0,1). All six public theorem declarations were audited:
+only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`lake build SerrinEpigraph Challenge Solution` passed (3597 jobs).
+Constancy of calibrated energy along comparison paths and local energy
+minimization remain unproved. The two rigidity theorems, complete Comparator
+acceptance, and Palomar registration remain unfinished.

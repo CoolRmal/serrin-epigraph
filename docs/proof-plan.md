@@ -176,7 +176,11 @@ level height. Its explicit differential solves the differentiated level equation
 its joint C¹ regularity and explicit differential, and proves the pointwise
 affine energy bound with equality on the original solution. `FoliationEquation.lean` proves the chain-rule equation and cancellation
 of the spatial divergence with the level derivative of the calibration energy
-component. The integrated calibration argument remains to be proved.
+component. `VectorIntegrationByParts.lean` supplies the compact-test vector
+integration identity. `FoliationPullback.lean` proves the comparison field
+regularity, divergence formula, and resulting integrated identity for arbitrary
+C¹ comparison functions taking values in (0,1). Constancy of the calibrated
+energy along comparison paths and the energy inequality remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
