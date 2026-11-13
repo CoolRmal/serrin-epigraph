@@ -226,3 +226,4 @@ public import SerrinEpigraph.NormalizedGraphMeasure
 public import SerrinEpigraph.GraphHeightGradient
 public import SerrinEpigraph.EuclideanProductVolume
 public import SerrinEpigraph.GraphRecoveryBound
+public import SerrinEpigraph.LocalRecoveryBound

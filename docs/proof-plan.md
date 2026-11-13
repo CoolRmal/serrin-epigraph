@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`LocalRecoveryBound.lean` removes global slope control from the recovery energy
+bound. A C1 coordinate only needs its gradient bounded on the compact integration
+region; the graph specialization likewise needs slope control only above that
+region. These local bounds still require localization and perimeter identification
+to produce the sharp geometric recovery theorem.
+
 `GraphRecoveryBound.lean` assembles unit-Lipschitz normalized graph coordinates,
 the Euclidean distribution bound, and recovery energy into an actual energy
 upper bound: normalization scale times projected base volume times action.

@@ -1,5 +1,15 @@
 # Verification record
 
+## Local graph recovery bound
+
+The `SerrinEpigraph Challenge Solution` build passed (3906 jobs).
+`LocalRecoveryBound.lean` proves recovery energy estimates for C1 coordinates
+whose gradient is controlled only on the integration region, and specializes
+them to graph heights with local slope control. Diagnostics are clean and the
+local graph theorem uses only the standard three axioms. Sharp perimeter
+recovery, both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Assembled graph recovery bound
 
 The `SerrinEpigraph Challenge Solution` build passed (3905 jobs).
