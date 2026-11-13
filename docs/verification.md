@@ -1,5 +1,28 @@
 # Verification record
 
+## Nontriviality of every local phase limit
+
+`EnergyNondegeneracy.lean` and `PhaseNontriviality.lean` have clean diagnostics.
+The final module passed its standalone Lean check, and
+`SerrinEpigraph Challenge Solution` built successfully (3980 jobs). After that
+build, the uniform positive rescaled-energy lower bound and phase-nontriviality
+theorem were each checked to use only `propext`, `Classical.choice`, and
+`Quot.sound`.
+
+Positive potential in the epigraph gives positive energy on some origin-centered
+ball. Surface-scale monotonicity propagates this to a positive lower bound on
+rescaled unit-ball energy for every sufficiently large scale. If the solution
+converged locally to either constant phase, comparison with that zero-energy
+constant through the existing annular gluing construction would force inner
+energy to vanish. The contradiction proves that every local phase limit of a
+diverging sequence has both phases of positive measure. This applies in
+particular to the common dilation-invariant phase constructed below.
+
+The remaining work is the geometric regularity and competitor class needed for
+classification, classification itself, and transfer of flatness. Both Main
+rigidity holes, full Comparator acceptance, and Palomar registration remain
+unfinished.
+
 ## A common dilation-invariant phase limit
 
 The ten new modules from `SurfaceEnergyLimit.lean` through

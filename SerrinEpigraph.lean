@@ -260,3 +260,4 @@ public import SerrinEpigraph.EnergyScaleMonotonicity
 public import SerrinEpigraph.GradientExcessMaximum
 public import SerrinEpigraph.SurfaceEnergyMonotonicity
 public import SerrinEpigraph.ConicalPhaseLimit
+public import SerrinEpigraph.PhaseNontriviality

@@ -56,8 +56,14 @@ the limiting phase is invariant almost everywhere under each positive dilation.
 vertical order, graph-competitor minimality, and the applicable one-sided bound
 for the same phase and sequence.
 
-This is dilation invariance of a measurable phase modulo null sets. Nontriviality,
-the geometric regularity and full competitor class required for classification,
+This is dilation invariance of a measurable phase modulo null sets.
+`EnergyNondegeneracy.lean` proves a positive energy lower bound at all sufficiently
+large scales. `PhaseNontriviality.lean` excludes either constant phase as a local
+solution limit: comparison with a constant competitor forces inner energy to
+zero, contradicting that lower bound. Consequently the same limiting phase and
+its complement both have positive measure.
+
+The geometric regularity and full competitor class required for classification,
 classification as a half-space, and transfer of flatness to the original solution
 remain outstanding. Neither Main rigidity conclusion is proved.
 
