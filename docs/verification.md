@@ -1,5 +1,20 @@
 # Verification record
 
+## Local increasing annular solution and parameter choice
+
+`AnnularLocal.lean` proves `exists_increasingRadialSegment` from reaction
+regularity, positive initial radius, and positive initial slope. The resulting
+segment solves the original radial equation, starts at value zero, has strictly
+positive slope throughout, and stays below value one. No existence assumption
+for the segment is used.
+`exists_annular_energy_margin` chooses a positive slope margin uniformly for
+all sufficiently large inner radii when the initial slope energy exceeds the
+potential drop. Both theorems passed individual transitive axiom audits with
+only `propext`, `Classical.choice`, and `Quot.sound`, and no source warnings.
+The full build passed (3741 jobs). Continuation to value one and the remaining
+rigidity/comparison obligations are still unfinished; full Comparator and
+Palomar registration have not been achieved.
+
 ## Smooth extension and zero-state local flow
 
 `ReactionSmoothExtension.lean` extends the continuous right derivative constantly
