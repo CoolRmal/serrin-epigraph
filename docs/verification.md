@@ -397,3 +397,17 @@ All four theorem declarations were audited and depend only on `propext`,
 `Classical.choice`, and `Quot.sound`. The complete build passed (3685 jobs).
 The integrated cross-boundary comparison, both rigidity proofs, full Comparator
 acceptance, and Palomar registration remain unfinished.
+
+## Integrable calibration for competitors touching zero
+
+`BoundaryCalibrationIntegral.lean` proves continuity of the closed foliation
+field on the level strip [0,1), continuity and compact-set integrability of
+the calibration density for smooth competitors in that range, and compact-set
+integrability of phase energy for smooth competitors in [0,1]. The pointwise
+calibration inequality therefore integrates for smooth competitors that may
+touch zero. All five new theorems were audited individually and use only
+`propext`, `Classical.choice`, and `Quot.sound`. The complete build passed
+(3686 jobs).
+This does not yet prove invariance of the calibration integral when the
+positive phase changes, or cross-boundary energy minimality. Both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain unfinished.

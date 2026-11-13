@@ -215,8 +215,12 @@ with the original interior integral. `BoundaryCalibration.lean` shifts the close
 calibration by the actual boundary energy constant. It vanishes at zero level
 and zero gradient, bounds the phase energy of every nonnegative competitor
 pointwise, and agrees with that energy on the zero extension. The deficit in
-the positive phase is half the squared gradient mismatch. The integrated
-cross-boundary calibration comparison is not yet proved.
+the positive phase is half the squared gradient mismatch. `BoundaryCalibrationIntegral.lean` proves continuity of the closed field on
+the half-closed level strip and local integrability of calibration and phase
+energy for smooth competitors taking values in [0,1). Thus the pointwise
+bound integrates even when a competitor touches zero. Invariance of the
+calibration integral under changes of the positive phase is not yet proved;
+the integrated bound alone does not establish energy minimality.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

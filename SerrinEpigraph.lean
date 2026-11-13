@@ -77,3 +77,4 @@ public import SerrinEpigraph.ZeroExtensionRegularity
 public import SerrinEpigraph.ZeroExtensionDifferentiability
 public import SerrinEpigraph.PhaseEnergy
 public import SerrinEpigraph.BoundaryCalibration
+public import SerrinEpigraph.BoundaryCalibrationIntegral
