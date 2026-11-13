@@ -1,5 +1,16 @@
 # Verification record
 
+## Reference inner-energy sequence comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3885 jobs).
+`InnerEnergyComparison.lean` proves a cutoff-free comparison of actual rescaled
+reference inner energy with outer candidate energy plus a vanishing error,
+under explicit annular input hypotheses. It also transfers candidate-energy
+convergence to eventual reference-energy upper bounds. Diagnostics are clean;
+the application theorem has only the standard three axioms. Recovery inputs,
+perimeter minimality, and geometric classification remain unfinished. Both Main
+rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Cancellation of reference annular energy
 
 The `SerrinEpigraph Challenge Solution` build passed (3884 jobs).

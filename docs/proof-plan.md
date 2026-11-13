@@ -2,6 +2,14 @@
 
 ## Geometric classification after minimality
 
+`InnerEnergyComparison.lean` applies annular gluing and energy cancellation to
+the actual rescaled zero extension, eliminating the cutoff from the final
+sequence comparison. Under explicit annular common-limit and bounded-energy
+hypotheses it produces a vanishing error between inner reference energy and
+outer candidate energy. A convergent candidate energy then gives eventual
+upper bounds with arbitrary positive tolerance. Suitable recovery inputs and
+the connection to perimeter minimality remain to be established.
+
 `GluingEnergyCancellation.lean` bounds the weighted input energy by candidate
 energy plus the reference annular energy. It cancels the latter against the
 reference total energy and applies rescaled minimality, giving an inner-ball
