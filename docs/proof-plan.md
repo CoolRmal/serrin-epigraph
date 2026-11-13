@@ -379,6 +379,12 @@ to the one-dimensional value. The next comparison steps require realizing
 these profiles as classical spatial PDE solutions, comparison/Hopf arguments
 at tangent balls, and the complementary exterior-annulus construction.
 
+`RadialSpatial.lean` defines the spatial realization centered at any point.
+It proves continuity and range on the closed ball, positivity throughout
+the open ball, zero boundary data, and the radial derivative and gradient
+formulas away from the center. The center regularity and second-derivative
+Laplacian formula are still required before using it as a classical PDE solution.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

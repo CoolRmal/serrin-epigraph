@@ -881,3 +881,14 @@ This is an ODE comparison-profile result; the spatial PDE comparison and
 Hopf steps, the annulus construction, both final rigidity proofs, full
 Comparator acceptance, and Palomar registration remain incomplete.
 
+## Spatial realization of radial profiles
+
+`RadialSpatial.lean` defines the centered spatial profile and proves seven
+theorems: the Euclidean norm derivative, closed-ball continuity and range,
+zero boundary data, interior positivity, and derivative/gradient formulas
+away from the center. All seven have clean diagnostics and only the standard
+three axioms. The full build passed (3727 jobs). Center regularity, the
+Laplacian formula, spatial comparison/Hopf arguments, annulus construction,
+both final rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.
+
