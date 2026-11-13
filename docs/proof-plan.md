@@ -345,8 +345,11 @@ family of all normalized extensions of a fixed seed and proves automatic
 compatibility by uniqueness at a shared positive radius. The family is
 nonempty. If its radii are bounded, their union is an extension at the
 supremal radius and must complete to a Dirichlet ball profile: the alternative
-extension would contradict the supremum. Resolving the infinite-radius
-alternative remains outstanding.
+extension would contradict the supremum. `RadialGlobal.lean` constructs
+the union on the whole nonnegative half-line when extension radii are
+unbounded. Thus each central value in (0,1) gives either a finite Dirichlet
+ball profile or a global normalized positive radial system. Ruling out the
+latter using the reaction structure remains outstanding.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

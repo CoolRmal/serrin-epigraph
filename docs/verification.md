@@ -822,3 +822,17 @@ Diagnostics are clean and the full build passed (3721 jobs). No new proof
 holes or main-statement changes were introduced. The unbounded-radius
 alternative, first-zero radius control, large-radius comparisons, both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain incomplete.
+
+## The unbounded-radius alternative
+
+`RadialGlobal.lean` proves four theorems: identification of the two union
+domains for unbounded radii, construction of a global normalized radial system
+from unbounded seed extensions, and the unconditional ball-or-global
+alternative for every central value in (0,1). The global system retains
+continuity at the center, central value, zero central slope, normalized
+positive values, and both radial differential equations at positive radii.
+All four declarations have clean diagnostics and standard axioms only,
+checked by `#print axioms`. The full build passed (3722 jobs). No new proof
+holes or main-statement changes were introduced. Excluding the global branch,
+first-zero radius control, large-radius comparisons, both rigidity proofs,
+full Comparator acceptance, and Palomar registration remain incomplete.
