@@ -42,6 +42,7 @@ public import SerrinEpigraph.SparseMoments
 public import SerrinEpigraph.StrongMaximum
 public import SerrinEpigraph.StrongPositivity
 public import SerrinEpigraph.Truncation
+public import SerrinEpigraph.VerticalLimit
 public import SerrinEpigraph.WeakEquation
 public import SerrinEpigraph.WeakBarrierComparison
 public import SerrinEpigraph.WeakComparison

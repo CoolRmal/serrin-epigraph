@@ -120,7 +120,11 @@ zero to one. Continuity at zero is proved using the interval primitive theorem.
 on the reaction derivative on the upper half interval gives a linear reaction
 bound and hence a quadratic potential bound. A compact potential bound controls
 the remaining interval. The resulting two-sided comparison holds on the full
-closed solution range, with no additional hypotheses. The monotone-solution
+closed solution range, with no additional hypotheses. `VerticalLimit.lean` now derives strict monotonicity of each vertical section
+from its directional derivative and proves that each ray has a positive limit
+at most one. Every finite interior value is strictly smaller than its ray limit.
+This does not yet identify the limits across rays or prove they equal one.
+The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

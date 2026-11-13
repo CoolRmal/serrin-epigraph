@@ -50,6 +50,15 @@ were individually checked for axiom dependencies: only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The full project build passed (3572
 jobs). The two rigidity target holes remain and still prevent full acceptance.
 
+## Vertical ray limits
+
+`VerticalLimit.lean` derives the vertical section derivative and strict
+monotonicity, proves existence of a positive limit at most one on each ray,
+and proves strict separation of every finite interior value from that limit.
+All four declarations use only the standard three axioms. The complete build
+passed (3573 jobs). Neither equality of the ray limits nor their identification
+with one is claimed; the two main rigidity proofs are still unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
