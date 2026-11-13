@@ -1,5 +1,14 @@
 # Verification record
 
+## Euclidean graph-height gradient
+
+The `SerrinEpigraph Challenge Solution` build passed (3903 jobs).
+`GraphHeightGradient.lean` proves the graph-height differential, gradient,
+exact squared norm, and unit-gradient bound after normalization. Diagnostics
+are clean and the normalization theorem uses only the standard three axioms.
+Chart measure transfer and sharp perimeter estimates, both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Normalized graph-height measure
 
 The `SerrinEpigraph Challenge Solution` build passed (3902 jobs).

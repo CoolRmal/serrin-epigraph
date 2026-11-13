@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`GraphHeightGradient.lean` computes the differential and Euclidean gradient of
+graph height, proves its squared norm is 1 plus the squared graph-gradient
+norm, and verifies unit-gradient control after normalization by a positive
+upper bound. Linking product-coordinate measures to Euclidean chart integrals
+and assembling sharp perimeter bounds remain.
+
 `NormalizedGraphMeasure.lean` tracks the exact measure factor when a real
 coordinate is divided by a positive normalization scale. It applies this to
 graph-height distributions and proves the corresponding layer integral bound
