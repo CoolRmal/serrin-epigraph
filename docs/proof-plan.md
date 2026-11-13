@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`RecoveryAction.lean` proves the exact core transition action by differentiating
+the phase-coordinate primitive along the inverse profile and applying the
+fundamental theorem of calculus. The kinetic-plus-potential integral equals
+this action; endpoint derivative values are irrelevant by nonatomicity.
+The regularization limit and geometric recovery upper bound remain unfinished.
+
 `RecoveryProfileExtension.lean` extends the inverse profile by clamping time
 to the finite transition interval. It proves the core and extended profiles
 are Lipschitz with the explicit maximal regularized speed, that the extension

@@ -1,5 +1,14 @@
 # Verification record
 
+## Exact core transition action
+
+The `SerrinEpigraph Challenge Solution` build passed (3891 jobs).
+`RecoveryAction.lean` proves the exact phase-coordinate formula for the core
+transition's kinetic-plus-potential integral. Diagnostics are clean and the
+energy-integral theorem uses only `propext`, `Classical.choice`, and `Quot.sound`.
+The regularization limit and geometric recovery upper bound remain unfinished;
+both Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Global Lipschitz recovery profile
 
 The `SerrinEpigraph Challenge Solution` build passed (3890 jobs).
