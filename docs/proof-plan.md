@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`SelectedTransitionCutoff.lean` combines the radial averaging result with the
+existing smooth cutoffs. For any nonnegative integrable cost, it constructs a
+normalized compactly supported cutoff equal to one on the inner ball, whose
+transition cost is at most the outer-ball cost divided by N. In an annulus of
+fixed width t, its gradient is bounded by C N/t, with a universal C. Choosing N
+in relation to the diffuse scale and actual mismatch remains necessary.
+
 `TransitionLayerSelection.lean` localizes existing fixed-width cutoffs to radial
 annuli and proves a finite disjoint-layer averaging bound for any nonnegative
 integrable cost. In particular, one of N consecutive equal-width radial layers

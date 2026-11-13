@@ -1,5 +1,16 @@
 # Verification record
 
+## Smooth cutoff with selected transition cost
+
+The `SerrinEpigraph Challenge Solution` build passed (3875 jobs).
+`SelectedTransitionCutoff.lean` constructs a smooth compactly supported cutoff
+in a selected low-cost layer. Its fixed-annulus version gives transition cost
+at most 1/N of the ambient cost and gradient bound C N/t for annulus width t.
+Diagnostics are clean; the fixed-annulus theorem's transitive audit uses only
+the standard three axioms. This supplies a cutoff, not yet a recovery sequence
+with vanishing errors. Both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Radial transition-layer selection
 
 The `SerrinEpigraph Challenge Solution` build passed (3874 jobs).
