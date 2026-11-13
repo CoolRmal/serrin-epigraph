@@ -1,5 +1,22 @@
 # Verification record
 
+## Phase-restricted potential cost of gluing
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3870 jobs).
+
+`GluingPotentialEnergy.lean` bounds the zero-level potential by a positive-level
+potential and a quadratic gap. Using antitonicity and positivity at one half,
+it then controls the phase-restricted potential of the glued competitor by
+the two input potentials plus their squared mismatch, with explicit constants
+involving the potential at zero and one half. The proof treats zero/positive
+phase interfaces separately, respecting the indicator discontinuity at zero.
+
+Diagnostics and the gluing theorem's transitive axiom audit are clean, using
+only the standard three axioms. Combining total transition-energy control,
+recovery profiles, and vanishing errors remains necessary for interface
+minimality. Both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Adjustable quadratic energy cost of gluing
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3869 jobs).

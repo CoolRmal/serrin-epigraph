@@ -109,8 +109,11 @@ bound, and applies the existing phase-energy minimality theorem to it.
 principal gradient terms incur a factor of one plus an arbitrary positive
 parameter, while the mismatch-cutoff term is explicit. The inverse-scale
 kinetic version holds almost everywhere for locally Lipschitz inputs.
-Potential-energy control, recovery profiles, vanishing transition errors,
-interface minimality, and geometric classification remain.
+`GluingPotentialEnergy.lean` controls the phase-restricted potential of the
+glued function by the sum of input potentials plus the squared mismatch, with
+explicit reaction-dependent constants. Its proof handles zero/positive phase
+interfaces separately. Combining total transition-energy control, recovery
+profiles, vanishing errors, interface minimality, and classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

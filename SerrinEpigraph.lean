@@ -190,3 +190,4 @@ public import SerrinEpigraph.PrimitiveEnergyLowerBound
 public import SerrinEpigraph.PerimeterEnergyLiminf
 public import SerrinEpigraph.GluedCompetitor
 public import SerrinEpigraph.GluingGradientEnergy
+public import SerrinEpigraph.GluingPotentialEnergy
