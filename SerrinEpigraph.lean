@@ -172,3 +172,4 @@ public import SerrinEpigraph.MollificationIntegralError
 public import SerrinEpigraph.IntegralCauchyApproximation
 public import SerrinEpigraph.LocalPrimitiveLimits
 public import SerrinEpigraph.LocalLimitCompatibility
+public import SerrinEpigraph.GlobalPrimitiveLimit

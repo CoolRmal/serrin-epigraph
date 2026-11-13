@@ -53,8 +53,10 @@ integral norm on all positive integer balls. `LocalPrimitiveLimits.lean` uses
 L¹ completeness to construct actual local integrable limits along that same
 subsequence. `LocalLimitCompatibility.lean` proves restriction of integral
 convergence and uniqueness almost everywhere, and applies them to show these
-local limits agree almost everywhere on nested balls. Patching a global
-representative and identifying the limiting phase remain.
+local limits agree almost everywhere on nested balls. `GlobalPrimitiveLimit.lean`
+glues these representatives into one function and proves local integral
+convergence to it on every integer-radius ball. Identifying the limiting
+phase and proving the geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

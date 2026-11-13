@@ -1,5 +1,20 @@
 # Verification record
 
+## Global representative of the local primitive limits
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3824 jobs).
+
+`GlobalPrimitiveLimit.lean` proves almost-everywhere gluing on a countable
+measurable cover with ordered compatibility. Applied to the integer balls,
+it constructs one global function representing every local primitive limit,
+with integrability and integral convergence on each ball along the same
+strictly increasing subsequence.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only `propext`, `Classical.choice`, and `Quot.sound`. Identifying the
+two-phase limit and the geometric classification remain. Both rigidity proof
+holes, full Comparator, and Palomar registration are still incomplete.
+
 ## Compatibility of local L¹ limits
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3823 jobs).
