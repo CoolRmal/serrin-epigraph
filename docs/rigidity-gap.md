@@ -1,9 +1,50 @@
 # Rigidity hypotheses requiring a proof
 
-The three supplied images are the project's target statements. The two rigidity
-conclusions are **not yet proved** under their stated general hypotheses. This
-note records a gap in the proposed literature deduction, not a counterexample
-to either conclusion.
+The three supplied images are the project's target statements. A detailed
+informal proof of the first statement is present in the existing research
+files. Those files also prove rigidity under additional reaction hypotheses.
+They do not supply a proof of the two rigidity conclusions with exactly the
+general hypotheses in the images. This note records the scope of those proofs
+and the remaining deduction, not a counterexample to either conclusion.
+
+## Comparison with the existing research files
+
+The following references are to the original `EllipticPDEs` workspace sources,
+audited through their concluding sections on 2026-11-13. These source files are
+outside this standalone Lean repository.
+
+| Original source and lines | What the proof establishes |
+| --- | --- |
+| `reports/商矩证明简化与无界解进展.md`, lines 9–69, 252–364 | General reaction monotonicity, with the same structural inequality and the first image's local regularity and Serrin boundary data. The final exponential lower bound also proves the image's weaker `liminf` mass condition. |
+| `reports/三维七次反应Serrin上图域刚性证明.md`, lines 9–36, 553–690 | A full three-dimensional rigidity argument using Robin/Picone and Bochner identities with a quadratic energy bound. This part is explicitly derived rather than merely quoted from Wang–Wei, but it uses the seventh-power reaction, bounded solution range, and its specified Neumann constant. |
+| `reports/任意维上图域单调性与八维Serrin刚性.md`, lines 7–30, 286–356 | Arbitrary-dimensional monotonicity and rigidity in dimensions at most eight for the power reaction with exponent greater than one and solution values strictly between zero and one. Lines 300–340 verify W1–W5 before invoking Wang–Wei. |
+| `reports/一般非线性的高阶商矩与Serrin刚性.md`, lines 82–129 | A broader rigidity corollary, still assuming a positive reaction on the solution interval and a nondegenerate positive equilibrium. The proof explicitly separates these hypotheses from those needed for monotonicity. |
+| `research_notes/商矩证明简化与无界解进展/literature.md`, lines 9–20, 73–83, 152–156 | The low-dimensional and one-sided-linear classifications are recorded for the specified Allen–Cahn class. The separate general-reaction, low-energy route in dimensions two and three has an additional energy hypothesis, which the mass assumption alone is not shown to supply. |
+| `reports/商矩证明简化与无界解进展.md`, lines 555–765; `reports/Killing单调性与圆柱刚性再核查.md`, lines 443–449 | A complete harmonic classification for a product cylinder with a closed, compact, connected base. The later audit explicitly excludes extrapolation to a noncompact base or a different reaction. |
+| `research_notes/商矩证明简化与无界解进展/simplified_proof.md`, lines 468–480, 723 | The argument yields fixed-domain stability and strict Killing monotonicity; it explicitly does not infer free-boundary stability or a complete Serrin-domain classification. |
+| `research_notes/反例的几何推广与欧氏障碍/euclidean_transfer.md`, lines 113–179, 302–321 | The new nonmonotone Euclidean example has nonconstant Neumann data. These notes explicitly do not give a full Euclidean Serrin counterexample. The companion geometric and analytic notes construct examples on non-Euclidean products with exponential mass growth. |
+
+In particular, the first proof is not merely a proposed route. Set
+
+$$z=(u_n/u)^-,\qquad V(R)=\int_{\Omega\cap B_{2R}}u^2.$$
+
+The report proves, for each integer greater than or equal to three,
+
+$$\left(\int_{\Omega\cap B_R}u^2z^m\right)^{1/m}
+\leq\frac{mC_\chi}{R}V(R)^{1/m}.$$
+
+If the negative quotient is positive at one interior point, continuity supplies
+a fixed ball with positive weighted mass and a positive lower bound there.
+Lines 336–364 then give
+
+$$\liminf_{R\to\infty}\frac{\log V(R)}R>0.$$
+
+Replacing the radius by twice the radius shows that this contradicts precisely
+the `liminf` condition in the first image, even though the report initially
+states a limit condition. The final Harnack argument gives strict positivity.
+The remaining issue is the passage from this valid monotonicity conclusion to
+the two general-reaction rigidity statements, not the absence of the original
+monotonicity proof.
 
 The first image assumes
 
@@ -66,7 +107,68 @@ $$f(1)=f'(1)=0,$$
 so the required strict potential-convexity condition at the equilibrium fails.
 This is a positive example of the target hypotheses, not a nonrigid example.
 
-The source search found no counterexample satisfying all target assumptions,
-and no theorem that supplies the missing general reduction. A complete proof
-must establish that broader rigidity result or another argument. Adding
+## Boundedness and low energy cannot be inferred
+
+There are also unbounded solutions satisfying every common target assumption.
+On the horizontal half-space, direct differentiation verifies
+
+$$f(s)=(1+s)^{-3},\qquad U(t)=\sqrt{1+2t}-1,\qquad
+-U''=f(U),\qquad U'(0)=1.$$
+
+Here
+
+$$f(s)-sf'(s)=\frac{1+4s}{(1+s)^4}>0,\qquad
+0<U(t)^2\leq2t\quad(t>0).$$
+
+Thus the square mass has polynomial growth, while the solution is unbounded
+and the reaction has no finite positive equilibrium. A similar example is
+already given in the original `literature.md`, lines 107–150. Consequently,
+boundedness and a finite equilibrium cannot be recovered from the target
+assumptions as an intermediate lemma.
+
+Likewise, the low-energy hypothesis in
+[Beuvin–Farina, Theorem 3.1](https://arxiv.org/html/2502.04812v2) is not a
+consequence of the target mass condition: the harmonic half-space solution has
+
+$$u(x)=\kappa x_n,\qquad
+\int_{\{x_n>0\}\cap B_R}|\nabla u|^2
+=\frac{\kappa^2\omega_n}{2}R^n.$$
+
+In dimension three this fails the required little-oh bound relative to
+
+$$R^2\log R.$$
+
+These examples already have the desired rigidity. They disprove proposed
+intermediate reductions, not the target conclusions.
+
+## A route for the harmonic one-sided case
+
+There is a concrete proof route for the harmonic subclass of the third image.
+After normalizing the boundary slope, the zero extension is a graphical
+Bernoulli solution. [Engelstein–Fernández-Real–Yu, Theorem 1.4 and Lemma
+2.8](https://arxiv.org/html/2212.08847) give global minimization and homogeneous
+blowdowns, including convergence of the phases.
+[Edelen–Li–Zhu, Theorem 2.2](https://arxiv.org/html/2606.01715v1#S2.SS1)
+then gives a dichotomy: the solution is flat, or every blowdown is nonflat and
+invariant under vertical translations.
+
+The following deduction combines these results. A one-sided linear lower
+bound for the graph preserves a downward cone in the zero phase of each
+blowdown. Vertical invariance would then make the entire blowdown zero,
+contradicting nondegeneracy. An upper bound preserves an upward cone in the
+positive phase; vertical invariance would eliminate the zero phase, again
+contradicting the nontrivial Bernoulli free boundary. Thus the flat alternative
+holds, in every dimension. This is an informal deduction for the harmonic
+subclass, not yet a Lean proof or a proof for general reactions.
+
+Without the one-sided bound, this argument leaves the nonflat cylindrical
+blowdown alternative in ambient dimension eight. For nonzero reactions,
+neither the harmonic minimization theorem nor its blowdown dichotomy applies
+directly. Establishing an appropriate general variational reduction and
+classification remains necessary for this route to prove the exact targets.
+
+The examined local proofs and cited primary sources do not supply the missing
+general reduction. No counterexample satisfying all target assumptions has
+been established in this audit. A complete proof must establish that broader
+rigidity result or another argument. Adding
 Allen–Cahn hypotheses would change the requested statements and is not done.

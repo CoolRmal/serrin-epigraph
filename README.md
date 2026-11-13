@@ -8,6 +8,14 @@ The three main proofs are still missing. A successful `lake build` is not a proo
 certificate: Comparator must reject the current `Solution` because of `sorryAx`.
 No Palomar registration or successful Comparator result is claimed.
 
+Completed supporting proofs include epigraph boundary geometry, positive vertical
+derivatives near the boundary, continuity and local integrability of the negative
+quotient, compact interior support of cutoff tests, differentiability of their
+high powers, directional integration by parts, the energy cancellation and Hölder
+interpolation, and the implication from odd-order moment estimates to nonnegative
+vertical derivatives. These do not yet establish the PDE moment estimates,
+strict interior positivity, or either rigidity theorem.
+
 ## Statements
 
 Let

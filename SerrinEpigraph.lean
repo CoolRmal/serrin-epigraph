@@ -1,7 +1,22 @@
 module
 
 public import SerrinEpigraph.Main
+public import SerrinEpigraph.BallCutoff
+public import SerrinEpigraph.Boundary
+public import SerrinEpigraph.CauchyEnergy
+public import SerrinEpigraph.Connectedness
+public import SerrinEpigraph.CutoffSupport
+public import SerrinEpigraph.Energy
 public import SerrinEpigraph.Geometry
+public import SerrinEpigraph.IntegrationByParts
 public import SerrinEpigraph.Mass
 public import SerrinEpigraph.MassGrowth
+public import SerrinEpigraph.MomentInterpolation
+public import SerrinEpigraph.Monotonicity
+public import SerrinEpigraph.Quotient
+public import SerrinEpigraph.QuotientRegularity
+public import SerrinEpigraph.QuotientTests
 public import SerrinEpigraph.Reaction
+public import SerrinEpigraph.SparseMoments
+public import SerrinEpigraph.Truncation
+public import SerrinEpigraph.WeakEquation
