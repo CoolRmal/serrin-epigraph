@@ -256,3 +256,4 @@ public import SerrinEpigraph.GraphPerimeterLower
 public import SerrinEpigraph.LocalizedPerimeterComparison
 public import SerrinEpigraph.LimitingPhaseGeometry
 public import SerrinEpigraph.DilationStationarity
+public import SerrinEpigraph.EnergyScaleMonotonicity

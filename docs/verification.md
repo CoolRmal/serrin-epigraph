@@ -1,5 +1,29 @@
 # Verification record
 
+## Exact scale derivative and sharp-ball monotonicity
+
+`ScaledRadialWeight.lean`, `RadialEnergyIdentity.lean`, `SharpRadialLimit.lean`,
+and `EnergyScaleMonotonicity.lean` have clean diagnostics. The
+`SerrinEpigraph Challenge Solution` build passed (3957 jobs). After that build,
+the exact scale-derivative theorem, unconditional Dirichlet-scale monotonicity,
+and conditional surface-scale monotonicity were each checked to depend only on
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+The scale-derivative identity is proved for every integer normalization exponent,
+every center, and every C1 radial profile vanishing beyond squared radius two.
+Differentiation under the integral uses only local integrability of the energy;
+no regularity of spherical intersections with the free boundary is assumed.
+An explicit smooth profile sequence then converges pointwise to the closed-ball
+indicator, including on its sphere. Dominated convergence removes the cutoff.
+
+Dirichlet-scaled ball energy is monotone under the original hypotheses.
+Surface-scaled ball energy is monotone under an explicit additional Modica bound.
+The latter theorem is conditional and does not establish that bound; it must not
+be presented as surface-scale monotonicity from the original hypotheses alone.
+Cone structure, geometric classification, transfer of flatness to the original
+solution, both Main rigidity proof holes, full Comparator, and Palomar
+registration remain unfinished.
+
 ## Spatial stationarity and localized dilation
 
 `StressEnergy.lean`, `GraphLocalDivergence.lean`, `ShiftedStressFlux.lean`,

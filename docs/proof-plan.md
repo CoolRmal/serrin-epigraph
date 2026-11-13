@@ -19,10 +19,27 @@ including variations that meet the free boundary, under the original regularity
 assumptions. `DilationStationarity.lean` specializes this to compactly localized
 dilations and proves the weak Pohozaev identity about any center.
 
-This establishes the spatial first-variation identity needed for scale analysis.
-It does not yet prove the surface-normalized energy monotonicity formula or the
-gradient bound needed to control its discrepancy term. In particular, no cone
-structure or rigidity conclusion follows merely from this new identity.
+`ScaledRadialWeight.lean` differentiates compact radial weights with respect to
+scale and passes that derivative under locally integrable energy integrals.
+`RadialEnergyIdentity.lean` combines it with stationarity to prove the exact
+scale-derivative formula for every integer normalization exponent. The proof
+retains the bulk discrepancy rather than assuming its sign.
+`SharpRadialLimit.lean` constructs smooth decreasing profiles converging to the
+closed-ball indicator, and proves convergence of their weighted integrals.
+`EnergyScaleMonotonicity.lean` passes the resulting monotonicity to exact ball
+energies. It proves Dirichlet scaling, with exponent 2 minus the ambient
+dimension, directly from the original hypotheses. Surface scaling, with exponent
+1 minus the ambient dimension, is proved only with an explicit Modica-bound
+premise. That premise has not been deduced from the original hypotheses.
+
+For the surface exponent the remaining bulk discrepancy is
+
+$$W(u)-\frac12|\nabla u|^2.$$
+
+Thus the remaining analytic step in this route is the Modica gradient estimate,
+including its control near boundary points escaping to infinity. The weaker
+Dirichlet-scaled monotonicity does not substitute for surface-scaled monotonicity
+in the cone argument. No cone structure or rigidity conclusion is asserted.
 
 `GraphPerimeter.lean` proves exact variational perimeter equals graph area on
 every open ambient domain for C1 graphs, allowing infinite area. Its lower bound
@@ -65,9 +82,9 @@ The remaining shared chain is:
 1. Establish the geometric structure of the limiting phase and sufficient
    competitor approximation/comparison for the classification argument. In
    particular, graph-competitor minimality does not itself prove dilation
-   invariance or full perimeter minimality. Spatial stationarity and its
-   localized dilation identity are now proved; the passage to the required
-   monotonicity and cone structure remains.
+   invariance or full perimeter minimality. Spatial stationarity, its exact scale
+   derivative, and removal of radial cutoffs are now proved. The Modica estimate
+   needed for surface-scale monotonicity and the passage to cone structure remain.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and
