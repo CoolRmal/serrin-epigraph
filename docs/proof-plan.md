@@ -13,7 +13,9 @@ rigidity theorem is currently proved.
 
 `RescaledPhaseEnergy.lean` proves the exact energy change of variables and
 a uniform bound on each fixed rescaled ball. Extracting convergent interfaces
-and identifying their geometry remain necessary.
+and identifying their geometry remain necessary. `RescaledPotential.lean` also
+proves that the positive-phase potential integral tends to zero on every fixed
+positive-radius ball, with an explicit inverse-scale bound.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

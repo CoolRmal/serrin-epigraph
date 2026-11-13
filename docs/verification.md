@@ -1,5 +1,24 @@
 # Verification record
 
+## Vanishing rescaled phase potential
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3805 jobs).
+
+`RescaledPotential.lean` proves local integrability and nonnegativity of the
+potential restricted to the positive phase, and compares it with the full energy.
+The exact dilation formula then gives
+
+$$
+0\le\int_{\overline B_r}1_{\{U(Rx)>0\}}W(U(Rx))\,dx
+\le \frac{C r^m}{R}\qquad(R>0,\ Rr\ge1).
+$$
+
+For each fixed positive radius this integral tends to zero as the scale tends
+to infinity. The positive-phase indicator is retained throughout. Diagnostics
+are clean, and the limit theorem's transitive audit uses only the three standard
+axioms. This does not yet extract an interface limit or classify its geometry;
+both rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Uniform rescaled phase energy
 
 `RescaledPhaseEnergy.lean` defines the actual gradient-based density
