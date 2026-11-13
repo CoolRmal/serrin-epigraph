@@ -23,6 +23,15 @@ derivative, and positive equilibrium curvature proofs were individually audited;
 each uses only `propext`, `Classical.choice`, and `Quot.sound`. This verifies the
 potential lemmas, not the two still unfinished rigidity classifications.
 
+## Uniform equilibrium estimates
+
+`EquilibriumEstimates.lean` adds a neighborhood bound on the negative reaction
+derivative, the corresponding positive potential curvature bound, and a linear
+reaction lower bound below equilibrium. The full build passed (3557 jobs).
+Individual axiom inspection of all three new declarations reports only
+`propext`, `Classical.choice`, and `Quot.sound`. The two main rigidity proof holes
+remain; this is not full Comparator acceptance.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

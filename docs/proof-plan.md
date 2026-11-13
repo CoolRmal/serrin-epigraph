@@ -108,8 +108,11 @@ strictly between zero and one. `NormalizedPotential.lean` now defines the potent
 reaction from the argument to one. It proves strict positivity on the interval
 from zero up to one, the unique zero at one, the derivative formulas on the
 positive half-line, and the strictly positive second derivative at one.
-The remaining potential work includes a suitable extension beyond the solution
-range and uniform estimates near the equilibrium. The monotone-solution
+`EquilibriumEstimates.lean` strengthens the equilibrium result to a uniform
+positive lower bound on the second derivative in a full neighborhood. It also
+proves a positive linear lower bound for the reaction in terms of the distance
+to equilibrium from below. The remaining potential work includes a suitable
+extension beyond the solution range and the integrated quadratic energy bounds. The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
