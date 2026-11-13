@@ -1,10 +1,10 @@
 # Proof obligations
 
-The ball comparison now has a proved strong maximum principle for nonnegative
-weak supersolutions, a classical-to-weak conversion, and the nonlinear
-`scaled_solution_eq_of_contact` theorem. Next maximize the solution ratio on a
-compact ball strictly inside the epigraph, then use boundary values to exclude
-the equality forced by an interior contact at a scaling factor greater than one.
+The maximum-ratio argument is now proved in `CompactComparison.lean`, including
+the boundary contradiction via continuous extension from the open domain.
+`RadialBallProfile.spatial_le_solution` applies it to every closed ball contained
+in the epigraph. Next extend this comparison to an interior tangent ball by
+upward translations and passage to the limit, then compare boundary derivatives.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

@@ -1,5 +1,20 @@
 # Verification record
 
+## Compact-domain and interior-ball comparison
+
+`nonlinear_comparison_of_compact_closure` proves boundary-to-interior comparison
+for two classical solutions on a connected open domain with compact closure and
+nonempty boundary, assuming the upper solution is positive on the closure and
+the reaction quotient condition holds. The proof maximizes the ratio, applies
+strong scaled comparison, and extends equality to the boundary to contradict a
+ratio greater than one.
+`RadialBallProfile.spatial_le_solution` applies it to the constructed radial ball
+solutions whenever the closed ball is contained in the epigraph. Its transitive
+axiom audit reports only `propext`, `Classical.choice`, and `Quot.sound`, with no
+source warnings. The full build passed (3736 jobs). Tangent-ball comparison and
+the final rigidity proofs remain unfinished; this is not full Comparator
+acceptance or Palomar registration.
+
 ## Nonlinear scaled comparison
 
 `ScaledComparison.lean` proves the reaction scaling inequality, a linear bound
