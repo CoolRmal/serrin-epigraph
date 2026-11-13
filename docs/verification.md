@@ -1,5 +1,15 @@
 # Verification record
 
+## Local graph-area recovery coefficient
+
+The `SerrinEpigraph Challenge Solution` build passed (3907 jobs).
+`GraphAreaDensity.lean` proves area-density continuity, local oscillation bounds,
+and recovery energy bounded by the local area integral plus arbitrary small
+base-volume error, times action. Diagnostics are clean and the local area-bound
+theorem uses only the standard three axioms. Competitor patching and variational
+perimeter identification, both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Local graph recovery bound
 
 The `SerrinEpigraph Challenge Solution` build passed (3906 jobs).

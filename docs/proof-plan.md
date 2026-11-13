@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`GraphAreaDensity.lean` proves continuity and local oscillation control of the
+graph area density. On sufficiently small patches it improves the recovery
+coefficient to the area-density integral plus an arbitrarily small base-volume
+error. Patching the local competitors and identifying area with variational
+perimeter remain necessary for the full geometric recovery result.
+
 `LocalRecoveryBound.lean` removes global slope control from the recovery energy
 bound. A C1 coordinate only needs its gradient bounded on the compact integration
 region; the graph specialization likewise needs slope control only above that
