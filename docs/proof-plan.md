@@ -208,7 +208,10 @@ set. `ZeroExtensionDifferentiability.lean` proves almost-everywhere
 differentiability via Rademacher, identifies the totalized gradient with the
 interior gradient extended by zero, and proves non-differentiability at every
 boundary point from the nonzero Neumann slope. Consequently the frontier has
-zero ambient volume.
+zero ambient volume. `PhaseEnergy.lean` defines positive-phase energy with an
+explicit additive constant, proves local integrability of the zero extension’s
+squared gradient and phase energy, and identifies the whole-space integral
+with the original interior integral.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

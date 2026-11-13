@@ -371,3 +371,15 @@ audited individually and use only `propext`, `Classical.choice`, and `Quot.sound
 new Rademacher dependencies).
 Cross-boundary energy minimality, both rigidity proofs, full Comparator
 acceptance, and Palomar registration remain unfinished.
+
+## Finite local phase energy
+
+`PhaseEnergy.lean` proves that the squared gradient and positive-phase energy
+of the zero extension are integrable on every compact ambient set. The
+whole-space energy integral equals the original interior energy integral.
+The additive energy constant remains explicit: no Bernoulli normalization is
+assumed. All seven public theorem declarations were individually audited and
+use only `propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3684 jobs).
+Cross-boundary energy minimality, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain unfinished.

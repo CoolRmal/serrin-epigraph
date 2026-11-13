@@ -75,3 +75,4 @@ public import SerrinEpigraph.BoundaryGradient
 public import SerrinEpigraph.ZeroExtension
 public import SerrinEpigraph.ZeroExtensionRegularity
 public import SerrinEpigraph.ZeroExtensionDifferentiability
+public import SerrinEpigraph.PhaseEnergy
