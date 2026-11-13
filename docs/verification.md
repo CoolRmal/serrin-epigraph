@@ -426,3 +426,19 @@ The zero extension is locally Lipschitz, not globally C¹, so the new identity
 does not yet apply to it. Extension to that regularity, free-boundary energy
 minimality, both rigidity proofs, full Comparator acceptance, and Palomar
 registration remain unfinished.
+
+## Stability of calibration integrals under bounded approximation
+
+`CalibrationConvergence.lean` proves convergence of compact-set calibration
+integrals under almost-everywhere convergence of levels and vector fields,
+assuming continuous approximating fields, a uniform level bound below one,
+and a uniform vector bound on the compact set. Compactness supplies the
+integrable domination, including at level zero. The limiting fields need not
+be smooth. A specialization identifies the limiting calibration integral
+with the phase energy of the zero extension, when a smooth approximation
+with convergent gradients and these bounds is supplied.
+Both new theorems were audited and use only `propext`, `Classical.choice`, and
+`Quot.sound`. The complete build passed (3688 jobs).
+The approximation sequence and its gradient convergence have not yet been
+constructed. Free-boundary energy minimality, both rigidity proofs, full
+Comparator acceptance, and Palomar registration remain unfinished.

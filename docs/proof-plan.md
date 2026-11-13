@@ -224,7 +224,13 @@ under compact smooth changes between globally smooth functions valued in
 endpoints toward one half and passes to zero regularization using continuity
 of compact-set integrals. Extension of this invariance to the locally
 Lipschitz zero extension remains; the smooth result alone does not establish
-free-boundary energy minimality.
+free-boundary energy minimality. `CalibrationConvergence.lean` supplies the
+compact-set dominated-convergence step: almost-everywhere convergence of
+levels and vector fields implies convergence of calibration integrals under
+uniform level bounds below one and uniform vector bounds. Its specialization
+to smooth approximations of the zero extension recovers the phase energy.
+The required approximation sequence and its gradient convergence are not yet
+constructed.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
