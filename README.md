@@ -50,6 +50,9 @@ Along one common sequence, potential and kinetic energies balance locally, and
 diffuse energy agrees asymptotically with primitive gradient mass. Their
 positive homogeneous ball-mass limit has not yet been identified with the
 limiting phase's perimeter.
+Arbitrary measurable phases now also admit smooth local approximations with
+gradient mass controlled by perimeter on slightly enlarged balls. Energy
+recovery for general competitors and the geometric rigidity argument remain open.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
 those degenerate and unbounded cases are not part of the corrected rigidity targets.

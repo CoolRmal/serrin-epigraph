@@ -1,5 +1,27 @@
 # Verification record
 
+## Smooth approximation with perimeter-controlled gradient mass
+
+The five modules from `MeasurablePhaseMollification.lean` through
+`MollifiedGradientMass.lean` compile successfully. The full
+`SerrinEpigraph Challenge Solution` build passed (3990 jobs). After the build,
+the local integral convergence of measurable phase averages, the gradient-mass
+duality theorem, and the mollified-phase gradient bound were each audited to
+use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Every measurable phase now has explicit smooth approximants taking values in
+the closed unit interval and converging in integral norm on every compact set.
+Fubini and translation of divergence tests bound their gradient mass on a ball
+by phase perimeter on the ball enlarged by the averaging radius. The reverse
+gradient duality uses continuous unit fields, support-preserving smooth
+approximation, regularization at zero gradients, and inner regularity.
+
+This is approximation with variation control. Construction of energy recovery
+competitors, full perimeter minimality, geometric classification, and transfer
+of flatness remain unfinished. The proof-status audit still passes the first
+main theorem and rejects both rigidity theorems because of `sorryAx`. Full
+Comparator acceptance and Palomar registration are not claimed.
+
 ## Simultaneous defect decay and positive limiting energy mass
 
 The five new modules from `BulkEnergyDiscrepancy.lean` through

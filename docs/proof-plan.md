@@ -84,6 +84,17 @@ with the perimeter of the limiting phase: ruling out loss of variation, and
 constructing recovery for the broader competitor class, are still required
 before invoking geometric classification.
 
+`MeasurablePhaseMollification.lean` now smooths arbitrary measurable phases,
+preserving the closed unit interval and proving local integral convergence.
+`MollificationDuality.lean` exchanges phase averaging with divergence testing.
+`MollifiedPerimeterBound.lean` controls the translated tests by perimeter on an
+enlarged ball. `GradientMassDuality.lean` proves the converse gradient-mass
+bound by regularized continuous unit fields, support-preserving smooth
+approximation, and inner regularity. `MollifiedGradientMass.lean` combines
+these into a gradient bound by perimeter on the ball enlarged by the kernel
+radius. This supplies variation-controlled smoothing for the broader
+competitor class; it does not yet construct its energy recovery functions.
+
 `WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
 tests and only the original C2 regularity of the solution. `GradientExcess.lean`
 proves the weak equation and the Hessian inequality for the perturbed discrepancy
@@ -149,10 +160,11 @@ The remaining shared chain is:
 
 1. Establish the geometric structure of the limiting phase and sufficient
    competitor approximation/comparison for the classification argument. In
-   particular, graph-competitor minimality does not itself prove dilation
-   invariance or full perimeter minimality. Spatial stationarity, its exact scale
-   derivative, removal of radial cutoffs, the Modica estimate, and surface-scale
-   monotonicity are now proved. The passage to cone structure remains.
+   particular, graph-competitor minimality does not itself prove full perimeter
+   minimality. Spatial stationarity, the Modica estimate, surface-scale
+   monotonicity, nontrivial dilation-invariant phase limits, and
+   variation-controlled smoothing are now proved. Energy recovery for general
+   finite-perimeter competitors and the required geometric regularity remain.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and
