@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`AnnularTransitionCost.lean` localizes cutoff selection and the integrated
+gluing comparison to the annular cost. The selection argument masks the cost
+outside the annulus, so different limiting sets inside the inner ball are
+allowed. Only the annulus needs common-limit mismatch control. This refinement
+is necessary for a genuine geometric competitor rather than a comparison of
+two sequences with the same limit everywhere.
+
 `GluingMismatchConvergence.lean` bounds squared mismatch of normalized inputs
 by their two absolute errors to a common limit. It proves common local L1
 convergence gives vanishing squared mismatch and hence, under a uniform

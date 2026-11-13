@@ -1,5 +1,15 @@
 # Verification record
 
+## Annular selection and integrated comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3881 jobs).
+`AnnularTransitionCost.lean` selects cutoffs from annular cost alone and applies
+the result to the gluing majorant and integrated energy comparison. The proof
+does not require common limits inside the inner ball. Diagnostics are clean
+and the integrated annular comparison has only the standard three axioms.
+Recovery competitors and geometric classification remain unfinished, as do
+both Main rigidity proofs, full Comparator, and Palomar registration.
+
 ## Common-limit control of squared mismatch
 
 The `SerrinEpigraph Challenge Solution` build passed (3880 jobs).
