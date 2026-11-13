@@ -588,3 +588,15 @@ The full build passed (3700 jobs).
 Radial existence and large-radius limits, boundary comparison, Bernoulli
 normalization, both rigidity proofs, full Comparator acceptance, and Palomar
 registration remain unfinished.
+
+## Nonsingular radial integral operator
+
+`RadialIntegral.lean` adds eight proved theorems for the weighted average
+and radial Picard operator, including the quadratic size and difference
+estimates with dimension factor 1/(m+1). LSP diagnostics are clean and the
+full `lake build SerrinEpigraph Challenge Solution` passed (3701 jobs).
+Each new theorem was checked by `#print axioms`; only `propext`,
+`Classical.choice`, and `Quot.sound` occur. No new proof holes were added.
+The two existing rigidity proof holes remain. This is operator infrastructure,
+not an existence theorem. Full Comparator acceptance and Palomar registration
+remain outstanding.

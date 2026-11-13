@@ -274,6 +274,15 @@ The free-boundary minimization argument and the low-dimensional or one-sided-gra
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
 
+## Radial integral construction
+
+`RadialIntegral.lean` defines the nonsingular weighted unit-interval average
+and radial Picard operator. It proves continuity of the average, the prescribed
+center value and zero center derivative, the derivative formula, a quadratic
+size bound, and a quadratic difference bound for continuous forcings.
+These estimates supply the operator bounds for a future fixed-point construction;
+no radial solution existence or large-radius limit is asserted yet.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard
