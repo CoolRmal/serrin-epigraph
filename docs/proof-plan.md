@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`RecoveryProfileExtension.lean` extends the inverse profile by clamping time
+to the finite transition interval. It proves the core and extended profiles
+are Lipschitz with the explicit maximal regularized speed, that the extension
+stays in [0,1], and that its exterior phases are exactly zero and one. Total
+action and its regularization limit remain needed for geometric recovery.
+
 `RecoveryProfileRegularity.lean` proves continuity of the inverse profile on
 its closed transition interval using compactness, identifies interior phase
 values, and derives the regularized first-order ODE by inverse differentiation.

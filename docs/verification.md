@@ -1,5 +1,15 @@
 # Verification record
 
+## Global Lipschitz recovery profile
+
+The `SerrinEpigraph Challenge Solution` build passed (3890 jobs).
+`RecoveryProfileExtension.lean` proves a Lipschitz bound for the core through
+the endpoints and for its constant-phase extension on the whole real line,
+with normalized range and exact exterior values zero and one. Diagnostics are
+clean and the global Lipschitz theorem has only the standard three axioms.
+Total recovery action and the geometric upper bound remain unfinished. Both
+Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Inverse profile regularity and energy identity
 
 The `SerrinEpigraph Challenge Solution` build passed (3889 jobs).
