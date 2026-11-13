@@ -903,3 +903,14 @@ Second-order spatial regularity and the Laplacian identity remain pending,
 along with comparison/Hopf arguments, annulus construction, both final
 rigidity proofs, full Comparator acceptance, and Palomar registration.
 
+## Central radial slope ratio and derivative
+
+`RadialSlopeRatio.lean` proves six theorems: the weighted average at zero,
+its continuity on the closed radius interval, the slope/average identity,
+the central slope-ratio limit, the central slope-derivative limit, and the
+right derivative of the slope at zero. All six have clean diagnostics and
+only the standard three axioms. The full build passed (3729 jobs).
+The spatial Hessian and Laplacian formulas, comparison/Hopf arguments,
+annulus construction, both final rigidity proofs, full Comparator acceptance,
+and Palomar registration remain unfinished.
+

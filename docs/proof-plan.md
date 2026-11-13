@@ -392,6 +392,12 @@ differentiable throughout the ball. Its gradient norm equals the absolute
 radial slope, including the center, and its gradient is continuous there.
 Second-order regularity and the Laplacian identity remain to be established.
 
+`RadialSlopeRatio.lean` identifies slope/radius with a continuous weighted
+reaction average. It proves the central limit is minus the central reaction
+divided by m+1. The radial equation then gives the same limit for the slope
+derivative and a right derivative of the slope at zero. These are the
+central second-order radial data needed for the spatial Hessian formula.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

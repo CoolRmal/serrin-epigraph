@@ -113,3 +113,4 @@ public import SerrinEpigraph.RadialEquilibrium
 public import SerrinEpigraph.RadialBoundaryEnergy
 public import SerrinEpigraph.RadialSpatial
 public import SerrinEpigraph.RadialCenter
+public import SerrinEpigraph.RadialSlopeRatio
