@@ -1,5 +1,16 @@
 # Verification record
 
+## Epigraph rescaling and one-sided bounds
+
+`EpigraphRescaling.lean` proves the exact domain identity for the rescaled graph,
+both one-sided bound formulas with intercept C/R, and passage to homogeneous
+cone bounds under an explicit pointwise-convergence hypothesis. Diagnostics
+are clean and the final bound theorem's transitive audit uses only `propext`,
+`Classical.choice`, and `Quot.sound`, with no source warnings. No existence or
+flatness of a blow-down limit is claimed. Both rigidity proofs, full Comparator,
+and Palomar registration remain unfinished.
+The complete `SerrinEpigraph Challenge Solution` build passed (3775 jobs).
+
 ## Closed-range Lipschitz free-boundary minimality
 
 `CappedEnergy.lean` proves uniform compact gradient bounds for the cap family,

@@ -1,5 +1,24 @@
 # Proof obligations
 
+## Geometric classification after minimality
+
+The analytic reduction to closed-range Lipschitz phase-energy minimality is now
+proved. The remaining classification is substantial: compactness of rescaled
+interfaces, identification of limiting minimizing geometry, flatness of the
+relevant limits, and an improvement-of-flatness argument recovering the original
+one-dimensional solution. The roadmap is informed by
+[Wang–Wei, Sections 3–4 and Theorem 1.6](https://arxiv.org/html/1502.04680).
+These results are not imported as assumptions or axioms, and neither main
+rigidity theorem is currently proved.
+
+`EpigraphRescaling.lean` starts the geometric infrastructure with the exact
+rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
+so any pointwise graph limit inherits a homogeneous one-sided cone bound.
+This is conditional on pointwise convergence; it does not establish compactness,
+nor claim that the relevant interface limit must exist as a pointwise graph.
+
+## Completed analytic reduction
+
 `AnnularComparison.lean` now proves that an increasing annular profile with
 outer value one bounds the original solution above whenever its inner closed
 ball is strictly separated from the closed epigraph. In particular this holds
