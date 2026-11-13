@@ -57,6 +57,10 @@ this profile to an annulus in Euclidean space and prove the exterior comparison.
 range, positivity, zero/one sphere values, gradient and Hessian formulas, and the
 original elliptic equation. Continuous second differentiability and the inner
 boundary derivative still need to be packaged for the comparison argument.
+Both are now proved in `AnnularRegularity.lean`: the spatial profile is C2 on the
+open annulus and has the explicit prescribed radial differential within the
+closed annulus at the inner sphere. The next obligation is comparison with the
+epigraph solution outside an exterior tangent ball.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

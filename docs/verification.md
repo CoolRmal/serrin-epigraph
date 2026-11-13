@@ -1,5 +1,18 @@
 # Verification record
 
+## Annular regularity and inner boundary differential
+
+`AnnularRegularity.lean` derives C1 slope and C2 radial value regularity from the
+radial equations, and composes with the smooth Euclidean norm away from the
+center to prove C2 regularity on the open annulus. It also proves the right
+derivative at the inner radius and the explicit spatial differential within the
+closed annulus at the inner sphere. The spatial regularity and boundary
+differential theorems passed individual transitive axiom audits with only
+`propext`, `Classical.choice`, and `Quot.sound`, with no source warnings. The
+complete build passed (3749 jobs). Exterior comparison, the reverse energy bound,
+both rigidity classifications, full Comparator acceptance, and Palomar
+registration remain unfinished.
+
 ## Spatial annular equation
 
 `AnnularSpatial.lean` lifts the constructed radial profiles by Euclidean distance.

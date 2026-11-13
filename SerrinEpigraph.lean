@@ -133,3 +133,4 @@ public import SerrinEpigraph.AnnularUnion
 public import SerrinEpigraph.AnnularLimits
 public import SerrinEpigraph.AnnularMaximal
 public import SerrinEpigraph.AnnularSpatial
+public import SerrinEpigraph.AnnularRegularity
