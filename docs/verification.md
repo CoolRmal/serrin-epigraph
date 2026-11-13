@@ -1,5 +1,18 @@
 # Verification record
 
+## Annular endpoint derivatives and local restart
+
+`AnnularEndpoint.lean` proves that increasing radial segments are nondecreasing,
+have positive outer endpoint value, and satisfy both radial equations as left
+derivatives at that endpoint. If the endpoint value is below one and its slope
+is positive, `exists_local_restart` gives a matching local radial solution with
+values strictly between zero and one and strictly positive slope.
+The slope endpoint theorem and restart theorem passed individual transitive
+axiom audits with only `propext`, `Classical.choice`, and `Quot.sound`; source
+diagnostics are clean. The complete build passed (3742 jobs). A glued extended
+segment and continuation to value one are still required. Both rigidity targets,
+full Comparator acceptance, and Palomar registration remain unfinished.
+
 ## Local increasing annular solution and parameter choice
 
 `AnnularLocal.lean` proves `exists_increasingRadialSegment` from reaction

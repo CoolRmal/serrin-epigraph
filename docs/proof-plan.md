@@ -29,6 +29,10 @@ positive slope and value below one, and chooses a uniform positive energy margin
 for all sufficiently large inner radii whenever the initial slope energy exceeds
 the potential drop. Next continue this segment using the annular energy bounds
 until its value reaches one.
+`AnnularEndpoint.lean` now establishes both left endpoint differential equations,
+positivity of the outer value, and a local restart retaining positive slope and
+values between zero and one when the endpoint has those strict bounds. Gluing
+the restart to the old segment and the maximal continuation argument remain.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
