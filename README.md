@@ -30,6 +30,13 @@ an explicit polynomial comparison on large interior balls, compact contact,
 and the reaction quotient condition. This is a proved prerequisite for the
 remaining rigidity argument, not a proof of either classification theorem.
 
+The **Modica gradient estimate** and **surface-scaled ball-energy monotonicity**
+are also proved under the original rigidity assumptions. The proof obtains a
+global gradient bound by a weak Bernstein argument and controls maxima escaping
+to infinity by quadratic penalization. It requires no extra regularity or
+assumed gradient estimate. The geometric classification and transfer of flatness
+to the original solution remain unfinished.
+
 An [informal variational reduction](docs/variational-reduction.md) now derives a
 common vertical limit and minimization of the general free-boundary energy.
 The development now proves phase-energy minimality against normalized locally

@@ -1,5 +1,32 @@
 # Verification record
 
+## Global gradient control, Modica bound, and unconditional surface-scale monotonicity
+
+The seven new modules from `WeakLaplacianCalculus.lean` through
+`SurfaceEnergyMonotonicity.lean` have clean diagnostics. The
+`SerrinEpigraph Challenge Solution` build passed (3968 jobs). After that build,
+the global gradient bound, the global perturbed-excess bound, the Modica theorem,
+and unconditional surface-scaled ball-energy monotonicity were each checked to
+depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+
+The Bernstein proof uses only C1 weak Laplacian calculus and the original C2
+solution regularity. Coordinate square completion absorbs the cutoff cross term.
+Compact optimization on each unit ball intersected with the closed epigraph
+uses the given Neumann data on the graph and the zero cutoff on the sphere.
+The resulting uniform gradient bound is proved, rather than assumed.
+
+Quadratic penalization then gives interior maxima of the bounded excess, with
+an explicit distance estimate. Sending the penalty to zero in the weak
+upper-test inequality bounds the perturbed excess. Removing the perturbation
+proves the Modica estimate. `surface_scaled_energy_monotone` supplies this proof
+to the previously conditional scale formula; it now has only the original
+`Hypotheses` and `RigidityHypotheses` assumptions.
+
+This closes the analytic discrepancy-control obligation recorded in the previous
+entries. Passing to a nontrivial dilation-invariant limiting phase, geometric
+classification, transfer of flatness, both Main rigidity holes, full Comparator
+acceptance, and Palomar registration remain unfinished.
+
 ## Weak Bochner identity and local excess maximum tests
 
 `WeakBochner.lean`, `GradientExcess.lean`, `WeakViscosity.lean`, and

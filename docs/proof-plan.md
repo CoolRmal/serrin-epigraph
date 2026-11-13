@@ -28,18 +28,18 @@ retains the bulk discrepancy rather than assuming its sign.
 closed-ball indicator, and proves convergence of their weighted integrals.
 `EnergyScaleMonotonicity.lean` passes the resulting monotonicity to exact ball
 energies. It proves Dirichlet scaling, with exponent 2 minus the ambient
-dimension, directly from the original hypotheses. Surface scaling, with exponent
-1 minus the ambient dimension, is proved only with an explicit Modica-bound
-premise. That premise has not been deduced from the original hypotheses.
+dimension, directly from the original hypotheses. `SurfaceEnergyMonotonicity.lean`
+now also proves surface scaling, with exponent 1 minus the ambient dimension,
+about every center under the original rigidity hypotheses. It supplies the
+previously explicit Modica premise from `ModicaBound.lean`.
 
-For the surface exponent the remaining bulk discrepancy is
+For the surface exponent the bulk discrepancy is
 
 $$W(u)-\frac12|\nabla u|^2.$$
 
-Thus the remaining analytic step in this route is the Modica gradient estimate,
-including its control near boundary points escaping to infinity. The weaker
-Dirichlet-scaled monotonicity does not substitute for surface-scaled monotonicity
-in the cone argument. No cone structure or rigidity conclusion is asserted.
+Its nonnegativity is now proved, including control of maximizing sequences
+escaping to infinity. Passage from surface-scale monotonicity to cone structure
+is still outstanding. No cone structure or rigidity conclusion is asserted.
 
 `WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
 tests and only the original C2 regularity of the solution. `GradientExcess.lean`
@@ -51,9 +51,20 @@ $$P_\varepsilon=\frac12|\nabla u|^2-W(u)+\varepsilon u^2.$$
 function with continuous weak Laplacian, using the existing strong maximum
 principle. `GradientExcessMaximum.lean` applies it to the discrepancy, proves its
 continuous boundary extension and zero graph trace, and shows that an interior
-local maximum cannot exceed epsilon when epsilon is positive. This is a local
-maximum result. A global bound or control of maximizing sequences on the
-unbounded epigraph is still required; the Modica estimate is not yet proved.
+local maximum cannot exceed epsilon when epsilon is positive.
+
+`WeakLaplacianCalculus.lean` supplies the product and linearity rules for C1
+functions with continuous weak Laplacians. `BernsteinQuantity.lean` and
+`BernsteinEstimate.lean` combine these rules with the polynomial ball cutoff;
+coordinatewise square completion absorbs the mixed Hessian term.
+`GlobalGradientBound.lean` obtains a uniform global gradient bound by maximizing
+on each unit ball intersected with the closed epigraph. The constant Neumann
+gradient handles the graph boundary, and the cutoff vanishes on the sphere.
+`QuadraticPenalization.lean` then constructs interior penalized maxima of the
+bounded excess. `ModicaBound.lean` sends the penalty to zero in the weak
+upper-test inequality and then removes the positive perturbation. This proves
+the Modica bound from the original hypotheses, without extra regularity or
+an assumed global gradient bound.
 
 `GraphPerimeter.lean` proves exact variational perimeter equals graph area on
 every open ambient domain for C1 graphs, allowing infinite area. Its lower bound
@@ -97,8 +108,8 @@ The remaining shared chain is:
    competitor approximation/comparison for the classification argument. In
    particular, graph-competitor minimality does not itself prove dilation
    invariance or full perimeter minimality. Spatial stationarity, its exact scale
-   derivative, and removal of radial cutoffs are now proved. The Modica estimate
-   needed for surface-scale monotonicity and the passage to cone structure remain.
+   derivative, removal of radial cutoffs, the Modica estimate, and surface-scale
+   monotonicity are now proved. The passage to cone structure remains.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and
