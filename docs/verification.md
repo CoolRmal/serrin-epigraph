@@ -1,5 +1,33 @@
 # Verification record
 
+## Simultaneous defect decay and positive limiting energy mass
+
+The five new modules from `BulkEnergyDiscrepancy.lean` through
+`AsymptoticEnergyMass.lean` have clean diagnostics. The final module passed its
+standalone Lean check, and `SerrinEpigraph Challenge Solution` built successfully
+(3985 jobs). After that build, the combined phase-and-equipartition theorem,
+the local energy/primitive-gradient gap limit, and the positive homogeneous
+primitive-mass limit were each checked to use only `propext`, `Classical.choice`,
+and `Quot.sound`.
+
+The exact logarithmic energy derivative splits into nonnegative radial and bulk
+defects. One scale sequence makes both vanish at every fixed integer multiple.
+The bulk defect controls the potential-minus-kinetic discrepancy on fixed balls,
+and hence on every compact set. The diffuse energy minus the phase primitive's
+gradient norm is nonnegative and no larger than this discrepancy, so its local
+integral also vanishes. The common phase theorem preserves these conclusions
+together with nontriviality, dilation invariance, perimeter bounds, vertical
+order, graph comparison, and the applicable one-sided cone constraint.
+
+For a positive finite coefficient L, the rescaled energy on an origin-centered
+ball of radius r tends to L times r to the power m. Primitive gradient mass has
+the same limits along the defect scales. This is not yet equality with the
+perimeter of the limiting phase: possible loss of variation in the limit and
+recovery for the broader competitor class still need to be addressed.
+
+Both Main rigidity proof holes remain. Geometric classification and transfer of
+flatness, full Comparator acceptance, and Palomar registration are unfinished.
+
 ## Nontriviality of every local phase limit
 
 `EnergyNondegeneracy.lean` and `PhaseNontriviality.lean` have clean diagnostics.

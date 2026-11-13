@@ -67,6 +67,23 @@ The geometric regularity and full competitor class required for classification,
 classification as a half-space, and transfer of flatness to the original solution
 remain outstanding. Neither Main rigidity conclusion is proved.
 
+`BulkEnergyDiscrepancy.lean` splits the logarithmic scale derivative exactly into
+bulk discrepancy and radial defect, and selects one sequence on which both
+vanish at all integer multiples. `RescaledDiscrepancy.lean` transfers bulk decay
+to fixed balls. `EnergyEquipartition.lean` proves that the diffuse energy minus
+the phase primitive's gradient norm lies between zero and this discrepancy;
+its integral tends to zero on every compact set. `EquipartitionPhaseLimit.lean`
+retains these properties alongside the nontrivial dilation-invariant phase,
+vertical order, and graph comparison on one common sequence.
+
+`AsymptoticEnergyMass.lean` proves a positive finite coefficient L such that
+rescaled energy on every origin-centered ball of radius r tends to L times r
+to the power m. Along the simultaneous defect sequence, primitive gradient
+mass has the same limits. This does not identify the limit of gradient mass
+with the perimeter of the limiting phase: ruling out loss of variation, and
+constructing recovery for the broader competitor class, are still required
+before invoking geometric classification.
+
 `WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
 tests and only the original C2 regularity of the solution. `GradientExcess.lean`
 proves the weak equation and the Hessian inequality for the perturbed discrepancy

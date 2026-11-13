@@ -46,6 +46,10 @@ invariant almost everywhere under each positive dilation, with finite local
 perimeter and vertical order. Both phases have positive measure; see the
 [proof obligations](docs/proof-plan.md). The remaining hypotheses for geometric
 classification, classification itself, and transfer of flatness remain open.
+Along one common sequence, potential and kinetic energies balance locally, and
+diffuse energy agrees asymptotically with primitive gradient mass. Their
+positive homogeneous ball-mass limit has not yet been identified with the
+limiting phase's perimeter.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
 those degenerate and unbounded cases are not part of the corrected rigidity targets.
