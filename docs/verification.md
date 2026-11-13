@@ -1,5 +1,19 @@
 # Verification record
 
+## Endpoint competitor cap and gradient convergence
+
+`CappedCompetitor.lean` constructs a ceiling between the reference solution and
+one. Taking its minimum with a normalized competitor preserves local Lipschitz
+regularity, positive phase, and support of the difference, while lowering all
+values strictly below one. Values converge as the cap parameter goes to zero;
+gradients converge at every differentiability point of the reference function,
+including where the competitor attains one. Diagnostics are clean and the
+gradient convergence theorem's transitive axiom audit uses only `propext`,
+`Classical.choice`, and `Quot.sound`. Energy-integral convergence is still
+needed before claiming closed-range minimality. Both rigidity targets, full
+Comparator, and Palomar registration remain incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3772 jobs).
+
 ## Minimality for locally Lipschitz competitors below equilibrium
 
 `LipschitzCalibration.lean` establishes the calibration integral limit,
