@@ -86,7 +86,11 @@ absorbed into the constant. `VariationalPerimeter.lean` defines the extended
 nonnegative variational perimeter using the supremum of compact C¹ unit-field
 divergence pairings, proves domain monotonicity, and packages finite
 surface-order perimeter bounds on integer-radius balls for the same phase
-limit. Interface minimality and geometric classification remain.
+limit. `PerimeterInvariance.lean` identifies divergence with the intrinsic
+linear trace, proves orthonormal-basis independence of perimeter, and proves
+invariance under almost-everywhere changes of the phase inside the test domain.
+Perimeter lower semicontinuity, interface minimality, and geometric
+classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

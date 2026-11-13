@@ -18,12 +18,12 @@ open scoped Topology ENNReal
 namespace SerrinEpigraph
 
 /-- Divergence expressed as the derivative trace in an orthonormal basis. -/
-noncomputable def fieldDivergence {d : ℕ} (b : OrthonormalBasis (Fin d) ℝ (Space d))
+@[expose] noncomputable def fieldDivergence {d : ℕ} (b : OrthonormalBasis (Fin d) ℝ (Space d))
     (F : Space d → Space d) (x : Space d) : ℝ :=
   ∑ i, inner ℝ (b i) (fderiv ℝ F x (b i))
 
 /-- The variational perimeter, tested by compactly supported unit C¹ vector fields. -/
-noncomputable def variationalPerimeter {d : ℕ}
+@[expose] noncomputable def variationalPerimeter {d : ℕ}
     (b : OrthonormalBasis (Fin d) ℝ (Space d)) (E Ω : Set (Space d)) : ℝ≥0∞ :=
   ⨆ (F : Space d → Space d) (_ : ContDiff ℝ 1 F) (_ : HasCompactSupport F)
     (_ : tsupport F ⊆ Ω) (_ : ∀ x, ‖F x‖ ≤ 1),

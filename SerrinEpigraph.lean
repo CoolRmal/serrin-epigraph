@@ -183,3 +183,4 @@ public import SerrinEpigraph.LipschitzDirectionalTest
 public import SerrinEpigraph.LimitingPhaseDirectionalBound
 public import SerrinEpigraph.PhaseVectorTestBound
 public import SerrinEpigraph.VariationalPerimeter
+public import SerrinEpigraph.PerimeterInvariance

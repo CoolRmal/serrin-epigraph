@@ -1,5 +1,21 @@
 # Verification record
 
+## Intrinsic perimeter and representative invariance
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3863 jobs).
+
+`PerimeterInvariance.lean` identifies the basis formula for divergence with
+Mathlib's intrinsic linear trace and proves that divergence and variational
+perimeter are independent of the orthonormal basis. It also proves that
+changing a phase on a null set inside the test domain leaves its perimeter
+unchanged. The two definitions in `VariationalPerimeter.lean` are exposed for
+use in downstream proofs; their mathematical definitions are unchanged.
+
+Diagnostics and both invariance theorems' transitive axiom audits are clean,
+using only the standard three axioms. Perimeter lower semicontinuity, interface
+minimality, and geometric classification remain. Both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Variational perimeter bounds
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3834 jobs).
