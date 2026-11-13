@@ -181,3 +181,4 @@ public import SerrinEpigraph.IntegralLimitTesting
 public import SerrinEpigraph.DirectionalTestBound
 public import SerrinEpigraph.LipschitzDirectionalTest
 public import SerrinEpigraph.LimitingPhaseDirectionalBound
+public import SerrinEpigraph.PhaseVectorTestBound

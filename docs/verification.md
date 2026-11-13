@@ -1,5 +1,21 @@
 # Verification record
 
+## Vector divergence test bound for the phase limit
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3833 jobs).
+
+`PhaseVectorTestBound.lean` decomposes a compactly supported unit-bounded C¹
+vector field into scalar components in any orthonormal basis. Directional
+bounds, integrability of the component pairings, and the finite-sum triangle
+inequality yield a bound on the full derivative trace pairing. Applied to the
+same measurable phase limit, this gives surface-order control for all vector
+divergence tests, absorbing the dimension factor into the constant.
+
+The final theorem's transitive axiom audit uses only the standard three axioms;
+there are no new build warnings or holes. Packaging the variational perimeter,
+interface minimality, and geometric classification remain. Both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Directional bounds inherited by the limiting phase
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3832 jobs).
