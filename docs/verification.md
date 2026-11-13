@@ -1,5 +1,21 @@
 # Verification record
 
+## Actual local L¹ limits of unsmoothed primitives
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3822 jobs).
+
+`LocalPrimitiveLimits.lean` embeds an integrable Cauchy sequence in Mathlib's
+complete L¹ space, identifies its metric with the integral of the absolute
+difference, and obtains an integrable representative of its limit. It applies
+this to the common primitive subsequence, producing an actual local integrable
+limit on every positive integer-radius ball along the same subsequence.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. Compatibility of representatives on
+nested balls and identification of the limiting phase are not yet proved.
+Both rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Integral Cauchy subsequence without mollification
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3821 jobs).

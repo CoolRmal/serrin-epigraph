@@ -170,3 +170,4 @@ public import SerrinEpigraph.TranslationIntegral
 public import SerrinEpigraph.LipschitzTranslationIntegral
 public import SerrinEpigraph.MollificationIntegralError
 public import SerrinEpigraph.IntegralCauchyApproximation
+public import SerrinEpigraph.LocalPrimitiveLimits

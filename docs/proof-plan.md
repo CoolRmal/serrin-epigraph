@@ -49,8 +49,10 @@ estimate is completed in `MollificationIntegralError.lean`, yielding an explicit
 local error bound proportional to the averaging radius, uniformly in dilation.
 `IntegralCauchyApproximation.lean` combines this with the common mollified
 subsequence and proves the unsmoothed primitive subsequence is Cauchy in
-integral norm on all positive integer balls. L¹ completeness, compatibility
-of local limits, and identification of the limiting phase remain.
+integral norm on all positive integer balls. `LocalPrimitiveLimits.lean` uses
+L¹ completeness to construct actual local integrable limits along that same
+subsequence. Compatibility of local limits and identification of the limiting
+phase remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
