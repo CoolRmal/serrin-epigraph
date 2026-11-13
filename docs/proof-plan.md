@@ -132,8 +132,12 @@ exhaustion and nonvanishing steps of the translation-limit argument.
 `LimitProfile.lean` selects the proved ray limits as a horizontal function,
 proves its measurability by continuous graph sections at increasing integer
 heights, and proves pointwise convergence of ambient vertical translates and
-of their nonlinear reactions. Passing the weak equation to this profile and
-identifying it with one remain necessary steps.
+of their nonlinear reactions. `TranslateIntegrals.lean` now proves convergence
+of compact weighted integrals for every continuous observable on the solution
+range, including the solution and reaction. It uses eventual compact-domain
+inclusion, compact bounds, and filter dominated convergence. Establishing the
+translated distributional identity and using it to identify the limit with one
+remain necessary steps.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

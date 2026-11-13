@@ -42,6 +42,7 @@ public import SerrinEpigraph.SmoothExcess
 public import SerrinEpigraph.SparseMoments
 public import SerrinEpigraph.StrongMaximum
 public import SerrinEpigraph.StrongPositivity
+public import SerrinEpigraph.TranslateIntegrals
 public import SerrinEpigraph.TranslatedDomain
 public import SerrinEpigraph.Truncation
 public import SerrinEpigraph.VerticalLimit

@@ -78,6 +78,15 @@ seven theorems was individually audited: only the standard three permitted
 axioms occur. The full build passed (3575 jobs). No limit equation or constancy
 of the profile has been assumed; those steps and both main rigidity proofs remain.
 
+## Compact weighted integral convergence
+
+`TranslateIntegrals.lean` proves convergence under compact weighted integration
+for continuous observables of the translated solution, with explicit solution
+and reaction specializations. All three declarations depend only on `propext`,
+`Classical.choice`, and `Quot.sound`. The full build passed (3576 jobs). The
+translated distributional equation has not yet been established; the two main
+rigidity proofs and full Comparator acceptance remain outstanding.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
