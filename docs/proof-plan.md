@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`WeightedGraphArea.lean` sums the principal weighted recovery bounds against
+graph area without a multiplicity factor. Nonnegative weights supported in a
+compact base and summing to at most one give the area integral plus ε times
+base volume when active local scales exceed area density by at most ε.
+Combining this with the single-patch recovery estimate bounds the whole
+principal sum by that coefficient times the regularized action. Compatible
+smooth weights and scales, overlap control, and a joint parameter choice are
+still required to obtain the full sharp recovery sequence.
+
 `WeightedGraphIntegral.lean` proves exact integration with horizontal weights
 through Euclidean graph flattening and positive vertical scaling. It applies
 this to the regularized layer action and bounds weighted graph recovery energy

@@ -1,5 +1,16 @@
 # Verification record
 
+## Weighted principal energy bounded by graph area
+
+The `SerrinEpigraph Challenge Solution` build passed (3920 jobs).
+Both theorems in `WeightedGraphArea.lean` have clean diagnostics and use only
+the standard three axioms. The summed weighted local recovery energies are
+bounded by graph area plus the prescribed base-volume error, times action,
+under the explicit active-slope and scale conditions. No patch-count factor
+appears. Construction of compatible weights and scales and parameter choices
+remains unfinished. Both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Weighted graph integration and recovery energy
 
 The `SerrinEpigraph Challenge Solution` build passed (3919 jobs).

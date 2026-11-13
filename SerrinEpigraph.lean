@@ -240,3 +240,4 @@ public import SerrinEpigraph.PartitionKineticIntegral
 public import SerrinEpigraph.RecoveryPositivePhase
 public import SerrinEpigraph.PartitionTotalEnergy
 public import SerrinEpigraph.WeightedGraphIntegral
+public import SerrinEpigraph.WeightedGraphArea
