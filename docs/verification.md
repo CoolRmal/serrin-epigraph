@@ -776,3 +776,19 @@ verified by `#print axioms`. The full build passed (3718 jobs). No new proof
 holes or main-statement changes were introduced. Maximal positive profiles,
 first-zero/radius control, large-radius comparisons, both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain incomplete.
+
+## Zero endpoint completion as a Dirichlet ball profile
+
+`RadialZeroEndpoint.lean` proves three theorems: closed-interval continuity
+from endpoint completion, construction of a `RadialBallProfile` from a
+normalized central solution with zero endpoint limit, and a combined
+ball-profile-or-normalized-extension alternative. The ball branch has
+strictly negative boundary slope and its squared slope is strictly below
+twice the potential at zero. It preserves both original components on the
+old half-open interval.
+All three declarations have clean diagnostics and standard axioms only,
+checked with `#print axioms`. The complete build passed (3719 jobs). No
+proof holes or main-statement changes were added. This remains conditional
+on a finite zero endpoint; maximal profiles, first-zero existence and radius
+control, large-radius comparisons, both rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.

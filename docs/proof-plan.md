@@ -333,6 +333,10 @@ the extended solution stays in (0,1), preserves both original components
 including their center values, and remains continuous up to the center.
 It repairs the center by updating the extended components and verifies that
 the differential equations at positive radii are unaffected.
+`RadialZeroEndpoint.lean` completes the zero-limit branch into a genuine
+`RadialBallProfile`, preserving value and slope before the endpoint. The
+combined alternative now yields either a ball profile with strictly negative
+boundary slope and the strict energy bound, or a normalized extension.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 
