@@ -1,5 +1,16 @@
 # Verification record
 
+## Perimeter bound from candidate-energy comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3886 jobs).
+`PerimeterComparison.lean` bounds the nonnegative energy liminf using a
+convergent comparison sequence, then combines it with the exact perimeter
+lower bound on smaller balls. Diagnostics are clean and the perimeter
+comparison theorem has only the standard three axioms. This does not yet
+prove perimeter minimality: a geometric recovery upper bound is still needed.
+Both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Reference inner-energy sequence comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3885 jobs).

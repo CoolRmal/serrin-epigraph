@@ -206,3 +206,4 @@ public import SerrinEpigraph.AnnularGluingSequence
 public import SerrinEpigraph.GluedLimit
 public import SerrinEpigraph.GluingEnergyCancellation
 public import SerrinEpigraph.InnerEnergyComparison
+public import SerrinEpigraph.PerimeterComparison

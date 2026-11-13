@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`PerimeterComparison.lean` transfers an inner-energy comparison with convergent
+candidate energy and vanishing error to a weighted perimeter bound on every
+strictly smaller ball. It connects the exact perimeter-energy liminf estimate
+to the gluing/minimality comparison. This is conditional on a candidate energy
+limit; a recovery upper bound by the candidate set's perimeter is still needed
+to establish perimeter minimality.
+
 `InnerEnergyComparison.lean` applies annular gluing and energy cancellation to
 the actual rescaled zero extension, eliminating the cutoff from the final
 sequence comparison. Under explicit annular common-limit and bounded-energy
