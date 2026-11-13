@@ -472,3 +472,17 @@ All seven new theorems were individually audited and use only `propext`,
 Almost-everywhere gradient convergence and support control for comparison pairs
 remain. Free-boundary energy minimality, both rigidity proofs, full Comparator
 acceptance, and Palomar registration remain unfinished.
+
+## Uniform support control for mollified comparison pairs
+
+`MollificationSupport.lean` proves that averaging enlarges a ball containing
+the support of a perturbation by at most one, uniformly in the approximation
+index. It establishes the corresponding topological support bound and
+additivity of normalized convolution for continuous functions. Consequently,
+for a continuous compact comparison pair valued in [0,1], all smoothed pairs
+have equal closed calibration integrals on a single fixed ball.
+All five new theorems were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The full build passed (3693 jobs).
+Almost-everywhere gradient convergence remains necessary to pass the integral
+identity to the original pair. Free-boundary energy minimality, both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain unfinished.

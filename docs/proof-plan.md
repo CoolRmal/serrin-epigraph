@@ -234,8 +234,11 @@ for the zero extension. Every term is smooth, nonnegative, and strictly below
 one, and the sequence converges pointwise to the extension. `MollificationBounds.lean` proves that averaging preserves a Lipschitz bound
 from a slightly larger ball. Hence all normalized approximations have a common
 gradient bound on each compact set. It also supplies a uniform compact level
-bound strictly below one. Almost-everywhere gradient convergence and support
-control for jointly smoothing compact comparison pairs remain to be proved.
+bound strictly below one. `MollificationSupport.lean` proves uniform support control for jointly
+smoothing compact comparison pairs and additivity of the normalized
+convolution. The calibration integrals of each smoothed pair agree on one
+fixed ball for all indices. Almost-everywhere convergence of the gradients
+remains necessary to pass this identity to the original pair.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
