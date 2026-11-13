@@ -164,8 +164,10 @@ variational minimization argument and the dimension/geometric classification.
 `LevelHeight.lean` now parameterizes each vertical ray by its solution value:
 every value in the open unit interval is attained at exactly one interior height,
 the inverse height is strictly increasing and continuous in that value, and it
-recovers the height of each original interior point. Joint regularity in the
-horizontal and level variables and the calibration identities remain to be proved.
+recovers the height of each original interior point.
+`LevelHeightContinuity.lean` proves joint continuity in horizontal location and
+level using strict order comparisons and continuous horizontal sections.
+Joint differentiability and the calibration identities remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

@@ -152,6 +152,15 @@ All five theorems were individually audited and use only the standard three
 axioms. The full build passed (3585 jobs). Joint regularity and the variational
 calibration, as well as the two rigidity classifications, remain unfinished.
 
+## Joint continuity of inverse heights
+
+`LevelHeightContinuity.lean` proves comparison equivalences for inverse heights,
+continuity of horizontal solution sections at interior points, and joint
+continuity of the inverse height in horizontal position and solution level.
+All four declarations use only the standard three axioms. The full build passed
+(3586 jobs). Differentiability, calibration, and both rigidity classifications
+remain unfinished; this is not full Comparator acceptance.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
