@@ -308,3 +308,16 @@ the endpoint. Both declarations use only `propext`, `Classical.choice`, and
 Perturbations are still supported strictly inside the original epigraph;
 free-boundary comparison, both rigidity proofs, full Comparator acceptance,
 and Palomar registration remain unfinished.
+
+## Zero-level boundary trace
+
+`LevelBoundary.lean` proves joint continuity of the total inverse height and
+level point at level zero. The gradient defined using the differential within
+the closed epigraph is continuous there, agrees with the interior foliation
+gradient at intermediate positive levels, and is its boundary trace. The
+vertical component at level zero is identified using the Neumann condition.
+All ten new theorem declarations were audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3602 jobs).
+Cross-boundary energy comparison and the two rigidity proofs remain unfinished,
+as do full Comparator acceptance and Palomar registration.

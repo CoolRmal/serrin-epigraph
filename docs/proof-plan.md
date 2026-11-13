@@ -191,7 +191,10 @@ supported inside the epigraph that keep the solution strictly between zero and
 one. `ClosedRangeMinimality.lean` extends this comparison to perturbations
 whose resulting values lie in the closed interval [0,1], using continuity of
 compact spatial integrals. This is an interior fixed-domain comparison, not yet the free-boundary
-minimization allowing changes to the positive phase.
+minimization allowing changes to the positive phase. `LevelBoundary.lean` proves
+joint continuity of inverse heights and level points at level zero, and the
+trace of the interior foliation gradient as the gradient within the closed
+epigraph. Its vertical component agrees with the Neumann boundary formula.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
