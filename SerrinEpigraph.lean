@@ -162,3 +162,4 @@ public import SerrinEpigraph.PhasePrimitive
 public import SerrinEpigraph.PhasePrimitiveGradient
 public import SerrinEpigraph.PhasePrimitiveRegularity
 public import SerrinEpigraph.PrimitiveIndicatorApproximation
+public import SerrinEpigraph.MollificationFamilyBounds

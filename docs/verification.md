@@ -1,5 +1,23 @@
 # Verification record
 
+## Uniform Lipschitz bounds for fixed mollification
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3813 jobs).
+
+`MollificationFamilyBounds.lean` proves that a fixed averaging kernel maps any
+uniformly bounded family of continuous inputs to a family with a common
+Lipschitz constant on each closed ball. The proof uses the swapped convolution,
+a global Lipschitz bound for the smooth compactly supported kernel, and the
+finite volume of the enlarged ball containing the difference integrand.
+
+It also proves the phase primitive remains between its two equilibrium values
+on the normalized range. Applied to the dilated primitive, this gives a local
+Lipschitz constant independent of dilation at each fixed mollification index.
+Diagnostics and the final theorem's transitive audit use only the standard
+three axioms. Subsequence extraction and uniform removal of mollification
+remain necessary; neither rigidity proof, full Comparator, nor Palomar
+registration is complete.
+
 ## Primitive approximation by the two phase values
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3812 jobs).
