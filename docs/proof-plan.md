@@ -417,6 +417,12 @@ proves Hessian continuity away from the center and C2 regularity on the
 punctured ball. Central Hessian continuity and boundary regularity are the
 remaining regularity steps for classical ball comparison.
 
+`RadialHessianContinuity.lean` bounds the normalized rank-one correction by
+its scalar coefficient, proves that coefficient vanishes at the center,
+and establishes central Hessian continuity. The spatial radial profile is
+now C2 throughout the open ball and satisfies the semilinear PDE there.
+Boundary regularity and comparison against the epigraph solution remain.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

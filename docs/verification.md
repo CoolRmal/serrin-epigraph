@@ -947,3 +947,13 @@ regularity, comparison/Hopf arguments, annulus construction, both final
 rigidity proofs, full Comparator acceptance, and Palomar registration remain
 unfinished.
 
+## Full open-ball C2 regularity
+
+`RadialHessianContinuity.lean` proves five theorems: a rank-one operator norm
+bound, vanishing of its singular-looking correction, central Hessian
+continuity, Hessian continuity on the ball, and C2 regularity throughout the
+open ball. All five have clean diagnostics and only the standard three
+axioms. The full build passed (3733 jobs). Boundary regularity, comparison/Hopf
+arguments, annulus construction, both final rigidity proofs, full Comparator
+acceptance, and Palomar registration remain unfinished.
+

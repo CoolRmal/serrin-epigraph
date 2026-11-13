@@ -117,3 +117,4 @@ public import SerrinEpigraph.RadialSlopeRatio
 public import SerrinEpigraph.RadialHessianCenter
 public import SerrinEpigraph.RadialHessian
 public import SerrinEpigraph.RadialRegularity
+public import SerrinEpigraph.RadialHessianContinuity
