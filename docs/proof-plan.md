@@ -44,7 +44,10 @@ extension from the compatible union is the next obligation.
 `AnnularUnion.lean` now constructs that union on the half-open interval ending at
 the supremum, with both continuous components, the radial equations on the open
 interval, the original seed values, normalized value bounds, and nonnegative
-slope. Completion at the finite outer endpoint remains.
+slope. `AnnularLimits.lean` now proves finite value and slope limits of this
+union, and separately proves that filling such limits creates a closed increasing
+segment. The next step is to assemble the completed supremal extension, including
+agreement with the seed at its outer endpoint, and apply the value-one criterion.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

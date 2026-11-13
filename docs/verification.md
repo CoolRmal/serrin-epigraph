@@ -1,5 +1,19 @@
 # Verification record
 
+## Finite annular endpoint limits and completion
+
+`AnnularLimits.lean` bounds the union's slope by the common initial slope and
+uses the radial endpoint-limit theorem to obtain finite value and slope limits.
+The value limit lies in the normalized closed interval and the slope limit is
+nonnegative. It also proves a general continuity result for filling a finite
+left limit and `increasingRadialSegment_of_endpoint_limits`, which packages a
+completed half-open increasing radial system as a closed segment.
+The union-limit theorem and segment-completion theorem passed individual
+transitive axiom audits with only `propext`, `Classical.choice`, and `Quot.sound`,
+with clean source diagnostics. The complete build passed (3746 jobs).
+Assembly of the completed supremal extension remains, followed by the exterior
+comparison and rigidity work. Full Comparator and Palomar remain incomplete.
+
 ## Supremal annular system on the half-open interval
 
 `AnnularUnion.lean` defines a union of compatible radial segments, proves local

@@ -130,3 +130,4 @@ public import SerrinEpigraph.AnnularEndpoint
 public import SerrinEpigraph.AnnularContinuation
 public import SerrinEpigraph.AnnularBranches
 public import SerrinEpigraph.AnnularUnion
+public import SerrinEpigraph.AnnularLimits
