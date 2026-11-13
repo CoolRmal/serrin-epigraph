@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`GluingCostBound.lean` gives a majorant independent of the chosen cutoff except
+through its gradient bound G: a fixed multiple of the two input energies plus
+the squared mismatch times G²/R + 4 R W(0). Its localized version incurs this
+additional cost only on the strict transition set. Substituting the selected
+cutoff bound and integrating will expose the competing layer-count terms.
+
 `SelectedTransitionCutoff.lean` combines the radial averaging result with the
 existing smooth cutoffs. For any nonnegative integrable cost, it constructs a
 normalized compactly supported cutoff equal to one on the inner ball, whose

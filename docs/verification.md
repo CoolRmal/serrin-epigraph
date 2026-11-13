@@ -1,5 +1,16 @@
 # Verification record
 
+## Explicit transition-energy majorant
+
+The `SerrinEpigraph Challenge Solution` build passed (3876 jobs).
+`GluingCostBound.lean` bounds glued energy by a fixed multiple of the input
+energies plus squared mismatch with coefficient G²/R + 4 R W(0), assuming a
+cutoff gradient bound G. The localized theorem confines this additional
+majorant to the transition region and preserves exact endpoint energy outside.
+Diagnostics and the localized theorem's standard-axiom audit are clean.
+Integrating and proving vanishing errors remains necessary; both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Smooth cutoff with selected transition cost
 
 The `SerrinEpigraph Challenge Solution` build passed (3875 jobs).

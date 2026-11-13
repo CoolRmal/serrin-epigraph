@@ -196,3 +196,4 @@ public import SerrinEpigraph.RescaledMinimality
 public import SerrinEpigraph.GluingTransition
 public import SerrinEpigraph.TransitionLayerSelection
 public import SerrinEpigraph.SelectedTransitionCutoff
+public import SerrinEpigraph.GluingCostBound
