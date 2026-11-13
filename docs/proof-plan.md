@@ -95,8 +95,11 @@ the full extended-nonnegative perimeter liminf inequality.
 `SharpDivergenceBound.lean` proves exact vector integration by parts and bounds
 a unit-field divergence pairing by gradient mass with no dimension factor,
 including bounded nonnegative locally Lipschitz coefficients via mollification.
-The sharp diffuse-energy lower bound, competitor recovery, interface minimality,
-and geometric classification remain.
+`PrimitiveEnergyLowerBound.lean` proves pointwise and integrated control of
+the rescaled primitive gradient by diffuse energy with coefficient one. It
+then proves the corresponding divergence test bound and passes each tested
+pairing to the diffuse-energy liminf. Taking the weighted perimeter supremum,
+competitor recovery, interface minimality, and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

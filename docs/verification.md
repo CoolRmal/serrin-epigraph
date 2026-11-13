@@ -1,5 +1,22 @@
 # Verification record
 
+## Exact primitive-to-energy comparison and tested liminf bound
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3866 jobs).
+
+`PrimitiveEnergyLowerBound.lean` proves that the actual rescaled primitive's
+gradient density is bounded pointwise by its rescaled diffuse-energy density,
+and integrates the comparison with coefficient one. Combined with the exact
+vector test estimate, this bounds every admissible divergence pairing by the
+diffuse energy. Local integral convergence then passes each pairing to the
+extended-nonnegative diffuse-energy liminf, without a dimension factor.
+
+Diagnostics and the tested-liminf theorem's transitive axiom audit are clean,
+using only the standard three axioms. Taking the weighted perimeter supremum
+and constructing recovery competitors remain necessary for interface minimality.
+Geometric classification, both Main rigidity proofs, full Comparator, and
+Palomar registration remain incomplete.
+
 ## Exact gradient-mass control of divergence tests
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3865 jobs).
