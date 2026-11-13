@@ -209,3 +209,4 @@ public import SerrinEpigraph.InnerEnergyComparison
 public import SerrinEpigraph.PerimeterComparison
 public import SerrinEpigraph.RecoveryTravelTime
 public import SerrinEpigraph.RecoveryProfileCore
+public import SerrinEpigraph.RecoveryProfileRegularity

@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`RecoveryProfileRegularity.lean` proves continuity of the inverse profile on
+its closed transition interval using compactness, identifies interior phase
+values, and derives the regularized first-order ODE by inverse differentiation.
+It also proves the kinetic-plus-potential density identity 2 W(q) + δ.
+Constant-phase extension, its total action, and the regularization limit remain
+necessary for the geometric recovery upper bound.
+
 `RecoveryProfileCore.lean` constructs the inverse of regularized travel time
 on the finite transition interval. It proves the travel-time image is exactly
 that interval, the inverse is normalized, both inverse identities hold, the

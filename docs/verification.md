@@ -1,5 +1,15 @@
 # Verification record
 
+## Inverse profile regularity and energy identity
+
+The `SerrinEpigraph Challenge Solution` build passed (3889 jobs).
+`RecoveryProfileRegularity.lean` proves endpoint-inclusive continuity, strict
+interior phase values, the inverse-profile derivative, and its regularized
+energy density identity. Diagnostics are clean; the energy identity's
+transitive audit uses only the standard three axioms. Constant extension and
+total recovery action remain unfinished. Both Main rigidity proofs, full
+Comparator, and Palomar registration remain incomplete.
+
 ## Inverse regularized recovery profile
 
 The `SerrinEpigraph Challenge Solution` build passed (3888 jobs).
