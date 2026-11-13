@@ -78,3 +78,4 @@ public import SerrinEpigraph.ZeroExtensionDifferentiability
 public import SerrinEpigraph.PhaseEnergy
 public import SerrinEpigraph.BoundaryCalibration
 public import SerrinEpigraph.BoundaryCalibrationIntegral
+public import SerrinEpigraph.ClosedCalibrationPath

@@ -411,3 +411,18 @@ touch zero. All five new theorems were audited individually and use only
 This does not yet prove invariance of the calibration integral when the
 positive phase changes, or cross-boundary energy minimality. Both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Closed-level calibration invariance for smooth competitors
+
+`ClosedCalibrationPath.lean` proves that compact smooth variations between
+globally C¹ functions taking values in [0,1) preserve the closed calibration
+integral. Both endpoints may vanish and their positive phases may differ.
+The proof lifts each endpoint toward one half, applies the positive-level
+path identity, and passes to zero regularization through continuity of the
+compact-set integrals. All five new theorems were individually audited and
+use only `propext`, `Classical.choice`, and `Quot.sound`. The full build passed
+(3687 jobs).
+The zero extension is locally Lipschitz, not globally C¹, so the new identity
+does not yet apply to it. Extension to that regularity, free-boundary energy
+minimality, both rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.
