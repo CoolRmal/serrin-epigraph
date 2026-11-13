@@ -40,19 +40,21 @@ to the original solution remain unfinished.
 An [informal variational reduction](docs/variational-reduction.md) now derives a
 common vertical limit and minimization of the general free-boundary energy.
 The development now proves phase-energy minimality against normalized locally
-Lipschitz compact perturbations, together with compactness and graph-competitor
-perimeter comparison for a limiting phase. That same phase can now be chosen
-invariant almost everywhere under each positive dilation, with finite local
-perimeter and vertical order. Both phases have positive measure; see the
-[proof obligations](docs/proof-plan.md). The remaining hypotheses for geometric
-classification, classification itself, and transfer of flatness remain open.
+Lipschitz compact perturbations, together with compactness and perimeter
+minimality against **arbitrary measurable competitors** agreeing with the limit
+outside a smaller concentric closed ball. Agreement may hold almost everywhere.
+That same phase is invariant almost everywhere under each positive dilation,
+has finite local perimeter and vertical order, and both phases have positive
+measure; see the [proof obligations](docs/proof-plan.md). Geometric regularity,
+half-space classification, and transfer of flatness remain open.
 Along one common sequence, potential and kinetic energies balance locally, and
 diffuse energy agrees asymptotically with primitive gradient mass. Their
 positive homogeneous ball-mass limit has not yet been identified with the
 limiting phase's perimeter.
-Arbitrary measurable phases now also admit smooth local approximations with
-gradient mass controlled by perimeter on slightly enlarged balls. Energy
-recovery for general competitors and the geometric rigidity argument remain open.
+General finite-perimeter recovery is proved: smooth phase averages, positive
+variable transition widths, and threshold averaging give competitors with the
+sharp asymptotic action-perimeter bound along the original scale sequence's
+subsequences. The geometric rigidity argument remains open.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
 those degenerate and unbounded cases are not part of the corrected rigidity targets.

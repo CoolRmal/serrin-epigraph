@@ -7,6 +7,19 @@ pending compiler repairs. The source note invokes Wang–Wei and related geometr
 rigidity results; their classification and flatness proofs are not yet formalized
 here. The restored reaction assumptions remain unchanged.
 
+General finite-perimeter recovery and full measurable-competitor minimality
+are now proved. `FinitePerimeterRecovery.lean` constructs recovery functions
+on a smaller closed ball under a perimeter bound in a larger open ball,
+along a subsequence of any prescribed diverging positive scales.
+`FinitePerimeterMinimality.lean` uses annular gluing and compact divergence
+tests to prove comparison in the same ball against all measurable competitors
+agreeing almost everywhere outside a smaller closed ball.
+`MinimizingConicalPhase.lean` applies this to the same nontrivial,
+dilation-invariant, vertically ordered phase already obtained from the PDE.
+Its local perimeter bounds, one-sided cone constraint, and equipartition are
+preserved. Geometric regularity, half-space classification, and transfer of
+flatness remain the main unfinished dependencies.
+
 `StressEnergy.lean` proves the interior stress-divergence identity and the zero
 normal stress forced by the Neumann condition and the already proved boundary
 energy identity. `GraphLocalDivergence.lean` extends graph Gauss to compact fields
@@ -63,9 +76,10 @@ solution limit: comparison with a constant competitor forces inner energy to
 zero, contradicting that lower bound. Consequently the same limiting phase and
 its complement both have positive measure.
 
-The geometric regularity and full competitor class required for classification,
-classification as a half-space, and transfer of flatness to the original solution
-remain outstanding. Neither Main rigidity conclusion is proved.
+Geometric regularity, classification as a half-space, and transfer of flatness
+to the original solution remain outstanding. Neither Main rigidity conclusion
+is proved. The required comparison against arbitrary measurable competitors
+in balls is now supplied by `FinitePerimeterMinimality.lean`.
 
 `BulkEnergyDiscrepancy.lean` splits the logarithmic scale derivative exactly into
 bulk discrepancy and radial defect, and selects one sequence on which both
@@ -80,9 +94,9 @@ vertical order, and graph comparison on one common sequence.
 rescaled energy on every origin-centered ball of radius r tends to L times r
 to the power m. Along the simultaneous defect sequence, primitive gradient
 mass has the same limits. This does not identify the limit of gradient mass
-with the perimeter of the limiting phase: ruling out loss of variation, and
-constructing recovery for the broader competitor class, are still required
-before invoking geometric classification.
+with the perimeter of the limiting phase. Recovery for the broader competitor
+class is now constructed below; the identification of these limiting masses
+with perimeter has not yet been assembled.
 
 `MeasurablePhaseMollification.lean` now smooths arbitrary measurable phases,
 preserving the closed unit interval and proving local integral convergence.
@@ -93,7 +107,17 @@ bound by regularized continuous unit fields, support-preserving smooth
 approximation, and inner regularity. `MollifiedGradientMass.lean` combines
 these into a gradient bound by perimeter on the ball enlarged by the kernel
 radius. This supplies variation-controlled smoothing for the broader
-competitor class; it does not yet construct its energy recovery functions.
+competitor class. `ThresholdRecovery.lean` bounds the phase approximation
+error uniformly over thresholds separated from the phase endpoints.
+`ThresholdCoordinateGradient.lean` and `ThresholdRecoveryEnergy.lean` control
+the energy cost of a spatially varying transition width.
+`RegularizedGradientWidth.lean` constructs positive C1 widths within a
+prescribed error of gradient norm. `ThresholdLayerAverage.lean` computes the
+threshold average exactly by Fubini, and `ThresholdSelection.lean` selects a
+competitor below that average. `SmoothPhaseRecovery.lean` combines its phase
+error and energy bounds. `PerimeterSmoothApproximation.lean` chooses smooth
+phases with both prescribed integral error and uniform gradient mass.
+`FinitePerimeterRecovery.lean` then completes the diagonal construction.
 
 `WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
 tests and only the original C2 regularity of the solution. `GradientExcess.lean`
@@ -158,13 +182,12 @@ yet imply dilation invariance, nontriviality, or half-space classification.
 
 The remaining shared chain is:
 
-1. Establish the geometric structure of the limiting phase and sufficient
-   competitor approximation/comparison for the classification argument. In
-   particular, graph-competitor minimality does not itself prove full perimeter
-   minimality. Spatial stationarity, the Modica estimate, surface-scale
-   monotonicity, nontrivial dilation-invariant phase limits, and
-   variation-controlled smoothing are now proved. Energy recovery for general
-   finite-perimeter competitors and the required geometric regularity remain.
+1. Establish the geometric regularity and energy/perimeter identification needed
+   by classification. Spatial stationarity, the Modica estimate, surface-scale
+   monotonicity, nontrivial dilation-invariant phase limits, and energy recovery
+   for general finite-perimeter competitors are now proved. The phase minimizes
+   perimeter against all measurable competitors agreeing outside a smaller
+   concentric closed ball.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and

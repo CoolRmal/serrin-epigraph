@@ -263,3 +263,4 @@ public import SerrinEpigraph.ConicalPhaseLimit
 public import SerrinEpigraph.PhaseNontriviality
 public import SerrinEpigraph.AsymptoticEnergyMass
 public import SerrinEpigraph.MollifiedGradientMass
+public import SerrinEpigraph.MinimizingConicalPhase

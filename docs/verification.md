@@ -1,5 +1,36 @@
 # Verification record
 
+## General finite-perimeter recovery and minimizing conical phases
+
+The eleven modules from `ThresholdRecovery.lean` through
+`MinimizingConicalPhase.lean` have clean diagnostics and compile successfully.
+The full `SerrinEpigraph Challenge Solution` build passed (4001 jobs). After
+the build, the threshold-average identity, prescribed-scale finite-perimeter
+recovery theorem, measurable-competitor minimality with almost-everywhere
+agreement, and combined minimizing-conical-phase theorem were audited. All
+four use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Recovery uses the existing one-dimensional transition applied to thresholds
+of a smooth phase approximation. A positive regularization of gradient norm
+sets its spatial width. Width variation introduces an energy factor tending
+to one. Fubini computes the threshold average exactly, and selection within an
+interval approaching the full phase interval gives the sharp action times
+gradient-mass bound. The phase error is controlled uniformly over the selected
+thresholds. A diagonal choice along any prescribed diverging scale sequence
+produces normalized locally Lipschitz recovery functions for arbitrary
+measurable sets with a finite larger-ball perimeter bound.
+
+Annular gluing now proves perimeter minimality against every measurable
+competitor agreeing almost everywhere outside a smaller concentric closed
+ball. Infinite-perimeter competitors are handled separately. Compactly
+supported divergence tests remove the intermediate radius gaps. The same
+nontrivial dilation-invariant phase retains vertical order, local perimeter
+bounds, the applicable one-sided cone constraint, and local equipartition.
+
+Geometric regularity, half-space classification, and transfer of flatness to
+the original solution remain open. Both Main rigidity holes remain, so this
+build is not full Comparator acceptance or Palomar registration.
+
 ## Smooth approximation with perimeter-controlled gradient mass
 
 The five modules from `MeasurablePhaseMollification.lean` through
