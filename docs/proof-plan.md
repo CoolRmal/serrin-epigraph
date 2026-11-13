@@ -28,7 +28,9 @@ obtains the uniform primitive-gradient integral bound.
 `PhasePrimitiveRegularity.lean` proves Lipschitz regularity of the primitive on
 the closed normalized range and local Lipschitz regularity of its composite
 with the zero extension across the free boundary. Compactness of the phase
-indicators remains to be proved.
+indicators remains to be proved. `PrimitiveIndicatorApproximation.lean` proves
+that the local integral error between the phase primitive and its two-phase
+indicator approximation tends to zero, linking their future compactness arguments.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

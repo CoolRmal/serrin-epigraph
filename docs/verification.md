@@ -1,5 +1,28 @@
 # Verification record
 
+## Primitive approximation by the two phase values
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3812 jobs).
+
+`PrimitiveIndicatorApproximation.lean` transfers the local integral approximation
+from the solution to its phase primitive using the proved Lipschitz constant:
+
+$$
+|\Phi(1)1_{\{U>0\}}-\Phi(U)|
+\le\sqrt{2W(0)}\,|1_{\{U>0\}}-U|.
+$$
+
+It proves compact-set integrability after dilation and, for each fixed r > 0,
+
+$$
+\int_{\overline B_r}|\Phi(1)1_{\{U(Rx)>0\}}-\Phi(U(Rx))|\,dx\longrightarrow0.
+$$
+
+Diagnostics and the final theorem's transitive axiom audit are clean, using
+only the standard three axioms. This comparison does not supply a convergent
+subsequence. Compactness, geometric classification, both rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Primitive regularity across the free boundary
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3811 jobs).
