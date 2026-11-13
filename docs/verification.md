@@ -1,5 +1,15 @@
 # Verification record
 
+## Regularized recovery travel time
+
+The `SerrinEpigraph Challenge Solution` build passed (3887 jobs).
+`RecoveryTravelTime.lean` defines the reciprocal-speed primitive for W+δ and
+proves continuity, its interior derivative, strict monotonicity on [0,1], and
+positive finite travel time to one. Diagnostics are clean; the monotonicity
+theorem's transitive audit uses only the standard three axioms. The inverse
+profile, recovery energy bound, and geometric use remain unfinished. Both Main
+rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Perimeter bound from candidate-energy comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3886 jobs).

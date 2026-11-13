@@ -207,3 +207,4 @@ public import SerrinEpigraph.GluedLimit
 public import SerrinEpigraph.GluingEnergyCancellation
 public import SerrinEpigraph.InnerEnergyComparison
 public import SerrinEpigraph.PerimeterComparison
+public import SerrinEpigraph.RecoveryTravelTime

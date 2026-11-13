@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`RecoveryTravelTime.lean` starts the one-dimensional recovery construction
+using the reciprocal speed of the potential regularized by a positive δ.
+The travel-time coordinate is continuous and strictly increasing on [0,1],
+has the expected interior derivative, and reaches one in positive finite time.
+Its inverse profile, exact action, and the δ-to-zero energy limit still need
+to be constructed and connected to geometric competitors.
+
 `PerimeterComparison.lean` transfers an inner-energy comparison with convergent
 candidate energy and vanishing error to a weighted perimeter bound on every
 strictly smaller ball. It connects the exact perimeter-energy liminf estimate
