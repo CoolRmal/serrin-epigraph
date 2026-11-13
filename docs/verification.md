@@ -1,5 +1,18 @@
 # Verification record
 
+## General locally Lipschitz competitor bounds
+
+`LipschitzCompetitorEnergy.lean` proves compact bounds for gradients and
+normalized-mollification gradients, almost-everywhere differentiability by a
+countable application of Rademacher, compact integrability of squared gradients,
+and finite local phase energy for normalized locally Lipschitz competitors.
+Diagnostics are clean. Axiom audits of phase-energy integrability,
+almost-everywhere differentiability, and mollified-gradient bounds use only
+`propext`, `Classical.choice`, and `Quot.sound`, with no source warnings.
+Gradient convergence and the full Lipschitz minimality argument remain open;
+both rigidity targets, full Comparator, and Palomar are also incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3768 jobs).
+
 ## Unshifted free-boundary minimality for smooth perturbations
 
 `UnshiftedMinimality.lean` combines the exact Neumann energy identity with

@@ -25,6 +25,15 @@ compact set containing the perturbation support and on enclosing balls.
 Competitor values are still restricted to [0,1). Next extend minimality to
 the required competitor class and complete the geometric rigidity arguments.
 
+`LipschitzCompetitorEnergy.lean` establishes almost-everywhere differentiability
+of arbitrary locally Lipschitz competitors by Rademacher on a countable ball
+cover. It also proves compact gradient bounds, uniform bounds for normalized
+mollifications, and compact integrability of squared gradients and phase
+energy. The missing approximation step is convergence of mollified gradients
+for these competitors; the existing proof only treats functions that are C¹
+locally away from the original graph boundary. These bounds do not by
+themselves establish Lipschitz minimality.
+
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
 `RadialBallProfile.spatial_le_solution` applies it to every closed ball contained
