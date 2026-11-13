@@ -5,8 +5,17 @@ the boundary contradiction via continuous extension from the open domain.
 `RadialBallProfile.spatial_le_solution` applies it to every closed ball contained
 in the epigraph. `TangentBallComparison.lean` extends the inequality to closed
 balls contained in the closed epigraph, using upward translations and the
-solution's continuity on the closure. Next compare boundary derivatives at an
-interior tangent point and combine with the large-ball boundary-energy limit.
+solution's continuity on the closure. `BallSlopeComparison.lean` now compares
+boundary derivatives through the positive tangent cone of the closed ball,
+uses the Neumann gradient norm, and combines arbitrary-radius tangent balls with
+the radial boundary-energy approximation to prove
+
+$$
+2W(0)\le\kappa^2.
+$$
+
+The opposite inequality, needed to remove the energy shift in minimality, remains
+to be proved (the exterior tangent-ball/annulus comparison route).
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction

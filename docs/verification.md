@@ -1,5 +1,24 @@
 # Verification record
 
+## Neumann energy lower bound
+
+`BallSlopeComparison.lean` proves the tangent-ball boundary slope inequality,
+its application to every radial ball profile via arbitrary-radius tangent balls,
+and `RigidityHypotheses.kappa_sq_ge_twice_potential`:
+
+$$
+\kappa^2\ge 2W(0),\qquad W(s)=\int_s^1 f(t)\,dt.
+$$
+
+The boundary argument applies Fermat's one-sided derivative inequality in the
+positive tangent cone to the nonnegative difference of the two solutions. The
+Neumann gradient norm bounds the resulting directional derivative. The final
+lower bound follows from the already proved radial boundary-energy approximation.
+Its transitive axiom audit reports only `propext`, `Classical.choice`, and
+`Quot.sound`, with no source warnings. The full build passed (3738 jobs).
+The reverse energy inequality and the two rigidity proofs remain unfinished;
+full Comparator acceptance and Palomar registration are still outstanding.
+
 ## Tangent-ball comparison
 
 `TangentBallComparison.lean` proves that every positive upward translation of a

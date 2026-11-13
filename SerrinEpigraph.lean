@@ -122,3 +122,4 @@ public import SerrinEpigraph.RadialBoundaryDerivative
 public import SerrinEpigraph.ScaledComparison
 public import SerrinEpigraph.CompactComparison
 public import SerrinEpigraph.TangentBallComparison
+public import SerrinEpigraph.BallSlopeComparison
