@@ -98,3 +98,4 @@ public import SerrinEpigraph.RadialLocalFlow
 public import SerrinEpigraph.RadialUniqueness
 public import SerrinEpigraph.RadialGluing
 public import SerrinEpigraph.RadialEndpoint
+public import SerrinEpigraph.RadialBounds

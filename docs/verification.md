@@ -705,3 +705,18 @@ or target changes were added. The endpoint results still require a slope
 bound; they do not assert positive endpoint value or continuation across it.
 Those steps, large-radius comparisons, both rigidity proofs, full Comparator,
 and Palomar registration remain incomplete.
+
+## Energy-derived slope bounds and unconditional finite endpoint limits
+
+`RadialBounds.lean` proves three theorems: radial energy monotonicity on
+convex positive-radius domains, a slope bound to the right of any interior
+radius derived from energy and compact potential bounds, and finite left
+limits for both value and slope of normalized radial systems under the
+original hypotheses. The last theorem no longer assumes bounded slope;
+it also proves the value limit belongs to [0,1].
+All three declarations have clean diagnostics and only standard axioms
+(`propext`, `Classical.choice`, `Quot.sound`). The full build passed (3714 jobs).
+No new proof holes or main-statement changes were introduced. These results
+do not yet give the differential equation at the endpoint or an extension
+past it. Those steps, large-radius comparisons, both rigidity proofs, full
+Comparator acceptance, and Palomar registration remain unfinished.

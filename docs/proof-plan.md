@@ -310,9 +310,12 @@ interior positive state to the existing profile. This union need not strictly
 enlarge the old interval. `RadialEndpoint.lean` proves finite value and slope
 limits when the slope is bounded and values stay in [0,1], on an interval
 separated from zero. It derives the forcing bound from the original reaction
-regularity and obtains the limits through Lipschitz extensions. A priori
-slope bounds for the continued profiles, endpoint differential equations,
-and continuation beyond a finite endpoint remain to be proved.
+regularity and obtains the limits through Lipschitz extensions.
+`RadialBounds.lean` removes the slope-bound assumption for solutions valued
+in (0,1): energy decreases on positive-radius convex domains, so slope is
+bounded to the right of any interior radius. Both left endpoint limits then
+exist, and the value limit lies in [0,1]. Endpoint differential equations and
+continuation beyond a finite endpoint remain to be proved.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 
