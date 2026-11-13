@@ -1,5 +1,18 @@
 # Verification record
 
+## Integrated unit-shell energy bound
+
+`PhaseEnergyShellBound.lean` splits both original and competitor energies into
+the inner ball and its unit shell. The cutoff energy vanishes in the inner ball;
+integrating the pointwise cost and using closed-range minimality cancels the
+original shell energy. The final theorem supplies one positive constant,
+independent of radius, bounding every ball energy by the unit-shell volume.
+Diagnostics and the final theorem's transitive axiom audit are clean, using
+only `propext`, `Classical.choice`, and `Quot.sound`. The explicit polynomial
+shell-volume bound and geometric classification remain to be proved. Both
+rigidity targets, full Comparator, and Palomar registration are incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3777 jobs).
+
 ## Radial cutoff competitor and energy cost
 
 `RadialCutoffCompetitor.lean` proves the radial ramp is one-Lipschitz, the

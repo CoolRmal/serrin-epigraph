@@ -21,9 +21,12 @@ nor claim that the relevant interface limit must exist as a pointwise graph.
 radius-R ball and equals U outside radius R+1. It remains locally Lipschitz and
 normalized, with compact perturbation support. A minimum-gradient selection
 lemma gives a squared-gradient cost of at most one, and a compact potential
-bound gives an energy-density increase of at most 1/2+M. Next integrate on the
-unit shell and cancel the original shell energy using minimality to obtain the
-surface-order energy growth estimate needed for rescaling compactness.
+bound gives an energy-density increase of at most 1/2+M.
+`PhaseEnergyShellBound.lean` now integrates on the unit shell and cancels the
+original shell energy using minimality. A single positive constant controls
+every ball energy by the outer unit-shell volume. Next estimate that volume
+by a constant times the radius to the ambient dimension minus one, then use
+the growth estimate in the rescaling compactness argument.
 
 ## Completed analytic reduction
 

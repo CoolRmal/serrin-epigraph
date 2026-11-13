@@ -151,3 +151,4 @@ public import SerrinEpigraph.CappedEnergy
 public import SerrinEpigraph.ClosedLipschitzMinimality
 public import SerrinEpigraph.EpigraphRescaling
 public import SerrinEpigraph.RadialCutoffCompetitor
+public import SerrinEpigraph.PhaseEnergyShellBound
