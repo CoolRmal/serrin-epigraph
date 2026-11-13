@@ -1,5 +1,26 @@
 # Verification record
 
+## Vanishing intermediate-phase volume
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3806 jobs).
+
+`TransitionVolume.lean` defines the measurable region where the dilated zero
+extension lies strictly above zero and at or below a fixed level a < 1.
+Monotonicity and strict positivity of the normalized potential give
+
+$$
+|\{0<U(Rx)\le a\}\cap\overline B_r|
+\le \frac{1}{W(a)}\int_{\overline B_r}1_{\{U(Rx)>0\}}W(U(Rx))\,dx
+\longrightarrow 0
+$$
+
+for every fixed positive radius and 0 ≤ a < 1. Local integrability of the
+dilated potential is proved directly from continuity and the phase indicator.
+Diagnostics and the transitive audit are clean, using only the three standard
+axioms. Interface compactness and geometric classification are not inferred from
+this volume convergence. Both rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Vanishing rescaled phase potential
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3805 jobs).

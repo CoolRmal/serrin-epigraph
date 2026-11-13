@@ -16,6 +16,9 @@ a uniform bound on each fixed rescaled ball. Extracting convergent interfaces
 and identifying their geometry remain necessary. `RescaledPotential.lean` also
 proves that the positive-phase potential integral tends to zero on every fixed
 positive-radius ball, with an explicit inverse-scale bound.
+`TransitionVolume.lean` converts this into vanishing local volume of every
+intermediate positive-phase region with a fixed level below equilibrium.
+Compactness of the phase indicators is still to be proved.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
