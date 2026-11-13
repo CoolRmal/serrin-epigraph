@@ -3,18 +3,17 @@
 A Lean 4 project depending on Mathlib, targeting the three statements in the
 [source images](docs/source). The original assumptions are preserved.
 
-**Status: incomplete.** The definitions and three theorem statements compile.
-The three main proofs are still missing. A successful `lake build` is not a proof
-certificate: Comparator must reject the current `Solution` because of `sorryAx`.
-No Palomar registration or successful Comparator result is claimed.
+**Status: one of three theorems proved.** The strict vertical monotonicity theorem
+is complete under the original assumptions. The two rigidity proofs remain open.
+A successful `lake build` is not a certificate for all three: the full Comparator
+configuration must still reject the two proof holes. No Palomar registration is claimed.
 
-Completed supporting proofs include epigraph boundary geometry, positive vertical
-derivatives near the boundary, continuity and local integrability of the negative
-quotient, compact interior support of cutoff tests, differentiability of their
-high powers, directional integration by parts, the energy cancellation and Hölder
-interpolation, and the implication from odd-order moment estimates to nonnegative
-vertical derivatives. These do not yet establish the PDE moment estimates,
-strict interior positivity, or either rigidity theorem.
+**Proved:** `SerrinEpigraph.verticalDerivative_pos` establishes strict vertical
+monotonicity. Its proof includes boundary geometry, weak linearization with only
+the stated regularity, the quotient energy estimate, cutoff moments, Hölder
+interpolation, the mass-growth contradiction, and a weak strong-maximum principle
+proved using cubic comparison tests and exponential annular barriers. The entire
+chain uses only `propext`, `Classical.choice`, and `Quot.sound`, with no proof holes.
 
 ## Statements
 
@@ -72,9 +71,10 @@ and [proof plan](docs/proof-plan.md).
 - `Challenge.lean`: independent specification, importing only Mathlib, with
   three deliberate specification holes.
 - `SerrinEpigraph/Basic.lean`: Euclidean geometry, PDE hypotheses, growth, and conclusions.
-- `SerrinEpigraph/Main.lean`: the three unproved proof-development targets.
+- `SerrinEpigraph/Main.lean`: the proved monotonicity theorem and two open rigidity targets.
 - `Solution.lean`: imports the development, never `Challenge`.
 - `comparator.json`: exact target names and the three standard permitted axioms.
+- `comparator-monotonicity.json`: separate verification of the one completed theorem.
 - `.github/workflows/verify.yml`: build, proof audit, sandboxed Comparator, and
   manually requested full Palomar preflight.
 
@@ -93,6 +93,9 @@ python3 scripts/check-proof-status.py
 The final command requires Linux and Bubblewrap. On macOS,
 `./scripts/verify-comparator.sh --preliminary` can run a local check without the
 Linux sandbox; it is not a Palomar mechanical-verification report.
+The additional CI job uses `--config comparator-monotonicity.json` to check the
+completed first theorem independently. It does not replace the three-theorem
+acceptance configuration.
 
 ## Reproducibility and attribution
 

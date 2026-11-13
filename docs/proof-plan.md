@@ -1,7 +1,8 @@
 # Proof obligations
 
-This is a dependency plan, not a completed proof. The three targets in
-`SerrinEpigraph/Main.lean` remain unchanged from the source images.
+The monotonicity proof is complete. The two rigidity obligations remain open.
+All three target statements in `SerrinEpigraph/Main.lean` remain unchanged from
+the source images.
 
 ## Automatic monotonicity
 
@@ -11,7 +12,7 @@ $$
 v=\partial_nu,\quad t=v/u,\quad z=t^-,\quad h(s)=f(s)-sf'(s).
 $$
 
-The intended argument has these obligations, each requiring an actual Lean proof:
+The argument consists of the following steps, now each proved in Lean:
 
 1. **Epigraph geometry and traces.** Identify the boundary and closure, justify
    the within-closure differential, and derive positive vertical boundary
@@ -45,8 +46,8 @@ $$
    so that both the testing power and the energy power of the negative part are
    continuously differentiable. `Truncation.lean` and `QuotientTests.lean` prove
    this regularity, including zero points. `SparseMoments.lean` proves that the
-   resulting odd moments alone suffice. The actual weak PDE testing estimate
-   remains to be derived.
+   resulting odd moments alone suffice. `PowerEnergy.lean` now proves the actual
+   weak PDE testing estimate from the original hypotheses.
 
 5. **Vertical integration by parts and Hölder.** Use the quotient's origin as a
    directional derivative, a high power of a ball cutoff, and Hölder to obtain
@@ -65,16 +66,23 @@ $$
    equation gives positivity or identical vanishing. Vertical rays, positivity
    of the solution, and its zero boundary values exclude identical vanishing.
 
-The boundary, integrability, support, and growth-contradiction steps are proved.
+Steps 1–6 are proved, culminating in `Hypotheses.verticalDerivative_nonneg` in
+`Nonnegative.lean`, with the original hypotheses and no additional assumptions.
 `WeakEquation.lean` proves the original PDE's weak formulation from its classical
-form with only the stated second derivatives. `IntegrationByParts.lean` proves
-the vertical identity. `BallCutoff.lean` constructs the scaled ball cutoffs, and
+form with only the stated second derivatives; `WeakLinearization.lean` derives
+the linearized equation by differentiating translated integrals. `WeakQuotient.lean`
+derives the weighted quotient equation. `IntegrationByParts.lean` proves the
+vertical identity. `BallCutoff.lean` constructs the scaled ball cutoffs, and
 `Energy.lean`, `CauchyEnergy.lean`, and `MomentInterpolation.lean` prove the
-algebraic and integral estimates used in the final moment closure.
+algebraic and integral estimates used by `FirstMoment.lean` and
+`CutoffMoments.lean` for the final moment closure.
 
-Weak differentiation, the quotient power-testing estimate, and the strong
-maximum principle remain open formalization obligations. They cannot be
-replaced with extra hypotheses in the final theorem.
+Step 7 is proved by `StrongMaximum.lean`, completing `verticalDerivative_pos`.
+`WeakComparison.lean` proves weak comparison by a smooth cubic negative-part
+test, `Barrier.lean` supplies the exponential annular barriers, and
+`StrongPositivity.lean` implements shifted-barrier comparison on annuli. This
+propagates a positive point through the connected domain without assuming a
+third classical derivative of the original solution.
 
 ## Rigidity
 

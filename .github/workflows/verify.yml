@@ -70,6 +70,32 @@ jobs:
       - name: Compare statements and check with Lean, NanoDa, and con-ron
         run: ./scripts/verify-comparator.sh
 
+  comparator-monotonicity:
+    name: Verify proved monotonicity only with three kernels
+    # This additional job verifies the proved first theorem. The original three-target
+    # Comparator and full Palomar preflight remain unchanged above and below.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out the project
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Configure Lean and Mathlib cache
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: false
+          use-github-cache: true
+          use-mathlib-cache: true
+      - name: Enable the Linux Comparator sandbox
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq bubblewrap >/dev/null
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - name: Compare monotonicity and check with Lean, NanoDa, and con-ron
+        run: ./scripts/verify-comparator.sh --config comparator-monotonicity.json
+
   preflight-inputs:
     name: Identify the full mechanical preflight
     if: github.event_name == 'workflow_dispatch'

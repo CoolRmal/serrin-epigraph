@@ -7,8 +7,8 @@ project:
     monotonicity under a lower subexponential squared-mass condition, rigidity
     through dimension eight, and higher-dimensional rigidity under either
     one-sided linear graph bound. The original general-reaction hypotheses are
-    retained. The three main proofs are incomplete, and the cited rigidity
-    references do not cover their full stated hypotheses.
+    retained. Strict vertical monotonicity is proved. The two rigidity proofs
+    are incomplete, and their cited references do not cover the full hypotheses.
   authors: []
   license: "Apache-2.0"
   responsible_maintainers: []
@@ -29,17 +29,18 @@ sources:
 
 status:
   scope: >-
-    Three statements have been transcribed. All three main proofs remain open.
-    Build success is not proof completion. Comparator and Palomar registration
-    are not yet passed; proof-development sorry counts exclude Challenge.
-  sorry_count: 3
+    Three statements have been transcribed. Strict vertical monotonicity is
+    proved with standard axioms only; two rigidity proofs remain open. The full
+    three-theorem Comparator and Palomar registration are not yet passed;
+    proof-development sorry counts exclude Challenge.
+  sorry_count: 2
   sorry_in_definitions: 0
   axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
   main_results:
     - declaration: "SerrinEpigraph.verticalDerivative_pos"
       file: "SerrinEpigraph/Main.lean"
-      sorry_count: 1
-      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "comparator.json"
     - declaration: "SerrinEpigraph.rigidity_of_dimension_le_eight"
       file: "SerrinEpigraph/Main.lean"
@@ -69,6 +70,6 @@ fidelity:
     assumptions or pre-existing monotonicity have been introduced.
 
 review:
-  status: "Statement review completed; proofs incomplete"
+  status: "Statement review completed; monotonicity proved; rigidity proofs incomplete"
   reviewers: []
-  notes: "See docs/statement-audit.md. No completed proof or registry review is claimed."
+  notes: "See docs/statement-audit.md. The monotonicity proof uses only standard axioms; no registry review is claimed."

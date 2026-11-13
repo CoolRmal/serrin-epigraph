@@ -10,27 +10,57 @@ set -euo pipefail
 # Preliminary mode uses dependencies already installed in this checkout and
 # does not download a cache; prepare the project before invoking it.
 preliminary=false
-case "${1:-}" in
-  "") ;;
-  --preliminary)
-    preliminary=true
-    shift
-    ;;
-  --help|-h)
-    echo "Usage: $0 [--preliminary]"
-    echo "Default: sandboxed Linux Comparator with Lean, NanoDa, and con-ron."
-    echo "--preliminary: local sandbox-off check; never accepted as CI verification."
-    exit 0
-    ;;
-  *)
-    echo "error: unknown option: $1" >&2
-    exit 2
-    ;;
-esac
-if [ "$#" -ne 0 ]; then
-  echo "error: unexpected additional arguments" >&2
-  exit 2
-fi
+source_config=comparator.json
+config_selected=false
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --preliminary)
+      if "$preliminary"; then
+        echo "error: --preliminary may only be specified once" >&2
+        exit 2
+      fi
+      preliminary=true
+      shift
+      ;;
+    --config)
+      if [ "$#" -lt 2 ] || [ -z "$2" ] || [[ "$2" == -* ]]; then
+        echo "error: --config requires a file path" >&2
+        exit 2
+      fi
+      if "$config_selected"; then
+        echo "error: --config may only be specified once" >&2
+        exit 2
+      fi
+      source_config=$2
+      config_selected=true
+      shift 2
+      ;;
+    --config=*)
+      if "$config_selected"; then
+        echo "error: --config may only be specified once" >&2
+        exit 2
+      fi
+      source_config=${1#--config=}
+      if [ -z "$source_config" ]; then
+        echo "error: --config requires a file path" >&2
+        exit 2
+      fi
+      config_selected=true
+      shift
+      ;;
+    --help|-h)
+      echo "Usage: $0 [--config FILE] [--preliminary]"
+      echo "Default: sandboxed Linux Comparator with Lean, NanoDa, and con-ron."
+      echo "--config FILE: configuration relative to the repository root (default: comparator.json)."
+      echo "--preliminary: local sandbox-off check; never accepted as CI verification."
+      exit 0
+      ;;
+    *)
+      echo "error: unknown option: $1" >&2
+      exit 2
+      ;;
+  esac
+done
 if "$preliminary" && { [ "${GITHUB_ACTIONS:-}" = true ] || [ "${CI:-}" = true ]; }; then
   echo "error: --preliminary is forbidden in CI; use sandboxed verification" >&2
   exit 1
@@ -60,11 +90,11 @@ for tool in lake leanexport leanchecker nanoda_bin con-ron; do
 done
 
 # Palomar supplies these trusted paths itself. They must not be committed in
-# comparator.json, where external_kernels is not a permitted submitter field.
+# the source config, where external_kernels is not a permitted submitter field.
 # Limit con-ron to the two workers used by Palomar's qualified memory policy.
 config=$(mktemp "${TMPDIR:-/tmp}/serrin-epigraph-comparator.XXXXXX")
 trap 'rm -f "$config"' EXIT
-python3 - comparator.json "$config" "$prefix" <<'PY'
+python3 - "$source_config" "$config" "$prefix" <<'PY'
 import json
 import pathlib
 import sys
@@ -79,6 +109,12 @@ if not isinstance(config, dict):
     raise SystemExit(f"error: {source} must contain one JSON object")
 if "external_kernels" in config:
     raise SystemExit(f"error: {source}: external_kernels is not a submitter field")
+permitted = config.get("permitted_axioms")
+standard = {"propext", "Quot.sound", "Classical.choice"}
+if not isinstance(permitted, list) or len(permitted) != len(standard) or any(
+    not isinstance(axiom, str) or axiom not in standard for axiom in permitted
+) or set(permitted) != standard:
+    raise SystemExit(f"error: {source}: permitted_axioms must be exactly the three standard axioms")
 config.pop("enable_nanoda", None)
 config["external_kernels"] = {
     "nanoda": [f"{prefix}/bin/nanoda_bin"],

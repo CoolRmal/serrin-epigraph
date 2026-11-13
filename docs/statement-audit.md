@@ -112,15 +112,16 @@ mathematical content:
   because the graph function is continuous.
 - `HasSubexponentialMass` uses an extended-real liminf of the exact real-valued
   expression. Local integrability follows mathematically from continuity on the
-  closure and compactness of closed bounded sets; its Lean proof is still needed
-  before treating `squareMass` as an analytic input to further estimates.
+  closure and compactness of closed bounded sets. `Mass.lean` now proves this
+  integrability before `squareMass` is used in subsequent estimates.
 - `IsAffineOneDimensional` quantifies the same affine coefficients in both
   formulas. A profile on the entire real line is harmless because only its
   positive arguments are used on the epigraph.
 - The two dimension restrictions and `HasOneSidedLinearBound` match the source.
 
-This is a review of statement fidelity, not a proof certificate. At the time of
-this review, the three declarations in `Main.lean` each contain `sorry`.
+This section reviews statement fidelity. The monotonicity declaration in
+`Main.lean` is now proved with only standard axioms. The two rigidity declarations
+still contain `sorry`.
 
 ## Additional investigation of the general-reaction case
 
@@ -162,5 +163,9 @@ for all sufficiently large radii, then the local descent rate cannot be positive
 The proof chooses an integer power proportional to the radius and derives an
 exponential lower bound for the mass. This support theorem was checked by Lean
 and uses only the standard axioms `propext`, `Classical.choice`, and `Quot.sound`.
-Deriving these moment estimates from the PDE, and obtaining strict monotonicity
-after ruling out negative derivatives, remain separate proof obligations.
+Those moment estimates are now derived from the original PDE in
+`PowerEnergy.lean` and `FirstMoment.lean`. `Nonnegative.lean` applies them, and
+`StrongMaximum.lean` supplies strict positivity through the weak comparison and
+annular-barrier argument. Thus `SerrinEpigraph.verticalDerivative_pos` is proved
+under the exact original assumptions; its complete axiom dependency list is the
+same three standard axioms above.
