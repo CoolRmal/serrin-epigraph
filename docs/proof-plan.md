@@ -25,8 +25,23 @@ compact sets and proves perimeter comparison in the same ball against every C1
 graph epigraph agreeing outside a smaller concentric closed ball. All cutoffs,
 partitions, and recovery scales are constructed internally. This is minimality
 within that graph competitor class; it does not assert minimality against all
-finite-perimeter sets. The one-sided phase-limit cone inclusions established
-previously remain available.
+finite-perimeter sets.
+
+`PhasePerimeterAE.lean` proves perimeter is invariant under changes on null sets
+and extends graph-competitor comparison to almost-everywhere annular agreement.
+`PhaseVerticalMonotonicity.lean` passes the rescaled solution's vertical order to
+any fixed local L1 phase limit: for each nonnegative translation distance, phase
+inclusion holds almost everywhere. It uses a common subsequence on a containing
+ball and invariance of volume under translation, without assuming pointwise
+convergence of graph heights.
+
+`LimitingPhaseGeometry.lean` assembles one phase with all of these properties
+simultaneously: local L1 solution convergence, surface-order perimeter bounds,
+vertical translation monotonicity, graph-competitor minimality under AE annular
+agreement, and the cone constraint when a one-sided linear bound is supplied.
+The perimeter and indicator convergence arguments apply to this same fixed limit,
+so no independent subsequence's geometry is substituted. These properties do not
+yet imply dilation invariance, nontriviality, or half-space classification.
 
 The remaining shared chain is:
 

@@ -1,5 +1,29 @@
 # Verification record
 
+## A common phase with vertical order and AE graph comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3947 jobs).
+`PhasePerimeterAE.lean`, `PhaseVerticalMonotonicity.lean`, and
+`LimitingPhaseGeometry.lean` have clean diagnostics. After the completed build,
+the final combined theorem, the vertical translation theorem, and the AE
+graph-minimality theorem were checked to depend only on `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+Perimeter is now invariant under changes to the phase on a null set, and graph
+comparison only requires AE annular agreement. Every fixed local L1 solution
+limit inherits upward inclusion almost everywhere for each nonnegative vertical
+translation. The combined existence theorem constructs one phase with local L1
+convergence, surface-order perimeter bounds, vertical order, AE graph-competitor
+minimality, and the applicable one-sided cone constraint. The indicator and
+perimeter bounds are proved for that same limit, avoiding incompatible
+subsequence selections.
+
+The theorem does not assert that the phase is nontrivial, dilation invariant, or
+a half-space, nor that its graph competitor class includes all finite-perimeter
+sets. Main still contains two rigidity proof holes; Challenge still contains
+three specification holes. Full Comparator and Palomar registration remain
+incomplete.
+
 ## Exact graph perimeter and localized graph-competitor minimality
 
 The `SerrinEpigraph Challenge Solution` build passed (3944 jobs).
