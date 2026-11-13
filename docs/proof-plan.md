@@ -185,10 +185,12 @@ level/gradient paths, and proves that its integrated first variation vanishes
 for compact variations. `CalibrationIntegral.lean` proves a uniform interval
 of admissible variation on compact sets, differentiates the calibrated energy
 under the compact spatial integral, and proves the resulting derivative is zero
-for compact variations. Constancy along full comparison paths and the energy
-inequality remain.
-The monotone-solution
-minimization argument and the low-dimensional or one-sided-graph rigidity
+for compact variations. `CalibrationPath.lean` proves constancy along admissible
+affine comparison paths and energy minimality against C¹ perturbations compactly
+supported inside the epigraph that keep the solution strictly between zero and
+one. This is an interior fixed-domain comparison, not yet the free-boundary
+minimization allowing changes to the positive phase.
+The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
 

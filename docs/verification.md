@@ -282,3 +282,16 @@ All four new declarations were audited individually and use only `propext`,
 Constancy along full comparison paths and the resulting energy inequality
 remain to be proved. Both rigidity theorems, full Comparator acceptance, and
 Palomar registration remain unfinished.
+
+## Interior energy minimality
+
+`CalibrationPath.lean` proves zero derivative at each admissible path parameter,
+constancy between the endpoints, and energy minimality against C¹ perturbations
+compactly supported inside the epigraph whose perturbed solution stays in (0,1).
+The comparison uses the actual gradient of the perturbed function. All four
+new declarations were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3600 jobs).
+This is fixed-domain interior minimality; it does not yet establish the
+free-boundary minimization permitting changes of positive phase. Both rigidity
+proofs, full Comparator acceptance, and Palomar registration remain unfinished.

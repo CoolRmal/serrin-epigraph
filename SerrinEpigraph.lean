@@ -68,3 +68,4 @@ public import SerrinEpigraph.VectorIntegrationByParts
 public import SerrinEpigraph.FoliationPullback
 public import SerrinEpigraph.CalibrationVariation
 public import SerrinEpigraph.CalibrationIntegral
+public import SerrinEpigraph.CalibrationPath
