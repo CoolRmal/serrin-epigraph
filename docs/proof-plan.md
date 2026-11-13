@@ -2,6 +2,26 @@
 
 ## Current remaining proof obligations
 
+The two Main rigidity holes are substantial mathematical dependencies, not
+pending compiler repairs. The source note proves the implication by invoking
+Wang–Wei and related geometric rigidity results; those results do not yet have
+Lean proofs in this development. Restoring the reaction assumptions resolved a
+statement error, but did not supply these proofs. The remaining shared chain is:
+
+1. Localize perimeter-area identification and establish the limiting phase's
+   minimizing property for the competitor class required by the geometric argument.
+2. Prove the geometric classification applicable in dimensions at most eight,
+   and the classification under either one-sided linear bound in higher dimensions.
+3. Prove the flatness/rigidity implication from the classified limit back to the
+   original epigraph and solution, yielding `IsAffineOneDimensional`.
+
+The current supporting work should not be reported as closing either Main hole.
+`UnitFieldApproximation.lean` and `GraphPerimeterLower.lean` now prove the reverse
+graph-area inequality with continuous compact cutoffs in the test domain.
+Continuous unit normal fields are approximated by C1 unit fields preserving
+support, so C1 graph regularity suffices. Removing the cutoff and matching the
+localized perimeter identity remain to be assembled.
+
 `GraphVerticalFlux.lean`, `GraphHorizontalFlux.lean`, and `GraphDivergence.lean`
 prove the exact divergence theorem for C1 graph epigraphs and compact C1 vector
 fields. Fubini in ordinary and flattened graph coordinates gives the vertical

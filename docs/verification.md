@@ -1,5 +1,20 @@
 # Verification record
 
+## Continuous normal tests and weighted lower graph area bound
+
+The `SerrinEpigraph Challenge Solution` build passed (3939 jobs).
+`UnitFieldApproximation.lean` and `GraphPerimeterLower.lean` have clean
+diagnostics. The final weighted graph-area lower bound and its transitive proof
+dependencies use only `propext`, `Classical.choice`, and `Quot.sound`.
+Continuous unit fields admit C1 approximations preserving support and unit norm;
+their boundary fluxes are therefore valid variational-perimeter tests. Applying
+this to a compact cutoff times the continuous unit normal proves the weighted
+area lower bound for C1 graphs. Full perimeter-area localization, minimality,
+classification, and transfer back to the original solution remain unfinished.
+Main retains both rigidity proof holes; full Comparator and Palomar registration
+remain incomplete. The proof-plan now explicitly identifies these substantial
+dependencies and distinguishes them from compiler repairs.
+
 ## Exact graph boundary flux
 
 The `SerrinEpigraph Challenge Solution` build passed (3936 jobs).

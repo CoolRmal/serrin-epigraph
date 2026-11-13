@@ -252,3 +252,4 @@ public import SerrinEpigraph.RecoveryPerimeter
 public import SerrinEpigraph.GraphCompetitorComparison
 public import SerrinEpigraph.OneSidedPhaseLimit
 public import SerrinEpigraph.GraphDivergence
+public import SerrinEpigraph.GraphPerimeterLower
