@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`PartitionOverlap.lean` sums pairwise profile differences with the partition
+weights, preserving their total mass one rather than introducing a patch-count
+factor. Only pairs whose weights are both positive need a discrepancy estimate.
+For graph scales bounded by H with nearby inverses on active overlaps, it bounds
+the mixture potential defect by a single common-layer indicator. This connects
+the scale-mismatch estimate to finite mixtures. Integration of this common-layer
+bound, weighted principal energy bounds, and geometric parameter selection
+remain necessary for sharp recovery.
+
 `RecoveryScaleMismatch.lean` proves that profiles with positive graph scales
 L and M differ only inside their larger transition layer. The integral of
 their absolute difference multiplied by the blow-down scale R is bounded by

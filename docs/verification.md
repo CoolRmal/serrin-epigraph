@@ -1,5 +1,16 @@
 # Verification record
 
+## Finite overlap potential bound
+
+The `SerrinEpigraph Challenge Solution` build passed (3914 jobs).
+All six theorems in `PartitionOverlap.lean` have clean diagnostics and use only
+the standard three axioms. They estimate mixture discrepancies by weighted
+pair differences, remove any patch-count factor using total weight one, and
+control the graph-profile mixture potential defect on one common transition
+layer. The assumptions on inverse-scale closeness apply only to active overlaps.
+Integration and geometric parameter selection remain unfinished. Both Main
+rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Scale mismatch on graph cylinders
 
 The `SerrinEpigraph Challenge Solution` build passed (3913 jobs).

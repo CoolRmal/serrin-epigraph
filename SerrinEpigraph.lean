@@ -234,3 +234,4 @@ public import SerrinEpigraph.PartitionRecovery
 public import SerrinEpigraph.PartitionGradientEnergy
 public import SerrinEpigraph.PartitionPotentialEnergy
 public import SerrinEpigraph.RecoveryScaleMismatch
+public import SerrinEpigraph.PartitionOverlap
