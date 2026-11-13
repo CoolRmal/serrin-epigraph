@@ -1,5 +1,19 @@
 # Verification record
 
+## Assembled graph recovery sequence
+
+The `SerrinEpigraph Challenge Solution` build passed (3926 jobs).
+Both theorems in `GraphRecoverySequence.lean` have clean diagnostics and depend
+only on `propext`, `Classical.choice`, and `Quot.sound`. The final theorem
+constructs scales, normalized locally Lipschitz functions, and an energy-bound
+sequence from a C1 graph and compact sets D, A, K with D inside the interior of A
+and K projecting into D. It proves L1 convergence on K and convergence of the
+energy bound to the area integral over A times the interface constant. All
+partition and parameter choices are internal to the proof. This is a graph
+neighborhood area bound; identification with the requisite variational perimeter
+and geometric classification remain unfinished. Main retains two rigidity proof
+holes; full Comparator and Palomar registration remain incomplete.
+
 ## Local L1 convergence of varying recovery partitions
 
 The `SerrinEpigraph Challenge Solution` build passed (3925 jobs).

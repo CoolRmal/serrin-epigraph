@@ -2,6 +2,20 @@
 
 ## Geometric classification after minimality
 
+`GraphRecoverySequence.lean` now assembles the graph recovery construction.
+For a C1 graph, compact base D inside the interior of a compact neighborhood A,
+and a compact ambient set K projecting into D, it constructs positive scales
+tending to infinity and normalized locally Lipschitz functions converging in L1
+on K to the graph epigraph indicator. Their energies on K are bounded by a
+sequence converging to the area integral over A times the interface constant.
+The proof chooses regularization, partition precision absorbing the overlap
+cost, compatible partitions, and a diagonal scale controlling kinetic error
+and layer thickness. The intermediate theorem accepts supplied refining
+partitions; the final theorem constructs them and imposes no partition or
+error-sequence assumptions on the caller. The bound is over the neighborhood A,
+not yet an identification with variational perimeter on K. Perimeter minimality
+for the needed competitor class and the geometric rigidity arguments remain.
+
 `VaryingRecoveryLimit.lean` proves compact-set L1 convergence of graph recovery
 mixtures with varying finite index types, continuous nonnegative weights summing
 to one on the compact set, uniformly bounded positive graph scales, and vanishing

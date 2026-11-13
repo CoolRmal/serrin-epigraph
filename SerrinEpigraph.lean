@@ -246,3 +246,4 @@ public import SerrinEpigraph.BoundedGraphPartition
 public import SerrinEpigraph.GraphRecoveryComparison
 public import SerrinEpigraph.RecoveryDiagonalScale
 public import SerrinEpigraph.VaryingRecoveryLimit
+public import SerrinEpigraph.GraphRecoverySequence
