@@ -1,5 +1,15 @@
 # Verification record
 
+## Cancellation of reference annular energy
+
+The `SerrinEpigraph Challenge Solution` build passed (3884 jobs).
+`GluingEnergyCancellation.lean` proves the weighted integral bound, cancels
+reference energy on the outer region, and applies rescaled minimality to give
+an inner-ball/outer-ball energy comparison with the same gluing error.
+Diagnostics are clean; the application theorem has only the standard three
+axioms. Recovery construction and geometric classification remain open, as do
+both Main rigidity proofs, full Comparator, and Palomar registration.
+
 ## Preservation of candidate limits
 
 The `SerrinEpigraph Challenge Solution` build passed (3883 jobs).

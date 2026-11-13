@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingEnergyCancellation.lean` bounds the weighted input energy by candidate
+energy plus the reference annular energy. It cancels the latter against the
+reference total energy and applies rescaled minimality, giving an inner-ball
+reference-energy bound by outer-ball candidate energy plus the gluing error.
+This removes the cutoff weights from the comparison needed for the geometric
+limit. Recovery construction and the geometric classification remain open.
+
 `GluedLimit.lean` proves that the glued function's L1 distance to the candidate
 is bounded by the input mismatch outside the region where the cutoff is one.
 Consequently, vanishing annular L1 mismatch preserves the candidate's limit
