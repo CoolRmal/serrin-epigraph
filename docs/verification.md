@@ -1,5 +1,34 @@
 # Verification record
 
+## A common dilation-invariant phase limit
+
+The ten new modules from `SurfaceEnergyLimit.lean` through
+`ConicalPhaseLimit.lean` have clean diagnostics. The final module passed its
+standalone Lean check, and `SerrinEpigraph Challenge Solution` built successfully
+(3978 jobs). After the build, the finite sharp-ball energy limit, simultaneous
+scale selection, vanishing primitive radial variation, general phase dilation
+invariance, and combined phase-existence theorem were each checked to use only
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+One diverging sequence controls the radial defect at every fixed integer
+multiple of the scale. The selected local phase limit uses a subsequence of
+that same sequence. Cauchy–Schwarz and the potential bound turn defect decay
+into vanishing radial variation of the primitive. Integration along rays and
+mollification yield dilation-difference estimates for locally Lipschitz
+functions. Local integral convergence then proves almost-everywhere invariance
+under every fixed positive dilation, including contractions.
+
+The combined theorem preserves local convergence, surface-order perimeter,
+vertical order, graph-competitor minimality, and the applicable one-sided cone
+bound for this same measurable phase. It does not assert a single exceptional
+null set working for all real scales simultaneously, nontriviality, minimality
+against all finite-perimeter competitors, or half-space classification.
+
+Nontriviality, the remaining classification hypotheses and geometric argument,
+transfer of flatness, both Main rigidity holes, full Comparator acceptance,
+and Palomar registration remain unfinished. Main still has two proof holes;
+Challenge has its three deliberate specification holes.
+
 ## Global gradient control, Modica bound, and unconditional surface-scale monotonicity
 
 The seven new modules from `WeakLaplacianCalculus.lean` through

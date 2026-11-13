@@ -38,8 +38,28 @@ For the surface exponent the bulk discrepancy is
 $$W(u)-\frac12|\nabla u|^2.$$
 
 Its nonnegativity is now proved, including control of maximizing sequences
-escaping to infinity. Passage from surface-scale monotonicity to cone structure
-is still outstanding. No cone structure or rigidity conclusion is asserted.
+escaping to infinity. `SurfaceEnergyLimit.lean` gives finite asymptotic weighted
+and sharp-ball energies. `BoundedScaleSelection.lean` chooses one diverging scale
+sequence on which the logarithmic derivative vanishes at every fixed integer
+multiple. `RadialEnergyDefect.lean` bounds the nonnegative radial defect by that
+derivative, and `RadialDefectProfile.lean` selects a common phase limit along
+those scales.
+
+`RadialDefectControl.lean` controls radial derivatives on fixed balls after
+rescaling. `PrimitiveRadialDefect.lean` combines this with the potential-energy
+bound using Cauchy–Schwarz to obtain vanishing radial variation of the phase
+primitives. `RadialDilationEstimate.lean` integrates along rays;
+`LipschitzDilationEstimate.lean` passes the estimate through mollification,
+including the zero interface. `PhaseDilationInvariance.lean` then proves that
+the limiting phase is invariant almost everywhere under each positive dilation.
+`ConicalPhaseLimit.lean` combines this with local convergence, perimeter bounds,
+vertical order, graph-competitor minimality, and the applicable one-sided bound
+for the same phase and sequence.
+
+This is dilation invariance of a measurable phase modulo null sets. Nontriviality,
+the geometric regularity and full competitor class required for classification,
+classification as a half-space, and transfer of flatness to the original solution
+remain outstanding. Neither Main rigidity conclusion is proved.
 
 `WeakBochner.lean` proves the Bochner identity in weak form, using C1 compact
 tests and only the original C2 regularity of the solution. `GradientExcess.lean`
