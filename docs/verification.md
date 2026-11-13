@@ -537,3 +537,21 @@ All eight new theorems were individually audited and use only `propext`,
 `Classical.choice`, and `Quot.sound`. The full build passed (3697 jobs).
 Broader competitor classes, Bernoulli normalization, both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Interior and exterior tangent balls
+
+`TangentBalls.lean` proves a general contact construction along a continuous
+path using the distance to a closed set and a nearest point. Applied to entire
+epigraphs, compact upward and downward translations produce interior and
+exterior tangent balls of every positive radius, centered on the vertical
+axis. The contact points lie on the original graph boundary. Only continuity
+of the graph is used; no global slope bound is imposed.
+This supplies the geometric input to the boundary-slope comparisons in
+[Wang–Wei §5, Lemmas 5.3–5.4](https://arxiv.org/html/1502.04680#S5).
+The radial comparison solutions, their large-radius limits, and the slope
+inequalities are not yet formalized, so Bernoulli normalization remains open
+in this Lean development.
+All five new theorems were individually audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The complete build passed (3698 jobs).
+Both rigidity proofs, full Comparator acceptance, and Palomar registration
+remain unfinished.

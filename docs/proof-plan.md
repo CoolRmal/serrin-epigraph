@@ -198,6 +198,13 @@ epigraph. Its vertical component agrees with the Neumann boundary formula.
 `BoundaryGradient.lean` proves the full boundary gradient is minus κ times
 the outward unit normal, hence has norm κ. The calibration energy component
 converges to κ²/2 − W(0); this constant has not been proved to vanish.
+For this normalization step, Wang–Wei §5, Lemmas 5.3–5.4 use interior
+radial-ball and exterior-annulus comparisons to bound the boundary slope from
+both sides. `TangentBalls.lean` now supplies the geometric input: every
+positive radius admits an interior and an exterior tangent ball with center
+on the vertical axis, assuming only continuity of the graph. The radial
+comparison solutions, their large-radius limits, and slope comparisons still
+need proofs; the geometric contact result alone does not normalize κ.
 `ZeroExtension.lean` constructs the whole-space extension, proves continuity,
 identifies its positive phase, preserves vertical monotonicity and the limit
 one, and establishes the original PDE and gradient identities in the interior.
