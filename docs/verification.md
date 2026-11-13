@@ -1,5 +1,19 @@
 # Verification record
 
+## Disconnected comparison domains and exterior separation
+
+`ComponentComparison.lean` proves that component boundaries of an open set lie
+on its boundary and applies nonlinear comparison component by component on any
+proper open set with compact closure. `ExteriorBallGeometry.lean` proves that
+every positive downward shift of an exterior ball places its entire closed ball
+outside the closed epigraph, giving a strict distance lower bound at every
+closed-epigraph point. The final comparison and distance theorems passed
+transitive axiom audits with only `propext`, `Classical.choice`, and `Quot.sound`.
+After correcting a complement-membership simplification, the complete build
+passed (3761 jobs); source diagnostics are clean. Annular comparison itself,
+reverse Neumann energy, both rigidity targets, full Comparator, and Palomar
+registration remain unfinished.
+
 ## Annular regularity and inner boundary differential
 
 `AnnularRegularity.lean` derives C1 slope and C2 radial value regularity from the

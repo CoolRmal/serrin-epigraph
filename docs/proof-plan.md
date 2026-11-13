@@ -61,6 +61,11 @@ Both are now proved in `AnnularRegularity.lean`: the spatial profile is C2 on th
 open annulus and has the explicit prescribed radial differential within the
 closed annulus at the inner sphere. The next obligation is comparison with the
 epigraph solution outside an exterior tangent ball.
+`ComponentComparison.lean` now removes connectedness from compact-domain
+comparison by applying the theorem on each open component. `ExteriorBallGeometry.lean`
+proves that positive downward shifts of an exterior ball separate its whole
+closed ball strictly from the closed epigraph. These provide the domain and
+strict positivity prerequisites for annular comparison.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
