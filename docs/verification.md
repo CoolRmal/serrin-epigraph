@@ -1,5 +1,22 @@
 # Verification record
 
+## Measurable global limiting phase
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3826 jobs).
+
+`GlobalPhaseSet.lean` combines local integrability and the local two-valued
+constraint across the integer-ball cover. A measurable representative yields
+a measurable phase set whose weighted indicator agrees almost everywhere
+with the global primitive limit. The final theorem gives one strictly
+increasing subsequence and one measurable phase set, with local integral
+convergence on every positive integer-radius ball for any diverging sequence
+of dilation factors at least one.
+
+Diagnostics are clean and the final theorem's transitive axiom audit uses only
+the standard three axioms. Interface minimality and geometric classification
+remain unproved. The two Main rigidity holes, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Local two-phase identification
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3825 jobs).
