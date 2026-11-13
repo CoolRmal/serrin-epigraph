@@ -268,3 +268,17 @@ audited individually: only `propext`, `Classical.choice`, and `Quot.sound` occur
 Differentiation under the integral and constancy along comparison paths remain
 to be established. Both rigidity proofs, full Comparator acceptance, and Palomar
 registration remain unfinished.
+
+## Differentiation of the calibrated energy integral
+
+`CalibrationIntegral.lean` proves a uniform admissible variation interval on a
+compact spatial set, establishes the continuity and uniform control needed for
+differentiation under the integral, and proves that the calibrated energy
+integral has derivative zero for compact variations. It reuses the existing
+compact-cylinder differentiation theorem from `WeakLinearization.lean`.
+All four new declarations were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3599 jobs).
+Constancy along full comparison paths and the resulting energy inequality
+remain to be proved. Both rigidity theorems, full Comparator acceptance, and
+Palomar registration remain unfinished.

@@ -182,8 +182,11 @@ regularity, divergence formula, and resulting integrated identity for arbitrary
 C¹ comparison functions taking values in (0,1). `CalibrationVariation.lean`
 defines the calibrated density, proves its derivative along differentiable
 level/gradient paths, and proves that its integrated first variation vanishes
-for compact variations. Differentiation under the integral, constancy of the
-calibrated energy along comparison paths, and the energy inequality remain.
+for compact variations. `CalibrationIntegral.lean` proves a uniform interval
+of admissible variation on compact sets, differentiates the calibrated energy
+under the compact spatial integral, and proves the resulting derivative is zero
+for compact variations. Constancy along full comparison paths and the energy
+inequality remain.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
