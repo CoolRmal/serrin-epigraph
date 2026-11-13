@@ -1,0 +1,74 @@
+version: "v0.4"
+
+project:
+  name: "Serrin epigraph monotonicity and rigidity"
+  description: >-
+    Work in progress toward three user-supplied statements: automatic vertical
+    monotonicity under a lower subexponential squared-mass condition, rigidity
+    through dimension eight, and higher-dimensional rigidity under either
+    one-sided linear graph bound. The original general-reaction hypotheses are
+    retained. The three main proofs are incomplete, and the cited rigidity
+    references do not cover their full stated hypotheses.
+  authors: []
+  license: "Apache-2.0"
+  responsible_maintainers: []
+
+repository:
+  role: "substantive-development"
+
+classification:
+  arxiv: ["math.AP"]
+  msc2020: ["35J61", "35B06"]
+
+sources:
+  - title: "User-supplied epigraph monotonicity and rigidity statements"
+    type: "other"
+    location: "docs/source"
+    relationship: "formalizes"
+    note: "Three supplied images; authorship not inferred."
+
+status:
+  scope: >-
+    Three statements have been transcribed. All three main proofs remain open.
+    Build success is not proof completion. Comparator and Palomar registration
+    are not yet passed; proof-development sorry counts exclude Challenge.
+  sorry_count: 3
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+  main_results:
+    - declaration: "SerrinEpigraph.verticalDerivative_pos"
+      file: "SerrinEpigraph/Main.lean"
+      sorry_count: 1
+      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      comparator_config: "comparator.json"
+    - declaration: "SerrinEpigraph.rigidity_of_dimension_le_eight"
+      file: "SerrinEpigraph/Main.lean"
+      sorry_count: 1
+      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      comparator_config: "comparator.json"
+    - declaration: "SerrinEpigraph.rigidity_of_oneSidedLinearBound"
+      file: "SerrinEpigraph/Main.lean"
+      sorry_count: 1
+      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      comparator_config: "comparator.json"
+
+automation:
+  methods:
+    - method: "agent"
+      models: []
+      framework: "Codex"
+      tool_setup: "Lean LSP, local Lean/Lake, Mathlib search, independent agent review."
+      prompting_notes: "Create a public Mathlib-dependent project, prove all three image statements, pass Comparator, and register on Palomar."
+  notes: "No human authorship or responsible-maintainer attestation has been inferred."
+
+fidelity:
+  divergences: >-
+    Ambient dimension n is indexed as m+1. Euclidean norms and volume are used.
+    Boundary derivatives are within the closure. The liminf is extended-real.
+    Profile equality is restricted to the epigraph. No additional reaction
+    assumptions or pre-existing monotonicity have been introduced.
+
+review:
+  status: "Statement review completed; proofs incomplete"
+  reviewers: []
+  notes: "See docs/statement-audit.md. No completed proof or registry review is claimed."

@@ -1,0 +1,11 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "SerrinEpigraph.verticalDerivative_pos",
+    "SerrinEpigraph.rigidity_of_dimension_le_eight",
+    "SerrinEpigraph.rigidity_of_oneSidedLinearBound"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}
