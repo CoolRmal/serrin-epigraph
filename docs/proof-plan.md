@@ -17,6 +17,14 @@ so any pointwise graph limit inherits a homogeneous one-sided cone bound.
 This is conditional on pointwise convergence; it does not establish compactness,
 nor claim that the relevant interface limit must exist as a pointwise graph.
 
+`RadialCutoffCompetitor.lean` constructs the competitor which vanishes in the
+radius-R ball and equals U outside radius R+1. It remains locally Lipschitz and
+normalized, with compact perturbation support. A minimum-gradient selection
+lemma gives a squared-gradient cost of at most one, and a compact potential
+bound gives an energy-density increase of at most 1/2+M. Next integrate on the
+unit shell and cancel the original shell energy using minimality to obtain the
+surface-order energy growth estimate needed for rescaling compactness.
+
 ## Completed analytic reduction
 
 `AnnularComparison.lean` now proves that an increasing annular profile with

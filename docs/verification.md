@@ -1,5 +1,18 @@
 # Verification record
 
+## Radial cutoff competitor and energy cost
+
+`RadialCutoffCompetitor.lean` proves the radial ramp is one-Lipschitz, the
+minimum competitor vanishes on the inner ball and equals the reference outside
+the unit shell, and its perturbation support is compact. A gradient-selection
+lemma for minima yields a radius-independent squared-gradient cost; the final
+pointwise phase-energy bound adds at most 1/2+M under a potential bound M.
+Diagnostics and the final theorem's transitive axiom audit are clean; only
+`propext`, `Classical.choice`, and `Quot.sound` are used. The integrated growth
+estimate, geometric classification, both rigidity targets, full Comparator,
+and Palomar registration remain unfinished.
+The complete `SerrinEpigraph Challenge Solution` build passed (3776 jobs).
+
 ## Epigraph rescaling and one-sided bounds
 
 `EpigraphRescaling.lean` proves the exact domain identity for the rescaled graph,

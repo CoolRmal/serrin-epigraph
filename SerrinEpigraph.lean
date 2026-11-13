@@ -150,3 +150,4 @@ public import SerrinEpigraph.CappedCompetitor
 public import SerrinEpigraph.CappedEnergy
 public import SerrinEpigraph.ClosedLipschitzMinimality
 public import SerrinEpigraph.EpigraphRescaling
+public import SerrinEpigraph.RadialCutoffCompetitor
