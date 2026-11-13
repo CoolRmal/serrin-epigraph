@@ -60,8 +60,11 @@ that any such local limit along diverging dilations takes only zero and the
 primitive value at one almost everywhere, by transfer from the weighted
 phase indicators. `GlobalPhaseSet.lean` packages a single measurable phase
 set and local integral convergence of the primitive subsequence to its
-weighted indicator on every integer-radius ball. Limiting-interface minimality
-and the geometric classification remain.
+weighted indicator on every integer-radius ball. `PhaseSetConvergence.lean`
+removes the positive primitive weight using the vanishing approximation error
+and identifies the rescaled positive phase exactly with the rescaled epigraph.
+Thus the rescaled epigraph indicators converge locally along the subsequence.
+Limiting-interface minimality and the geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

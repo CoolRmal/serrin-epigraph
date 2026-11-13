@@ -175,3 +175,4 @@ public import SerrinEpigraph.LocalLimitCompatibility
 public import SerrinEpigraph.GlobalPrimitiveLimit
 public import SerrinEpigraph.TwoPhaseLimit
 public import SerrinEpigraph.GlobalPhaseSet
+public import SerrinEpigraph.PhaseSetConvergence

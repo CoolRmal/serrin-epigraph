@@ -1,5 +1,22 @@
 # Verification record
 
+## Local convergence of rescaled epigraph indicators
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3827 jobs).
+
+`PhaseSetConvergence.lean` transfers primitive convergence to convergence of
+positive-phase indicators using the vanishing primitive approximation error
+and the strictly positive primitive value at one. It then identifies the
+rescaled positive phase with the epigraph of the rescaled graph. The resulting
+theorem provides a common subsequence and a measurable set such that the
+rescaled epigraph indicators converge in integral norm on every positive
+integer-radius ball.
+
+Diagnostics and the final theorem's transitive axiom audit are clean; only
+the standard three axioms occur. No interface minimality or flatness is
+asserted. Both Main rigidity holes, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Measurable global limiting phase
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3826 jobs).
