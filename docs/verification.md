@@ -1,5 +1,17 @@
 # Verification record
 
+## Finite partition kinetic and potential bounds
+
+The `SerrinEpigraph Challenge Solution` build passed (3912 jobs).
+The four theorems in `PartitionGradientEnergy.lean` and two theorems in
+`PartitionPotentialEnergy.lean` have clean diagnostics and use only the standard
+three axioms. They provide the weighted quadratic norm inequality, pointwise
+and almost-everywhere kinetic bounds, a derived potential Lipschitz constant,
+and the mixture potential-defect bound. The latter still needs quantitative
+overlap control after multiplication by the blow-down scale; it does not prove
+sharp recovery by itself. Both Main rigidity proofs, full Comparator, and
+Palomar registration remain incomplete.
+
 ## Weighted recovery convergence and derivative error
 
 The `SerrinEpigraph Challenge Solution` build passed (3910 jobs).

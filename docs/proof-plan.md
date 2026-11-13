@@ -2,6 +2,17 @@
 
 ## Geometric classification after minimality
 
+`PartitionGradientEnergy.lean` bounds the squared norm of a weighted gradient
+by the weighted squared norms, with total weight at most one. The recovery
+kinetic estimate has an arbitrarily small multiplicative loss and the separate
+weight-gradient error; it also holds almost everywhere for locally Lipschitz
+inputs. `PartitionPotentialEnergy.lean` derives a Lipschitz constant for the
+normalized potential from the reaction assumptions and bounds the potential
+defect by weighted profile differences. This does not assume convexity of the
+potential. The potential error is multiplied by the blow-down scale in the
+energy, so unscaled L1 convergence alone does not make it vanish: quantitative
+control of the overlap profiles is still required.
+
 `PartitionRecovery.lean` defines finite weighted recovery competitors, proves
 their normalized range and common-phase local L1 convergence, and separates
 their gradient into profile and weight contributions. For fixed C1 weights,
