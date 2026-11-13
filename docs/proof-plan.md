@@ -45,7 +45,10 @@ the local translation error by displacement times the gradient integral on the
 enlarged ball. `LipschitzTranslationIntegral.lean` extends this to locally
 Lipschitz functions by dominated convergence and proves a dilation-independent
 translation bound for the actual phase primitive family. Averaging this
-estimate to control mollification error remains necessary.
+estimate is completed in `MollificationIntegralError.lean`, yielding an explicit
+local error bound proportional to the averaging radius, uniformly in dilation.
+It remains to combine this with the common mollified subsequence to construct
+the unsmoothed local integral limit.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

@@ -1,5 +1,26 @@
 # Verification record
 
+## Uniform local mollification error
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3820 jobs).
+
+`MollificationIntegralError.lean` proves the pointwise averaging bound for
+mollification error and integrates it using compact product integrability and
+Fubini. The translation hypothesis is needed only on the actual kernel support.
+Applied to the dilated phase primitive, it gives one C > 0 such that
+
+$$
+\int_{\overline B_r}|\rho_n*\Phi(U(R\cdot))-\Phi(U(R\cdot))|
+\le\frac{C(r+1)^m}{n+1}\qquad(R\ge1,\ r\ge1).
+$$
+
+Thus the local error vanishes uniformly in dilation as the mollification index
+grows. Diagnostics and the final theorem's transitive audit are clean, using
+only the standard three axioms. Combining this estimate with the common
+mollified subsequence to establish unsmoothed local integral convergence remains
+necessary. Both rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Locally Lipschitz translation estimates and uniform dilation control
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3819 jobs).
