@@ -24,8 +24,11 @@ difference between the dilated solution and its phase indicator to zero.
 bounds. `PhasePrimitive.lean` gives the primitive derivative and separates the
 two equilibrium values. `PhasePrimitiveGradient.lean` proves the spatial chain
 rule everywhere for the totalized gradient, including the zero phase, and
-obtains the uniform primitive-gradient integral bound. Local Lipschitz regularity
-of this composite and compactness of the phase indicators remain to be proved.
+obtains the uniform primitive-gradient integral bound.
+`PhasePrimitiveRegularity.lean` proves Lipschitz regularity of the primitive on
+the closed normalized range and local Lipschitz regularity of its composite
+with the zero extension across the free boundary. Compactness of the phase
+indicators remains to be proved.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

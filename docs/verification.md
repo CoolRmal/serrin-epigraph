@@ -1,5 +1,24 @@
 # Verification record
 
+## Primitive regularity across the free boundary
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3811 jobs).
+
+`PhasePrimitiveRegularity.lean` proves that the phase primitive is Lipschitz on
+the whole closed normalized range, with constant
+
+$$
+\sqrt{2W(0)}.
+$$
+
+The proof bounds the integral of the square-root potential between any two
+values in [0,1], so it includes both endpoints without assuming two-sided
+differentiability there. Composing with the zero extension proves local
+Lipschitz regularity of the phase primitive across the free boundary.
+Diagnostics and the transitive axiom audit are clean and use only the standard
+three axioms. Compactness and geometric classification remain unproved, as do
+the two rigidity targets, full Comparator, and Palomar registration.
+
 ## Spatial chain rule and primitive gradient bound
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3810 jobs).
