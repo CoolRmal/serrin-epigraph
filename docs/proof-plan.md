@@ -169,7 +169,10 @@ recovers the height of each original interior point.
 level using strict order comparisons and continuous horizontal sections.
 `LevelHeightDerivative.lean` proves differentiability with respect to the level,
 with derivative the reciprocal of the positive vertical derivative.
-Joint differentiability and the calibration identities remain to be proved.
+`LevelHeightSmooth.lean` now proves joint C² regularity by the implicit function
+theorem, identifying the local implicit solution with the globally unique
+level height. Its explicit differential solves the differentiated level equation.
+The calibration identities remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

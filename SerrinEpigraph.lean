@@ -61,3 +61,4 @@ public import SerrinEpigraph.WeakComparison
 public import SerrinEpigraph.WeakLinearization
 public import SerrinEpigraph.WeakQuotient
 public import SerrinEpigraph.LevelHeightDerivative
+public import SerrinEpigraph.LevelHeightSmooth

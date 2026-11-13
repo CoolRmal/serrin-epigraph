@@ -204,3 +204,15 @@ they use only `propext`, `Classical.choice`, and `Quot.sound`.
 `lake build SerrinEpigraph Challenge Solution` passed (3587 jobs).
 The two main rigidity proofs remain unfinished; this is not full Comparator
 acceptance or Palomar registration.
+
+## Joint inverse height regularity
+
+`LevelHeightSmooth.lean` proves joint C² regularity of the real inverse height
+at every level strictly between zero and one. It uses the implicit function
+theorem and the previously proved uniqueness of the level height. The second
+new theorem gives its full differential, including horizontal variations.
+Both declarations were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3593 jobs).
+The two main rigidity proofs remain unfinished; full Comparator acceptance and
+Palomar registration have not been obtained.
