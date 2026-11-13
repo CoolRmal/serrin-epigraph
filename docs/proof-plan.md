@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingTotalEnergy.lean` combines the kinetic and phase-potential estimates into
+an almost-everywhere total rescaled gluing-energy bound for locally Lipschitz
+inputs in the closed unit interval. The gradient term is correctly included
+on the zero phase using the local-minimum derivative theorem. The remaining
+transition argument must select cutoffs and recovery profiles so the explicit
+inverse-scale gradient error and scale-weighted squared mismatch vanish.
+
 The analytic reduction to closed-range Lipschitz phase-energy minimality is now
 proved. Local integral compactness of the rescaled phase indicators and
 solutions is also proved below. The remaining classification is substantial:

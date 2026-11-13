@@ -1,5 +1,17 @@
 # Verification record
 
+## Total rescaled gluing energy
+
+The `SerrinEpigraph Challenge Solution` build passed (3871 jobs).
+`GluingTotalEnergy.lean` proves the exact kinetic/potential decomposition for
+nonnegative functions, using vanishing totalized gradient at a zero minimum.
+It combines the preceding estimates into an almost-everywhere total energy
+bound for locally Lipschitz cutoff gluing. Diagnostics are clean and the
+transitive axiom audit reports only `propext`, `Classical.choice`, and `Quot.sound`.
+The estimate retains both explicit mismatch errors; proving they vanish for
+suitable recovery competitors remains necessary. The two Main rigidity proof
+holes, full Comparator, and Palomar registration remain incomplete.
+
 ## Phase-restricted potential cost of gluing
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3870 jobs).
