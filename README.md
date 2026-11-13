@@ -48,13 +48,15 @@ has finite local perimeter and vertical order, and both phases have positive
 measure; see the [proof obligations](docs/proof-plan.md). Geometric regularity,
 half-space classification, and transfer of flatness remain open.
 Along one common sequence, potential and kinetic energies balance locally, and
-diffuse energy agrees asymptotically with primitive gradient mass. Their
-positive homogeneous ball-mass limit has not yet been identified with the
-limiting phase's perimeter.
+diffuse energy agrees asymptotically with primitive gradient mass. On every
+origin-centered ball, their positive homogeneous mass limit is now identified
+with the interface constant times the limiting phase's perimeter.
 General finite-perimeter recovery is proved: smooth phase averages, positive
 variable transition widths, and threshold averaging give competitors with the
 sharp asymptotic action-perimeter bound along the original scale sequence's
-subsequences. The geometric rigidity argument remains open.
+subsequences. Under either one-sided cone constraint, a nontrivial phase cannot
+be invariant under all vertical translations. The geometric classification
+and transfer of flatness to the original solution remain open.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
 those degenerate and unbounded cases are not part of the corrected rigidity targets.

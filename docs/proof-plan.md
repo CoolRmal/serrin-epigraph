@@ -20,6 +20,22 @@ Its local perimeter bounds, one-sided cone constraint, and equipartition are
 preserved. Geometric regularity, half-space classification, and transfer of
 flatness remain the main unfinished dependencies.
 
+`RecoveryEnergyUpper.lean` now compares the diffuse inner energy with recovery
+of the same phase. `EnergyPerimeterIdentification.lean` passes to the scale
+limit and then removes the radius gap, proving equality between homogeneous
+ball-energy mass and the interface constant times phase perimeter.
+`HomogeneousPhasePerimeter.lean` gives a positive finite homogeneous perimeter
+coefficient. `PrimitivePerimeterMass.lean` identifies the primitive's limiting
+gradient mass with weighted perimeter along the existing equipartition scales.
+These conclusions apply to every origin-centered ball and to the same phase.
+
+`NoncylindricalPhase.lean` shows that vertical translation invariance combined
+with a lower cone bound forces the phase to be null, while an upper cone bound
+forces its complement to be null. Therefore the one-sided hypothesis excludes
+vertical cylinders for the already constructed nontrivial phase. The required
+geometric regularity and classification dichotomy are not inferred from this
+exclusion alone.
+
 `StressEnergy.lean` proves the interior stress-divergence identity and the zero
 normal stress forced by the Neumann condition and the already proved boundary
 energy identity. `GraphLocalDivergence.lean` extends graph Gauss to compact fields
@@ -93,10 +109,10 @@ vertical order, and graph comparison on one common sequence.
 `AsymptoticEnergyMass.lean` proves a positive finite coefficient L such that
 rescaled energy on every origin-centered ball of radius r tends to L times r
 to the power m. Along the simultaneous defect sequence, primitive gradient
-mass has the same limits. This does not identify the limit of gradient mass
-with the perimeter of the limiting phase. Recovery for the broader competitor
-class is now constructed below; the identification of these limiting masses
-with perimeter has not yet been assembled.
+mass has the same limits. The subsequent `EnergyPerimeterIdentification.lean`
+and `PrimitivePerimeterMass.lean` now identify these limiting masses with the
+interface constant times the perimeter of the same phase, using recovery for
+the broader competitor class constructed below.
 
 `MeasurablePhaseMollification.lean` now smooths arbitrary measurable phases,
 preserving the closed unit interval and proving local integral convergence.
@@ -182,12 +198,14 @@ yet imply dilation invariance, nontriviality, or half-space classification.
 
 The remaining shared chain is:
 
-1. Establish the geometric regularity and energy/perimeter identification needed
-   by classification. Spatial stationarity, the Modica estimate, surface-scale
+1. Establish the geometric regularity needed by classification. Spatial
+   stationarity, the Modica estimate, surface-scale
    monotonicity, nontrivial dilation-invariant phase limits, and energy recovery
    for general finite-perimeter competitors are now proved. The phase minimizes
    perimeter against all measurable competitors agreeing outside a smaller
-   concentric closed ball.
+   concentric closed ball. Its ball-energy and primitive-gradient masses now
+   agree with weighted perimeter. The one-sided cone constraint excludes
+   vertical translation invariance, but the geometric dichotomy remains open.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and

@@ -1,5 +1,34 @@
 # Verification record
 
+## Exact perimeter mass and exclusion of vertical cylinders
+
+The five modules from `RecoveryEnergyUpper.lean` through the energy/perimeter
+identification, homogeneous perimeter, noncylindrical phase, and primitive
+mass results compile successfully. The final
+`SerrinEpigraph Challenge Solution` build passed (4006 jobs). The exact
+energy/perimeter identity, positive homogeneous perimeter coefficient,
+exclusion of vertical translation invariance under a one-sided cone bound,
+and primitive-gradient mass limit were each audited to use only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+Recovery of the same phase and annular gluing give the missing upper energy
+bound. Taking interior radii up to the target radius and combining this with
+the previous perimeter lower bound identifies diffuse mass with weighted
+perimeter on every origin-centered ball. The perimeter has a positive finite
+coefficient times the radius to the surface dimension. Along equipartition
+scales, primitive gradient mass converges to that same weighted perimeter.
+
+A separate measure-theoretic argument translates the one-sided cone bound
+through countably many integer shifts. If the phase were invariant under all
+vertical translations, a lower cone bound would make the phase null, and an
+upper cone bound would make its complement null. Thus the existing nontrivial
+phase excludes that cylindrical alternative under the one-sided hypothesis.
+This does not prove a plane/cylinder dichotomy or geometric regularity.
+
+Both Main rigidity holes remain. Half-space classification and transfer to
+the original solution, full Comparator acceptance, and Palomar registration
+are unfinished.
+
 ## General finite-perimeter recovery and minimizing conical phases
 
 The eleven modules from `ThresholdRecovery.lean` through
