@@ -1,5 +1,18 @@
 # Verification record
 
+## Spatial annular equation
+
+`AnnularSpatial.lean` lifts the constructed radial profiles by Euclidean distance.
+It proves continuity on the closed annulus, normalized range, interior positivity,
+zero inner sphere value and one outer sphere value, explicit first and second
+spatial derivatives, and `IncreasingRadialSegment.spatial_equation` for the
+original reaction. The equation theorem's transitive axiom audit reports only
+`propext`, `Classical.choice`, and `Quot.sound`, with clean source diagnostics.
+The full build passed (3748 jobs). Continuous second differentiability and inner
+boundary derivatives are still needed for the exterior comparison. The reverse
+energy inequality, final rigidity proofs, full Comparator, and Palomar remain
+unfinished.
+
 ## Annular solution existence completed
 
 `AnnularMaximal.lean` completes the compatible union and proves that it is an

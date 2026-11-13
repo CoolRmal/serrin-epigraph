@@ -53,6 +53,10 @@ initial slope whose squared value exceeds twice the potential drop, all
 sufficiently large inner radii admit an increasing radial solution from zero to
 one with that prescribed inner slope and positive slope throughout. Next lift
 this profile to an annulus in Euclidean space and prove the exterior comparison.
+`AnnularSpatial.lean` now supplies the lift, closed-annulus continuity, normalized
+range, positivity, zero/one sphere values, gradient and Hessian formulas, and the
+original elliptic equation. Continuous second differentiability and the inner
+boundary derivative still need to be packaged for the comparison argument.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
