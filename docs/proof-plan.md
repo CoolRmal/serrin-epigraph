@@ -296,8 +296,14 @@ average to a weighted primitive and differentiating away from the center.
 It proves slope continuity on the closed radius interval and constructs a local
 value/slope pair satisfying the original reaction equation, with central value
 in (0,1), zero central slope, and values in (0,1).
-Still required: continue solutions, construct Dirichlet ball and annulus
-profiles, and prove their large-radius limits.
+`RadialLocalFlow.lean` proves local existence at every positive radius and
+positive value, with arbitrary initial slope, under the original reaction
+hypotheses. It uses the autonomous radius/value/slope field and proves that
+the radius coordinate equals time. A smaller neighborhood preserves positive
+radius and positive value. This supplies the local restart step; uniqueness,
+gluing, and a continuation argument are still needed to extend existing profiles.
+Still required: construct Dirichlet ball and annulus profiles and prove their
+large-radius limits.
 
 ## Acceptance
 

@@ -646,3 +646,18 @@ All six declarations have clean diagnostics and standard axioms only
 This is a local initial-value construction: the Dirichlet boundary condition,
 large-radius profiles and limits, both rigidity proofs, full Comparator, and
 Palomar registration remain outstanding.
+
+## Radial local flow away from the center
+
+`RadialLocalFlow.lean` defines the autonomous radius/value/slope vector field
+and proves it is C¹ at nonzero radius whenever the reaction is C¹ at the
+initial value. Picard–Lindelöf gives a local flow; derivative uniqueness for
+the radius coordinate identifies it with time. The resulting theorem gives
+local radial-system solutions at every positive radius with arbitrary slope.
+Its specialization to the project hypotheses shrinks the interval to keep
+both radius and value positive.
+All three theorems use only the standard axioms, checked with `#print axioms`.
+The full build passed (3710 jobs), with no new proof holes. This does not yet
+prove uniqueness/gluing or global continuation of an existing profile.
+Large-radius comparisons, both rigidity proofs, full Comparator acceptance,
+and Palomar registration remain incomplete.
