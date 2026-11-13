@@ -119,3 +119,4 @@ public import SerrinEpigraph.RadialHessian
 public import SerrinEpigraph.RadialRegularity
 public import SerrinEpigraph.RadialHessianContinuity
 public import SerrinEpigraph.RadialBoundaryDerivative
+public import SerrinEpigraph.ScaledComparison

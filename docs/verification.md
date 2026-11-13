@@ -1,5 +1,19 @@
 # Verification record
 
+## Nonlinear scaled comparison
+
+`ScaledComparison.lean` proves the reaction scaling inequality, a linear bound
+for the reaction difference, the resulting weak supersolution inequality, and
+`scaled_solution_eq_of_contact`. The latter says that an ordered nonnegative
+solution touching a scaled positive solution at an interior point must equal it
+throughout the connected open domain. Its hypotheses include the original
+reaction quotient condition, a scaling factor at least one, and a bounded scaled
+solution; the Lipschitz constant is derived from the reaction regularity.
+The final theorem's transitive axiom audit reports only `propext`,
+`Classical.choice`, and `Quot.sound`, with no source warnings. The full build
+passed (3735 jobs). Compact-ball comparison still requires the maximum-ratio
+argument and boundary contradiction. Neither rigidity target is complete.
+
 ## Strong comparison infrastructure
 
 Added `isWeakSupersolution_of_classical`, `IsWeakSupersolution.positive`, and

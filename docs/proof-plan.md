@@ -1,9 +1,10 @@
 # Proof obligations
 
 The ball comparison now has a proved strong maximum principle for nonnegative
-weak supersolutions and a classical-to-weak conversion. Next, apply these to
-the nonnegative difference between a scaled epigraph solution and a radial ball
-solution, using the reaction quotient inequality to exclude interior contact.
+weak supersolutions, a classical-to-weak conversion, and the nonlinear
+`scaled_solution_eq_of_contact` theorem. Next maximize the solution ratio on a
+compact ball strictly inside the epigraph, then use boundary values to exclude
+the equality forced by an interior contact at a scaling factor greater than one.
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
 The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
