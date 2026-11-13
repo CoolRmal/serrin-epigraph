@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`AnnularGluingSequence.lean` combines annular cutoff selection, the integrated
+comparison, and the scale choice into a sequence-level gluing theorem with an
+error tending to zero. The input energy bound and common local L1 limit are
+required only on the annulus; the inner-ball limits may differ. Recovery
+construction and preservation of the candidate limit under gluing still need
+to be connected to the geometric comparison.
+
 `AnnularTransitionCost.lean` localizes cutoff selection and the integrated
 gluing comparison to the annular cost. The selection argument masks the cost
 outside the annulus, so different limiting sets inside the inner ball are

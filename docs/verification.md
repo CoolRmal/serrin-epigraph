@@ -1,5 +1,16 @@
 # Verification record
 
+## Annular gluing sequence with vanishing error
+
+The `SerrinEpigraph Challenge Solution` build passed (3882 jobs).
+`AnnularGluingSequence.lean` constructs a sequence of smooth cutoffs with an
+integrated gluing comparison and an error tending to zero. Bounded energy and
+common local L1 convergence are assumed only on the annulus. Diagnostics are
+clean; the sequence theorem has only the standard three axioms. This remains
+conditional on the input sequences, whose required recovery construction and
+geometric use are unfinished. Both Main rigidity proofs, full Comparator, and
+Palomar registration remain incomplete.
+
 ## Annular selection and integrated comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3881 jobs).
