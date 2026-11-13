@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`GeometricRecoveryEnergy.lean` proves the extended-profile ODE on the open
+transition interval, the spatial gradient chain rule, and the interior
+rescaled energy bound R(2W(v)+δ) when the coordinate gradient has norm at
+most one. Exterior energy localization and geometric integration are still
+required to obtain the recovery upper bound.
+
 `GeometricRecoveryProfile.lean` defines the scaled profile composed with a
 geometric coordinate, proves its normalized range and explicit Lipschitz
 bound, and proves compact-local L1 convergence to the indicator of the

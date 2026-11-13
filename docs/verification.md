@@ -1,5 +1,15 @@
 # Verification record
 
+## Interior geometric recovery energy
+
+The `SerrinEpigraph Challenge Solution` build passed (3895 jobs).
+`GeometricRecoveryEnergy.lean` proves the interior derivative of the extended
+profile, the spatial gradient formula, and the interior energy bound for
+coordinates whose gradient norm is at most one. Diagnostics are clean and
+the energy bound has only the standard three axioms. Exterior localization,
+integrated geometric upper bounds, both Main rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Geometric recovery profile convergence
 
 The `SerrinEpigraph Challenge Solution` build passed (3894 jobs).
