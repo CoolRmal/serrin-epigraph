@@ -219,3 +219,4 @@ public import SerrinEpigraph.GeometricRecoveryEnergy
 public import SerrinEpigraph.RecoveryEnergyLocalization
 public import SerrinEpigraph.DistanceRecovery
 public import SerrinEpigraph.RecoveryLayerMass
+public import SerrinEpigraph.RecoveryMeasureBound

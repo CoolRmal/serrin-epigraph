@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`RecoveryMeasureBound.lean` connects the analytic recovery construction to
+geometry: domination of the pushed-forward transition-layer volume by P
+times length implies energy at most P times the exact regularized action.
+The measure-domination premise is explicit and remains to be established
+from geometric hypotheses; this conditional result is not perimeter minimality.
+
 `RecoveryLayerMass.lean` defines the supported one-dimensional layer density,
 proves its nonnegativity and integrability, and computes its exact total mass
 as the regularized action independently of the positive spatial scale. This

@@ -1,5 +1,15 @@
 # Verification record
 
+## Recovery bound from coordinate-measure domination
+
+The `SerrinEpigraph Challenge Solution` build passed (3899 jobs).
+`RecoveryMeasureBound.lean` proves the exact action upper bound under an
+explicit domination hypothesis on the pushed-forward transition-layer volume.
+Diagnostics are clean; the geometric energy theorem uses only the standard
+three axioms. The domination hypothesis itself is not proved here. Geometric
+recovery, both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Exact scaled layer mass
 
 The `SerrinEpigraph Challenge Solution` build passed (3898 jobs).
