@@ -1,5 +1,20 @@
 # Verification record
 
+## Compatibility of local L¹ limits
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3823 jobs).
+
+`LocalLimitCompatibility.lean` proves restriction of integral convergence to
+smaller sets and almost-everywhere uniqueness of integrable limits. Applied
+to the common phase-primitive subsequence, this shows all local limits agree
+almost everywhere on nested integer-radius balls.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only `propext`, `Classical.choice`, and `Quot.sound`. A global
+representative and identification of the limiting phase remain to be proved.
+Both rigidity proofs, full Comparator, and Palomar registration remain
+incomplete; the successful build does not discharge the two Main proof holes.
+
 ## Actual local L¹ limits of unsmoothed primitives
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3822 jobs).

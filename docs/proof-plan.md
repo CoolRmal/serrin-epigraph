@@ -51,8 +51,10 @@ local error bound proportional to the averaging radius, uniformly in dilation.
 subsequence and proves the unsmoothed primitive subsequence is Cauchy in
 integral norm on all positive integer balls. `LocalPrimitiveLimits.lean` uses
 L¹ completeness to construct actual local integrable limits along that same
-subsequence. Compatibility of local limits and identification of the limiting
-phase remain.
+subsequence. `LocalLimitCompatibility.lean` proves restriction of integral
+convergence and uniqueness almost everywhere, and applies them to show these
+local limits agree almost everywhere on nested balls. Patching a global
+representative and identifying the limiting phase remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
