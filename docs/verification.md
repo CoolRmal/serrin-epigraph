@@ -1,5 +1,25 @@
 # Verification record
 
+## Spatial stationarity and localized dilation
+
+`StressEnergy.lean`, `GraphLocalDivergence.lean`, `ShiftedStressFlux.lean`,
+`StressStationarity.lean`, and `DilationStationarity.lean` have clean diagnostics.
+The `SerrinEpigraph Challenge Solution` build passed (3953 jobs). After that build,
+the stress-stationarity theorem and the final localized dilation theorem were
+checked to use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+The proof combines the interior PDE stress identity, the exact Neumann boundary
+energy cancellation, and graph Gauss on epigraphs shifted upward into the open
+solution domain. The shift limit uses only the original C1 regularity on the
+closed epigraph, so no C2 boundary assumption is added. Every compact C1 vector
+test is admitted, including those meeting the boundary. The resulting localized
+dilation formula is the weak Pohozaev identity about an arbitrary center.
+
+Surface-normalized energy monotonicity, its discrepancy control, cone structure,
+classification, and the implication back to the original solution remain
+unfinished. Both Main rigidity proof holes remain. Full Comparator acceptance
+and Palomar registration remain incomplete.
+
 ## A common phase with vertical order and AE graph comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3947 jobs).

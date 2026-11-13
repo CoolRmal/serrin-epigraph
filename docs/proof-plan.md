@@ -7,6 +7,23 @@ pending compiler repairs. The source note invokes Wang–Wei and related geometr
 rigidity results; their classification and flatness proofs are not yet formalized
 here. The restored reaction assumptions remain unchanged.
 
+`StressEnergy.lean` proves the interior stress-divergence identity and the zero
+normal stress forced by the Neumann condition and the already proved boundary
+energy identity. `GraphLocalDivergence.lean` extends graph Gauss to compact fields
+that are C1 only near the relevant part of the closed epigraph.
+`ShiftedStressFlux.lean` then integrates stress over epigraphs shifted upward into
+the original open domain. `StressStationarity.lean` sends the shift to zero using
+the continuous within-closure gradient and uniformly compact graph traces. Its
+final theorem proves stationarity for every compact C1 spatial variation,
+including variations that meet the free boundary, under the original regularity
+assumptions. `DilationStationarity.lean` specializes this to compactly localized
+dilations and proves the weak Pohozaev identity about any center.
+
+This establishes the spatial first-variation identity needed for scale analysis.
+It does not yet prove the surface-normalized energy monotonicity formula or the
+gradient bound needed to control its discrepancy term. In particular, no cone
+structure or rigidity conclusion follows merely from this new identity.
+
 `GraphPerimeter.lean` proves exact variational perimeter equals graph area on
 every open ambient domain for C1 graphs, allowing infinite area. Its lower bound
 uses compact normal tests and inner regularity; the upper bound uses the exact
@@ -48,7 +65,9 @@ The remaining shared chain is:
 1. Establish the geometric structure of the limiting phase and sufficient
    competitor approximation/comparison for the classification argument. In
    particular, graph-competitor minimality does not itself prove dilation
-   invariance or full perimeter minimality.
+   invariance or full perimeter minimality. Spatial stationarity and its
+   localized dilation identity are now proved; the passage to the required
+   monotonicity and cone structure remains.
 2. Prove the classification applicable in dimensions at most eight, and under
    either one-sided linear bound in higher dimensions.
 3. Prove the flatness/rigidity implication back to the original epigraph and
