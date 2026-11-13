@@ -96,3 +96,4 @@ public import SerrinEpigraph.RadialReactionExtension
 public import SerrinEpigraph.RadialEquation
 public import SerrinEpigraph.RadialLocalFlow
 public import SerrinEpigraph.RadialUniqueness
+public import SerrinEpigraph.RadialGluing

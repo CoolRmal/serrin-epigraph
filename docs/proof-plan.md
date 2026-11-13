@@ -303,8 +303,12 @@ the radius coordinate equals time. A smaller neighborhood preserves positive
 radius and positive value. `RadialUniqueness.lean` proves local uniqueness
 through a matching radial value/slope state, and propagates agreement over
 any connected open set of positive radii and positive values. This supplies
-the consistency needed for the restart step. Gluing and a continuation
-argument are still needed to extend existing profiles.
+the consistency needed for the restart step. `RadialGluing.lean` now constructs
+a radial system on the union of two open domains with connected overlap,
+preserving each original value and slope. It also glues a local restart at an
+interior positive state to the existing profile. This union need not strictly
+enlarge the old interval; endpoint limits and continuation beyond a finite
+endpoint remain to be proved.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

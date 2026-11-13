@@ -675,3 +675,18 @@ All four declarations have clean diagnostics and only `propext`,
 passed (3711 jobs). No target signatures or proof holes were changed.
 Actual gluing and continuation, large-radius comparisons, both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Gluing radial systems
+
+`RadialGluing.lean` introduces `IsRadialSystemOn` and proves five theorems:
+restriction, local agreement of piecewise branches on an overlap, preservation
+of the radial equations under gluing, existence of a glued system from a
+single matching state on a connected overlap, and gluing a local positive
+restart to an existing system on an open interval. The construction preserves
+both value and slope on the entire original domain.
+All five declarations have clean diagnostics and only the standard axioms
+(`propext`, `Classical.choice`, `Quot.sound`). The full build passed (3712 jobs).
+No new proof holes or target changes were introduced. Restarting at an interior
+point does not assert strict enlargement of the domain; finite-endpoint limits
+and outward continuation remain. Large-radius comparisons, both rigidity
+proofs, full Comparator acceptance, and Palomar registration are still incomplete.
