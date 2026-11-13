@@ -356,6 +356,13 @@ bound, contradicting boundedness of arctangent. Thus every central value in
 Still required: control these radii as the central value tends to one,
 construct annulus profiles, and prove the large-radius boundary-slope limits.
 
+`RadialSlopeBound.lean` bounds every radial slope by the one-dimensional
+energy scale and bounds outer-region energy loss by the value drop times
+that scale and the curvature factor. For inner radius a and outer radius b,
+the loss is at most m/a times that scale. This supplies the uniform
+outer-region error estimate; control of the inner-region energy as the
+central value tends to one remains.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

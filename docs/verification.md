@@ -848,3 +848,14 @@ checked by `#print axioms`. The full build passed (3722 jobs). No new proof
 holes or main-statement changes were introduced. Excluding the global branch,
 first-zero radius control, large-radius comparisons, both rigidity proofs,
 full Comparator acceptance, and Palomar registration remain incomplete.
+
+## Uniform radial slope and outer-region energy bounds
+
+`RadialSlopeBound.lean` proves five declarations: potential monotonicity,
+the squared and absolute slope bounds throughout the closed ball, and two
+outer-region energy-loss bounds. All five passed LSP diagnostics and axiom
+verification with only `propext`, `Classical.choice`, and `Quot.sound`.
+The full build passed (3724 jobs). No main statements were changed. The two
+main rigidity proofs remain incomplete, as do full Comparator acceptance
+and Palomar registration. The next analytic step is inner-region control
+as the central value tends to equilibrium and the corresponding radius limit.
