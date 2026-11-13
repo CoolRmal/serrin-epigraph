@@ -1,5 +1,14 @@
 # Verification record
 
+## Exact scaled layer mass
+
+The `SerrinEpigraph Challenge Solution` build passed (3898 jobs).
+`RecoveryLayerMass.lean` proves that the nonnegative, integrable supported
+layer density has total mass exactly equal to the regularized action at
+every positive scale. Diagnostics are clean and the mass theorem uses only
+the standard three axioms. Geometric measure comparison, both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Distance recovery competitors
 
 The `SerrinEpigraph Challenge Solution` build passed (3897 jobs).

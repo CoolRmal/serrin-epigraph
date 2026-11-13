@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`RecoveryLayerMass.lean` defines the supported one-dimensional layer density,
+proves its nonnegativity and integrability, and computes its exact total mass
+as the regularized action independently of the positive spatial scale. This
+preserves the sharp interface constant when the geometric layer integral is
+compared to a one-dimensional measure. The geometric comparison itself remains.
+
 `DistanceRecovery.lean` specializes the coordinate construction to distance
 from the complement. For proper open sets it identifies the positive phase
 exactly, proves exterior zero values and global Lipschitz regularity, and
