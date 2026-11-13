@@ -600,3 +600,18 @@ Each new theorem was checked by `#print axioms`; only `propext`,
 The two existing rigidity proof holes remain. This is operator infrastructure,
 not an existence theorem. Full Comparator acceptance and Palomar registration
 remain outstanding.
+
+## Local radial fixed-point construction
+
+`RadialFixedPoint.lean` proves five theorems: continuity of constant endpoint
+extension, the quadratic Lipschitz estimate in the continuous-function sup
+metric, existence and uniqueness of the short-interval integral solution, and
+existence of a continuous profile satisfying the averaged derivative equation
+with prescribed central value and zero central derivative. The forcing here
+is globally Lipschitz; this is an auxiliary existence theorem, not a change
+to either rigidity target's reaction assumptions.
+LSP diagnostics are clean. The full build passed (3702 jobs). All five new
+theorems were audited with `#print axioms` and use only `propext`,
+`Classical.choice`, and `Quot.sound`. No new proof holes were introduced.
+The second-order equation, connection to the original reaction, large-radius
+profiles, both rigidity proofs, full Comparator, and Palomar registration remain.

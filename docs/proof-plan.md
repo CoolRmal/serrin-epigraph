@@ -280,8 +280,14 @@ a paper or assuming a classification conclusion is not sufficient.
 and radial Picard operator. It proves continuity of the average, the prescribed
 center value and zero center derivative, the derivative formula, a quadratic
 size bound, and a quadratic difference bound for continuous forcings.
-These estimates supply the operator bounds for a future fixed-point construction;
-no radial solution existence or large-radius limit is asserted yet.
+`RadialFixedPoint.lean` uses these bounds on continuous functions on a compact
+radius interval. For globally Lipschitz forcing and a sufficiently small radius,
+it proves existence and uniqueness of an integral solution. It produces a
+continuous real-valued extension with the prescribed initial value, zero center
+derivative, and the averaged radial derivative formula throughout the interval.
+Still required: extend the original reaction from its value interval, recover
+the second-order radial equation, continue solutions, construct Dirichlet ball
+and annulus profiles, and prove their large-radius limits.
 
 ## Acceptance
 
