@@ -167,3 +167,4 @@ public import SerrinEpigraph.MollifiedPrimitiveCompactness
 public import SerrinEpigraph.SimultaneousMollifiedCompactness
 public import SerrinEpigraph.SegmentGradientEstimate
 public import SerrinEpigraph.TranslationIntegral
+public import SerrinEpigraph.LipschitzTranslationIntegral

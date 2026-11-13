@@ -1,5 +1,28 @@
 # Verification record
 
+## Locally Lipschitz translation estimates and uniform dilation control
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3819 jobs).
+
+`LipschitzTranslationIntegral.lean` proves convergence of compact-set integrals
+of normalized-mollification gradient norms by dominated convergence. It also
+proves convergence of the fixed-translation integral error using a uniform
+local Lipschitz bound. Passing the smooth translation inequality to the limit
+gives its full locally Lipschitz version.
+
+Applied to the actual dilated phase primitive, with the previously proved
+gradient integral bound, it yields a single C > 0 such that
+
+$$
+\int_{\overline B_r}|\Phi(U(R(x+z)))-\Phi(U(Rx))|\,dx
+\le |z| C(r+|z|)^m
+$$
+
+whenever R > 0 and R(r+|z|) ≥ 1. Diagnostics and the final theorem's transitive
+axiom audit are clean, using only the standard three axioms. Averaging this
+translation estimate to remove mollification remains necessary. Both rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Local integral translation estimate
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3818 jobs).

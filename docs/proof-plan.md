@@ -42,7 +42,10 @@ Uniform control of the mollification error remains necessary.
 segment integral formula and gradient bound for continuously differentiable
 functions. `TranslationIntegral.lean` completes spatial integration and bounds
 the local translation error by displacement times the gradient integral on the
-enlarged ball. The locally Lipschitz extension remains.
+enlarged ball. `LipschitzTranslationIntegral.lean` extends this to locally
+Lipschitz functions by dominated convergence and proves a dilation-independent
+translation bound for the actual phase primitive family. Averaging this
+estimate to control mollification error remains necessary.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
