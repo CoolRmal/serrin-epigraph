@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`DistanceRecovery.lean` specializes the coordinate construction to distance
+from the complement. For proper open sets it identifies the positive phase
+exactly, proves exterior zero values and global Lipschitz regularity, and
+obtains compact-local L1 convergence to the set indicator. Its energy bound
+is the explicit interior boundary-layer integral. A sharp geometric estimate
+of that layer integral is still required.
+
 `RecoveryEnergyLocalization.lean` proves zero energy at pure phases, including
 transition endpoints, and localizes the density bound to the open transition
 layer. For a one-Lipschitz coordinate, it integrates this bound on compact

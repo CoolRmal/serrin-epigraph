@@ -1,5 +1,15 @@
 # Verification record
 
+## Distance recovery competitors
+
+The `SerrinEpigraph Challenge Solution` build passed (3897 jobs).
+`DistanceRecovery.lean` constructs competitors from distance to the complement,
+proves global Lipschitz regularity and exterior zero values, identifies the
+positive-distance set for proper open sets, and proves local L1 convergence
+and the interior boundary-layer energy bound. Diagnostics are clean; the L1
+theorem uses only the standard three axioms. Sharp geometric layer estimates,
+both Main rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Localized recovery energy integral
 
 The `SerrinEpigraph Challenge Solution` build passed (3896 jobs).
