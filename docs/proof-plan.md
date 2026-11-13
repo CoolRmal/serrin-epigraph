@@ -29,10 +29,13 @@ the required competitor class and complete the geometric rigidity arguments.
 of arbitrary locally Lipschitz competitors by Rademacher on a countable ball
 cover. It also proves compact gradient bounds, uniform bounds for normalized
 mollifications, and compact integrability of squared gradients and phase
-energy. The missing approximation step is convergence of mollified gradients
-for these competitors; the existing proof only treats functions that are C¹
-locally away from the original graph boundary. These bounds do not by
-themselves establish Lipschitz minimality.
+energy. `LipschitzMollificationDerivative.lean` now differentiates convolution
+for globally Lipschitz functions using dominated differentiation and Rademacher,
+applies Lebesgue differentiation to their derivatives, and localizes through
+real-valued Lipschitz extensions on a countable ball cover. Thus normalized
+mollification gradients converge almost everywhere for every locally Lipschitz
+competitor. Next connect these results to the calibration integral limit and
+minimality; gradient convergence alone does not establish that comparison.
 
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.

@@ -143,3 +143,4 @@ public import SerrinEpigraph.InwardTangent
 public import SerrinEpigraph.AnnularSlopeComparison
 public import SerrinEpigraph.UnshiftedMinimality
 public import SerrinEpigraph.LipschitzCompetitorEnergy
+public import SerrinEpigraph.LipschitzMollificationDerivative

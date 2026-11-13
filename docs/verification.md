@@ -1,5 +1,18 @@
 # Verification record
 
+## Gradient convergence for locally Lipschitz competitors
+
+`LipschitzMollificationDerivative.lean` proves differentiation under the
+averaging integral for globally Lipschitz functions, local integrability of
+their derivatives, almost-everywhere convergence by Lebesgue differentiation,
+and convergence for normalized gradients. Real-valued Lipschitz extensions on
+a countable ball cover transfer the result to arbitrary locally Lipschitz
+functions. Diagnostics are clean; the final local theorem's transitive audit
+uses only `propext`, `Classical.choice`, and `Quot.sound`, with no source warnings.
+Connecting this convergence to Lipschitz minimality remains to be done. Both
+rigidity targets, full Comparator, and Palomar registration remain incomplete.
+The complete `SerrinEpigraph Challenge Solution` build passed (3769 jobs).
+
 ## General locally Lipschitz competitor bounds
 
 `LipschitzCompetitorEnergy.lean` proves compact bounds for gradients and
