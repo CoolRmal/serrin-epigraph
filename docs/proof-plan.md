@@ -137,10 +137,12 @@ of compact weighted integrals for every continuous observable on the solution
 range, including the solution and reaction. It uses eventual compact-domain
 inclusion, compact bounds, and filter dominated convergence. `DistributionalEquation.lean` now proves the second integration-by-parts
 identity, the distributional equation, and its translated form for every fixed
-compact test at sufficiently large heights. The next step is to restrict both
-integrands to the compact test support, verify the Laplacian weight's continuity
-and support, and combine the established limits. Identifying the resulting
-limit profile with one still remains.
+compact test at sufficiently large heights. `LimitEquation.lean` proves continuity and support control of the test
+Laplacian, restricts the integrals to the compact test support, and combines the
+established limits with uniqueness of limits. The lifted horizontal profile now
+satisfies the semilinear equation in distributions and is distributionally
+superharmonic. Identifying this profile with one still remains; the argument
+must use the reaction structure, not merely bounded superharmonicity.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

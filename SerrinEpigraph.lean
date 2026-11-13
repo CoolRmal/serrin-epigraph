@@ -21,6 +21,7 @@ public import SerrinEpigraph.FixedWidthCutoff
 public import SerrinEpigraph.Geometry
 public import SerrinEpigraph.GradientPowerTests
 public import SerrinEpigraph.IntegrationByParts
+public import SerrinEpigraph.LimitEquation
 public import SerrinEpigraph.LimitProfile
 public import SerrinEpigraph.Mass
 public import SerrinEpigraph.MassGrowth

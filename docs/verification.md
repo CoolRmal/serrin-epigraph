@@ -96,6 +96,16 @@ theorems were individually axiom-audited and use only the three permitted
 standard axioms. The full build passed (3577 jobs). The limit equation and the
 two main rigidity proofs remain unfinished.
 
+## Limit distributional equation
+
+`LimitEquation.lean` proves that the lifted ray-limit profile satisfies the
+semilinear PDE against every compactly supported C² test. Its superharmonicity
+is also proved. The six public declarations, including test-support and
+continuity lemmas, were individually axiom-audited and use only the standard
+three permitted axioms. The full build passed (3578 jobs). Constancy of the
+profile, both main rigidity classifications, full Comparator acceptance, and
+Palomar registration remain unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
