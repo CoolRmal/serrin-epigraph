@@ -1,5 +1,19 @@
 # Verification record
 
+## Exact graph boundary flux
+
+The `SerrinEpigraph Challenge Solution` build passed (3936 jobs).
+`GraphVerticalFlux.lean`, `GraphHorizontalFlux.lean`, and `GraphDivergence.lean`
+have clean diagnostics. The final exact divergence formula and localized area
+bound, including their transitive proof dependencies, use only `propext`,
+`Classical.choice`, and `Quot.sound`. The proof handles C1 graphs and compact C1
+vector fields, decomposes Euclidean volume into graph sections, and derives
+both horizontal and vertical boundary terms. The norm of the unnormalized
+normal is the graph area density. The resulting upper bound uses the field's
+actual boundary trace. Perimeter-area equality, full minimality, and geometric
+classification remain unfinished; Main still has two rigidity proof holes.
+Full Comparator and Palomar registration remain incomplete.
+
 ## Existing limiting phases and one-sided cone inclusions
 
 The `SerrinEpigraph Challenge Solution` build passed (3933 jobs).

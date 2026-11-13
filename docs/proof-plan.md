@@ -2,6 +2,15 @@
 
 ## Current remaining proof obligations
 
+`GraphVerticalFlux.lean`, `GraphHorizontalFlux.lean`, and `GraphDivergence.lean`
+prove the exact divergence theorem for C1 graph epigraphs and compact C1 vector
+fields. Fubini in ordinary and flattened graph coordinates gives the vertical
+and horizontal fluxes, which sum to the outward unnormalized normal flux. Its
+norm equals the graph area density, yielding an upper bound weighted by the
+field's actual boundary trace. No PDE or recovery-sequence assumption is needed
+for these formulas. Saturating the variational supremum and the subsequent
+minimality/classification arguments remain outstanding.
+
 `LimitingGraphComparison.lean` now obtains the fixed phase and all compact-set
 solution convergence directly from the PDE assumptions, and gives graph
 competitor comparisons for that phase. `OneSidedPhaseLimit.lean` passes both
