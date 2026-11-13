@@ -346,3 +346,15 @@ All fifteen new declarations were audited individually and use only `propext`,
 No boundary differentiability or cross-boundary energy minimality is claimed.
 Both rigidity proofs, full Comparator acceptance, and Palomar registration
 remain unfinished.
+
+## Cross-boundary local Lipschitz regularity
+
+`ZeroExtensionRegularity.lean` flattens the C¹ epigraph boundary, transfers the
+solution to a convex closed half-space, and identifies the zero extension with
+the solution composed with vertical clamping. This proves local Lipschitz
+regularity across the original boundary and a finite Lipschitz constant on
+every compact set. All six public theorem declarations were audited and use
+only `propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3605 jobs).
+Cross-boundary energy minimality and both rigidity theorems remain unfinished;
+full Comparator acceptance and Palomar registration have not been obtained.

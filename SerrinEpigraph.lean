@@ -73,3 +73,4 @@ public import SerrinEpigraph.ClosedRangeMinimality
 public import SerrinEpigraph.LevelBoundary
 public import SerrinEpigraph.BoundaryGradient
 public import SerrinEpigraph.ZeroExtension
+public import SerrinEpigraph.ZeroExtensionRegularity
