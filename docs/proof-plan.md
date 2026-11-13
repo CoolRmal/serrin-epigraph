@@ -398,6 +398,13 @@ divided by m+1. The radial equation then gives the same limit for the slope
 derivative and a right derivative of the slope at zero. These are the
 central second-order radial data needed for the spatial Hessian formula.
 
+`RadialHessianCenter.lean` now proves the spatial gradient derivative at the
+center is the scalar -f(value(0))/(m+1) times the identity. It also proves a
+general gradient-trace formula requiring only differentiability of the
+gradient, and uses it to establish the semilinear PDE at the center.
+The off-center Hessian/PDE formula and full second-order continuity are
+still required for the classical comparison-solution package.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

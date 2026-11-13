@@ -914,3 +914,14 @@ The spatial Hessian and Laplacian formulas, comparison/Hopf arguments,
 annulus construction, both final rigidity proofs, full Comparator acceptance,
 and Palomar registration remain unfinished.
 
+## Central spatial Hessian and PDE identity
+
+`RadialHessianCenter.lean` proves five theorems: differentiation of a continuous
+coefficient times displacement, a division-free averaged gradient formula,
+the isotropic gradient derivative at the center, the general gradient-trace
+formula, and the original semilinear equation at the center. All five have
+clean diagnostics and only the standard three axioms. The full build passed
+(3730 jobs). Off-center second-order formulas, full second-order continuity,
+comparison/Hopf arguments, annulus construction, both final rigidity proofs,
+full Comparator acceptance, and Palomar registration remain unfinished.
+
