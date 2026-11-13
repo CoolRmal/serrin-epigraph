@@ -188,7 +188,9 @@ under the compact spatial integral, and proves the resulting derivative is zero
 for compact variations. `CalibrationPath.lean` proves constancy along admissible
 affine comparison paths and energy minimality against C¹ perturbations compactly
 supported inside the epigraph that keep the solution strictly between zero and
-one. This is an interior fixed-domain comparison, not yet the free-boundary
+one. `ClosedRangeMinimality.lean` extends this comparison to perturbations
+whose resulting values lie in the closed interval [0,1], using continuity of
+compact spatial integrals. This is an interior fixed-domain comparison, not yet the free-boundary
 minimization allowing changes to the positive phase.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

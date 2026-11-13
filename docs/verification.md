@@ -295,3 +295,16 @@ new declarations were audited individually and use only `propext`,
 This is fixed-domain interior minimality; it does not yet establish the
 free-boundary minimization permitting changes of positive phase. Both rigidity
 proofs, full Comparator acceptance, and Palomar registration remain unfinished.
+
+## Closed-range interior comparisons
+
+`ClosedRangeMinimality.lean` proves continuity of compact spatial integrals on
+compact parameter sets and uses it to extend interior energy minimality to C¹
+compact perturbations whose resulting values lie in [0,1]. The proof approximates
+such perturbations by strict-range ones and passes the energy inequality to
+the endpoint. Both declarations use only `propext`, `Classical.choice`, and
+`Quot.sound`, as checked individually.
+`lake build SerrinEpigraph Challenge Solution` passed (3601 jobs).
+Perturbations are still supported strictly inside the original epigraph;
+free-boundary comparison, both rigidity proofs, full Comparator acceptance,
+and Palomar registration remain unfinished.
