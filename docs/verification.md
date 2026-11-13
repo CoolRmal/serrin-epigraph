@@ -859,3 +859,13 @@ The full build passed (3724 jobs). No main statements were changed. The two
 main rigidity proofs remain incomplete, as do full Comparator acceptance
 and Palomar registration. The next analytic step is inner-region control
 as the central value tends to equilibrium and the corresponding radius limit.
+
+## Quantitative radial equilibrium and radius control
+
+`RadialEquilibrium.lean` proves five theorems: a slope bound proportional
+to the equilibrium deficit, exponential control of that deficit, its lower
+bound in terms of the boundary radius, a uniform constant for all profiles,
+and an explicit criterion forcing the radius above any prescribed threshold.
+All five have clean diagnostics and standard axioms only, verified with
+the Lean axiom checker. The full build passed (3725 jobs). Both final rigidity
+proofs, full Comparator acceptance, and Palomar registration remain unfinished.

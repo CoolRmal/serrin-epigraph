@@ -363,6 +363,14 @@ the loss is at most m/a times that scale. This supplies the uniform
 outer-region error estimate; control of the inner-region energy as the
 central value tends to one remains.
 
+`RadialEquilibrium.lean` gives a uniform reaction-dependent constant K > 0
+such that the deficit at radius r is at most the central deficit times exp(Kr).
+At the zero boundary this implies exp(-KR) is at most the central deficit.
+The explicit threshold theorem forces R > T whenever the central deficit
+is less than exp(-KT). This supplies fixed-radius value control and the
+quantitative radius divergence criterion. The boundary-slope limit still
+needs to combine this control with the outer-region energy-loss estimate.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

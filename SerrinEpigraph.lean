@@ -109,3 +109,4 @@ public import SerrinEpigraph.RadialBranches
 public import SerrinEpigraph.RadialGlobal
 public import SerrinEpigraph.RadialRiccati
 public import SerrinEpigraph.RadialSlopeBound
+public import SerrinEpigraph.RadialEquilibrium
