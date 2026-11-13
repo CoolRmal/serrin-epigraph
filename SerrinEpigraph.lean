@@ -23,6 +23,7 @@ public import SerrinEpigraph.FixedWidthCutoff
 public import SerrinEpigraph.Geometry
 public import SerrinEpigraph.GradientPowerTests
 public import SerrinEpigraph.IntegrationByParts
+public import SerrinEpigraph.LevelHeight
 public import SerrinEpigraph.LimitOne
 public import SerrinEpigraph.LimitEquation
 public import SerrinEpigraph.LocalMinimum

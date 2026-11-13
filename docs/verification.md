@@ -143,6 +143,15 @@ permitted axioms. The full build passed (3584 jobs). This closes identification
 of the vertical limit; variational minimization, the two main rigidity proofs,
 full Comparator acceptance, and Palomar registration remain unfinished.
 
+## Inverse level heights
+
+`LevelHeight.lean` proves existence and uniqueness of each intermediate solution
+level on every vertical ray, strict monotonicity and continuity of the inverse
+height in the level variable, and recovery of every original point's height.
+All five theorems were individually audited and use only the standard three
+axioms. The full build passed (3585 jobs). Joint regularity and the variational
+calibration, as well as the two rigidity classifications, remain unfinished.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

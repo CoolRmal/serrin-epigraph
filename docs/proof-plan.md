@@ -161,6 +161,11 @@ then uses upward domain exhaustion to prove that every vertical ray limit equals
 one. This proof uses the classical original solution directly and does not
 assume extra regularity of the limit profile. The remaining work includes the
 variational minimization argument and the dimension/geometric classification.
+`LevelHeight.lean` now parameterizes each vertical ray by its solution value:
+every value in the open unit interval is attained at exactly one interior height,
+the inverse height is strictly increasing and continuous in that value, and it
+recovers the height of each original interior point. Joint regularity in the
+horizontal and level variables and the calibration identities remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
