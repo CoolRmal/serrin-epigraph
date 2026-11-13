@@ -147,8 +147,11 @@ must use the reaction structure, not merely bounded superharmonicity.
 computes its first and second derivatives and exact Laplacian, and proves its
 positive interior values, zero sphere values, and an explicit inverse-radius-
 squared bound for the negative Laplacian relative to the polynomial. The next
-comparison step is to rule out interior first contact with the classical
-solution, then use large translated balls to identify the ray limits with one.
+comparison step now has its differential contradiction in `LocalMinimum.lean`:
+a local minimum has nonnegative Laplacian, and positive contact is impossible
+when the reaction coefficient strictly exceeds the barrier coefficient. The
+compact optimization that produces a first contact, and its application to
+large translated balls to identify the ray limits with one, still remain.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing

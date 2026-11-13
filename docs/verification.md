@@ -115,6 +115,15 @@ only the standard three axioms. The full build passed (3579 jobs). Comparison
 with the solution and the resulting identification of its ray limits remain
 to be formalized; no main rigidity target has been closed by this addition.
 
+## Local minimum and contact contradiction
+
+`LocalMinimum.lean` proves the scalar second-derivative condition, its
+directional version, the nonnegative Laplacian condition at an interior local
+minimum, and the positive-contact contradiction for strict reaction/barrier
+coefficient separation. All four declarations use only the standard three
+axioms. The complete build passed (3581 jobs). Constructing a contact point by
+compact optimization and completing the main rigidity proofs remain outstanding.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
