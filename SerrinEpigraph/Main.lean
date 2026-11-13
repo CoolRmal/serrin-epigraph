@@ -6,8 +6,9 @@ public import SerrinEpigraph.StrongMaximum
 /-!
 # The three source targets
 
-The monotonicity theorem is proved. The two rigidity targets remain open, and no extra
-reaction assumptions have been added to resolve the citation gap in `docs/statement-audit.md`.
+The monotonicity theorem is proved. The two rigidity proofs remain unfinished.
+Their reaction and boundedness assumptions include the source conversation and notes;
+see `docs/scope-correction.md`.
 -/
 
 public section
@@ -23,13 +24,15 @@ theorem verticalDerivative_pos {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1
 /-- Image 2: affine and one-dimensional rigidity in ambient dimensions two through eight. -/
 theorem rigidity_of_dimension_le_eight {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
-    (h : Hypotheses g u f κ) (hdim : m + 1 ≤ 8) : IsAffineOneDimensional g u := by
+    (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f) (hdim : m + 1 ≤ 8) :
+    IsAffineOneDimensional g u := by
   sorry
 
 /-- Image 3: rigidity in ambient dimension at least nine under either one-sided linear bound. -/
 theorem rigidity_of_oneSidedLinearBound {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
-    (h : Hypotheses g u f κ) (hdim : 9 ≤ m + 1) (hg : HasOneSidedLinearBound g) :
+    (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f)
+    (hdim : 9 ≤ m + 1) (hg : HasOneSidedLinearBound g) :
     IsAffineOneDimensional g u := by
   sorry
 

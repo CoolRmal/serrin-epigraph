@@ -1,5 +1,11 @@
 # Independent statement audit
 
+> Historical audit of the broader statement inferred from the cropped images.
+> The user has corrected that interpretation: reaction and boundedness conditions
+> in the original conversation also apply. See [scope correction](scope-correction.md).
+> The exclusions discussed below are not blockers for the corrected targets.
+
+
 The three supplied images are the source of the formalization targets. This audit
 separates faithful transcription from mathematical proof. A compiled declaration
 containing `sorry` is not a proved theorem; unfinished proof targets are **ineligible

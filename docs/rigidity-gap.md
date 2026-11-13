@@ -1,5 +1,11 @@
 # Rigidity hypotheses requiring a proof
 
+> Historical audit of the broader statement inferred from the cropped images.
+> The user has corrected that interpretation: reaction and boundedness conditions
+> in the original conversation also apply. See [scope correction](scope-correction.md).
+> The exclusions discussed below are not blockers for the corrected targets.
+
+
 The three supplied images are the project's target statements. A detailed
 informal proof of the first statement is present in the existing research
 files. Those files also prove rigidity under additional reaction hypotheses.

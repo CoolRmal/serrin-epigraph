@@ -77,6 +77,15 @@ structure Hypotheses {m : ℕ} (g : Space m → ℝ) (u : Space (m + 1) → ℝ)
   kappa_pos : 0 < κ
   mass_growth : HasSubexponentialMass g u
 
+/-- The normalized reaction and bounded-solution assumptions recovered from the source notes.
+Together with `Hypotheses`, these specify the reaction class for the two rigidity targets. -/
+structure RigidityHypotheses {m : ℕ} (g : Space m → ℝ) (u : Space (m + 1) → ℝ)
+    (f : ℝ → ℝ) : Prop where
+  reaction_pos : ∀ s ∈ Set.Ioo (0 : ℝ) 1, 0 < f s
+  reaction_one : f 1 = 0
+  reaction_deriv_one_neg : deriv f 1 < 0
+  solution_lt_one : ∀ x ∈ epigraph g, u x < 1
+
 /-- Either a global linear lower bound or a global linear upper bound, with positive constant. -/
 def HasOneSidedLinearBound {m : ℕ} (g : Space m → ℝ) : Prop :=
   (∃ C : ℝ, 0 < C ∧ ∀ y, -C * (1 + ‖y‖) ≤ g y) ∨
@@ -100,13 +109,15 @@ theorem verticalDerivative_pos {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1
 /-- Image 2: affine and one-dimensional rigidity in ambient dimensions two through eight. -/
 theorem rigidity_of_dimension_le_eight {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
-    (h : Hypotheses g u f κ) (hdim : m + 1 ≤ 8) : IsAffineOneDimensional g u := by
+    (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f) (hdim : m + 1 ≤ 8) :
+    IsAffineOneDimensional g u := by
   sorry
 
 /-- Image 3: rigidity in ambient dimension at least nine under either one-sided linear bound. -/
 theorem rigidity_of_oneSidedLinearBound {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
-    (h : Hypotheses g u f κ) (hdim : 9 ≤ m + 1) (hg : HasOneSidedLinearBound g) :
+    (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f)
+    (hdim : 9 ≤ m + 1) (hg : HasOneSidedLinearBound g) :
     IsAffineOneDimensional g u := by
   sorry
 

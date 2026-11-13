@@ -1,7 +1,8 @@
 # Serrin epigraph monotonicity and rigidity
 
 A Lean 4 project depending on Mathlib, targeting the three statements in the
-[source images](docs/source). The original assumptions are preserved.
+[source images](docs/source) together with the original conversation and notes.
+The [restored reaction assumptions](docs/scope-correction.md) apply to both rigidity targets.
 
 **Status: one of three theorems proved.** The strict vertical monotonicity theorem
 is complete under the original assumptions. The two rigidity proofs remain open.
@@ -26,8 +27,8 @@ the two rigidity proofs remain incomplete.
 An [informal variational reduction](docs/variational-reduction.md) now derives a
 common vertical limit and minimization of the general free-boundary energy.
 This argument has not been formalized in Lean. The [reaction-regime audit](docs/rigidity-regimes.md)
-explains why newer results on degenerate wells and unbounded minimizers still
-do not provide the missing general classification.
+concerns a broader reaction class investigated before the source-context correction;
+those degenerate and unbounded cases are not part of the corrected rigidity targets.
 
 ## Statements
 
@@ -58,6 +59,18 @@ $$
 \liminf_{R\to\infty}\frac{\log\left(1+\int_{\Omega\cap B_R}u^2\,dx\right)}R=0.
 $$
 
+For targets 2 and 3, the source context additionally requires
+
+$$
+f(s)>0\quad(0<s<1),\qquad f(1)=0,\qquad f'(1)<0,\qquad 0<u<1.
+$$
+
+These include the original example of the reaction given by
+
+$$
+f(s)=s-s^p,\qquad p>1.
+$$
+
 The three targets are:
 
 1. Strict vertical monotonicity throughout the domain.
@@ -74,11 +87,10 @@ u(x',x_n)=U\!\left(\frac{x_n-a\cdot x'-b}{\sqrt{1+|a|^2}}\right)
 \quad\text{in }\Omega.
 $$
 
-The cited Wang–Wei and Beuvin–Farina theorems have additional Allen–Cahn-type
-assumptions absent from these images. They do not directly establish the two
-rigidity targets as stated. This is a gap in the supplied justification, not a
-proved counterexample. See the [independent statement audit](docs/statement-audit.md)
-and [proof plan](docs/proof-plan.md).
+The reaction assumptions were restored after consulting the original conversation
+and project notes. See the [scope correction](docs/scope-correction.md).
+The remaining work is to formalize the rigidity arguments, not to classify
+arbitrary reactions outside that source setting.
 
 ## Layout and verification
 

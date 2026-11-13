@@ -1,8 +1,8 @@
 # Proof obligations
 
 The monotonicity proof is complete. The two rigidity obligations remain open.
-All three target statements in `SerrinEpigraph/Main.lean` remain unchanged from
-the source images.
+The rigidity targets in `SerrinEpigraph/Main.lean` now include the reaction
+assumptions restored from the source context; see [scope correction](scope-correction.md).
 
 ## Automatic monotonicity
 
@@ -103,22 +103,11 @@ unbounded branch this forces a finite reaction primitive, and in the bounded
 branch the potential vanishes at the limiting equilibrium. The proof uses
 classical analytic ingredients not yet implemented in this project.
 
-This does not close the classification step. The exact hypotheses still
-admit infinitely flat finite equilibria, negative-power potential tails, and
-the harmonic problem in ambient dimension eight. The [newer-literature and
-scaling audit](rigidity-regimes.md) identifies the additional results that
-would be needed; it does not assert a classification or a counterexample.
-
-The supplied citations do not currently discharge either rigidity obligation.
-The Allen–Cahn assumptions in Wang–Wei and Beuvin–Farina are not among the common
-image hypotheses. The zero reaction is a concrete admissible edge case that
-prevents simply importing those informal theorems unchanged.
-
-Both rigidity targets require a proof for the exact general reaction class,
-followed by formalization of its analytic and geometric dependencies. A new
-reference, a missing argument, or an actual counterexample would change this
-assessment. No counterexample has been established. The project must not claim
-completion while these targets remain open.
+For the corrected targets, the equilibrium is nondegenerate and the solution lies
+strictly between zero and one. The next obligations are the normalized potential
+conditions, the monotone-solution minimization argument, and the low-dimensional
+or one-sided-graph rigidity classification. These must be proved in Lean; citing
+a paper or assuming a classification conclusion is not sufficient.
 
 ## Acceptance
 

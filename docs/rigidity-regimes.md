@@ -1,5 +1,11 @@
 # Reaction regimes and newer rigidity literature
 
+> Historical audit of the broader statement inferred from the cropped images.
+> The user has corrected that interpretation: reaction and boundedness conditions
+> in the original conversation also apply. See [scope correction](scope-correction.md).
+> The exclusions discussed below are not blockers for the corrected targets.
+
+
 The proved reaction reduction establishes nonnegativity of the reaction on
 the solution range, and boundedness whenever the reaction is negative at a
 positive argument. It does not recover the extra hypotheses of the cited

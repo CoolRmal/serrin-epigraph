@@ -4,6 +4,17 @@ The strict monotonicity theorem is proved. The two rigidity theorems remain
 unproved, so this is not a completed three-theorem formalization or a Palomar
 registration.
 
+## Source-context correction checked locally
+
+After restoring `RigidityHypotheses` in both the independent Challenge and the
+development, `lake build SerrinEpigraph Challenge Solution` passed (3555 jobs).
+The three lemmas in `NormalizedReaction.lean` elaborate without proof holes;
+explicit axiom inspection reports only `propext`, `Classical.choice`, and
+`Quot.sound` for each. The full target audit still rejects the two unfinished
+rigidity proofs. This local build is not a new full Comparator acceptance or
+Palomar registration. The earlier successful Comparator snapshot below predates
+the correction and verifies only monotonicity.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).
