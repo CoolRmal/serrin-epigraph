@@ -187,3 +187,4 @@ public import SerrinEpigraph.PerimeterInvariance
 public import SerrinEpigraph.PerimeterLowerSemicontinuity
 public import SerrinEpigraph.SharpDivergenceBound
 public import SerrinEpigraph.PrimitiveEnergyLowerBound
+public import SerrinEpigraph.PerimeterEnergyLiminf

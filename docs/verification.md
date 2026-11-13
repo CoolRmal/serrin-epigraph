@@ -1,5 +1,22 @@
 # Verification record
 
+## Exact weighted perimeter–energy liminf inequality
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3867 jobs).
+
+`PerimeterEnergyLiminf.lean` proves the scalar-weight identity for absolute
+indicator pairings and distributes the nonnegative primitive weight over the
+variational supremum. The resulting theorem bounds the primitive value at one
+times the phase perimeter in an open ball by the diffuse-energy liminf on the
+closed ball. A common-subsequence theorem packages this exact coefficient on
+all positive integer-radius balls for the same measurable phase limit.
+
+Diagnostics and the common-subsequence theorem's transitive axiom audit are
+clean, using only the standard three axioms. This is the lower-bound side;
+recovery competitors and their matching boundary values still need construction
+before interface minimality follows. Geometric classification, both Main
+rigidity proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Exact primitive-to-energy comparison and tested liminf bound
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3866 jobs).

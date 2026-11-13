@@ -98,8 +98,11 @@ including bounded nonnegative locally Lipschitz coefficients via mollification.
 `PrimitiveEnergyLowerBound.lean` proves pointwise and integrated control of
 the rescaled primitive gradient by diffuse energy with coefficient one. It
 then proves the corresponding divergence test bound and passes each tested
-pairing to the diffuse-energy liminf. Taking the weighted perimeter supremum,
-competitor recovery, interface minimality, and geometric classification remain.
+pairing to the diffuse-energy liminf. `PerimeterEnergyLiminf.lean` takes the
+weighted supremum and proves that the primitive value at one times the limiting
+phase perimeter is bounded by the diffuse-energy liminf. It packages the same
+phase and subsequence on every integer-radius ball. Competitor recovery,
+interface minimality, and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
