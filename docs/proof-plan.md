@@ -423,6 +423,13 @@ and establishes central Hessian continuity. The spatial radial profile is
 now C2 throughout the open ball and satisfies the semilinear PDE there.
 Boundary regularity and comparison against the epigraph solution remain.
 
+`RadialBoundaryDerivative.lean` completes the C1 regularity on the closed
+ball and identifies the outward normal derivative with the radial boundary
+slope. The ball profiles now have C2 interior regularity, C1 closed-ball
+regularity, the PDE, positivity, zero boundary data, and the sharp boundary
+energy approximation. Comparison with the original epigraph solution and
+the complementary annulus construction remain.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

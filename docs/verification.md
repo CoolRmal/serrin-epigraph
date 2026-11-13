@@ -957,3 +957,14 @@ axioms. The full build passed (3733 jobs). Boundary regularity, comparison/Hopf
 arguments, annulus construction, both final rigidity proofs, full Comparator
 acceptance, and Palomar registration remain unfinished.
 
+## Closed-ball regularity and normal derivative
+
+`RadialBoundaryDerivative.lean` proves six theorems: the profile's left
+boundary derivative, the spatial boundary differential, unique differentials
+on a closed ball, the normal derivative formula, the averaged closed-ball
+differential, and C1 regularity up to the boundary. All six have clean
+diagnostics and only the standard three axioms. The full build passed
+(3734 jobs). Comparison with the epigraph solution, the annulus construction,
+both final rigidity proofs, full Comparator acceptance, and Palomar
+registration remain unfinished.
+
