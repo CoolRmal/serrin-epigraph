@@ -1,5 +1,15 @@
 # Verification record
 
+## Integrated partition kinetic comparison
+
+The `SerrinEpigraph Challenge Solution` build passed (3916 jobs).
+All three theorems in `PartitionKineticIntegral.lean` have clean diagnostics and
+use only the standard three axioms. They prove local Lipschitz regularity,
+the integrated weighted kinetic comparison, and existence of a nonnegative
+vanishing additive error for fixed C1 weights at diverging scales. Principal
+weighted recovery bounds and assembly of the full phase energy remain open,
+as do both Main rigidity proofs, full Comparator, and Palomar registration.
+
 ## Integrated finite-mixture potential defect
 
 The `SerrinEpigraph Challenge Solution` build passed (3915 jobs).

@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`PartitionKineticIntegral.lean` proves local Lipschitz regularity of finite
+partition recovery and integrates its kinetic bound with the principal patch
+weights retained. For fixed C1 weights and normalized profiles, diverging
+positive scales give a nonnegative additive error tending to zero, with any
+fixed positive multiplicative loss. The remaining principal weighted-energy
+bound must retain the weights when reducing to base area; summing unweighted
+patch bounds would overcount overlaps. Assembly with the phase-indicator
+potential estimate and geometric parameter construction are still required.
+
 `GraphOverlapIntegral.lean` integrates the common transition-layer bound over
 Euclidean graph cylinders. For a finite mixture, the potential defect multiplied
 by R has integral at most the projected base volume times
