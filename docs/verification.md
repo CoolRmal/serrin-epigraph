@@ -1,5 +1,15 @@
 # Verification record
 
+## Geometric recovery profile convergence
+
+The `SerrinEpigraph Challenge Solution` build passed (3894 jobs).
+`GeometricRecoveryProfile.lean` defines the pullback along a geometric
+coordinate and proves range bounds, quantitative Lipschitz regularity,
+and compact-local L1 convergence to the positive-coordinate indicator.
+Diagnostics are clean; the L1 theorem has only the standard three axioms.
+Geometric energy upper bounds, both Main rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
+
 ## Recovery thickness and phase convergence
 
 The `SerrinEpigraph Challenge Solution` build passed (3893 jobs).

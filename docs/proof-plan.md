@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GeometricRecoveryProfile.lean` defines the scaled profile composed with a
+geometric coordinate, proves its normalized range and explicit Lipschitz
+bound, and proves compact-local L1 convergence to the indicator of the
+coordinate's positive set. The L1 proof uses dominated convergence and does
+not require a null zero level set. Energy upper bounds for geometric
+coordinates and the ensuing perimeter minimality remain to be proved.
+
 `RecoveryThickness.lean` bounds the transition time by 1/√(2δ), derives
 vanishing scaled thickness under the corresponding scale condition, and
 proves pointwise convergence of the scaled profiles to the positive half-line
