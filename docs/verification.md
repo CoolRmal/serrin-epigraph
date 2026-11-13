@@ -194,3 +194,13 @@ The original acceptance configuration remains `comparator.json` and still
 selects all three pictured theorems. The separate successful check does not
 replace it. See [the proof plan](proof-plan.md) and
 [the rigidity audit](rigidity-gap.md) for the remaining obligations.
+
+## Inverse height derivative
+
+`LevelHeightDerivative.lean` extends the inverse height to real levels and proves
+interior continuity, the reciprocal vertical derivative formula, and positivity
+of that derivative. All four theorem declarations were audited individually:
+they use only `propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3587 jobs).
+The two main rigidity proofs remain unfinished; this is not full Comparator
+acceptance or Palomar registration.

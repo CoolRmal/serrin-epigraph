@@ -167,6 +167,8 @@ the inverse height is strictly increasing and continuous in that value, and it
 recovers the height of each original interior point.
 `LevelHeightContinuity.lean` proves joint continuity in horizontal location and
 level using strict order comparisons and continuous horizontal sections.
+`LevelHeightDerivative.lean` proves differentiability with respect to the level,
+with derivative the reciprocal of the positive vertical derivative.
 Joint differentiability and the calibration identities remain to be proved.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
