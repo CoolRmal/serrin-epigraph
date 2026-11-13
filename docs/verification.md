@@ -749,3 +749,16 @@ with `#print axioms`. The full build passed (3716 jobs). No new proof holes
 or main-statement changes were introduced. Maximal profiles, prescribed-radius
 Dirichlet solutions and large-radius comparisons, both rigidity proofs, full
 Comparator acceptance, and Palomar registration remain incomplete.
+
+## Strict decrease of regular central radial solutions
+
+`RadialDecrease.lean` proves six theorems: strictly decreasing weighted flux,
+negative slope at positive radii, strictly decreasing value on closed radius
+intervals, existence of a decreasing local central solution, strict decrease
+on half-open intervals, and a finite endpoint limit strictly below the central
+value. These results do not assume a zero Dirichlet boundary value.
+All six declarations have clean diagnostics and standard axioms only, checked
+with `#print axioms`. The complete build passed (3717 jobs). No proof holes
+or main-statement changes were added. Maximal profiles, first-zero/radius
+control and large-radius comparisons, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain incomplete.

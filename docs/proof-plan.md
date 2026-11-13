@@ -323,6 +323,11 @@ at the junction. The resulting interval is strictly larger. It proves the
 alternative that a normalized radial solution has zero endpoint value or
 continues past the finite endpoint. This does not yet construct maximal
 profiles or prove that a first zero occurs at a desired radius.
+`RadialDecrease.lean` proves strict decrease of weighted flux and value for
+regular central profiles, with strictly negative slope at every positive
+radius. It packages a decreasing local initial-value solution, propagates
+strict decrease to half-open intervals, and shows a finite endpoint limit
+is strictly below the central value. No prescribed boundary value is used.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

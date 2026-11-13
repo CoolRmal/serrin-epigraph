@@ -101,3 +101,4 @@ public import SerrinEpigraph.RadialEndpoint
 public import SerrinEpigraph.RadialBounds
 public import SerrinEpigraph.RadialEndpointDerivative
 public import SerrinEpigraph.RadialContinuation
+public import SerrinEpigraph.RadialDecrease
