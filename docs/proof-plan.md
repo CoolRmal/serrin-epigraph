@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GraphPartition.lean` constructs smooth compactly supported weights subordinate
+to the finite half-radius ball cover. They are nonnegative, sum to one on the
+compact base, and sum to at most one everywhere. The construction also handles
+an empty base and empty index set. Estimates for the energy of the weighted
+recovery profiles, including derivative and potential errors on overlaps, are
+still required before this gives a global sharp recovery competitor.
+
 `FiniteGraphCover.lean` extracts finitely many buffered patches covering any
 compact graph base. Each closed half-radius patch retains the local recovery
 area bound with the prescribed error. This supplies finite data for gluing;

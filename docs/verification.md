@@ -1,5 +1,14 @@
 # Verification record
 
+## Smooth weights for finite graph covers
+
+The `SerrinEpigraph Challenge Solution` build passed (3909 jobs).
+`GraphPartition.lean` constructs subordinate smooth nonnegative weights with
+compact support and total weight one on the compact base. Diagnostics are clean;
+the theorem uses only `propext`, `Classical.choice`, and `Quot.sound`.
+Weighted recovery energy estimates, perimeter identification, both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Finite buffered graph cover
 
 The `SerrinEpigraph Challenge Solution` build passed (3908 jobs).

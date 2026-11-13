@@ -229,3 +229,4 @@ public import SerrinEpigraph.GraphRecoveryBound
 public import SerrinEpigraph.LocalRecoveryBound
 public import SerrinEpigraph.GraphAreaDensity
 public import SerrinEpigraph.FiniteGraphCover
+public import SerrinEpigraph.GraphPartition
