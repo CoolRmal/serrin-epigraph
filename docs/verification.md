@@ -1,5 +1,16 @@
 # Verification record
 
+## Diagonal recovery scales and varying partitions
+
+The `SerrinEpigraph Challenge Solution` build passed (3924 jobs).
+Both theorems in `RecoveryDiagonalScale.lean` have clean diagnostics and depend
+only on `propext`, `Classical.choice`, and `Quot.sound`. The first selects scales
+that simultaneously send row-wise kinetic errors and transition thicknesses to
+zero. The second proves eventual exact phase values for partitions whose finite
+index types and weights may vary, subject to a uniform graph scale bound and
+vanishing thickness. The sharp integral energy limit is still to be assembled;
+both Main rigidity proofs, full Comparator, and Palomar remain incomplete.
+
 ## Full energy comparison for a fixed graph partition
 
 The `SerrinEpigraph Challenge Solution` build passed (3923 jobs).

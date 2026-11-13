@@ -244,3 +244,4 @@ public import SerrinEpigraph.WeightedGraphArea
 public import SerrinEpigraph.CompatibleGraphPartition
 public import SerrinEpigraph.BoundedGraphPartition
 public import SerrinEpigraph.GraphRecoveryComparison
+public import SerrinEpigraph.RecoveryDiagonalScale

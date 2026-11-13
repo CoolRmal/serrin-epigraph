@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`RecoveryDiagonalScale.lean` chooses diagonal integer scales for any family of
+nonnegative kinetic errors tending to zero along each fixed row and any
+nonnegative sequence of transition lengths. The selected scales tend to infinity
+while both diagonal errors and thicknesses vanish. It also proves eventual exact
+phase values at each fixed point for uniformly bounded graph scales, allowing
+the finite partition index type and weights to vary with the sequence. These
+results still need to be assembled with the compatible partitions, regularized
+action limit, and integral convergence into the sharp recovery sequence.
+
 `GraphRecoveryComparison.lean` assembles the full energy estimate for a fixed
 compatible graph partition. Its upper bound consists of the weighted graph-area
 action with arbitrarily small multiplicative kinetic loss, an explicit overlap
