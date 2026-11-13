@@ -385,6 +385,13 @@ the open ball, zero boundary data, and the radial derivative and gradient
 formulas away from the center. The center regularity and second-derivative
 Laplacian formula are still required before using it as a classical PDE solution.
 
+`RadialCenter.lean` supplies the first-order center argument: the right
+derivative of the profile at zero vanishes, composition with distance has
+zero spatial derivative at the center, and the spatial profile is
+differentiable throughout the ball. Its gradient norm equals the absolute
+radial slope, including the center, and its gradient is continuous there.
+Second-order regularity and the Laplacian identity remain to be established.
+
 ## Acceptance
 
 All three proof targets must compile without proof holes, use only the standard

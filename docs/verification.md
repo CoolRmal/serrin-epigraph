@@ -892,3 +892,14 @@ Laplacian formula, spatial comparison/Hopf arguments, annulus construction,
 both final rigidity proofs, full Comparator acceptance, and Palomar
 registration remain unfinished.
 
+## First-order center regularity
+
+`RadialCenter.lean` proves seven theorems covering the zero right derivative,
+composition with distance at the center, differentiability throughout the
+ball, zero central gradient, the gradient norm formula, and central gradient
+continuity. All seven passed diagnostics and axiom verification with only
+the standard three axioms. The full build passed (3728 jobs).
+Second-order spatial regularity and the Laplacian identity remain pending,
+along with comparison/Hopf arguments, annulus construction, both final
+rigidity proofs, full Comparator acceptance, and Palomar registration.
+
