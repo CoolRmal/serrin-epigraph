@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`TransitionLayerSelection.lean` localizes existing fixed-width cutoffs to radial
+annuli and proves a finite disjoint-layer averaging bound for any nonnegative
+integrable cost. In particular, one of N consecutive equal-width radial layers
+has cost at most the outer-ball cost divided by N. This will allow energy and
+mismatch penalties to be selected together. The layer count, widths, recovery
+profiles, and their limiting error estimates still need to be coordinated.
+
 `GluingTransition.lean` proves exact energy selection at both cutoff endpoints
 and localizes any excess bound to the strict transition region. This includes
 boundary points of that region: the cutoff gradient vanishes at its extrema.

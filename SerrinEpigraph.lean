@@ -194,3 +194,4 @@ public import SerrinEpigraph.GluingPotentialEnergy
 public import SerrinEpigraph.GluingTotalEnergy
 public import SerrinEpigraph.RescaledMinimality
 public import SerrinEpigraph.GluingTransition
+public import SerrinEpigraph.TransitionLayerSelection

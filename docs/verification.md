@@ -1,5 +1,16 @@
 # Verification record
 
+## Radial transition-layer selection
+
+The `SerrinEpigraph Challenge Solution` build passed (3874 jobs).
+`TransitionLayerSelection.lean` proves cutoff transition containment in an
+annulus, disjoint-layer integral averaging, disjointness of consecutive radial
+layers, and selection of a radial layer with at most 1/N of the outer-ball
+cost. All costs are explicitly assumed nonnegative and integrable. Diagnostics
+are clean and the radial selection theorem has only the standard three axioms.
+No vanishing transition-error conclusion is claimed yet. Both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Transition-localized gluing costs
 
 The `SerrinEpigraph Challenge Solution` build passed (3873 jobs).
