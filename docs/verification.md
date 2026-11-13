@@ -1,5 +1,22 @@
 # Verification record
 
+## Locally Lipschitz directional tests and the actual rescaled primitive
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3831 jobs).
+
+`LipschitzDirectionalTest.lean` proves normalized mollification preserves a
+nonnegative constant upper bound and converges in integral norm on compact
+sets. Together with convergence of gradient masses, this extends the directional
+test estimate to bounded nonnegative locally Lipschitz functions. Its application
+to the actual rescaled phase primitives gives a dilation-independent bound
+proportional to the direction norm and the radius to the boundary dimension.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. Passing the bounds to the limiting phase,
+assembling perimeter control, interface minimality, and classification remain.
+Both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Directional derivative test bounds
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3830 jobs).

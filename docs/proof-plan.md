@@ -73,9 +73,12 @@ this to the primitive subsequence with a common phase set for every local
 bounded test. `DirectionalTestBound.lean` proves compact-set integration by
 parts and bounds unit-bounded directional tests by gradient mass for smooth
 functions, then passes the bound through smooth integral approximations with
-convergent gradient masses. Applying this to locally Lipschitz mollification,
-assembling the perimeter bound, limiting-interface minimality, and geometric
-classification remain.
+convergent gradient masses. `LipschitzDirectionalTest.lean` verifies integral
+convergence of normalized mollification for bounded nonnegative functions,
+obtains the actual locally Lipschitz directional test estimate, and applies it
+to the rescaled phase primitives with a uniform surface-order bound. Passing
+these bounds to the limiting phase, assembling the perimeter bound, interface
+minimality, and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
