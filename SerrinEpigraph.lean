@@ -85,3 +85,4 @@ public import SerrinEpigraph.MollificationBounds
 public import SerrinEpigraph.MollificationSupport
 public import SerrinEpigraph.MollificationDerivative
 public import SerrinEpigraph.PerturbedCalibration
+public import SerrinEpigraph.CrossBoundaryMinimality

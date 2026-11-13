@@ -520,3 +520,20 @@ Integrability of the competitor phase energy and integration of the pointwise
 energy inequality remain before claiming free-boundary minimality. Both
 rigidity proofs, full Comparator acceptance, and Palomar registration remain
 unfinished.
+
+## Cross-boundary energy comparison for compact C¹ perturbations
+
+`CrossBoundaryMinimality.lean` proves compact-set integrability of the perturbed
+gradient, its square, phase energy, and calibration density. Integrating the
+pointwise calibration bound and using the limiting calibration identity gives
+energy comparison on a containing ball. Equality of the two energies outside
+the perturbation support transfers this comparison to every compact set
+containing that support. The perturbation need not be supported inside the
+original epigraph.
+The precise result concerns compact C¹ perturbations whose perturbed zero
+extension takes values in [0,1), and retains the shift κ²/2 − W(0) in the phase
+energy. No claim for all Lipschitz competitors or a vanishing shift is made.
+All eight new theorems were individually audited and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The full build passed (3697 jobs).
+Broader competitor classes, Bernoulli normalization, both rigidity proofs,
+full Comparator acceptance, and Palomar registration remain unfinished.

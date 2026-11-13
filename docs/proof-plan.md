@@ -246,8 +246,13 @@ approximation assumptions. `PerturbedCalibration.lean` completes the analogous b
 argument for a smooth compact perturbation whose values stay in [0,1). The
 calibration integral of that perturbed zero extension equals the original
 phase energy on a ball explicitly containing the perturbation support.
-Integrability of the competitor phase energy and the integrated energy
-inequality remain before asserting free-boundary minimality.
+`CrossBoundaryMinimality.lean` proves integrability of the perturbed
+gradient, its square, its phase energy, and its calibration. It integrates
+the pointwise bound and transfers the comparison from the construction ball
+to every compact set containing the perturbation support. Thus the shifted
+phase energy is minimal against compact C¹ perturbations with values in
+[0,1), even across the original boundary. This does not yet cover all
+Lipschitz competitors or prove that the energy shift vanishes.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.
