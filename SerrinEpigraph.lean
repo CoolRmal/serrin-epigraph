@@ -247,3 +247,5 @@ public import SerrinEpigraph.GraphRecoveryComparison
 public import SerrinEpigraph.RecoveryDiagonalScale
 public import SerrinEpigraph.VaryingRecoveryLimit
 public import SerrinEpigraph.GraphRecoverySequence
+public import SerrinEpigraph.CompetitorPrimitiveBound
+public import SerrinEpigraph.RecoveryPerimeter

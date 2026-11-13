@@ -1,5 +1,19 @@
 # Verification record
 
+## Recovery sequences bound graph perimeter
+
+The `SerrinEpigraph Challenge Solution` build passed (3928 jobs).
+All four theorems in `CompetitorPrimitiveBound.lean` and all three in
+`RecoveryPerimeter.lean` have clean diagnostics and use only `propext`,
+`Classical.choice`, and `Quot.sound`. Exact primitive-energy bounds now apply to
+arbitrary normalized locally Lipschitz competitors, including endpoint values.
+L1 convergence passes through the primitive, so a recovery energy bound yields
+a variational perimeter bound. Applied to the constructed graph sequence this
+proves epigraph perimeter is at most graph area over the compact base
+neighborhood. The reverse inequality, minimality, and geometric rigidity are
+not proved here. Main retains two rigidity proof holes, and full Comparator and
+Palomar registration remain incomplete.
+
 ## Assembled graph recovery sequence
 
 The `SerrinEpigraph Challenge Solution` build passed (3926 jobs).

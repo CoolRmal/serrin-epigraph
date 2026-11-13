@@ -2,6 +2,25 @@
 
 ## Geometric classification after minimality
 
+`RecoveryPerimeter.lean` connects the assembled recovery sequence to variational
+perimeter. Normalized L1 convergence passes through the Lipschitz phase primitive;
+divergence tests then pass to the limit and the positive interface constant
+cancels. The resulting graph theorem bounds epigraph perimeter on a test domain
+inside K by the graph area over a compact base neighborhood A. This is an upper
+bound, not yet perimeter-area equality, and does not establish minimality or
+either rigidity theorem. The reverse area bound, localization to the required
+competitor class, and geometric classification remain outstanding.
+
+`CompetitorPrimitiveBound.lean` extends the exact primitive-energy control from
+rescaled PDE solutions to arbitrary normalized locally Lipschitz competitors in
+any Euclidean dimension. It proves local Lipschitz regularity of the composed
+primitive, its gradient bound at differentiability points (including endpoint
+values via extrema), the compact-set integral bound by Rademacher's theorem,
+and the unit-vector divergence-test bound with coefficient one. These are the
+lower-bound tools needed to apply variational perimeter tests to the constructed
+graph recovery sequence; the passage to the limiting phase and the graph area
+identification still need to be assembled.
+
 `GraphRecoverySequence.lean` now assembles the graph recovery construction.
 For a C1 graph, compact base D inside the interior of a compact neighborhood A,
 and a compact ambient set K projecting into D, it constructs positive scales
