@@ -222,3 +222,4 @@ public import SerrinEpigraph.RecoveryLayerMass
 public import SerrinEpigraph.RecoveryMeasureBound
 public import SerrinEpigraph.FlatLayerMeasure
 public import SerrinEpigraph.GraphLayerMeasure
+public import SerrinEpigraph.NormalizedGraphMeasure

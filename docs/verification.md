@@ -1,5 +1,14 @@
 # Verification record
 
+## Normalized graph-height measure
+
+The `SerrinEpigraph Challenge Solution` build passed (3902 jobs).
+`NormalizedGraphMeasure.lean` proves the exact scaling of coordinate-measure
+domination and the resulting normalized graph-layer integral bound. Diagnostics
+are clean and the integral theorem uses only the standard three axioms.
+Geometric gradient control and perimeter assembly, both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Vertical graph-layer measure
 
 The `SerrinEpigraph Challenge Solution` build passed (3901 jobs).

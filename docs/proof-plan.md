@@ -2,6 +2,12 @@
 
 ## Geometric classification after minimality
 
+`NormalizedGraphMeasure.lean` tracks the exact measure factor when a real
+coordinate is divided by a positive normalization scale. It applies this to
+graph-height distributions and proves the corresponding layer integral bound
+with that scale times projected base volume. Establishing the sharp coordinate
+gradient bounds and assembling charts into a perimeter estimate remain.
+
 `GraphLayerMeasure.lean` proves that vertical flattening of a measurable graph
 preserves product volume. It computes graph-strip height distributions and
 bounds vertical layer integrals by projected base volume times action.
