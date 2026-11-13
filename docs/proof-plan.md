@@ -2,6 +2,11 @@
 
 ## Geometric classification after minimality
 
+`RecoveryActionBounds.lean` bounds the action between the interface constant
+and that constant plus √(2δ), then proves convergence for every positive
+regularization sequence tending to zero. The next obligation is the
+multidimensional geometric recovery construction and its perimeter upper bound.
+
 `RecoveryAction.lean` proves the exact core transition action by differentiating
 the phase-coordinate primitive along the inverse profile and applying the
 fundamental theorem of calculus. The kinetic-plus-potential integral equals

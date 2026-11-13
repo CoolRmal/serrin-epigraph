@@ -1,5 +1,15 @@
 # Verification record
 
+## Recovery action limit
+
+The `SerrinEpigraph Challenge Solution` build passed (3892 jobs).
+`RecoveryActionBounds.lean` proves the pointwise action-density bounds, the
+integrated error bound √(2δ), and convergence to `phasePrimitive f 1` for
+positive regularizations tending to zero. Diagnostics are clean and the limit
+theorem's transitive audit uses only the standard three axioms. Multidimensional
+geometric recovery, both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Exact core transition action
 
 The `SerrinEpigraph Challenge Solution` build passed (3891 jobs).
