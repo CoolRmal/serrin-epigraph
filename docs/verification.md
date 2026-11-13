@@ -1,5 +1,24 @@
 # Verification record
 
+## Segment gradient estimate for translation control
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3817 jobs).
+
+`SegmentGradientEstimate.lean` proves the exact line-segment fundamental theorem
+for a continuously differentiable real function on Euclidean space, and derives
+
+$$
+|v(x+z)-v(x)|\le |z|\int_0^1|\nabla v(x+tz)|\,dt.
+$$
+
+The proof uses the spatial derivative composed with the affine segment, the
+fundamental theorem of calculus, and the operator-norm bound identified with
+the Euclidean gradient norm. Diagnostics and the transitive audit are clean,
+using only the standard three axioms. This is the smooth pointwise estimate;
+spatial integration, extension to locally Lipschitz functions, and uniform
+mollification error control still need completion. Both rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## A common subsequence for all mollifications and integer balls
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3816 jobs).

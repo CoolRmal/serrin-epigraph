@@ -38,6 +38,9 @@ extraction for a fixed ball and fixed index is now proved in
 subsequence is now proved in `SimultaneousMollifiedCompactness.lean` for all
 mollification indices and positive integer-radius balls simultaneously.
 Uniform control of the mollification error remains necessary.
+`SegmentGradientEstimate.lean` starts its translation estimate with the exact
+segment integral formula and gradient bound for continuously differentiable
+functions. Spatial integration and the locally Lipschitz extension remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,
