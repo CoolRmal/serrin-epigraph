@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingScaleChoice.lean` chooses N as the natural ceiling of R. The averaged
+majorant is bounded by A E/R + (2 C²/t² + 4 W(0)) D, where E is the sum of
+input energies and D their squared mismatch integral. It proves the actual
+integral majorant tends to zero for bounded-energy normalized locally Lipschitz
+inputs with D tending to zero. Applying this to appropriate recovery inputs,
+and controlling the weighted energy in the annulus, remain necessary.
+
 `IntegratedGluing.lean` integrates the localized comparison and combines it
 with cutoff selection. The resulting competitor has energy bounded by the
 cutoff-weighted input energies plus 1/N of the ambient gluing majorant, with

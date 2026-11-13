@@ -1,5 +1,16 @@
 # Verification record
 
+## Vanishing averaged gluing error
+
+The `SerrinEpigraph Challenge Solution` build passed (3879 jobs).
+`GluingScaleChoice.lean` proves the scale-comparable layer-count estimate,
+chooses the natural ceiling of the scale, and proves vanishing of the averaged
+integral majorant under explicit bounded-energy and vanishing squared-mismatch
+hypotheses. Diagnostics are clean and the integral convergence theorem has
+only the standard three axioms. Recovery inputs satisfying these hypotheses
+must still be constructed for the geometric comparison. Both Main rigidity
+proofs, full Comparator, and Palomar registration remain incomplete.
+
 ## Integrated selected gluing comparison
 
 The `SerrinEpigraph Challenge Solution` build passed (3878 jobs).
