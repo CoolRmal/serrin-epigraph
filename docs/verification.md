@@ -1,5 +1,16 @@
 # Verification record
 
+## Common-limit control of squared mismatch
+
+The `SerrinEpigraph Challenge Solution` build passed (3880 jobs).
+`GluingMismatchConvergence.lean` proves the normalized squared-difference
+bound, its integral bound by errors to a common limit, convergence of squared
+mismatch, and vanishing averaged gluing cost under common local L1 convergence
+and bounded energy. Diagnostics and the final theorem's standard-axiom audit
+are clean. Recovery construction and geometric classification remain open;
+both Main rigidity proofs, full Comparator, and Palomar registration remain
+incomplete.
+
 ## Vanishing averaged gluing error
 
 The `SerrinEpigraph Challenge Solution` build passed (3879 jobs).

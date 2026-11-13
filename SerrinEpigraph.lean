@@ -200,3 +200,4 @@ public import SerrinEpigraph.GluingCostBound
 public import SerrinEpigraph.GluingCostIntegral
 public import SerrinEpigraph.IntegratedGluing
 public import SerrinEpigraph.GluingScaleChoice
+public import SerrinEpigraph.GluingMismatchConvergence

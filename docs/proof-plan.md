@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingMismatchConvergence.lean` bounds squared mismatch of normalized inputs
+by their two absolute errors to a common limit. It proves common local L1
+convergence gives vanishing squared mismatch and hence, under a uniform
+energy bound, vanishing averaged gluing cost. This connects the compactness
+results to the gluing estimates; constructing suitable recovery inputs and
+restricting the comparison to where the limits agree remain necessary.
+
 `GluingScaleChoice.lean` chooses N as the natural ceiling of R. The averaged
 majorant is bounded by A E/R + (2 C²/t² + 4 W(0)) D, where E is the sum of
 input energies and D their squared mismatch integral. It proves the actual
