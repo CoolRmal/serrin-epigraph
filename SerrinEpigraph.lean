@@ -5,6 +5,7 @@ public import SerrinEpigraph.BallCutoff
 public import SerrinEpigraph.Barrier
 public import SerrinEpigraph.Boundary
 public import SerrinEpigraph.CauchyEnergy
+public import SerrinEpigraph.CompactContact
 public import SerrinEpigraph.Connectedness
 public import SerrinEpigraph.CoerciveEstimate
 public import SerrinEpigraph.CoerciveGrowth

@@ -124,6 +124,15 @@ coefficient separation. All four declarations use only the standard three
 axioms. The complete build passed (3581 jobs). Constructing a contact point by
 compact optimization and completing the main rigidity proofs remain outstanding.
 
+## Compact contact and comparison
+
+`CompactContact.lean` constructs an interior scaled contact by maximizing a
+continuous quotient on a compact set, then combines the contact with the local
+Laplacian contradiction to prove comparison under a strict coefficient gap.
+Both public declarations use only the three standard permitted axioms. The
+full build passed (3582 jobs). Applying this comparison to the polynomial ball
+barrier, proving the ray limits equal one, and the rigidity classifications remain.
+
 ## Public snapshot checked
 
 Commit: [`7a91f2313ae92019716dbaf15616fd6981e11451`](https://github.com/CoolRmal/serrin-epigraph/commit/7a91f2313ae92019716dbaf15616fd6981e11451).

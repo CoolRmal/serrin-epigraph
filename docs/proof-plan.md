@@ -150,8 +150,12 @@ squared bound for the negative Laplacian relative to the polynomial. The next
 comparison step now has its differential contradiction in `LocalMinimum.lean`:
 a local minimum has nonnegative Laplacian, and positive contact is impossible
 when the reaction coefficient strictly exceeds the barrier coefficient. The
-compact optimization that produces a first contact, and its application to
-large translated balls to identify the ray limits with one, still remain.
+compact optimization is now proved in `CompactContact.lean`: maximizing the
+comparison-to-solution quotient produces an interior contact with a scale
+strictly between zero and one. Combining this with the differential contradiction
+proves comparison on compact sets under a strict coefficient gap. Applying the
+comparison theorem to the polynomial on large translated balls, then identifying
+the ray limits with one, still remains.
 The monotone-solution
 minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
