@@ -242,3 +242,4 @@ public import SerrinEpigraph.PartitionTotalEnergy
 public import SerrinEpigraph.WeightedGraphIntegral
 public import SerrinEpigraph.WeightedGraphArea
 public import SerrinEpigraph.CompatibleGraphPartition
+public import SerrinEpigraph.BoundedGraphPartition

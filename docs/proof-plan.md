@@ -2,6 +2,15 @@
 
 ## Geometric classification after minimality
 
+`BoundedGraphPartition.lean` supplies one scale bound valid for every compatible
+partition with precision at most one on the fixed compact neighborhood. It
+also chooses positive precisions tending to zero while their products with
+arbitrary nonnegative regularization-dependent cost coefficients tend to zero.
+This handles the potential-error coefficient even when regularization worsens
+it. The blow-down scale still needs to be chosen after each finite partition
+to control its weight-gradient error and transition width; the full recovery
+sequence and its final energy limit remain to be assembled.
+
 `CompatibleGraphPartition.lean` constructs finite smooth compactly supported
 weights for a compact base inside a compact neighborhood. Weights sum to one
 on the base and at most one everywhere, and each active scale lies between

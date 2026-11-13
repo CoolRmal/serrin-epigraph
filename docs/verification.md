@@ -1,5 +1,16 @@
 # Verification record
 
+## Uniform graph scales and partition precision
+
+The `SerrinEpigraph Challenge Solution` build passed (3922 jobs).
+Both theorems in `BoundedGraphPartition.lean` have clean diagnostics and use only
+the standard three axioms. Compatible partitions have one scale bound uniform
+over all precisions at most one, and precisions can be chosen to absorb any
+nonnegative regularization-dependent cost coefficients while tending to zero.
+The remaining diagonal blow-down choice and final recovery assembly are not
+yet proved. Both Main rigidity proofs, full Comparator, and Palomar registration
+remain incomplete.
+
 ## Compatible smooth graph partition
 
 The `SerrinEpigraph Challenge Solution` build passed (3921 jobs).
