@@ -2,6 +2,13 @@
 
 ## Geometric classification after minimality
 
+`GluingTransition.lean` proves exact energy selection at both cutoff endpoints
+and localizes any excess bound to the strict transition region. This includes
+boundary points of that region: the cutoff gradient vanishes at its extrema.
+The global weighted input energy therefore incurs additional cost only in the
+transition region. Selecting a layer and recovery profile with vanishing total
+transition cost remains to be proved.
+
 `RescaledMinimality.lean` transports closed-range Lipschitz minimality to every
 positive dilation, including the perturbation's topological support. It also
 provides the direct comparison with a cutoff-glued competitor in the scaled

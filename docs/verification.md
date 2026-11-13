@@ -1,5 +1,16 @@
 # Verification record
 
+## Transition-localized gluing costs
+
+The `SerrinEpigraph Challenge Solution` build passed (3873 jobs).
+`GluingTransition.lean` proves nonnegativity of normalized rescaled energy,
+vanishing cutoff gradient at endpoints, exact selection of input energy there,
+and an almost-everywhere bound localizing excess energy to the strict transition
+set. Diagnostics are clean; the localization theorem uses only the standard
+three axioms. This does not establish that the transition cost vanishes.
+Recovery construction, both Main rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Rescaled local minimality
 
 The `SerrinEpigraph Challenge Solution` build passed (3872 jobs).
