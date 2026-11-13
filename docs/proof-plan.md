@@ -47,8 +47,10 @@ Lipschitz functions by dominated convergence and proves a dilation-independent
 translation bound for the actual phase primitive family. Averaging this
 estimate is completed in `MollificationIntegralError.lean`, yielding an explicit
 local error bound proportional to the averaging radius, uniformly in dilation.
-It remains to combine this with the common mollified subsequence to construct
-the unsmoothed local integral limit.
+`IntegralCauchyApproximation.lean` combines this with the common mollified
+subsequence and proves the unsmoothed primitive subsequence is Cauchy in
+integral norm on all positive integer balls. L¹ completeness, compatibility
+of local limits, and identification of the limiting phase remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

@@ -1,5 +1,23 @@
 # Verification record
 
+## Integral Cauchy subsequence without mollification
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3821 jobs).
+
+`IntegralCauchyApproximation.lean` proves the integral triangle inequality,
+transfer of the integral Cauchy property from approximations with uniformly
+vanishing errors, and the integral Cauchy criterion from uniform convergence
+on compact sets. Applying these to the common mollified subsequence and the
+uniform mollification error proves that a single subsequence of the actual,
+unsmoothed phase primitives is Cauchy in integral norm on every positive
+integer-radius ball, for any sequence of dilation factors at least one.
+
+Diagnostics and the application theorem's transitive axiom audit are clean,
+using only the standard three axioms. Constructing the L¹ limits by completeness,
+checking compatibility on nested balls, and identifying the limiting phase
+remain necessary. Both rigidity proofs, full Comparator, and Palomar
+registration remain incomplete.
+
 ## Uniform local mollification error
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3820 jobs).
