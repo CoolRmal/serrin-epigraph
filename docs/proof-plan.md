@@ -101,8 +101,12 @@ then proves the corresponding divergence test bound and passes each tested
 pairing to the diffuse-energy liminf. `PerimeterEnergyLiminf.lean` takes the
 weighted supremum and proves that the primitive value at one times the limiting
 phase perimeter is bounded by the diffuse-energy liminf. It packages the same
-phase and subsequence on every integer-radius ball. Competitor recovery,
-interface minimality, and geometric classification remain.
+phase and subsequence on every integer-radius ball. `GluedCompetitor.lean`
+constructs cutoff interpolation, proves its closed-range and local Lipschitz
+admissibility, support control, exact gradient formula, and transition-gradient
+bound, and applies the existing phase-energy minimality theorem to it.
+Recovery profiles, quantitative transition-energy control, interface minimality,
+and geometric classification remain.
 
 `EpigraphRescaling.lean` starts the geometric infrastructure with the exact
 rescaled graph/domain identity. For a one-sided bound its intercept is C/R,

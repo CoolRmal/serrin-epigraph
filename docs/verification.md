@@ -1,5 +1,23 @@
 # Verification record
 
+## Admissible cutoff gluing of competitors
+
+The complete `SerrinEpigraph Challenge Solution` build passed (3868 jobs).
+
+`GluedCompetitor.lean` constructs cutoff interpolation between a reference and
+candidate. It proves local Lipschitz regularity, preservation of the closed
+normalized range, agreement with the reference/candidate at cutoff values zero
+and one, and confinement of the perturbation to the cutoff support. Its exact
+gradient formula yields the convex gradient bound plus the value-difference
+times cutoff-gradient error. The constructed function is applied directly to
+the already proved phase-energy minimality theorem.
+
+Diagnostics and the admissibility-application and gradient-bound axiom audits
+are clean, using only the standard three axioms. Recovery profiles and
+quantitative transition-energy control remain needed; this does not yet prove
+interface minimality. Geometric classification, both Main rigidity proofs,
+full Comparator, and Palomar registration remain incomplete.
+
 ## Exact weighted perimeter–energy liminf inequality
 
 The complete `SerrinEpigraph Challenge Solution` build passed (3867 jobs).
