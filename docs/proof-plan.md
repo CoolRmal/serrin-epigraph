@@ -1,5 +1,12 @@
 # Proof obligations
 
+`AnnularComparison.lean` now proves that an increasing annular profile with
+outer value one bounds the original solution above whenever its inner closed
+ball is strictly separated from the closed epigraph. In particular this holds
+for every positive downward shift of an exterior ball. The comparison domain
+may be disconnected. Passing to zero shift and comparing contact derivatives
+remain necessary for the upper Neumann energy bound.
+
 The maximum-ratio argument is now proved in `CompactComparison.lean`, including
 the boundary contradiction via continuous extension from the open domain.
 `RadialBallProfile.spatial_le_solution` applies it to every closed ball contained

@@ -1,5 +1,16 @@
 # Verification record
 
+## Shifted exterior annular comparison
+
+`AnnularComparison.lean` proves comparison on the closure of the intersection
+of the epigraph and the outer ball. It checks compactness, strict positivity of
+the annular profile, both equations, and boundary ordering on both boundary
+pieces. The downward-shift specialization has clean Lean diagnostics and its
+transitive axiom audit uses only `propext`, `Classical.choice`, and `Quot.sound`.
+The complete `SerrinEpigraph Challenge Solution` build passed (3762 jobs).
+Zero-shift comparison, the upper Neumann energy bound, both rigidity proofs,
+full Comparator, and Palomar registration remain unfinished.
+
 ## Disconnected comparison domains and exterior separation
 
 `ComponentComparison.lean` proves that component boundaries of an open set lie
