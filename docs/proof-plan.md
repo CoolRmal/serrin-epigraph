@@ -307,8 +307,12 @@ the consistency needed for the restart step. `RadialGluing.lean` now constructs
 a radial system on the union of two open domains with connected overlap,
 preserving each original value and slope. It also glues a local restart at an
 interior positive state to the existing profile. This union need not strictly
-enlarge the old interval; endpoint limits and continuation beyond a finite
-endpoint remain to be proved.
+enlarge the old interval. `RadialEndpoint.lean` proves finite value and slope
+limits when the slope is bounded and values stay in [0,1], on an interval
+separated from zero. It derives the forcing bound from the original reaction
+regularity and obtains the limits through Lipschitz extensions. A priori
+slope bounds for the continued profiles, endpoint differential equations,
+and continuation beyond a finite endpoint remain to be proved.
 Still required: construct Dirichlet ball and annulus profiles and prove their
 large-radius limits.
 

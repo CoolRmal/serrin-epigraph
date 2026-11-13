@@ -690,3 +690,18 @@ No new proof holes or target changes were introduced. Restarting at an interior
 point does not assert strict enlargement of the domain; finite-endpoint limits
 and outward continuation remain. Large-radius comparisons, both rigidity
 proofs, full Comparator acceptance, and Palomar registration are still incomplete.
+
+## Finite endpoint limits with bounded slope
+
+`RadialEndpoint.lean` proves seven theorems: a value Lipschitz bound from
+bounded slope, the slope derivative bound away from zero, the corresponding
+slope Lipschitz bound, finite limits of Lipschitz functions, finite radial
+value/slope limits with bounded forcing, boundedness of the original reaction
+on [0,1], and finite radial endpoint limits under the original hypotheses
+with normalized values and bounded slope.
+All seven proofs have clean diagnostics and standard axioms only, checked
+with `#print axioms`. The complete build passed (3713 jobs). No proof holes
+or target changes were added. The endpoint results still require a slope
+bound; they do not assert positive endpoint value or continuation across it.
+Those steps, large-radius comparisons, both rigidity proofs, full Comparator,
+and Palomar registration remain incomplete.
