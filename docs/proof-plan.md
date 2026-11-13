@@ -204,7 +204,11 @@ one, and establishes the original PDE and gradient identities in the interior.
 `ZeroExtensionRegularity.lean` proves local Lipschitz regularity across the
 free boundary by flattening the epigraph and clamping the vertical coordinate
 to the closed half-space. It also gives a Lipschitz constant on each compact
-set. No differentiability at every free-boundary point is asserted.
+set. `ZeroExtensionDifferentiability.lean` proves almost-everywhere
+differentiability via Rademacher, identifies the totalized gradient with the
+interior gradient extended by zero, and proves non-differentiability at every
+boundary point from the nonzero Neumann slope. Consequently the frontier has
+zero ambient volume.
 The free-boundary minimization argument and the low-dimensional or one-sided-graph rigidity
 classification also remain. These must be proved in Lean; citing
 a paper or assuming a classification conclusion is not sufficient.

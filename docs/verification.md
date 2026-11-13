@@ -358,3 +358,16 @@ only `propext`, `Classical.choice`, and `Quot.sound`.
 `lake build SerrinEpigraph Challenge Solution` passed (3605 jobs).
 Cross-boundary energy minimality and both rigidity theorems remain unfinished;
 full Comparator acceptance and Palomar registration have not been obtained.
+
+## Almost-everywhere derivatives and null boundary
+
+`ZeroExtensionDifferentiability.lean` applies Rademacher on a countable compact
+cover to prove almost-everywhere differentiability of the zero extension. It
+identifies its totalized gradient with the original gradient extended by zero.
+The nonzero Neumann slope rules out differentiability at every graph point;
+therefore the frontier is an ambient-volume null set. All six declarations were
+audited individually and use only `propext`, `Classical.choice`, and `Quot.sound`.
+`lake build SerrinEpigraph Challenge Solution` passed (3683 jobs, including the
+new Rademacher dependencies).
+Cross-boundary energy minimality, both rigidity proofs, full Comparator
+acceptance, and Palomar registration remain unfinished.
