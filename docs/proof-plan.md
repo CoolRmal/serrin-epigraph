@@ -205,6 +205,11 @@ positive radius admits an interior and an exterior tangent ball with center
 on the vertical axis, assuming only continuity of the graph. The radial
 comparison solutions, their large-radius limits, and slope comparisons still
 need proofs; the geometric contact result alone does not normalize κ.
+`RadialEnergy.lean` now formalizes the radial profile equation and proves its
+energy dissipation formula, monotonicity through the center-to-boundary
+interval, boundary slope bounds, and the integrated energy loss away from
+the origin. These are conditional estimates for a supplied radial profile;
+existence of the profile is not assumed as an axiom or proved yet.
 `ZeroExtension.lean` constructs the whole-space extension, proves continuity,
 identifies its positive phase, preserves vertical monotonicity and the limit
 one, and establishes the original PDE and gradient identities in the interior.

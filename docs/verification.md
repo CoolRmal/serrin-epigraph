@@ -555,3 +555,20 @@ All five new theorems were individually audited and use only `propext`,
 `Classical.choice`, and `Quot.sound`. The complete build passed (3698 jobs).
 Both rigidity proofs, full Comparator acceptance, and Palomar registration
 remain unfinished.
+
+## Radial profile energy dissipation
+
+`RadialEnergy.lean` defines radial ball-profile data with the differential
+equation, regular center slope, zero boundary value, and normalized range
+explicitly included. It proves the exact energy derivative, monotonicity
+from the center to the boundary, a boundary slope bound (strict when the
+central value is below equilibrium), and the integrated curvature-energy
+loss on intervals away from the radial origin.
+These are conditional estimates for a supplied profile, not a proof that
+radial comparison solutions exist. No profile existence or external PDE
+theorem is introduced as an axiom.
+All six new theorems were audited individually and use only `propext`,
+`Classical.choice`, and `Quot.sound`. The complete build passed (3699 jobs).
+Radial profile existence, large-radius limits, boundary slope comparisons,
+Bernoulli normalization, both rigidity proofs, full Comparator acceptance,
+and Palomar registration remain unfinished.
