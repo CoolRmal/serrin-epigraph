@@ -74,7 +74,7 @@ theorem IsWeakSupersolution.eq_zero_of_zero {Ω : Set E} {v : E → ℝ} {M : �
   by_contra hne
   have hypos : 0 < v y := lt_of_le_of_ne (hv0 y hy) (Ne.symm hne)
   have hxpos := hweak.positive hΩ hconn hv hv0 hM ⟨y, hy, hypos⟩ x hx
-  simpa [hz] using hxpos
+  simp [hz] at hxpos
 
 /-- A continuous potential is absorbed into a positive constant on compact interior balls. -/
 theorem exists_weakSupersolution_on_ball {Ω : Set E} {v a : E → ℝ}
