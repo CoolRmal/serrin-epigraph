@@ -348,3 +348,5 @@ public import SerrinEpigraph.EventualTranslationOrder
 public import SerrinEpigraph.MovingPhaseCompactness
 public import SerrinEpigraph.PerimeterVariation
 public import SerrinEpigraph.TiltIteration
+public import SerrinEpigraph.DiffuseStressEstimates
+public import SerrinEpigraph.MicroscopicWeiss
