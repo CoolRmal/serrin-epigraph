@@ -353,3 +353,6 @@ public import SerrinEpigraph.MicroscopicWeiss
 public import SerrinEpigraph.ExteriorBallSlope
 public import SerrinEpigraph.TranslatedPhaseConnected
 public import SerrinEpigraph.TranslationOrderBall
+public import SerrinEpigraph.LocalPerimeterMinimizer
+public import SerrinEpigraph.MinimizerCompactness
+public import SerrinEpigraph.MinimizerDensity
