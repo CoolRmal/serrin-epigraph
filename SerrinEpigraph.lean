@@ -350,3 +350,6 @@ public import SerrinEpigraph.PerimeterVariation
 public import SerrinEpigraph.TiltIteration
 public import SerrinEpigraph.DiffuseStressEstimates
 public import SerrinEpigraph.MicroscopicWeiss
+public import SerrinEpigraph.ExteriorBallSlope
+public import SerrinEpigraph.TranslatedPhaseConnected
+public import SerrinEpigraph.TranslationOrderBall
