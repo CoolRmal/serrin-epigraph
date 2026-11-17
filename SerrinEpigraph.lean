@@ -343,3 +343,8 @@ public import SerrinEpigraph.StableWellTranslation
 public import SerrinEpigraph.TranslationOrderSet
 public import SerrinEpigraph.WeakGradientComparison
 public import SerrinEpigraph.WeakLipschitzTest
+public import SerrinEpigraph.BVBallGluing
+public import SerrinEpigraph.EventualTranslationOrder
+public import SerrinEpigraph.MovingPhaseCompactness
+public import SerrinEpigraph.PerimeterVariation
+public import SerrinEpigraph.TiltIteration
