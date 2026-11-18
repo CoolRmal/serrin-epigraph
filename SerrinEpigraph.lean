@@ -360,3 +360,6 @@ public import SerrinEpigraph.PerimeterMonotonicity
 public import SerrinEpigraph.HalfspaceTangents
 public import SerrinEpigraph.BVColumnGraph
 public import SerrinEpigraph.RigidityReduction
+public import SerrinEpigraph.SharpPlaneDensity
+public import SerrinEpigraph.UniformKineticMass
+public import SerrinEpigraph.CoarseConeAssembly
