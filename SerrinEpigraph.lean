@@ -363,3 +363,4 @@ public import SerrinEpigraph.RigidityReduction
 public import SerrinEpigraph.SharpPlaneDensity
 public import SerrinEpigraph.UniformKineticMass
 public import SerrinEpigraph.CoarseConeAssembly
+public import SerrinEpigraph.SobolevBallCompactness
