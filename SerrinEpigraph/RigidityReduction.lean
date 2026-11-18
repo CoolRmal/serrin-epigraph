@@ -5,7 +5,7 @@ public import SerrinEpigraph.LocalPerimeterMinimizer
 public import SerrinEpigraph.MovingPhaseCompactness
 public import SerrinEpigraph.NoncylindricalPhase
 public import SerrinEpigraph.TranslationOrderBall
-public import SerrinEpigraph.CoarseConeAssembly
+public import SerrinEpigraph.CylinderTiltDecay
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -17,12 +17,13 @@ This module isolates the remaining mathematical content of the two rigidity theo
   minimizer is a half-space or is invariant under all vertical translations.
 * `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight` (blueprint GR6, GR16):
   in ambient dimension at most eight such a vertical cylinder is a half-space.
-* `RigidityHypotheses.hasBallTiltImprovement_of_sharp_energy` (blueprint
-  `harmonic-approximation.md` HA0–HA12): under the all-center sharp energy bound, the optimal
-  ball tilt of the zero extension improves by a fixed factor up to a scale-squared error.
-  Together with `CoarseConeAssembly` (sharp density, compactness, kinetic bounds, iteration,
-  common normal and DS1), this gives the uniform boundary coarse cone from one half-space
-  blow-down limit (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
+* `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
+  `harmonic-approximation.md` HA0–HA11): under the all-center sharp energy bound, the
+  rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
+  (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
+  (sharp density, compactness, kinetic bounds, iteration, common normal and DS1) then gives
+  the uniform boundary coarse cone from one half-space blow-down limit
+  (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
 The reductions proved here are complete; the three statements above are the open proof
 obligations, recorded as explicit proof holes until their modules are finished.
@@ -65,17 +66,27 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
     ∃ e : Space (m + 1), ‖e‖ = 1 ∧ E =ᵐ[volume] positiveHalfspace e := by
   sorry
 
-/-- **Open obligation (tilt-excess decay, blueprint HA0–HA12).** Under the sharp
-surface-energy bound at every center and radius, the optimal ball tilt of the zero extension
-at free-boundary centers improves by a fixed factor up to a scale-squared stopping error. -/
+/-- **Open obligation (tilt-excess decay, blueprint HA0–HA11).** Under the sharp
+surface-energy bound at every center and radius, the rescaled cylinder tilt of the zero
+extension at free-boundary centers decays by the HA0 factor. -/
+theorem RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy
+    {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
+    (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
+    (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
+      (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
+        phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
+    HasCylinderTiltDecay g u := by
+  sorry
+
+/-- Ball-tilt improvement at free-boundary centers (blueprint HA12 applied to HA0). -/
 theorem RigidityHypotheses.hasBallTiltImprovement_of_sharp_energy
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
     (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
       (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
         phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
-    HasBallTiltImprovement (zeroExtension g u) (frontier (epigraph g)) := by
-  sorry
+    HasBallTiltImprovement (zeroExtension g u) (frontier (epigraph g)) :=
+  h.hasBallTiltImprovement_of_cylinderTiltDecay (hr.hasCylinderTiltDecay_of_sharp_energy h hsharp)
 
 /-- One half-space blow-down limit of the zero extension gives a uniform boundary coarse
 cone (blueprint `sharp-density.md`, `harmonic-approximation.md`,
