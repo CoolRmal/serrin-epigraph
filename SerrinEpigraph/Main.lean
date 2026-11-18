@@ -2,11 +2,14 @@ module
 
 public import SerrinEpigraph.Nonnegative
 public import SerrinEpigraph.StrongMaximum
+public import SerrinEpigraph.RigidityReduction
 
 /-!
 # The three source targets
 
-The monotonicity theorem is proved. The two rigidity proofs remain unfinished.
+The monotonicity theorem is proved. The two rigidity theorems are reduced, in
+`SerrinEpigraph.RigidityReduction`, to three open geometric obligations (cone dichotomy,
+low-dimensional cylinders, and flatness transfer); they are not yet fully proved.
 Their reaction and boundedness assumptions include the source conversation and notes;
 see `docs/scope-correction.md`.
 -/
@@ -25,15 +28,15 @@ theorem verticalDerivative_pos {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1
 theorem rigidity_of_dimension_le_eight {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f) (hdim : m + 1 ≤ 8) :
-    IsAffineOneDimensional g u := by
-  sorry
+    IsAffineOneDimensional g u :=
+  hr.isAffineOneDimensional_of_le_eight h hdim
 
 /-- Image 3: rigidity in ambient dimension at least nine under either one-sided linear bound. -/
 theorem rigidity_of_oneSidedLinearBound {m : ℕ} {g : Space m → ℝ}
     {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (h : Hypotheses g u f κ) (hr : RigidityHypotheses g u f)
     (hdim : 9 ≤ m + 1) (hg : HasOneSidedLinearBound g) :
-    IsAffineOneDimensional g u := by
-  sorry
+    IsAffineOneDimensional g u :=
+  hr.isAffineOneDimensional_of_oneSidedLinearBound h hg
 
 end SerrinEpigraph

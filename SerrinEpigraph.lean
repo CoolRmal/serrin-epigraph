@@ -359,3 +359,4 @@ public import SerrinEpigraph.MinimizerDensity
 public import SerrinEpigraph.PerimeterMonotonicity
 public import SerrinEpigraph.HalfspaceTangents
 public import SerrinEpigraph.BVColumnGraph
+public import SerrinEpigraph.RigidityReduction
