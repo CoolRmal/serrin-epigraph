@@ -365,3 +365,5 @@ public import SerrinEpigraph.UniformKineticMass
 public import SerrinEpigraph.CoarseConeAssembly
 public import SerrinEpigraph.SobolevBallCompactness
 public import SerrinEpigraph.CylinderTiltDecay
+public import SerrinEpigraph.PerimeterFlatteningAux
+public import SerrinEpigraph.PerimeterFlattening
