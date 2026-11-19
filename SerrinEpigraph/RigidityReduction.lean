@@ -8,6 +8,7 @@ public import SerrinEpigraph.TranslationOrderBall
 public import SerrinEpigraph.CylinderTiltDecay
 public import SerrinEpigraph.ConeSplitting
 public import SerrinEpigraph.ConeClassificationInduction
+public import SerrinEpigraph.DirectedConeDichotomy
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -16,7 +17,10 @@ This module isolates the remaining mathematical content of the two rigidity theo
 
 * `IsDirectedMinimizingCone.halfspace_or_verticalInvariant` (blueprint `one-sided.md` §5A,
   `low-dimensional.md` G0–G2): a nontrivial, conical, vertically monotone local perimeter
-  minimizer is a half-space or is invariant under all vertical translations.
+  minimizer is a half-space or is invariant under all vertical translations. It is proved in
+  `DirectedConeDichotomy` from the named obligations below together with
+  `singularSetUSCHyp` (GR14) and `c1RegularSmoothHyp` (Schauder smoothness of `C¹` regular
+  points).
 * `epsilonRegularityHyp` (blueprint GR7–GR14, De Giorgi ε-regularity): a boundary point of a
   local perimeter minimizer with a half-space tangent cone is a `C¹` regular point.
 * `simonsHyp` (blueprint GR1–GR4 with Schauder smoothness): for `2 ≤ k ≤ 7`, a minimizing cone
@@ -45,24 +49,35 @@ open scoped Topology ENNReal
 
 namespace SerrinEpigraph
 
-/-- **Open obligation (cone dichotomy).** A nontrivial, conical, vertically monotone local
-perimeter minimizer is a.e. a half-space, or is a.e. invariant under every vertical
-translation. -/
-theorem IsDirectedMinimizingCone.halfspace_or_verticalInvariant {m : ℕ}
-    {E : Set (Space (m + 1))} (hE : IsDirectedMinimizingCone E) :
-    (∃ e : Space (m + 1), ‖e‖ = 1 ∧ E =ᵐ[volume] positiveHalfspace e) ∨
-      (∀ t : ℝ, ∀ᵐ x ∂volume, x ∈ E ↔ x + t • verticalDirection m ∈ E) := by
-  sorry
-
 /-- **Open obligation (ε-regularity, blueprint GR7–GR14).** A boundary point of a local
 perimeter minimizer at which some tangent cone is a half-space is a `C¹` regular point. -/
 theorem epsilonRegularityHyp : EpsilonRegularityHyp := by
+  sorry
+
+/-- **Open obligation (singular sets, blueprint GR14).** Singular boundary points of local
+perimeter minimizers persist under local `L¹` convergence of the minimizers. -/
+theorem singularSetUSCHyp : SingularSetUSCHyp := by
+  sorry
+
+/-- **Open obligation (Schauder smoothness).** A `C¹` regular boundary point of a local
+perimeter minimizer has a smooth boundary chart. -/
+theorem c1RegularSmoothHyp : C1RegularSmoothHyp := by
   sorry
 
 /-- **Open obligation (Simons, blueprint GR1–GR4).** For `2 ≤ k ≤ 7`, a minimizing cone in
 `Space k` whose boundary points other than the origin are `C¹` regular is a half-space. -/
 theorem simonsHyp {k : ℕ} (hk2 : 2 ≤ k) (hk7 : k ≤ 7) : SimonsHyp k := by
   sorry
+
+/-- The cone dichotomy (blueprint `one-sided.md` §5A): a nontrivial, conical, vertically
+monotone local perimeter minimizer is a.e. a half-space, or is a.e. invariant under every
+vertical translation. -/
+theorem IsDirectedMinimizingCone.halfspace_or_verticalInvariant {m : ℕ}
+    {E : Set (Space (m + 1))} (hE : IsDirectedMinimizingCone E) :
+    (∃ e : Space (m + 1), ‖e‖ = 1 ∧ E =ᵐ[volume] positiveHalfspace e) ∨
+      (∀ t : ℝ, ∀ᵐ x ∂volume, x ∈ E ↔ x + t • verticalDirection m ∈ E) :=
+  hE.halfspace_or_verticalInvariant_of_hyps epsilonRegularityHyp singularSetUSCHyp
+    (fun _ h2 h7 ↦ simonsHyp h2 h7) c1RegularSmoothHyp
 
 /-- GR16: every nontrivial minimizing cone in `Space k`, `k ≤ 7`, is a.e. a half-space through
 the origin. -/

@@ -397,3 +397,8 @@ public import SerrinEpigraph.LowLevelHeightMoments
 public import SerrinEpigraph.HarmonicHeightEstimates
 public import SerrinEpigraph.HarmonicHeightLimit
 public import SerrinEpigraph.HarmonicApproximation
+public import SerrinEpigraph.BoundaryChartGeometry
+public import SerrinEpigraph.BoundaryChartGluing
+public import SerrinEpigraph.DirectionalInvariance
+public import SerrinEpigraph.DirectedConeJacobi
+public import SerrinEpigraph.DirectedConeDichotomy
