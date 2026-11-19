@@ -405,3 +405,4 @@ public import SerrinEpigraph.DirectedConeDichotomy
 public import SerrinEpigraph.PerimeterDilation
 public import SerrinEpigraph.TiltExcessStep
 public import SerrinEpigraph.TiltExcessDecay
+public import SerrinEpigraph.ExcessEpsilonRegularity
