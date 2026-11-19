@@ -384,3 +384,11 @@ public import SerrinEpigraph.SingularCutoff
 public import SerrinEpigraph.DifferenceQuotientRegularity
 public import SerrinEpigraph.DiffuseLayerHeights
 public import SerrinEpigraph.DiffuseGoodLayers
+public import SerrinEpigraph.PerimeterRotation
+public import SerrinEpigraph.ColumnHeightPoincare
+public import SerrinEpigraph.ExcessGoodSet
+public import SerrinEpigraph.ExcessOscillation
+public import SerrinEpigraph.ExcessLipschitzApprox
+public import SerrinEpigraph.ExcessGradientBound
+public import SerrinEpigraph.ExcessBandWidth
+public import SerrinEpigraph.ExcessPhaseBand
