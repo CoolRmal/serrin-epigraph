@@ -414,3 +414,4 @@ public import SerrinEpigraph.FlatBand
 public import SerrinEpigraph.FlatIteration
 public import SerrinEpigraph.FlatGraph
 public import SerrinEpigraph.ExcessEpsilonRegularityProof
+public import SerrinEpigraph.EpsilonRegularityBridge

@@ -10,6 +10,8 @@ public import SerrinEpigraph.ConeSplitting
 public import SerrinEpigraph.ConeClassificationInduction
 public import SerrinEpigraph.DirectedConeDichotomy
 public import SerrinEpigraph.SimonsCone
+public import SerrinEpigraph.ExcessEpsilonRegularityProof
+public import SerrinEpigraph.EpsilonRegularityBridge
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -23,7 +25,9 @@ This module isolates the remaining mathematical content of the two rigidity theo
   `singularSetUSCHyp` (GR14) and `c1RegularSmoothHyp` (Schauder smoothness of `C¹` regular
   points).
 * `epsilonRegularityHyp` (blueprint GR7–GR14, De Giorgi ε-regularity): a boundary point of a
-  local perimeter minimizer with a half-space tangent cone is a `C¹` regular point.
+  local perimeter minimizer with a half-space tangent cone is a `C¹` regular point. Proved from
+  the excess form `excessEpsilonRegularityHyp` (GR8–GR13) via `EpsilonRegularityBridge`, which
+  also proves `singularSetUSCHyp`.
 * `simonsHyp` (blueprint GR1–GR4 with Schauder smoothness): for `2 ≤ k ≤ 7`, a minimizing cone
   in `Space k` that is `C¹`-regular away from the origin is a half-space. `SimonsCone` proves it
   for `3 ≤ k ≤ 7` from `c1RegularSmoothHyp`; the planar case `simonsHyp_two` is open.
@@ -51,15 +55,15 @@ open scoped Topology ENNReal
 
 namespace SerrinEpigraph
 
-/-- **Open obligation (ε-regularity, blueprint GR7–GR14).** A boundary point of a local
-perimeter minimizer at which some tangent cone is a half-space is a `C¹` regular point. -/
-theorem epsilonRegularityHyp : EpsilonRegularityHyp := by
-  sorry
+/-- ε-regularity (blueprint GR7–GR14): a boundary point of a local perimeter minimizer at which
+some tangent cone is a half-space is a `C¹` regular point. -/
+theorem epsilonRegularityHyp : EpsilonRegularityHyp :=
+  epsilonRegularityHyp_of_excess excessEpsilonRegularityHyp
 
-/-- **Open obligation (singular sets, blueprint GR14).** Singular boundary points of local
-perimeter minimizers persist under local `L¹` convergence of the minimizers. -/
-theorem singularSetUSCHyp : SingularSetUSCHyp := by
-  sorry
+/-- Singular sets (blueprint GR14): singular boundary points of local perimeter minimizers
+persist under local `L¹` convergence of the minimizers. -/
+theorem singularSetUSCHyp : SingularSetUSCHyp :=
+  singularSetUSCHyp_of_excess excessEpsilonRegularityHyp
 
 /-- **Open obligation (Schauder smoothness).** A `C¹` regular boundary point of a local
 perimeter minimizer has a smooth boundary chart. -/
