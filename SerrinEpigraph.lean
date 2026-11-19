@@ -394,3 +394,6 @@ public import SerrinEpigraph.ExcessBandWidth
 public import SerrinEpigraph.ExcessPhaseBand
 public import SerrinEpigraph.DiffuseHeightTails
 public import SerrinEpigraph.LowLevelHeightMoments
+public import SerrinEpigraph.HarmonicHeightEstimates
+public import SerrinEpigraph.HarmonicHeightLimit
+public import SerrinEpigraph.HarmonicApproximation
