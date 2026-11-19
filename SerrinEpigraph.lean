@@ -406,3 +406,7 @@ public import SerrinEpigraph.PerimeterDilation
 public import SerrinEpigraph.TiltExcessStep
 public import SerrinEpigraph.TiltExcessDecay
 public import SerrinEpigraph.ExcessEpsilonRegularity
+public import SerrinEpigraph.SimonsConeHomogeneity
+public import SerrinEpigraph.SimonsConeIntegral
+public import SerrinEpigraph.SimonsConeVanishing
+public import SerrinEpigraph.SimonsCone

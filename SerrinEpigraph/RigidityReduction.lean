@@ -9,6 +9,7 @@ public import SerrinEpigraph.CylinderTiltDecay
 public import SerrinEpigraph.ConeSplitting
 public import SerrinEpigraph.ConeClassificationInduction
 public import SerrinEpigraph.DirectedConeDichotomy
+public import SerrinEpigraph.SimonsCone
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -24,7 +25,8 @@ This module isolates the remaining mathematical content of the two rigidity theo
 * `epsilonRegularityHyp` (blueprint GR7–GR14, De Giorgi ε-regularity): a boundary point of a
   local perimeter minimizer with a half-space tangent cone is a `C¹` regular point.
 * `simonsHyp` (blueprint GR1–GR4 with Schauder smoothness): for `2 ≤ k ≤ 7`, a minimizing cone
-  in `Space k` that is `C¹`-regular away from the origin is a half-space.
+  in `Space k` that is `C¹`-regular away from the origin is a half-space. `SimonsCone` proves it
+  for `3 ≤ k ≤ 7` from `c1RegularSmoothHyp`; the planar case `simonsHyp_two` is open.
   From these two, `ConeClassificationInduction` proves GR16 (every minimizing cone in dimension
   at most seven is a half-space), and with GR5–GR6 (`ConeSplitting`) this gives
   `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
@@ -64,10 +66,16 @@ perimeter minimizer has a smooth boundary chart. -/
 theorem c1RegularSmoothHyp : C1RegularSmoothHyp := by
   sorry
 
-/-- **Open obligation (Simons, blueprint GR1–GR4).** For `2 ≤ k ≤ 7`, a minimizing cone in
-`Space k` whose boundary points other than the origin are `C¹` regular is a half-space. -/
-theorem simonsHyp {k : ℕ} (hk2 : 2 ≤ k) (hk7 : k ≤ 7) : SimonsHyp k := by
+/-- **Open obligation (planar case of GR4).** A minimizing cone in the plane whose boundary
+points other than the origin are `C¹` regular is a half-plane. -/
+theorem simonsHyp_two : SimonsHyp 2 := by
   sorry
+
+/-- Simons (blueprint GR1–GR4): for `2 ≤ k ≤ 7`, a minimizing cone in `Space k` whose boundary
+points other than the origin are `C¹` regular is a half-space (proved in `SimonsCone` for
+`3 ≤ k ≤ 7`, from smoothness of `C¹` regular points). -/
+theorem simonsHyp {k : ℕ} (hk2 : 2 ≤ k) (hk7 : k ≤ 7) : SimonsHyp k :=
+  simonsHyp_of_smooth_of_simonsHyp_two c1RegularSmoothHyp simonsHyp_two hk2 hk7
 
 /-- The cone dichotomy (blueprint `one-sided.md` §5A): a nontrivial, conical, vertically
 monotone local perimeter minimizer is a.e. a half-space, or is a.e. invariant under every
