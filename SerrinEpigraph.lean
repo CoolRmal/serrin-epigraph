@@ -392,3 +392,5 @@ public import SerrinEpigraph.ExcessLipschitzApprox
 public import SerrinEpigraph.ExcessGradientBound
 public import SerrinEpigraph.ExcessBandWidth
 public import SerrinEpigraph.ExcessPhaseBand
+public import SerrinEpigraph.DiffuseHeightTails
+public import SerrinEpigraph.LowLevelHeightMoments
