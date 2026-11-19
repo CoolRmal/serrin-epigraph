@@ -7,6 +7,7 @@ public import SerrinEpigraph.NoncylindricalPhase
 public import SerrinEpigraph.TranslationOrderBall
 public import SerrinEpigraph.CylinderTiltDecay
 public import SerrinEpigraph.ConeSplitting
+public import SerrinEpigraph.ConeClassificationInduction
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -16,10 +17,13 @@ This module isolates the remaining mathematical content of the two rigidity theo
 * `IsDirectedMinimizingCone.halfspace_or_verticalInvariant` (blueprint `one-sided.md` §5A,
   `low-dimensional.md` G0–G2): a nontrivial, conical, vertically monotone local perimeter
   minimizer is a half-space or is invariant under all vertical translations.
-* `IsMinimizingCone.ae_eq_positiveHalfspace_of_le_seven` (blueprint GR16): every minimizing
-  cone in dimension at most seven is a half-space. With GR5–GR6 (`ConeSplitting`) this gives
-  `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`: in ambient dimension at
-  most eight a vertical directed minimizing cylinder is a half-space.
+* `epsilonRegularityHyp` (blueprint GR7–GR14, De Giorgi ε-regularity): a boundary point of a
+  local perimeter minimizer with a half-space tangent cone is a `C¹` regular point.
+* `simonsHyp` (blueprint GR1–GR4 with Schauder smoothness): for `2 ≤ k ≤ 7`, a minimizing cone
+  in `Space k` that is `C¹`-regular away from the origin is a half-space.
+  From these two, `ConeClassificationInduction` proves GR16 (every minimizing cone in dimension
+  at most seven is a half-space), and with GR5–GR6 (`ConeSplitting`) this gives
+  `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11): under the all-center sharp energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
@@ -28,8 +32,8 @@ This module isolates the remaining mathematical content of the two rigidity theo
   the uniform boundary coarse cone from one half-space blow-down limit
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
-The reductions proved here are complete; the three statements above are the open proof
-obligations, recorded as explicit proof holes until their modules are finished.
+The reductions proved here are complete; the statements above marked as open obligations are
+recorded as explicit proof holes until their modules are finished.
 -/
 
 @[expose] public section
@@ -50,12 +54,23 @@ theorem IsDirectedMinimizingCone.halfspace_or_verticalInvariant {m : ℕ}
       (∀ t : ℝ, ∀ᵐ x ∂volume, x ∈ E ↔ x + t • verticalDirection m ∈ E) := by
   sorry
 
-/-- **Open obligation (GR16).** Every nontrivial minimizing cone in `Space k`, `k ≤ 7`, is
-a.e. a half-space through the origin. -/
+/-- **Open obligation (ε-regularity, blueprint GR7–GR14).** A boundary point of a local
+perimeter minimizer at which some tangent cone is a half-space is a `C¹` regular point. -/
+theorem epsilonRegularityHyp : EpsilonRegularityHyp := by
+  sorry
+
+/-- **Open obligation (Simons, blueprint GR1–GR4).** For `2 ≤ k ≤ 7`, a minimizing cone in
+`Space k` whose boundary points other than the origin are `C¹` regular is a half-space. -/
+theorem simonsHyp {k : ℕ} (hk2 : 2 ≤ k) (hk7 : k ≤ 7) : SimonsHyp k := by
+  sorry
+
+/-- GR16: every nontrivial minimizing cone in `Space k`, `k ≤ 7`, is a.e. a half-space through
+the origin. -/
 theorem IsMinimizingCone.ae_eq_positiveHalfspace_of_le_seven {k : ℕ} (hk : k ≤ 7)
     {T : Set (Space k)} (hT : IsMinimizingCone T) :
-    ∃ e : Space k, ‖e‖ = 1 ∧ T =ᵐ[volume] positiveHalfspace e := by
-  sorry
+    ∃ e : Space k, ‖e‖ = 1 ∧ T =ᵐ[volume] positiveHalfspace e :=
+  IsMinimizingCone.ae_eq_positiveHalfspace_of_le_seven_of_regularity epsilonRegularityHyp
+    (fun _ h2 h7 ↦ simonsHyp h2 h7) hk hT
 
 /-- In ambient dimension at most eight, a vertically invariant directed minimizing cone is a.e.
 a half-space (blueprint GR6 and GR16). -/

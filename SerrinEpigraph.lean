@@ -374,3 +374,7 @@ public import SerrinEpigraph.HarmonicWeyl
 public import SerrinEpigraph.CampanatoHolder
 public import SerrinEpigraph.SmoothBoundaryChart
 public import SerrinEpigraph.SecondVariation
+public import SerrinEpigraph.HausdorffContent
+public import SerrinEpigraph.RegularBoundary
+public import SerrinEpigraph.ConeClassificationInduction
+public import SerrinEpigraph.DimensionReduction
