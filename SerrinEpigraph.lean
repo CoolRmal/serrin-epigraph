@@ -371,3 +371,4 @@ public import SerrinEpigraph.DirectedMinimizingCone
 public import SerrinEpigraph.CylinderSlicing
 public import SerrinEpigraph.ConeSplitting
 public import SerrinEpigraph.HarmonicWeyl
+public import SerrinEpigraph.CampanatoHolder
