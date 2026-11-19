@@ -402,3 +402,6 @@ public import SerrinEpigraph.BoundaryChartGluing
 public import SerrinEpigraph.DirectionalInvariance
 public import SerrinEpigraph.DirectedConeJacobi
 public import SerrinEpigraph.DirectedConeDichotomy
+public import SerrinEpigraph.PerimeterDilation
+public import SerrinEpigraph.TiltExcessStep
+public import SerrinEpigraph.TiltExcessDecay
