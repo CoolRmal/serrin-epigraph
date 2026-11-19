@@ -380,3 +380,7 @@ public import SerrinEpigraph.ConeClassificationInduction
 public import SerrinEpigraph.DimensionReduction
 public import SerrinEpigraph.ConstantCoefficientElliptic
 public import SerrinEpigraph.MinimalSurfaceIdentities
+public import SerrinEpigraph.SingularCutoff
+public import SerrinEpigraph.DifferenceQuotientRegularity
+public import SerrinEpigraph.DiffuseLayerHeights
+public import SerrinEpigraph.DiffuseGoodLayers
