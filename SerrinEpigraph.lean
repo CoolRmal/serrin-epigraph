@@ -378,3 +378,4 @@ public import SerrinEpigraph.HausdorffContent
 public import SerrinEpigraph.RegularBoundary
 public import SerrinEpigraph.ConeClassificationInduction
 public import SerrinEpigraph.DimensionReduction
+public import SerrinEpigraph.ConstantCoefficientElliptic
