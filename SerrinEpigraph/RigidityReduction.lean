@@ -6,6 +6,7 @@ public import SerrinEpigraph.MovingPhaseCompactness
 public import SerrinEpigraph.NoncylindricalPhase
 public import SerrinEpigraph.TranslationOrderBall
 public import SerrinEpigraph.CylinderTiltDecay
+public import SerrinEpigraph.ConeSplitting
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -15,8 +16,10 @@ This module isolates the remaining mathematical content of the two rigidity theo
 * `IsDirectedMinimizingCone.halfspace_or_verticalInvariant` (blueprint `one-sided.md` §5A,
   `low-dimensional.md` G0–G2): a nontrivial, conical, vertically monotone local perimeter
   minimizer is a half-space or is invariant under all vertical translations.
-* `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight` (blueprint GR6, GR16):
-  in ambient dimension at most eight such a vertical cylinder is a half-space.
+* `IsMinimizingCone.ae_eq_positiveHalfspace_of_le_seven` (blueprint GR16): every minimizing
+  cone in dimension at most seven is a half-space. With GR5–GR6 (`ConeSplitting`) this gives
+  `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`: in ambient dimension at
+  most eight a vertical directed minimizing cylinder is a half-space.
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11): under the all-center sharp energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
@@ -38,17 +41,6 @@ open scoped Topology ENNReal
 
 namespace SerrinEpigraph
 
-/-- A nontrivial, conical, vertically monotone local perimeter minimizer in `Space (m + 1)`. -/
-structure IsDirectedMinimizingCone {m : ℕ} (E : Set (Space (m + 1))) : Prop where
-  measurableSet : MeasurableSet E
-  nontrivial : volume E ≠ 0 ∧ volume Eᶜ ≠ 0
-  dilation : ∀ a : ℝ, 0 < a → ∀ᵐ x ∂volume, x ∈ E ↔ a • x ∈ E
-  vertical : ∀ t : ℝ, 0 ≤ t → ∀ᵐ x ∂volume, x ∈ E → x + t • verticalDirection m ∈ E
-  minimizer : IsLocalPerimeterMinimizer (EuclideanSpace.basisFun (Fin (m + 1)) ℝ) E univ
-
-/-- The open half-space with inner normal `e`. -/
-def positiveHalfspace {d : ℕ} (e : Space d) : Set (Space d) := {x | 0 < inner ℝ e x}
-
 /-- **Open obligation (cone dichotomy).** A nontrivial, conical, vertically monotone local
 perimeter minimizer is a.e. a half-space, or is a.e. invariant under every vertical
 translation. -/
@@ -58,13 +50,21 @@ theorem IsDirectedMinimizingCone.halfspace_or_verticalInvariant {m : ℕ}
       (∀ t : ℝ, ∀ᵐ x ∂volume, x ∈ E ↔ x + t • verticalDirection m ∈ E) := by
   sorry
 
-/-- **Open obligation (low-dimensional cylinders).** In ambient dimension at most eight, a
-vertically invariant directed minimizing cone is a.e. a half-space. -/
+/-- **Open obligation (GR16).** Every nontrivial minimizing cone in `Space k`, `k ≤ 7`, is
+a.e. a half-space through the origin. -/
+theorem IsMinimizingCone.ae_eq_positiveHalfspace_of_le_seven {k : ℕ} (hk : k ≤ 7)
+    {T : Set (Space k)} (hT : IsMinimizingCone T) :
+    ∃ e : Space k, ‖e‖ = 1 ∧ T =ᵐ[volume] positiveHalfspace e := by
+  sorry
+
+/-- In ambient dimension at most eight, a vertically invariant directed minimizing cone is a.e.
+a half-space (blueprint GR6 and GR16). -/
 theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : ℕ}
     {E : Set (Space (m + 1))} (hE : IsDirectedMinimizingCone E) (hdim : m + 1 ≤ 8)
     (hinv : ∀ t : ℝ, ∀ᵐ x ∂volume, x ∈ E ↔ x + t • verticalDirection m ∈ E) :
-    ∃ e : Space (m + 1), ‖e‖ = 1 ∧ E =ᵐ[volume] positiveHalfspace e := by
-  sorry
+    ∃ e : Space (m + 1), ‖e‖ = 1 ∧ E =ᵐ[volume] positiveHalfspace e :=
+  IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
+    (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
 /-- **Open obligation (tilt-excess decay, blueprint HA0–HA11).** Under the sharp
 surface-energy bound at every center and radius, the rescaled cylinder tilt of the zero

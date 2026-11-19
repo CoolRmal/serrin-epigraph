@@ -367,3 +367,7 @@ public import SerrinEpigraph.SobolevBallCompactness
 public import SerrinEpigraph.CylinderTiltDecay
 public import SerrinEpigraph.PerimeterFlatteningAux
 public import SerrinEpigraph.PerimeterFlattening
+public import SerrinEpigraph.DirectedMinimizingCone
+public import SerrinEpigraph.CylinderSlicing
+public import SerrinEpigraph.ConeSplitting
+public import SerrinEpigraph.HarmonicWeyl
