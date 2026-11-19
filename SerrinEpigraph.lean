@@ -410,3 +410,7 @@ public import SerrinEpigraph.SimonsConeHomogeneity
 public import SerrinEpigraph.SimonsConeIntegral
 public import SerrinEpigraph.SimonsConeVanishing
 public import SerrinEpigraph.SimonsCone
+public import SerrinEpigraph.FlatBand
+public import SerrinEpigraph.FlatIteration
+public import SerrinEpigraph.FlatGraph
+public import SerrinEpigraph.ExcessEpsilonRegularityProof
