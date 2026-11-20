@@ -14,6 +14,7 @@ public import SerrinEpigraph.ExcessEpsilonRegularityProof
 public import SerrinEpigraph.EpsilonRegularityBridge
 public import SerrinEpigraph.DiffuseNormalKinetic
 public import SerrinEpigraph.MinimizerGraphChart
+public import SerrinEpigraph.AlignedHarmonicLayers
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -121,17 +122,30 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
   IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
     (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
-/-- **Open obligation (harmonic layer data, blueprint HA2–HA4, HA6.1, HA10).** Along aligned
-HA11 contradiction sequences, the normalized level-set heights have a harmonic limit with the
-HA4 flux limit and the HA6.1 weighted height approximation. -/
+/-- **Open obligation (weak height data, blueprint HA2–HA3, HA4.1, HA6.1, HA10).** Along
+aligned HA11 contradiction sequences, the normalized level-set heights have an `L²` limit with
+an `L²` weak gradient, the HA6.1 weighted height approximation and the HA4.1 flux limit. -/
+theorem RigidityHypotheses.exists_hasAlignedWeakHeightData
+    {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
+    (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
+    (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
+      (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
+        phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
+    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedWeakHeightData g u (phasePrimitive f 1) M := by
+  sorry
+
+/-- Harmonic layer data (blueprint HA2–HA4, HA6.1, HA10): the limit of the normalized heights
+is harmonic (Weyl's lemma applied to the HA4 flux identity), proved from the weak height data
+in `AlignedHarmonicLayers`. -/
 theorem RigidityHypotheses.exists_hasAlignedHarmonicLayerData
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
     (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
       (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
         phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
-    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedHarmonicLayerData g u (phasePrimitive f 1) M := by
-  sorry
+    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedHarmonicLayerData g u (phasePrimitive f 1) M :=
+  hr.exists_hasAlignedHarmonicLayerData_of_weak h hsharp
+    (hr.exists_hasAlignedWeakHeightData h hsharp)
 
 /-- Tilt-excess decay (blueprint HA0–HA11): under the sharp surface-energy bound at every center
 and radius, the rescaled cylinder tilt of the zero extension at free-boundary centers decays by
