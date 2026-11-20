@@ -415,3 +415,6 @@ public import SerrinEpigraph.FlatIteration
 public import SerrinEpigraph.FlatGraph
 public import SerrinEpigraph.ExcessEpsilonRegularityProof
 public import SerrinEpigraph.EpsilonRegularityBridge
+public import SerrinEpigraph.LayerProfile
+public import SerrinEpigraph.MicroscopicProfileLimit
+public import SerrinEpigraph.LowLevelProfileApproximation
