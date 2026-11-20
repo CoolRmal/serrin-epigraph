@@ -18,7 +18,7 @@ public import SerrinEpigraph.AlignedHarmonicLayers
 public import SerrinEpigraph.MinimalGraphRegularity
 
 /-!
-# Reduction of the two rigidity targets to three geometric statements
+# Reduction of the two rigidity targets to the remaining open statements
 
 This module isolates the remaining mathematical content of the two rigidity theorems.
 
@@ -40,16 +40,19 @@ This module isolates the remaining mathematical content of the two rigidity theo
   `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11; proved in `DiffuseTiltDecay`, `DiffuseHarmonicApproximation`,
-  `DiffusePlanarAlignment` and `DiffuseNormalKinetic` from the open obligation
-  `RigidityHypotheses.exists_hasAlignedHarmonicLayerData`): under the all-center sharp energy bound, the
+  `DiffusePlanarAlignment`, `DiffuseNormalKinetic` and `AlignedHarmonicLayers` from the open
+  obligation `RigidityHypotheses.exists_hasAlignedWeakHeightData`): under the all-center sharp
+  energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
   (sharp density, compactness, kinetic bounds, iteration, common normal and DS1) then gives
   the uniform boundary coarse cone from one half-space blow-down limit
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
-The reductions proved here are complete; the statements above marked as open obligations are
-recorded as explicit proof holes until their modules are finished.
+The reductions proved here are complete. The only remaining proof holes are `simonsHyp_two`
+(planar minimizing cones are half-planes) and `RigidityHypotheses.exists_hasAlignedWeakHeightData`
+(the level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay); every other
+named obligation above is proved with only the standard axioms.
 -/
 
 @[expose] public section
