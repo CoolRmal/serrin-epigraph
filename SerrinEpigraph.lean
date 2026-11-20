@@ -432,3 +432,4 @@ public import SerrinEpigraph.MinimalGraphRegularity
 public import SerrinEpigraph.AlignedHeightDecomposition
 public import SerrinEpigraph.WeakGradientConvergence
 public import SerrinEpigraph.AlignedFluxOffPlane
+public import SerrinEpigraph.AlignedHeightCompactness
