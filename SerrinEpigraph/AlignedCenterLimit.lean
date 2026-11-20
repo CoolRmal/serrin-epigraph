@@ -168,7 +168,6 @@ theorem RigidityHypotheses.tendsto_alignedCenter_zero
     hr.verticalPlanarLayers_of_rotated h hsharp x hR hRt he hloc hQ
   have hvL : ∀ k, LipschitzWith (⟨κ, h.kappa_pos.le⟩ * Real.toNNReal (R k)) (v k) := fun k ↦
     hr.lipschitzWith_rescaled h (x k) (hR k).le (Q k)
-  have hvert : ‖verticalDirection m‖ = 1 := norm_verticalDirection m
   -- the bad volume tends to zero (HA1.2 with the cylinder normalization)
   set η : ℝ := (2 - ρ - |r₀|) / 2 with hηdef
   have hη : 0 < η := by rw [hηdef]; linarith
@@ -185,12 +184,15 @@ theorem RigidityHypotheses.tendsto_alignedCenter_zero
     rw [ENNReal.ofReal_zero] at h2
     have h3 := ENNReal.Tendsto.const_mul h2 (Or.inr hC)
     rwa [mul_zero] at h3
-  have hbadT : Tendsto (fun k ↦ volume (closedBall (0 : Space m) ρ \
-      goodProjection (R k) (v k) (verticalDirection m) ℓ r₀ b)) atTop (𝓝 0) := by
+  have hη1 : η ≤ 1 := by
+    rw [hηdef]
+    linarith [abs_nonneg r₀]
+  have hbadT : Tendsto (fun k ↦ volume (ball (0 : Space m) ρ \
+      verticalGoodSet (R k) (v k) ℓ r₀ b ρ)) atTop (𝓝 0) := by
     refine tendsto_of_tendsto_of_tendsto_of_le_of_le' tendsto_const_nhds hup
       (Eventually.of_forall fun _ ↦ zero_le) ?_
-    filter_upwards [hV.eventually_volume_sdiff_goodProjection_le hR
-      (fun k ↦ (hvL k).locallyLipschitz) hvert hℓ r₀ hb0 hb1 ρ hη] with k hk
+    filter_upwards [hV.eventually_volume_sdiff_verticalGoodSet_le hR
+      (fun k ↦ (hvL k).locallyLipschitz) hℓ r₀ hb0 hb1 ρ hη hη1] with k hk
     refine hk.trans (mul_le_mul_right (ENNReal.ofReal_le_ofReal ?_) C)
     rw [← htilt k]
     exact setIntegral_closedBall_diffuseTiltDensity_le_cylinderTilt (hR k)
@@ -210,15 +212,10 @@ theorem RigidityHypotheses.tendsto_alignedCenter_zero
   filter_upwards [hφ.tendsto_atTop.eventually (hlev.and hbad)] with j hj
   obtain ⟨hj1, hj2⟩ := hj
   have hDm : MeasurableSet (verticalGoodSet (R (φ j)) (v (φ j)) ℓ r₀ b ρ) :=
-    ((isOpen_goodProjection (hR (φ j)) (hvL (φ j)) hvert ℓ r₀ b).inter isOpen_ball).measurableSet
-  have hsub : ball (0 : Space m) ρ \ verticalGoodSet (R (φ j)) (v (φ j)) ℓ r₀ b ρ ⊆
-      closedBall (0 : Space m) ρ \
-        goodProjection (R (φ j)) (v (φ j)) (verticalDirection m) ℓ r₀ b := by
-    rintro y ⟨hyB, hyD⟩
-    exact ⟨ball_subset_closedBall hyB, fun hyG ↦ hyD ⟨hyG, hyB⟩⟩
+    (isOpen_verticalGoodSet (hR (φ j)) (hvL (φ j)) ℓ r₀ b ρ).measurableSet
   have hvolD : volume.real (ball (0 : Space m) ρ \ verticalGoodSet (R (φ j)) (v (φ j)) ℓ r₀ b ρ) <
       ε / 3 * volume.real (ball (0 : Space m) ρ) / τ :=
-    ENNReal.toReal_lt_of_lt_ofReal ((measure_mono hsub).trans_lt hj2)
+    ENNReal.toReal_lt_of_lt_ofReal hj2
   have hav := abs_setAverage_extendedHeight_le_of_bound (L := L)
     (h := fun s y ↦ slabLevelHeight (v (φ j)) τ s y) hDm hρ hτ.le (hσ j) hε'pos.le hε'τ
     (fun z hz ↦ (abs_slabLevelHeight_lt hε'pos hj1 (hσ j) hz.2).le)

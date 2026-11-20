@@ -37,14 +37,21 @@ The working coordinates are vertical: `x = point y t`, `y = horizontal x ∈ Spa
   `verticalGoodSet`): an actual good point has value in `(0, 1 - b)` and normalized tilt
   `r⁻ᵐ ∫_{B_r(x)} ε (|∇v|² - (e·∇v)²) < ℓ` at every radius `0 < r ≤ r₀`; the good projection is
   the horizontal projection of the actual good points (not the complement of the projection of
-  the bad points). For Lipschitz `v` both sets are open (`isOpen_layerGoodSet`,
-  `isOpen_goodProjection`, via `isOpen_setOf_forall_setIntegral_ball_lt`), and they are nested
-  in the thresholds (`layerGoodSet_mono`, `goodProjection_mono`).
+  the bad points). The vertical good set `verticalGoodSet` projects only the good points of
+  height less than `1`, since HA8 controls the rescalings only on bounded sets. For Lipschitz `v`
+  these sets are open (`isOpen_layerGoodSet`, `isOpen_goodProjection`,
+  `isOpen_image_horizontal_layerGoodSet_inter_abs_lt`, `isOpen_verticalGoodSet`, via
+  `isOpen_setOf_forall_setIntegral_ball_lt`), and they are nested in the thresholds
+  (`layerGoodSet_mono`, `goodProjection_mono`).
 * **HA1.2 on the good projection** (`exists_bad_radius_of_horizontal_notMem_goodProjection`,
   `volume_sdiff_goodProjection_le`,
-  `VerticalPlanarLayers.eventually_volume_sdiff_goodProjection_le`): a point of the value window
-  over the complement of the good projection is an actual bad point; with the HA8 crossings this
-  gives `|B_s \ D| ≤ 5ᵐ |B₁| ℓ⁻¹ ∫_{B_{s+η+r₀}} ε |∇_y v|²` for any slab half-height `η > 0`.
+  `VerticalPlanarLayers.eventually_volume_sdiff_goodProjection_le`; for good points of bounded
+  height `volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le`,
+  `VerticalPlanarLayers.eventually_volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le`
+  and `VerticalPlanarLayers.eventually_volume_sdiff_verticalGoodSet_le`): a point of the value
+  window over the complement of the good projection is an actual bad point; with the HA8
+  crossings this gives `|B_s \ D| ≤ 5ᵐ |B₁| ℓ⁻¹ ∫_{B_{s+η+r₀}} ε |∇_y v|²` for any slab
+  half-height `η > 0` (at most the height bound, for good points of bounded height).
 * **HA9 microscopic limits** (`RigidityHypotheses.exists_oneDimensional_limit_at_good_points`):
   physical translates about good points with thresholds `ℓ_j → 0` converge, along a
   subsequence, to a `κ`-Lipschitz profile depending only on the coordinate along `e`, with all
@@ -666,6 +673,79 @@ theorem VerticalPlanarLayers.eventually_volume_sdiff_goodProjection_le
         _ ≤ ‖z - point y t‖ + ‖point y t‖ := norm_add_le _ _
         _ = ‖point y t‖ + dist z (point y t) := by rw [dist_eq_norm, add_comm]
     have h3 : |t| < η := abs_lt.mpr ⟨ht.1, ht.2⟩
+    have h4 : r₀ ≤ |r₀| := le_abs_self r₀
+    linarith
+
+/-! #### Good points at bounded height -/
+
+/-- The projection of the good points of height less than `H` is open. -/
+theorem isOpen_image_horizontal_layerGoodSet_inter_abs_lt {T : ℝ} (hT : 0 < T)
+    {v : Space (m + 1) → ℝ} {K : ℝ≥0} (hv : LipschitzWith K v) {e : Space (m + 1)}
+    (he : ‖e‖ = 1) (ℓ r₀ b H : ℝ) :
+    IsOpen (horizontal '' (layerGoodSet T v e ℓ r₀ b ∩ {x | |x (Fin.last m)| < H})) := by
+  refine isOpenMap_horizontal _ ((isOpen_layerGoodSet hT hv he ℓ r₀ b).inter ?_)
+  exact isOpen_lt (continuous_abs.comp
+    (PiLp.continuous_apply 2 (fun _ : Fin (m + 1) ↦ ℝ) (Fin.last m))) continuous_const
+
+/-- **HA1.2 for good points of bounded height.** If every horizontal point of `B` lies under a
+point of height less than `H` in the value window whose admissible balls stay in the compact set
+`A`, then the part of `B` outside the projection of the good points of height less than `H` has
+volume at most `5ᵐ |B₁| / ℓ` times the total tilt on `A`. -/
+theorem volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le {T : ℝ} (hT : 0 < T)
+    {v : Space (m + 1) → ℝ} (hv : LocallyLipschitz v) {e : Space (m + 1)} (he : ‖e‖ = 1)
+    {ℓ : ℝ} (hℓ : 0 < ℓ) (r₀ b H : ℝ) {A : Set (Space (m + 1))} (hA : IsCompact A)
+    {B : Set (Space m)}
+    (hcross : ∀ y ∈ B, ∃ x : Space (m + 1), horizontal x = y ∧ |x (Fin.last m)| < H ∧
+      v x ∈ Ioo 0 (1 - b) ∧ ball x r₀ ⊆ A) :
+    volume (B \ horizontal '' (layerGoodSet T v e ℓ r₀ b ∩ {x | |x (Fin.last m)| < H})) ≤
+      (ENNReal.ofReal ((5 : ℝ) ^ m) * volume (ball (0 : Space m) 1) / ENNReal.ofReal ℓ) *
+        ENNReal.ofReal (∫ x in A, diffuseTiltDensity T v e x) := by
+  refine le_trans (measure_mono ?_)
+    (measure_projected_tilt_bad_set_le lipschitzWith_one_horizontal hv he hT hA r₀ hℓ)
+  rintro y ⟨hyB, hyD⟩
+  obtain ⟨x, rfl, hxH, hxv, hxA⟩ := hcross y hyB
+  obtain ⟨r, hr, hbad⟩ : ∃ r ∈ Ioc 0 r₀, ℓ * r ^ m ≤
+      ∫ z in ball x r, diffuseTiltDensity T v e z := by
+    by_contra hn
+    push Not at hn
+    exact hyD ⟨x, ⟨⟨hxv, hn⟩, hxH⟩, rfl⟩
+  exact ⟨x, ⟨r, hr.1, hr.2, (ball_subset_ball hr.2).trans hxA, hbad⟩, rfl⟩
+
+/-- **HA1.2 + HA8 for good points of bounded height.** Under vertical planar layers, for
+`0 < η ≤ H`, eventually the part of the horizontal ball `B̄_s` outside the projection of the good
+points of height less than `H` is controlled by the tilt on the ball of radius `|s| + η + |r₀|`:
+the crossing points used lie in the slab `|t| < η`. -/
+theorem VerticalPlanarLayers.eventually_volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le
+    {v : ℕ → Space (m + 1) → ℝ} (hV : VerticalPlanarLayers v) {T : ℕ → ℝ} (hT : ∀ j, 0 < T j)
+    (hv : ∀ j, LocallyLipschitz (v j)) {e : Space (m + 1)} (he : ‖e‖ = 1) {ℓ : ℝ} (hℓ : 0 < ℓ)
+    (r₀ : ℝ) {b : ℝ} (hb0 : 0 ≤ b) (hb1 : b < 1) (s : ℝ) {η H : ℝ} (hη : 0 < η)
+    (hηH : η ≤ H) :
+    ∀ᶠ j in atTop, volume (closedBall (0 : Space m) s \
+        horizontal '' (layerGoodSet (T j) (v j) e ℓ r₀ b ∩ {x | |x (Fin.last m)| < H})) ≤
+      (ENNReal.ofReal ((5 : ℝ) ^ m) * volume (ball (0 : Space m) 1) / ENNReal.ofReal ℓ) *
+        ENNReal.ofReal (∫ x in closedBall (0 : Space (m + 1)) (|s| + η + |r₀|),
+          diffuseTiltDensity (T j) (v j) e x) := by
+  have hl0 : 0 < (1 - b) / 2 := by linarith
+  have hl1 : (1 - b) / 2 < 1 := by linarith
+  filter_upwards [hV.eventually_exists_level |s| hη hl0 hl1] with j hj
+  apply volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le (hT j) (hv j) he hℓ r₀ b H
+    (isCompact_closedBall _ _)
+  intro y hy
+  have hyn : ‖y‖ ≤ |s| := norm_le_abs_of_mem_closedBall hy
+  obtain ⟨t, ht, hval⟩ := hj y hyn
+  have h3 : |t| < η := abs_lt.mpr ⟨ht.1, ht.2⟩
+  refine ⟨point y t, horizontal_point y t, by rw [last_point]; linarith, ?_, ?_⟩
+  · rw [hval]
+    exact ⟨hl0, by linarith⟩
+  · intro z hz
+    rw [mem_closedBall, dist_zero_right]
+    rw [mem_ball] at hz
+    have h1 := norm_point_le y t
+    have h2 : ‖z‖ ≤ ‖point y t‖ + dist z (point y t) := by
+      calc
+        ‖z‖ = ‖(z - point y t) + point y t‖ := by rw [sub_add_cancel]
+        _ ≤ ‖z - point y t‖ + ‖point y t‖ := norm_add_le _ _
+        _ = ‖point y t‖ + dist z (point y t) := by rw [dist_eq_norm, add_comm]
     have h4 : r₀ ≤ |r₀| := le_abs_self r₀
     linarith
 
@@ -1527,9 +1607,58 @@ theorem exists_normalizedHeight_limit_of_eventually {v : ℕ → Space (m + 1) �
     fun j ↦ σ' (φ' j), fun j ↦ a' (φ' j), fun j ↦ hσ' _, fun j ↦ ha' _, fun j ↦ hW' _,
     H, hHm, hHL2, fun s hsj r hr ↦ hlim' s hsj r hr⟩
 
-/-- The good projection inside the horizontal ball `B_ρ`, in vertical coordinates. -/
+/-- The vertical good set: the horizontal projection of the actual good points of height less
+than `1` (anchors), inside the horizontal ball `B_ρ`, in vertical coordinates.
+
+The anchors have bounded height because HA8 (`VerticalPlanarLayers`) controls the rescalings only
+on bounded sets: a good point far up its line (where the line may meet the free boundary again)
+gives no information on the crossings of the slab, while along HA11 sequences the good points of
+bounded height eventually lie in the thin layer, next to these crossings. The HA1.2 estimate is
+unaffected (`VerticalPlanarLayers.eventually_volume_sdiff_verticalGoodSet_le`): it only uses
+crossing points in a thin slab. -/
 def verticalGoodSet (T : ℝ) (v : Space (m + 1) → ℝ) (ℓ r₀ b ρ : ℝ) : Set (Space m) :=
-  goodProjection T v (verticalDirection m) ℓ r₀ b ∩ ball 0 ρ
+  horizontal '' (layerGoodSet T v (verticalDirection m) ℓ r₀ b ∩ {x | |x (Fin.last m)| < 1}) ∩
+    ball 0 ρ
+
+/-- The vertical good set is open, hence measurable. -/
+theorem isOpen_verticalGoodSet {T : ℝ} (hT : 0 < T) {v : Space (m + 1) → ℝ} {K : ℝ≥0}
+    (hv : LipschitzWith K v) (ℓ r₀ b ρ : ℝ) : IsOpen (verticalGoodSet T v ℓ r₀ b ρ) :=
+  (isOpen_image_horizontal_layerGoodSet_inter_abs_lt hT hv (norm_verticalDirection m) ℓ r₀ b
+    1).inter isOpen_ball
+
+theorem verticalGoodSet_subset_ball {T : ℝ} {v : Space (m + 1) → ℝ} {ℓ r₀ b ρ : ℝ} :
+    verticalGoodSet T v ℓ r₀ b ρ ⊆ ball 0 ρ :=
+  inter_subset_right
+
+theorem verticalGoodSet_subset_goodProjection {T : ℝ} {v : Space (m + 1) → ℝ} {ℓ r₀ b ρ : ℝ} :
+    verticalGoodSet T v ℓ r₀ b ρ ⊆ goodProjection T v (verticalDirection m) ℓ r₀ b :=
+  fun _ hy ↦ image_mono inter_subset_left hy.1
+
+/-- Every line of the vertical good set carries a good point of height less than `1`. -/
+theorem exists_isLayerGoodPoint_of_mem_verticalGoodSet {T : ℝ} {v : Space (m + 1) → ℝ}
+    {ℓ r₀ b ρ : ℝ} {y : Space m} (hy : y ∈ verticalGoodSet T v ℓ r₀ b ρ) :
+    ‖y‖ < ρ ∧ ∃ t, |t| < 1 ∧ IsLayerGoodPoint T v (verticalDirection m) ℓ r₀ b (point y t) := by
+  obtain ⟨⟨A, ⟨hA, hA1⟩, rfl⟩, hyρ⟩ := hy
+  rw [mem_ball, dist_zero_right] at hyρ
+  refine ⟨hyρ, A (Fin.last m), hA1, ?_⟩
+  rwa [point_horizontal_last]
+
+/-- **HA1.2 + HA8 for the vertical good set.** Under vertical planar layers, for `0 < η ≤ 1`,
+eventually `|B_ρ \ D| ≤ 5ᵐ |B₁| ℓ⁻¹ ∫_{B_{|ρ|+η+|r₀|}} ε |∇_y v|²` for
+`D = verticalGoodSet (T j) (v j) ℓ r₀ b ρ`. -/
+theorem VerticalPlanarLayers.eventually_volume_sdiff_verticalGoodSet_le
+    {v : ℕ → Space (m + 1) → ℝ} (hV : VerticalPlanarLayers v) {T : ℕ → ℝ} (hT : ∀ j, 0 < T j)
+    (hv : ∀ j, LocallyLipschitz (v j)) {ℓ : ℝ} (hℓ : 0 < ℓ) (r₀ : ℝ) {b : ℝ} (hb0 : 0 ≤ b)
+    (hb1 : b < 1) (ρ : ℝ) {η : ℝ} (hη : 0 < η) (hη1 : η ≤ 1) :
+    ∀ᶠ j in atTop, volume (ball (0 : Space m) ρ \ verticalGoodSet (T j) (v j) ℓ r₀ b ρ) ≤
+      (ENNReal.ofReal ((5 : ℝ) ^ m) * volume (ball (0 : Space m) 1) / ENNReal.ofReal ℓ) *
+        ENNReal.ofReal (∫ x in closedBall (0 : Space (m + 1)) (|ρ| + η + |r₀|),
+          diffuseTiltDensity (T j) (v j) (verticalDirection m) x) := by
+  filter_upwards [hV.eventually_volume_sdiff_image_horizontal_layerGoodSet_inter_abs_lt_le hT hv
+    (norm_verticalDirection m) hℓ r₀ hb0 hb1 ρ hη hη1] with j hj
+  refine le_trans (measure_mono ?_) hj
+  rintro y ⟨hy, hyD⟩
+  exact ⟨ball_subset_closedBall hy, fun hyG ↦ hyD ⟨hyG, hy⟩⟩
 
 theorem norm_le_norm_horizontal_add_abs_vertical (x : Space (m + 1)) :
     ‖x‖ ≤ ‖horizontal x‖ + |x (Fin.last m)| := by
@@ -1599,33 +1728,29 @@ theorem VerticalPlanarLayers.exists_normalizedHeight_limit {v : ℕ → Space (m
   have hDo : ∀ j, IsOpen (D j) := by
     intro j
     rw [hDdef j]
-    exact (isOpen_goodProjection (hT j) (hvL j) hvert ℓ r₀ b).inter isOpen_ball
+    exact isOpen_verticalGoodSet (hT j) (hvL j) ℓ r₀ b ρ
   have hDball : ∀ j, D j ⊆ ball 0 ρ := by
     intro j
     rw [hDdef j]
     exact inter_subset_right
-  -- HA1.2 on the good projection
+  -- HA1.2 on the vertical good set, with crossings in the slab `|t| < min τ 1`
   have hbad : ∀ᶠ j in atTop, volume (ball (0 : Space m) ρ \ D j) ≤
       ENNReal.ofReal (M * δ j ^ 2) := by
-    filter_upwards [hV.eventually_volume_sdiff_goodProjection_le hT
-      (fun j ↦ (hvL j).locallyLipschitz) hvert hℓ r₀ hb0 hb1 ρ hτ, htot] with j hj hjt
-    have hsub : ball (0 : Space m) ρ \ D j ⊆
-        closedBall 0 ρ \ goodProjection (T j) (v j) (verticalDirection m) ℓ r₀ b := by
-      rintro y ⟨hy, hyD⟩
-      refine ⟨ball_subset_closedBall hy, fun hyG ↦ hyD ?_⟩
-      rw [hDdef j]
-      exact ⟨hyG, hy⟩
-    have hint : ∫ x in closedBall (0 : Space (m + 1)) (|ρ| + τ + |r₀|),
+    filter_upwards [hV.eventually_volume_sdiff_verticalGoodSet_le hT
+      (fun j ↦ (hvL j).locallyLipschitz) hℓ r₀ hb0 hb1 ρ (lt_min hτ one_pos)
+      (min_le_right τ 1), htot] with j hj hjt
+    have hint : ∫ x in closedBall (0 : Space (m + 1)) (|ρ| + min τ 1 + |r₀|),
         diffuseTiltDensity (T j) (v j) (verticalDirection m) x ≤ Θ * δ j ^ 2 := by
       refine le_trans (setIntegral_mono_set (hFint j) (Eventually.of_forall (hF0 j))
         (Eventually.of_forall (closedBall_subset_closedBall ?_))) hjt
       rw [abs_of_pos hρ]
+      linarith [min_le_left τ 1]
     have hω' : volume (ball (0 : Space m) 1) = ENNReal.ofReal ω :=
       (ofReal_measureReal measure_ball_lt_top.ne).symm
     calc
-      volume (ball (0 : Space m) ρ \ D j) ≤
-          volume (closedBall 0 ρ \ goodProjection (T j) (v j) (verticalDirection m) ℓ r₀ b) :=
-        measure_mono hsub
+      volume (ball (0 : Space m) ρ \ D j) =
+          volume (ball (0 : Space m) ρ \ verticalGoodSet (T j) (v j) ℓ r₀ b ρ) := by
+        rw [hDdef j]
       _ ≤ _ := hj
       _ ≤ (ENNReal.ofReal ((5 : ℝ) ^ m) * volume (ball (0 : Space m) 1) / ENNReal.ofReal ℓ) *
           ENNReal.ofReal (Θ * δ j ^ 2) := by gcongr

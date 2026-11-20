@@ -547,12 +547,14 @@ theorem physical_tilt_lt_of_isLayerGoodPoint_rotated {U : Space (m + 1) → ℝ}
   have he : R ^ m * (ℓ * (ρ ^ m / R ^ m)) = ℓ * ρ ^ m := by field_simp
   rwa [he] at h1
 
-/-- A good point at horizontal distance less than `ρ` lies over the vertical good set; hence
-`D = verticalGoodSet R v ℓ r₀ b ρD` contains every line of `B_{ρD}` carrying a good point. -/
+/-- A good point of height less than `1` at horizontal distance less than `ρ` lies over the
+vertical good set; hence `D = verticalGoodSet R v ℓ r₀ b ρD` contains every line of `B_{ρD}`
+carrying a good point of height less than `1`. -/
 theorem horizontal_mem_verticalGoodSet {T : ℝ} {v : Space (m + 1) → ℝ} {ℓ r₀ b ρ : ℝ}
     {A : Space (m + 1)} (hA : IsLayerGoodPoint T v (verticalDirection m) ℓ r₀ b A)
-    (hρ : ‖horizontal A‖ < ρ) : horizontal A ∈ verticalGoodSet T v ℓ r₀ b ρ :=
-  ⟨⟨A, hA, rfl⟩, by rwa [mem_ball, dist_zero_right]⟩
+    (h1 : |A (Fin.last m)| < 1) (hρ : ‖horizontal A‖ < ρ) :
+    horizontal A ∈ verticalGoodSet T v ℓ r₀ b ρ :=
+  ⟨⟨A, ⟨hA, h1⟩, rfl⟩, by rwa [mem_ball, dist_zero_right]⟩
 
 /-- The cone condition on a range of levels restricts to each single level of the range. -/
 theorem HasLevelCone.of_mem_Icc {v : Space (m + 1) → ℝ} {D : Set (Space m)} {τ s₁ s₂ : ℝ}
@@ -568,8 +570,8 @@ theorem HasLevelCone.of_mem_Icc {v : Space (m + 1) → ℝ} {D : Set (Space m)} 
 following property. Let `v = U(x + R • Q ·)`; let `D` be a horizontal set on which the cone
 condition holds at the level `s` in the slab `|t| < τs` and which contains every line in the
 horizontal ball `B_{ρD}` carrying a good point (threshold `ℓ`, radii up to `r₀`) in the slab, e.g.
-`D = verticalGoodSet R v ℓ r₀ b₀ ρD` (`horizontal_mem_verticalGoodSet`); let `v` vanish below
-`-η` and exceed `1 - β` above `η` on lines over `D`. Then every low positive point `p`
+`D = verticalGoodSet R v ℓ r₀ b₀ ρD` if `τs ≤ 1` (`horizontal_mem_verticalGoodSet`); let `v`
+vanish below `-η` and exceed `1 - β` above `η` on lines over `D`. Then every low positive point `p`
 (`0 < v p < b ≤ s`) over `D` in the slab, at horizontal distance at least `C_w / R` from the
 boundary of `B_{ρD}`, is either a bad point at the threshold `ℓ'` (radii up to `2 r₀`), or `v` is
 `α`-close on `B_{Kα/R}(p)` to the layer profile translated to the height `H(y) = h_s(y) - T(s)/R`,
