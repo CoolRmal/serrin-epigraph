@@ -17,6 +17,7 @@ public import SerrinEpigraph.MinimizerGraphChart
 public import SerrinEpigraph.AlignedHarmonicLayers
 public import SerrinEpigraph.MinimalGraphRegularity
 public import SerrinEpigraph.AlignedHeightDecomposition
+public import SerrinEpigraph.WeakGradientConvergence
 
 /-!
 # Reduction of the two rigidity targets to the remaining open statements
@@ -42,8 +43,8 @@ This module isolates the remaining mathematical content of the two rigidity theo
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11; proved in `DiffuseTiltDecay`, `DiffuseHarmonicApproximation`,
   `DiffusePlanarAlignment`, `DiffuseNormalKinetic` and `AlignedHarmonicLayers` from the open
-  obligations `RigidityHypotheses.exists_alignedHeightInputs` and `weakGradientLimit`): under the
-  all-center sharp
+  obligation `RigidityHypotheses.exists_alignedHeightInputs`, with the Sobolev lemma
+  `weakGradientLimit` from `WeakGradientConvergence`): under the all-center sharp
   energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
@@ -53,8 +54,7 @@ This module isolates the remaining mathematical content of the two rigidity theo
 
 The reductions proved here are complete. The only remaining proof holes are `simonsHyp_two`
 (planar minimizing cones are half-planes), `RigidityHypotheses.exists_alignedHeightInputs` (the
-level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay) and the Sobolev lemma
-`weakGradientLimit`; every other
+level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay); every other
 named obligation above is proved with only the standard axioms.
 -/
 
@@ -144,12 +144,6 @@ theorem RigidityHypotheses.exists_alignedHeightInputs
       HasAlignedHeightCompactness g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
       HasAlignedHeightMoments g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
       HasAlignedFluxIdentification g u (phasePrimitive f 1) ℓ r₀ b ρ τ s₁ s₂ L c K := by
-  sorry
-
-/-- **Open obligation (weak gradient limits).** Uniformly `H¹`-bounded Lipschitz functions
-converging in `L²` to a `C¹` function have gradients converging weakly against compactly
-supported continuous fields. -/
-theorem weakGradientLimit (m : ℕ) : WeakGradientLimit m := by
   sorry
 
 /-- Harmonic layer data (blueprint HA2–HA4, HA6.1, HA10), assembled in

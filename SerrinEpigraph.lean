@@ -430,3 +430,4 @@ public import SerrinEpigraph.LinearSchauder
 public import SerrinEpigraph.SchauderBootstrap
 public import SerrinEpigraph.MinimalGraphRegularity
 public import SerrinEpigraph.AlignedHeightDecomposition
+public import SerrinEpigraph.WeakGradientConvergence
