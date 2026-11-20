@@ -429,3 +429,4 @@ public import SerrinEpigraph.HolderClasses
 public import SerrinEpigraph.LinearSchauder
 public import SerrinEpigraph.SchauderBootstrap
 public import SerrinEpigraph.MinimalGraphRegularity
+public import SerrinEpigraph.AlignedHeightDecomposition

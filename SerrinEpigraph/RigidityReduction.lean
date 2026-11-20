@@ -16,6 +16,7 @@ public import SerrinEpigraph.DiffuseNormalKinetic
 public import SerrinEpigraph.MinimizerGraphChart
 public import SerrinEpigraph.AlignedHarmonicLayers
 public import SerrinEpigraph.MinimalGraphRegularity
+public import SerrinEpigraph.AlignedHeightDecomposition
 
 /-!
 # Reduction of the two rigidity targets to the remaining open statements
@@ -41,7 +42,8 @@ This module isolates the remaining mathematical content of the two rigidity theo
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11; proved in `DiffuseTiltDecay`, `DiffuseHarmonicApproximation`,
   `DiffusePlanarAlignment`, `DiffuseNormalKinetic` and `AlignedHarmonicLayers` from the open
-  obligation `RigidityHypotheses.exists_hasAlignedWeakHeightData`): under the all-center sharp
+  obligations `RigidityHypotheses.exists_alignedHeightInputs` and `weakGradientLimit`): under the
+  all-center sharp
   energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
@@ -50,8 +52,9 @@ This module isolates the remaining mathematical content of the two rigidity theo
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
 The reductions proved here are complete. The only remaining proof holes are `simonsHyp_two`
-(planar minimizing cones are half-planes) and `RigidityHypotheses.exists_hasAlignedWeakHeightData`
-(the level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay); every other
+(planar minimizing cones are half-planes), `RigidityHypotheses.exists_alignedHeightInputs` (the
+level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay) and the Sobolev lemma
+`weakGradientLimit`; every other
 named obligation above is proved with only the standard axioms.
 -/
 
@@ -60,7 +63,7 @@ named obligation above is proved with only the standard axioms.
 noncomputable section
 
 open Set Metric MeasureTheory Filter InnerProductSpace
-open scoped Topology ENNReal
+open scoped Topology ENNReal NNReal
 
 namespace SerrinEpigraph
 
@@ -127,30 +130,40 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
   IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
     (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
-/-- **Open obligation (weak height data, blueprint HA2–HA3, HA4.1, HA6.1, HA10).** Along
-aligned HA11 contradiction sequences, the normalized level-set heights have an `L²` limit with
-an `L²` weak gradient, the HA6.1 weighted height approximation and the HA4.1 flux limit. -/
-theorem RigidityHypotheses.exists_hasAlignedWeakHeightData
+/-- **Open obligation (aligned height inputs, blueprint HA2–HA3, HA4.1, HA6.1, HA9–HA10).** For
+suitable layer parameters, along aligned HA11 contradiction sequences the normalized level-set
+heights are compact (A), carry the weighted height moments (B) and identify the horizontal flux
+(C); see `AlignedHeightDecomposition`. -/
+theorem RigidityHypotheses.exists_alignedHeightInputs
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
     (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
       (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
         phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
-    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedWeakHeightData g u (phasePrimitive f 1) M := by
+    ∃ (ℓ r₀ b ρ τ s₁ s₂ c K : ℝ) (L : ℝ≥0), 3 / 4 < ρ ∧
+      HasAlignedHeightCompactness g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
+      HasAlignedHeightMoments g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
+      HasAlignedFluxIdentification g u (phasePrimitive f 1) ℓ r₀ b ρ τ s₁ s₂ L c K := by
   sorry
 
-/-- Harmonic layer data (blueprint HA2–HA4, HA6.1, HA10): the limit of the normalized heights
-is harmonic (Weyl's lemma applied to the HA4 flux identity), proved from the weak height data
-in `AlignedHarmonicLayers`. -/
+/-- **Open obligation (weak gradient limits).** Uniformly `H¹`-bounded Lipschitz functions
+converging in `L²` to a `C¹` function have gradients converging weakly against compactly
+supported continuous fields. -/
+theorem weakGradientLimit (m : ℕ) : WeakGradientLimit m := by
+  sorry
+
+/-- Harmonic layer data (blueprint HA2–HA4, HA6.1, HA10), assembled in
+`AlignedHeightDecomposition` from the aligned height inputs and weak gradient limits. -/
 theorem RigidityHypotheses.exists_hasAlignedHarmonicLayerData
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
     (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
       (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
         phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
-    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedHarmonicLayerData g u (phasePrimitive f 1) M :=
-  hr.exists_hasAlignedHarmonicLayerData_of_weak h hsharp
-    (hr.exists_hasAlignedWeakHeightData h hsharp)
+    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedHarmonicLayerData g u (phasePrimitive f 1) M := by
+  obtain ⟨ℓ, r₀, b, ρ, τ, s₁, s₂, c, K, L, hρ, hA, hB, hC⟩ :=
+    hr.exists_alignedHeightInputs h hsharp
+  exact hr.exists_hasAlignedHarmonicLayerData_of_inputs h hsharp hρ hA hB hC (weakGradientLimit m)
 
 /-- Tilt-excess decay (blueprint HA0–HA11): under the sharp surface-energy bound at every center
 and radius, the rescaled cylinder tilt of the zero extension at free-boundary centers decays by
