@@ -1409,11 +1409,11 @@ theorem RigidityHypotheses.exists_stable_well_potential_bounds
     linarith
 
 /-- Open coordinate cube `{x : Space d | ∀ i, |(x - x₀) i| < L}`. -/
-def openCoordCube {d : ℕ} (x₀ : Space d) (L : ℝ) : Set (Space d) :=
+@[expose] def openCoordCube {d : ℕ} (x₀ : Space d) (L : ℝ) : Set (Space d) :=
   {x | ∀ i : Fin d, |(x - x₀) i| < L}
 
 /-- Closed coordinate cube `{x : Space d | ∀ i, |(x - x₀) i| ≤ L}`. -/
-def closedCoordCube {d : ℕ} (x₀ : Space d) (L : ℝ) : Set (Space d) :=
+@[expose] def closedCoordCube {d : ℕ} (x₀ : Space d) (L : ℝ) : Set (Space d) :=
   {x | ∀ i : Fin d, |(x - x₀) i| ≤ L}
 
 theorem isOpen_openCoordCube {d : ℕ} (x₀ : Space d) (L : ℝ) :

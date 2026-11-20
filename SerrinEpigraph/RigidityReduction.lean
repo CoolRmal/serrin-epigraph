@@ -12,6 +12,7 @@ public import SerrinEpigraph.DirectedConeDichotomy
 public import SerrinEpigraph.SimonsCone
 public import SerrinEpigraph.ExcessEpsilonRegularityProof
 public import SerrinEpigraph.EpsilonRegularityBridge
+public import SerrinEpigraph.DiffuseNormalKinetic
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -35,7 +36,9 @@ This module isolates the remaining mathematical content of the two rigidity theo
   at most seven is a half-space), and with GR5–GR6 (`ConeSplitting`) this gives
   `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
-  `harmonic-approximation.md` HA0–HA11): under the all-center sharp energy bound, the
+  `harmonic-approximation.md` HA0–HA11; proved in `DiffuseTiltDecay`, `DiffuseHarmonicApproximation`,
+  `DiffusePlanarAlignment` and `DiffuseNormalKinetic` from the open obligation
+  `RigidityHypotheses.exists_hasAlignedHarmonicLayerData`): under the all-center sharp energy bound, the
   rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
   (sharp density, compactness, kinetic bounds, iteration, common normal and DS1) then gives
@@ -108,9 +111,21 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
   IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
     (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
-/-- **Open obligation (tilt-excess decay, blueprint HA0–HA11).** Under the sharp
-surface-energy bound at every center and radius, the rescaled cylinder tilt of the zero
-extension at free-boundary centers decays by the HA0 factor. -/
+/-- **Open obligation (harmonic layer data, blueprint HA2–HA4, HA6.1, HA10).** Along aligned
+HA11 contradiction sequences, the normalized level-set heights have a harmonic limit with the
+HA4 flux limit and the HA6.1 weighted height approximation. -/
+theorem RigidityHypotheses.exists_hasAlignedHarmonicLayerData
+    {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
+    (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
+    (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
+      (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
+        phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
+    ∃ M : ℝ, 0 ≤ M ∧ HasAlignedHarmonicLayerData g u (phasePrimitive f 1) M := by
+  sorry
+
+/-- Tilt-excess decay (blueprint HA0–HA11): under the sharp surface-energy bound at every center
+and radius, the rescaled cylinder tilt of the zero extension at free-boundary centers decays by
+the HA0 factor. -/
 theorem RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
@@ -118,7 +133,8 @@ theorem RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy
       (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
         phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m) :
     HasCylinderTiltDecay g u := by
-  sorry
+  obtain ⟨M, hM, hal⟩ := hr.exists_hasAlignedHarmonicLayerData h hsharp
+  exact hr.hasCylinderTiltDecay_of_harmonicLayerData h hsharp hM hal
 
 /-- Ball-tilt improvement at free-boundary centers (blueprint HA12 applied to HA0). -/
 theorem RigidityHypotheses.hasBallTiltImprovement_of_sharp_energy

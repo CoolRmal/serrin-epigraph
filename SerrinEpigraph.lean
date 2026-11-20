@@ -418,3 +418,8 @@ public import SerrinEpigraph.EpsilonRegularityBridge
 public import SerrinEpigraph.LayerProfile
 public import SerrinEpigraph.MicroscopicProfileLimit
 public import SerrinEpigraph.LowLevelProfileApproximation
+public import SerrinEpigraph.CoordCubeMembership
+public import SerrinEpigraph.DiffuseTiltDecay
+public import SerrinEpigraph.DiffuseHarmonicApproximation
+public import SerrinEpigraph.DiffusePlanarAlignment
+public import SerrinEpigraph.DiffuseNormalKinetic
