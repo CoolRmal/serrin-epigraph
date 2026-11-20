@@ -23,6 +23,7 @@ public import SerrinEpigraph.AlignedHeightCompactness
 public import SerrinEpigraph.AlignedHeightMoments
 public import SerrinEpigraph.AlignedLevelStructure
 public import SerrinEpigraph.AlignedFluxVertical
+public import SerrinEpigraph.AlignedFluxCalibrationDensity
 
 /-!
 # Reduction of the two rigidity targets to the remaining open statements
@@ -56,17 +57,17 @@ This module isolates the remaining mathematical content of the two rigidity theo
   inputs are assembled for one explicit parameter choice from the level structure (D)
   (`AlignedLevelStructure`), the height compactness (A) (`AlignedHeightCompactness`), the
   height moments (B) (`AlignedHeightMoments`, from (C)) and the flux identification (C), which
-  `AlignedFluxVertical` reduces to its vertically integrated form, the open obligation
-  `RigidityHypotheses.hasAlignedVerticalFluxIdentification`. HA12
+  `AlignedFluxVertical` reduces to its vertically integrated form (C⋆), proved by the
+  phase-primitive calibration in `AlignedFluxCalibrationDensity`
+  (`RigidityHypotheses.hasAlignedVerticalFluxIdentification_of_calibration`). HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
   (sharp density, compactness, kinetic bounds, iteration, common normal and DS1) then gives
   the uniform boundary coarse cone from one half-space blow-down limit
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
-The reductions proved here are complete. The only remaining proof hole is
-`RigidityHypotheses.hasAlignedVerticalFluxIdentification` (the vertically integrated flux
-identification HA4.1 of the tilt-excess decay, for fixed layer parameters); every other named
-obligation above is proved with only the standard axioms.
+Every named obligation above is proved; this module has no remaining proof holes, and the two
+rigidity reductions depend only on the standard axioms (`propext`, `Classical.choice`,
+`Quot.sound`).
 -/
 
 @[expose] public section
@@ -141,24 +142,6 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
   IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
     (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
-/-- **Open obligation (vertical flux identification, blueprint HA4.1 with HA1, HA3, HA10,
-HA11).** For fixed layer parameters with `0 < s₁ < s₂ < 1 - b`, `0 < r₀ < 13/32`,
-`3/4 < ρ`, `0 < τ ≤ 1`, `ρ + τ + |r₀| < 2` and the level structure (D), along aligned HA11
-sequences the normalized horizontal flux tested against horizontal fields is asymptotically
-`-σ ∇f_j` (`HasAlignedVerticalFluxIdentification`, the vertically integrated form of (C)). -/
-theorem RigidityHypotheses.hasAlignedVerticalFluxIdentification
-    {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
-    (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
-    (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
-      (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
-        phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m)
-    {ℓ r₀ b ρ τ s₁ s₂ c K : ℝ} {L : ℝ≥0} (hℓ : 0 < ℓ) (hr₀ : 0 < r₀) (hr₀' : r₀ < 13 / 32)
-    (hb : 0 < b) (hs₁ : 0 < s₁) (hs₁₂ : s₁ < s₂) (hs₂ : s₂ < 1 - b) (hρ : 3 / 4 < ρ)
-    (hτ : 0 < τ) (hτ1 : τ ≤ 1) (hΛ : ρ + τ + |r₀| < 2) (hc : 0 < c) (hL : 0 < L)
-    (hD : HasAlignedLevelStructure g u ℓ r₀ b ρ τ s₁ s₂ L c) :
-    HasAlignedVerticalFluxIdentification g u (phasePrimitive f 1) ℓ r₀ b ρ τ s₁ s₂ L c K := by
-  sorry
-
 /-- **Aligned height inputs (blueprint HA2–HA3, HA4.1, HA6.1, HA9–HA10).** For the layer
 parameters `r₀ = 1/4`, `ρ = 1`, `τ = 1/2`, `L = 1`, levels `0 < s₁ < σ₀` and `s₂ = 1 - d`
 close to `1`, cut `b = d/2`, thresholds `ℓ, c` from the level structure (D) and the energy
@@ -193,11 +176,14 @@ theorem RigidityHypotheses.exists_alignedHeightInputs
   have hΛ : (1 : ℝ) + 1 / 2 + |(1 / 4 : ℝ)| < 2 := by
     rw [abs_of_pos (by norm_num : (0 : ℝ) < 1 / 4)]
     norm_num
+  have hρr₀ : (1 : ℝ) + |(1 / 4 : ℝ)| < 2 := by
+    rw [abs_of_pos (by norm_num : (0 : ℝ) < 1 / 4)]
+    norm_num
   have hC : HasAlignedFluxIdentification g u (phasePrimitive f 1) ℓ (1 / 4) (d / 2) 1 (1 / 2) s₁
       (1 - d) 1 c (alignedHeightEnergyBound m ℓ 1 s₁ (1 - d) c 1) :=
     hr.hasAlignedFluxIdentification_of_vertical h hsharp
-      (hr.hasAlignedVerticalFluxIdentification h hsharp hℓ (by norm_num) (by norm_num) hb hs₁
-        hs₁₂ hs₂b (by norm_num) (by norm_num) (by norm_num) hΛ hc one_pos hDp)
+      (hr.hasAlignedVerticalFluxIdentification_of_calibration h hsharp hℓ hb.le (by linarith)
+        (by norm_num) hρr₀ (by norm_num) hs₁ (by linarith))
   refine ⟨ℓ, 1 / 4, d / 2, 1, 1 / 2, s₁, 1 - d, c,
     alignedHeightEnergyBound m ℓ 1 s₁ (1 - d) c 1, 1, by norm_num, ?_, ?_, hC⟩
   · exact hr.hasAlignedHeightCompactness_of_levelStructure h hsharp hℓ hb.le (by linarith)

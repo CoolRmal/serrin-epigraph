@@ -7,9 +7,10 @@ public import SerrinEpigraph.RigidityReduction
 /-!
 # The three source targets
 
-The monotonicity theorem is proved. The two rigidity theorems are reduced, in
-`SerrinEpigraph.RigidityReduction`, to one remaining open statement (the level-set height data
-of the tilt-excess decay); they are not yet fully proved.
+All three targets are proved. The two rigidity theorems are derived in
+`SerrinEpigraph.RigidityReduction`, whose named obligations are all proved; the three theorems
+below depend only on the standard axioms. The dimension bound of the one-sided theorem only
+delimits the case: its proof does not need it.
 Their reaction and boundedness assumptions include the source conversation and notes;
 see `docs/scope-correction.md`.
 -/
