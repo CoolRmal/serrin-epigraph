@@ -441,3 +441,4 @@ public import SerrinEpigraph.InteriorGradientModulus
 public import SerrinEpigraph.MesoscopicLayerFlatness
 public import SerrinEpigraph.LevelConeCondition
 public import SerrinEpigraph.AlignedLevelStructure
+public import SerrinEpigraph.AlignedHeightMoments
