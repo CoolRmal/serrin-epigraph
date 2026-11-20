@@ -4,18 +4,33 @@ A Lean 4 project depending on Mathlib, targeting the three statements in the
 [source images](docs/source) together with the original conversation and notes.
 The [restored reaction assumptions](docs/scope-correction.md) apply to both rigidity targets.
 
-**Lean status: one of three theorems proved.** The strict vertical monotonicity theorem
-is complete under the original assumptions. The two Lean rigidity proofs remain open.
-A successful `lake build` is not a certificate for all three: the full Comparator
-configuration must still reject the two proof holes. No Palomar registration is claimed.
+**Lean status: all three theorems proved.** `SerrinEpigraph.verticalDerivative_pos`,
+`SerrinEpigraph.rigidity_of_dimension_le_eight` and
+`SerrinEpigraph.rigidity_of_oneSidedLinearBound` are proved, the rigidity targets under the
+restored reaction assumptions. `python3 scripts/check-proof-status.py` reports that each
+depends only on `propext`, `Classical.choice` and `Quot.sound`; the development has no
+proof holes (the three `sorry`s in `Challenge.lean` are the specification holes).
+The sandboxed Linux Comparator in CI accepted all three statements with the Lean, NanoDa
+and con-ron kernels on commit `d057a0d`
+([run 44746773713](https://github.com/CoolRmal/serrin-epigraph/actions/runs/44746773713));
+see the [verification record](docs/verification.md). No Palomar registration is claimed.
 
 The [detailed mathematical proofs of both rigidity theorems](docs/rigidity-proof/theorems.md)
-and [formalization execution plan](docs/rigidity-proof/formalization-plan.md)
-expand the remaining geometric regularity, cone classification, diffuse flatness
-improvement, and final free-boundary comparison. See the
-[chapter index and review notes](docs/rigidity-proof/README.md).
-These documents have undergone mathematical cross-review; they are not yet
-Lean-verified proofs and do not change the formal status above.
+and [formalization execution plan](docs/rigidity-proof/formalization-plan.md) are the
+informal blueprint of the Lean proof; see the
+[chapter index and review notes](docs/rigidity-proof/README.md). The Lean proof follows it
+except for the flux identification HA4.1, which is proved by a phase-primitive calibration
+(`AlignedFluxCalibration*.lean`, `PhaseCalibration*.lean`) instead of a level-set change of
+variables.
+
+**Rigidity:** `SerrinEpigraph/RigidityReduction.lean` assembles both rigidity theorems. A
+blow-down of the solution gives a directed perimeter-minimizing cone, which is a half-space
+or a vertical cylinder. In dimension at most eight, cone classification (De Giorgi
+ε-regularity, Schauder smoothness, Simons' theorem including the planar chord argument, and
+dimension reduction) excludes the cylinder; under a one-sided linear bound the cylinder is
+excluded in every dimension. From a half-space blow-down, the Wang-type tilt-excess decay of
+the diffuse one-phase problem (harmonic approximation HA0–HA12) gives a uniform boundary
+coarse cone, and the sliding method yields the affine one-dimensional conclusion.
 
 **Proved:** `SerrinEpigraph.verticalDerivative_pos` establishes strict vertical
 monotonicity. Its proof includes boundary geometry, weak linearization with only
@@ -29,21 +44,18 @@ The [reaction reduction](docs/reaction-reduction.md) is also proved: any positiv
 argument with negative reaction value bounds the solution from above. Thus an
 unbounded solution requires nonnegative reaction on the entire nonnegative
 half-line. For every solution, the reaction is nonnegative on its range and the
-solution is superharmonic. These consequences retain the original hypotheses;
-the two rigidity proofs remain incomplete.
+solution is superharmonic. These consequences retain the original hypotheses.
 
 Under the restored rigidity assumptions, **the solution converges to one along
 every vertical ray**. `BallLowerBound.lean` and `LimitOne.lean` prove this using
 an explicit polynomial comparison on large interior balls, compact contact,
-and the reaction quotient condition. This is a proved prerequisite for the
-remaining rigidity argument, not a proof of either classification theorem.
+and the reaction quotient condition. It is one ingredient of the rigidity proofs.
 
 The **Modica gradient estimate** and **surface-scaled ball-energy monotonicity**
 are also proved under the original rigidity assumptions. The proof obtains a
 global gradient bound by a weak Bernstein argument and controls maxima escaping
 to infinity by quadratic penalization. It requires no extra regularity or
-assumed gradient estimate. The Lean geometric classification and transfer of flatness
-to the original solution remain unfinished.
+assumed gradient estimate.
 
 An [informal variational reduction](docs/variational-reduction.md) now derives a
 common vertical limit and minimization of the general free-boundary energy.
@@ -53,8 +65,7 @@ minimality against **arbitrary measurable competitors** agreeing with the limit
 outside a smaller concentric closed ball. Agreement may hold almost everywhere.
 That same phase is invariant almost everywhere under each positive dilation,
 has finite local perimeter and vertical order, and both phases have positive
-measure; see the [proof obligations](docs/proof-plan.md). The Lean geometric regularity,
-half-space classification, and transfer of flatness remain open.
+measure; see the [proof obligations](docs/proof-plan.md).
 Along one common sequence, potential and kinetic energies balance locally, and
 diffuse energy agrees asymptotically with primitive gradient mass. On every
 origin-centered ball, their positive homogeneous mass limit is now identified
@@ -63,8 +74,7 @@ General finite-perimeter recovery is proved: smooth phase averages, positive
 variable transition widths, and threshold averaging give competitors with the
 sharp asymptotic action-perimeter bound along the original scale sequence's
 subsequences. Under either one-sided cone constraint, a nontrivial phase cannot
-be invariant under all vertical translations. The Lean geometric classification
-and transfer of flatness to the original solution remain open.
+be invariant under all vertical translations.
 The [reaction-regime audit](docs/rigidity-regimes.md)
 concerns a broader reaction class investigated before the source-context correction;
 those degenerate and unbounded cases are not part of the corrected rigidity targets.
@@ -128,18 +138,18 @@ $$
 
 The reaction assumptions were restored after consulting the original conversation
 and project notes. See the [scope correction](docs/scope-correction.md).
-The remaining work is to formalize the rigidity arguments, not to classify
-arbitrary reactions outside that source setting.
+The rigidity targets do not classify arbitrary reactions outside that source setting.
 
 ## Layout and verification
 
 - `Challenge.lean`: independent specification, importing only Mathlib, with
   three deliberate specification holes.
 - `SerrinEpigraph/Basic.lean`: Euclidean geometry, PDE hypotheses, growth, and conclusions.
-- `SerrinEpigraph/Main.lean`: the proved monotonicity theorem and two open rigidity targets.
+- `SerrinEpigraph/Main.lean`: the three proved targets.
+- `SerrinEpigraph/RigidityReduction.lean`: assembly of the two rigidity theorems.
 - `Solution.lean`: imports the development, never `Challenge`.
 - `comparator.json`: exact target names and the three standard permitted axioms.
-- `comparator-monotonicity.json`: separate verification of the one completed theorem.
+- `comparator-monotonicity.json`: separate verification of the monotonicity theorem alone.
 - `.github/workflows/verify.yml`: build, proof audit, sandboxed Comparator, and
   manually requested full Palomar preflight.
 
@@ -159,15 +169,16 @@ The final command requires Linux and Bubblewrap. On macOS,
 `./scripts/verify-comparator.sh --preliminary` can run a local check without the
 Linux sandbox; it is not a Palomar mechanical-verification report.
 The additional CI job uses `--config comparator-monotonicity.json` to check the
-completed first theorem independently. It does not replace the three-theorem
-acceptance configuration.
+first theorem independently. It does not replace the three-theorem acceptance
+configuration.
 
 ## Reproducibility and attribution
 
 Lean is pinned to `v4.35.0-rc2`; Mathlib and transitive dependencies are locked in
 `lake-manifest.json`. The user-supplied images are the source of the three claims.
 No authorship of the images is inferred. Codex agents assisted with transcription,
-implementation, and review. No independent human mathematical review is claimed.
+implementation, and review; Claude Code agents (Claude Opus 5.5) completed the two rigidity
+formalizations. No independent human mathematical review is claimed.
 
 Code is licensed under Apache-2.0. The supplied source images retain their
 original attribution and rights; the code license does not assert ownership of them.

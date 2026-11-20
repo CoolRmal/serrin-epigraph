@@ -3,12 +3,12 @@ version: "v0.4"
 project:
   name: "Serrin epigraph monotonicity and rigidity"
   description: >-
-    Work in progress toward three user-supplied statements: automatic vertical
-    monotonicity under a lower subexponential squared-mass condition, rigidity
-    through dimension eight, and higher-dimensional rigidity under either
-    one-sided linear graph bound. The original general-reaction hypotheses are
-    retained. Strict vertical monotonicity is proved. The two rigidity proofs
-    are incomplete, and their cited references do not cover the full hypotheses.
+    Three user-supplied statements: automatic vertical monotonicity under a lower
+    subexponential squared-mass condition, rigidity through dimension eight, and
+    higher-dimensional rigidity under either one-sided linear graph bound. The
+    original general-reaction hypotheses are retained, with the restored reaction
+    assumptions for the two rigidity targets. All three statements are proved;
+    the cited references do not cover the full hypotheses.
   authors: []
   license: "Apache-2.0"
   responsible_maintainers: []
@@ -29,13 +29,13 @@ sources:
 
 status:
   scope: >-
-    Three statements have been transcribed. Strict vertical monotonicity is
-    proved with standard axioms only; two rigidity proofs remain open. The full
-    three-theorem Comparator and Palomar registration are not yet passed;
-    proof-development sorry counts exclude Challenge.
-  sorry_count: 2
+    Three statements have been transcribed and all three are proved with
+    standard axioms only. The sandboxed three-kernel Comparator (Lean, NanoDa,
+    con-ron) accepted all three in CI on commit d057a0d. Palomar registration
+    is not claimed; proof-development sorry counts exclude Challenge.
+  sorry_count: 0
   sorry_in_definitions: 0
-  axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
   main_results:
     - declaration: "SerrinEpigraph.verticalDerivative_pos"
       file: "SerrinEpigraph/Main.lean"
@@ -44,13 +44,13 @@ status:
       comparator_config: "comparator.json"
     - declaration: "SerrinEpigraph.rigidity_of_dimension_le_eight"
       file: "SerrinEpigraph/Main.lean"
-      sorry_count: 1
-      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "comparator.json"
     - declaration: "SerrinEpigraph.rigidity_of_oneSidedLinearBound"
       file: "SerrinEpigraph/Main.lean"
-      sorry_count: 1
-      axioms: ["propext", "Classical.choice", "Quot.sound", "sorryAx"]
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "comparator.json"
 
 automation:
@@ -60,6 +60,11 @@ automation:
       framework: "Codex"
       tool_setup: "Lean LSP, local Lean/Lake, Mathlib search, independent agent review."
       prompting_notes: "Create a public Mathlib-dependent project, prove all three image statements, pass Comparator, and register on Palomar."
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: "Local Lean/Lake, grep-based Mathlib search, parallel subagents and workflows with adversarial review of proof plans."
+      prompting_notes: "Finish the formalization of the three Challenge theorems so that Comparator passes, working in the local checkout and pushing verified commits."
   notes: "No human authorship or responsible-maintainer attestation has been inferred."
 
 fidelity:
@@ -70,6 +75,6 @@ fidelity:
     assumptions or pre-existing monotonicity have been introduced.
 
 review:
-  status: "Statement review completed; monotonicity proved; rigidity proofs incomplete"
+  status: "Statement review completed; all three targets proved"
   reviewers: []
-  notes: "See docs/statement-audit.md. The monotonicity proof uses only standard axioms; no registry review is claimed."
+  notes: "See docs/statement-audit.md and docs/verification.md. All three proofs use only standard axioms; no registry review and no independent human mathematical review is claimed."

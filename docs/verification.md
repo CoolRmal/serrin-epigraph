@@ -1,5 +1,45 @@
 # Verification record
 
+## All three targets proved; three-kernel Comparator accepted
+
+Commit `d057a0d` closes the last proof hole of `RigidityReduction.lean`. The flux
+identification HA4.1, in its vertically integrated form, is proved by a
+phase-primitive calibration in the eleven modules from `PhaseCalibrationDefect.lean`
+through `AlignedFluxCalibrationDensity.lean`. The calibration defect
+`e - √(2W(v)) ∂ₜv` is nonnegative and its integral over the unit slab tends to zero.
+The flux then differs from the horizontal derivative of the phase primitive by a
+tilt-controlled error. On good columns the phase primitive is within `C W(v)` of the
+interface constant times the indicator above the level height. Earlier commits of the
+same session prove the level cone condition and the aligned level structure (D), the
+height compactness (A), the centers and weighted height moments (B), and the planar
+Simons case. They also restrict the anchor of `verticalGoodSet` to height below one,
+because anchors at unbounded heights are not controlled by the planar layer
+convergence.
+
+- `lake build Solution Challenge +SerrinEpigraph` passed locally (4304 jobs). The only
+  `sorry` warnings are the three specification holes of `Challenge.lean`; no file under
+  `SerrinEpigraph/` contains `sorry`.
+- `python3 scripts/check-proof-status.py` reports PASS for
+  `SerrinEpigraph.verticalDerivative_pos`, `SerrinEpigraph.rigidity_of_dimension_le_eight`
+  and `SerrinEpigraph.rigidity_of_oneSidedLinearBound`. Each depends only on `propext`,
+  `Classical.choice` and `Quot.sound`.
+- `./scripts/verify-comparator.sh --preliminary` (macOS, sandbox disabled, not a Palomar
+  report) accepted the three statements with con-ron (67192 declarations), NanoDa and
+  the Lean default kernel.
+- CI run 44746773713 on `d057a0d` passed all of its jobs:
+  - the build;
+  - the proof-hole and axiom rejection step;
+  - the sandboxed three-theorem Comparator job, where con-ron, NanoDa and the Lean
+    kernel each accept the solution ("Your solution is okay!");
+  - the separate monotonicity-only Comparator job.
+
+  The manual Palomar preflight jobs were not run, and no Palomar registration is
+  claimed.
+
+The hypothesis `9 ≤ m + 1` of `rigidity_of_oneSidedLinearBound` is unused, and the linter
+reports it. The one-sided argument works in every dimension; the bound only delimits the
+case covered by the source statement.
+
 ## Exact perimeter mass and exclusion of vertical cylinders
 
 The five modules from `RecoveryEnergyUpper.lean` through the energy/perimeter
