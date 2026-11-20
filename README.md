@@ -1,8 +1,10 @@
 # Serrin epigraph monotonicity and rigidity
 
-A Lean 4 project depending on Mathlib, targeting the three statements in the
-[source images](docs/source) together with the original conversation and notes.
-The [restored reaction assumptions](docs/scope-correction.md) apply to both rigidity targets.
+A Lean 4 project depending on Mathlib that proves the three statements of the author's
+unpublished notes, reproduced as [images](docs/source). The
+[restored reaction assumptions](docs/scope-correction.md), taken from the same notes and the
+original conversation, apply to both rigidity targets. The two rigidity theorems adapt a
+theorem of Beuvin and Farina; see [sources and related work](#sources-and-related-work).
 
 **Lean status: all three theorems proved.** `SerrinEpigraph.verticalDerivative_pos`,
 `SerrinEpigraph.rigidity_of_dimension_le_eight` and
@@ -13,7 +15,7 @@ proof holes (the three `sorry`s in `Challenge.lean` are the specification holes)
 The sandboxed Linux Comparator in CI accepted all three statements with the Lean, NanoDa
 and con-ron kernels on commit `d057a0d`
 ([run 44746773713](https://github.com/CoolRmal/serrin-epigraph/actions/runs/44746773713));
-see the [verification record](docs/verification.md). No Palomar registration is claimed.
+see the [verification record](docs/verification.md).
 
 The [detailed mathematical proofs of both rigidity theorems](docs/rigidity-proof/theorems.md)
 and [formalization execution plan](docs/rigidity-proof/formalization-plan.md) are the
@@ -139,6 +141,38 @@ $$
 The reaction assumptions were restored after consulting the original conversation
 and project notes. See the [scope correction](docs/scope-correction.md).
 The rigidity targets do not classify arbitrary reactions outside that source setting.
+The proof of the third theorem does not use its dimension restriction: under a one-sided
+linear bound the argument works in every dimension.
+
+## Sources and related work
+
+The three statements come from the author's unpublished notes. The vertical monotonicity
+theorem is the author's own. The two rigidity theorems adapt published results:
+
+- N. Beuvin and A. Farina, *Serrin's overdetermined problems on epigraphs*,
+  [arXiv:2502.04812](https://arxiv.org/abs/2502.04812). Their Theorem 2.1 proves the same
+  rigidity conclusion for **vertically monotone** solutions with a specified Allen–Cahn type
+  nonlinearity: in dimension at most eight without further conditions, and in dimension at
+  least nine under a global linear lower or upper bound of the graph. The second and third
+  theorems here replace the monotonicity hypothesis by the first theorem, for the reaction
+  class above. The Lean proof follows the route of their proof: a blow-down to a
+  perimeter-minimizing cone, followed by the flatness argument of Wang and Wei.
+- K. Wang and J. Wei, *On Serrin's overdetermined problem and a conjecture of Berestycki,
+  Caffarelli and Nirenberg*, [arXiv:1502.04680](https://arxiv.org/abs/1502.04680). Their
+  Theorem 1.4 proves half-space rigidity in dimension at most eight for vertically monotone
+  solutions under standing assumptions W1–W5, which the reaction class above satisfies
+  ([check](docs/rigidity-proof/low-dimensional.md)).
+- K. Wang, *A new proof of Savin's theorem on Allen-Cahn equations*,
+  [arXiv:1401.6480](https://arxiv.org/abs/1401.6480). The tilt-excess decay of the Lean proof
+  follows this method, re-derived for the one-phase problem used here.
+- M. del Pino, F. Pacard and J. Wei, *Serrin's overdetermined problem and constant mean
+  curvature surfaces*, Duke Math. J. 164 (2015), [arXiv:1310.4528](https://arxiv.org/abs/1310.4528).
+  They construct epigraphs in dimension at least nine that are not half-spaces and carry
+  solutions of the overdetermined problem, so the third theorem needs a hypothesis on the graph.
+
+None of these results is assumed in Lean: every step is proved from Mathlib. Novelty of the
+statements has not been established by a literature search. A GitHub search (November 2026)
+found no other Lean formalization of these results.
 
 ## Layout and verification
 
@@ -175,10 +209,12 @@ configuration.
 ## Reproducibility and attribution
 
 Lean is pinned to `v4.35.0-rc2`; Mathlib and transitive dependencies are locked in
-`lake-manifest.json`. The user-supplied images are the source of the three claims.
-No authorship of the images is inferred. Codex agents assisted with transcription,
-implementation, and review; Claude Code agents (Claude Opus 5.5) completed the two rigidity
-formalizations. No independent human mathematical review is claimed.
+`lake-manifest.json`. Yongxi (Aaron) Lin is the author of the three statements and the
+responsible maintainer; the images in `docs/source` reproduce the author's notes. AI agents
+produced most of the development under the author's direction: Codex agents worked on the
+transcription, implementation and review, and Claude Code agents (Claude Opus 5.5) completed
+the two rigidity formalizations. The author checked that `Challenge.lean` states the intended
+results. No independent human review of the proofs is claimed.
 
 Code is licensed under Apache-2.0. The supplied source images retain their
 original attribution and rights; the code license does not assert ownership of them.
