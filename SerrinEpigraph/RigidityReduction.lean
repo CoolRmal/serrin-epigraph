@@ -19,6 +19,10 @@ public import SerrinEpigraph.MinimalGraphRegularity
 public import SerrinEpigraph.AlignedHeightDecomposition
 public import SerrinEpigraph.WeakGradientConvergence
 public import SerrinEpigraph.PlanarMinimizingCones
+public import SerrinEpigraph.AlignedHeightCompactness
+public import SerrinEpigraph.AlignedHeightMoments
+public import SerrinEpigraph.AlignedLevelStructure
+public import SerrinEpigraph.AlignedFluxVertical
 
 /-!
 # Reduction of the two rigidity targets to the remaining open statements
@@ -44,20 +48,25 @@ This module isolates the remaining mathematical content of the two rigidity theo
   `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
 * `RigidityHypotheses.hasCylinderTiltDecay_of_sharp_energy` (blueprint
   `harmonic-approximation.md` HA0–HA11; proved in `DiffuseTiltDecay`, `DiffuseHarmonicApproximation`,
-  `DiffusePlanarAlignment`, `DiffuseNormalKinetic` and `AlignedHarmonicLayers` from the open
-  obligation `RigidityHypotheses.exists_alignedHeightInputs`, with the Sobolev lemma
+  `DiffusePlanarAlignment`, `DiffuseNormalKinetic` and `AlignedHarmonicLayers` from the aligned
+  height inputs `RigidityHypotheses.exists_alignedHeightInputs`, with the Sobolev lemma
   `weakGradientLimit` from `WeakGradientConvergence`): under the all-center sharp
   energy bound, the
-  rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. HA12
+  rescaled cylinder tilt at free-boundary centers decays by the HA0 factor. The aligned height
+  inputs are assembled for one explicit parameter choice from the level structure (D)
+  (`AlignedLevelStructure`), the height compactness (A) (`AlignedHeightCompactness`), the
+  height moments (B) (`AlignedHeightMoments`, from (C)) and the flux identification (C), which
+  `AlignedFluxVertical` reduces to its vertically integrated form, the open obligation
+  `RigidityHypotheses.hasAlignedVerticalFluxIdentification`. HA12
   (`CylinderTiltDecay`) turns this into ball-tilt improvement, and `CoarseConeAssembly`
   (sharp density, compactness, kinetic bounds, iteration, common normal and DS1) then gives
   the uniform boundary coarse cone from one half-space blow-down limit
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
 The reductions proved here are complete. The only remaining proof hole is
-`RigidityHypotheses.exists_alignedHeightInputs` (the level-set height data HA2–HA3, HA4.1 and
-HA6.1 of the tilt-excess decay); every other named obligation above is proved with only the
-standard axioms.
+`RigidityHypotheses.hasAlignedVerticalFluxIdentification` (the vertically integrated flux
+identification HA4.1 of the tilt-excess decay, for fixed layer parameters); every other named
+obligation above is proved with only the standard axioms.
 -/
 
 @[expose] public section
@@ -132,10 +141,30 @@ theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight {m : �
   IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower
     (fun _ hT' ↦ hT'.ae_eq_positiveHalfspace_of_le_seven (by omega)) hE hinv
 
-/-- **Open obligation (aligned height inputs, blueprint HA2–HA3, HA4.1, HA6.1, HA9–HA10).** For
-suitable layer parameters, along aligned HA11 contradiction sequences the normalized level-set
-heights are compact (A), carry the weighted height moments (B) and identify the horizontal flux
-(C); see `AlignedHeightDecomposition`. -/
+/-- **Open obligation (vertical flux identification, blueprint HA4.1 with HA1, HA3, HA10,
+HA11).** For fixed layer parameters with `0 < s₁ < s₂ < 1 - b`, `0 < r₀ < 13/32`,
+`3/4 < ρ`, `0 < τ ≤ 1`, `ρ + τ + |r₀| < 2` and the level structure (D), along aligned HA11
+sequences the normalized horizontal flux tested against horizontal fields is asymptotically
+`-σ ∇f_j` (`HasAlignedVerticalFluxIdentification`, the vertically integrated form of (C)). -/
+theorem RigidityHypotheses.hasAlignedVerticalFluxIdentification
+    {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
+    (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
+    (hsharp : ∀ z : Space (m + 1), ∀ ρ : ℝ, 0 < ρ →
+      (∫ x in closedBall z ρ, phaseEnergyDensity f 0 (zeroExtension g u) x) ≤
+        phasePrimitive f 1 * volume.real (closedBall (0 : Space m) 1) * ρ ^ m)
+    {ℓ r₀ b ρ τ s₁ s₂ c K : ℝ} {L : ℝ≥0} (hℓ : 0 < ℓ) (hr₀ : 0 < r₀) (hr₀' : r₀ < 13 / 32)
+    (hb : 0 < b) (hs₁ : 0 < s₁) (hs₁₂ : s₁ < s₂) (hs₂ : s₂ < 1 - b) (hρ : 3 / 4 < ρ)
+    (hτ : 0 < τ) (hτ1 : τ ≤ 1) (hΛ : ρ + τ + |r₀| < 2) (hc : 0 < c) (hL : 0 < L)
+    (hD : HasAlignedLevelStructure g u ℓ r₀ b ρ τ s₁ s₂ L c) :
+    HasAlignedVerticalFluxIdentification g u (phasePrimitive f 1) ℓ r₀ b ρ τ s₁ s₂ L c K := by
+  sorry
+
+/-- **Aligned height inputs (blueprint HA2–HA3, HA4.1, HA6.1, HA9–HA10).** For the layer
+parameters `r₀ = 1/4`, `ρ = 1`, `τ = 1/2`, `L = 1`, levels `0 < s₁ < σ₀` and `s₂ = 1 - d`
+close to `1`, cut `b = d/2`, thresholds `ℓ, c` from the level structure (D) and the energy
+bound `K` of (A), along aligned HA11 sequences the normalized level-set heights are compact
+(A), carry the weighted height moments (B) and identify the horizontal flux (C); see
+`AlignedHeightDecomposition`. -/
 theorem RigidityHypotheses.exists_alignedHeightInputs
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)
@@ -146,7 +175,36 @@ theorem RigidityHypotheses.exists_alignedHeightInputs
       HasAlignedHeightCompactness g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
       HasAlignedHeightMoments g u ℓ r₀ b ρ τ s₁ s₂ L c K ∧
       HasAlignedFluxIdentification g u (phasePrimitive f 1) ℓ r₀ b ρ τ s₁ s₂ L c K := by
-  sorry
+  obtain ⟨b₅, σ₀, hb₅, hσ₀, hB⟩ := hr.hasAlignedHeightMoments_of_fluxIdentification h hsharp
+  obtain ⟨s₁, hs₁, hs₁σ, hs₁h⟩ : ∃ s₁ : ℝ, 0 < s₁ ∧ s₁ < σ₀ ∧ s₁ < 1 / 2 := by
+    have hmin : 0 < min σ₀ (1 / 2) := lt_min hσ₀ (by norm_num)
+    refine ⟨min σ₀ (1 / 2) / 2, by positivity, ?_, ?_⟩
+    · linarith [min_le_left σ₀ (1 / 2)]
+    · linarith [min_le_right σ₀ (1 / 2)]
+  obtain ⟨d, hd, hdb₅, hds₁⟩ : ∃ d : ℝ, 0 < d ∧ d ≤ b₅ / 2 ∧ d ≤ (1 - s₁) / 2 :=
+    ⟨min (b₅ / 2) ((1 - s₁) / 2), lt_min (by linarith) (by linarith), min_le_left _ _,
+      min_le_right _ _⟩
+  have hs₁₂ : s₁ < 1 - d := by linarith
+  have hs₂b : 1 - d < 1 - d / 2 := by linarith
+  have hb : 0 < d / 2 := by positivity
+  obtain ⟨ℓ, c, hℓ, hc, hD⟩ :=
+    hr.exists_hasAlignedLevelStructure h hsharp hs₁ hs₁₂.le hs₂b hb (L := 1) one_pos
+  have hDp := hD (1 / 4) 1 (1 / 2) (by norm_num) (by norm_num)
+  have hΛ : (1 : ℝ) + 1 / 2 + |(1 / 4 : ℝ)| < 2 := by
+    rw [abs_of_pos (by norm_num : (0 : ℝ) < 1 / 4)]
+    norm_num
+  have hC : HasAlignedFluxIdentification g u (phasePrimitive f 1) ℓ (1 / 4) (d / 2) 1 (1 / 2) s₁
+      (1 - d) 1 c (alignedHeightEnergyBound m ℓ 1 s₁ (1 - d) c 1) :=
+    hr.hasAlignedFluxIdentification_of_vertical h hsharp
+      (hr.hasAlignedVerticalFluxIdentification h hsharp hℓ (by norm_num) (by norm_num) hb hs₁
+        hs₁₂ hs₂b (by norm_num) (by norm_num) (by norm_num) hΛ hc one_pos hDp)
+  refine ⟨ℓ, 1 / 4, d / 2, 1, 1 / 2, s₁, 1 - d, c,
+    alignedHeightEnergyBound m ℓ 1 s₁ (1 - d) c 1, 1, by norm_num, ?_, ?_, hC⟩
+  · exact hr.hasAlignedHeightCompactness_of_levelStructure h hsharp hℓ hb.le (by linarith)
+      one_pos (by norm_num) hs₁ hs₁₂ (by linarith) hc hΛ le_rfl hDp
+  · exact hB ℓ (1 / 4) (d / 2) 1 (1 / 2) s₁ (1 - d) c _ 1 hℓ (by norm_num) (by norm_num) hb
+      (by linarith) (by norm_num) (by norm_num) (by norm_num) (by norm_num) hs₁ hs₁σ hs₁₂
+      (by linarith) (by linarith) hc hC
 
 /-- Harmonic layer data (blueprint HA2–HA4, HA6.1, HA10), assembled in
 `AlignedHeightDecomposition` from the aligned height inputs and weak gradient limits. -/
