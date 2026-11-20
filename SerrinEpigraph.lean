@@ -437,3 +437,7 @@ public import SerrinEpigraph.AlignedFluxVertical
 public import SerrinEpigraph.PlanarConeChord
 public import SerrinEpigraph.PlanarMinimizingCones
 public import SerrinEpigraph.AlignedCenterLimit
+public import SerrinEpigraph.InteriorGradientModulus
+public import SerrinEpigraph.MesoscopicLayerFlatness
+public import SerrinEpigraph.LevelConeCondition
+public import SerrinEpigraph.AlignedLevelStructure
