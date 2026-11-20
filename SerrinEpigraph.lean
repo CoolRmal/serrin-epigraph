@@ -425,3 +425,7 @@ public import SerrinEpigraph.DiffusePlanarAlignment
 public import SerrinEpigraph.DiffuseNormalKinetic
 public import SerrinEpigraph.MinimizerGraphChart
 public import SerrinEpigraph.AlignedHarmonicLayers
+public import SerrinEpigraph.HolderClasses
+public import SerrinEpigraph.LinearSchauder
+public import SerrinEpigraph.SchauderBootstrap
+public import SerrinEpigraph.MinimalGraphRegularity

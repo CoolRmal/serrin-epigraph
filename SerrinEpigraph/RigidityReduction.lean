@@ -15,6 +15,7 @@ public import SerrinEpigraph.EpsilonRegularityBridge
 public import SerrinEpigraph.DiffuseNormalKinetic
 public import SerrinEpigraph.MinimizerGraphChart
 public import SerrinEpigraph.AlignedHarmonicLayers
+public import SerrinEpigraph.MinimalGraphRegularity
 
 /-!
 # Reduction of the two rigidity targets to three geometric statements
@@ -70,13 +71,14 @@ persist under local `L¹` convergence of the minimizers. -/
 theorem singularSetUSCHyp : SingularSetUSCHyp :=
   singularSetUSCHyp_of_excess excessEpsilonRegularityHyp
 
-/-- **Open obligation (Schauder for the minimal surface equation).** A `C¹` weak solution of the
-minimal surface equation on a ball is smooth there. -/
+/-- Schauder for the minimal surface equation (`LinearSchauder`, `HolderClasses`,
+`SchauderBootstrap`, `MinimalGraphRegularity`): a `C¹` weak solution of the minimal surface
+equation on a ball is smooth there. -/
 theorem minimalSurface_contDiffOn_top (m : ℕ) (ρ : ℝ) (φ : Space m → ℝ) (hm : 0 < m)
     (hρ : 0 < ρ) (hφ : ContDiffOn ℝ 1 φ (ball 0 ρ))
     (hweak : IsWeakSolution minimalSurfaceFlux φ (ball 0 ρ)) :
-    ContDiffOn ℝ (⊤ : ℕ∞) φ (ball 0 ρ) := by
-  sorry
+    ContDiffOn ℝ (⊤ : ℕ∞) φ (ball 0 ρ) :=
+  minimalSurface_contDiffOn_top_proof m ρ φ hm hρ hφ hweak
 
 /-- Schauder smoothness: a `C¹` regular boundary point of a local perimeter minimizer has a
 smooth boundary chart (graph chart and weak minimal surface equation in
