@@ -18,6 +18,7 @@ public import SerrinEpigraph.AlignedHarmonicLayers
 public import SerrinEpigraph.MinimalGraphRegularity
 public import SerrinEpigraph.AlignedHeightDecomposition
 public import SerrinEpigraph.WeakGradientConvergence
+public import SerrinEpigraph.PlanarMinimizingCones
 
 /-!
 # Reduction of the two rigidity targets to the remaining open statements
@@ -36,7 +37,8 @@ This module isolates the remaining mathematical content of the two rigidity theo
   also proves `singularSetUSCHyp`.
 * `simonsHyp` (blueprint GR1–GR4 with Schauder smoothness): for `2 ≤ k ≤ 7`, a minimizing cone
   in `Space k` that is `C¹`-regular away from the origin is a half-space. `SimonsCone` proves it
-  for `3 ≤ k ≤ 7` from `c1RegularSmoothHyp`; the planar case `simonsHyp_two` is open.
+  for `3 ≤ k ≤ 7` from `c1RegularSmoothHyp`; the planar case `simonsHyp_two` is proved in
+  `PlanarMinimizingCones` by the chord argument (`PlanarConeChord`).
   From these two, `ConeClassificationInduction` proves GR16 (every minimizing cone in dimension
   at most seven is a half-space), and with GR5–GR6 (`ConeSplitting`) this gives
   `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight`.
@@ -52,10 +54,10 @@ This module isolates the remaining mathematical content of the two rigidity theo
   the uniform boundary coarse cone from one half-space blow-down limit
   (`RigidityHypotheses.exists_uniformBoundaryCoarseCone_of_halfspace_limit`).
 
-The reductions proved here are complete. The only remaining proof holes are `simonsHyp_two`
-(planar minimizing cones are half-planes), `RigidityHypotheses.exists_alignedHeightInputs` (the
-level-set height data HA2–HA3, HA4.1 and HA6.1 of the tilt-excess decay); every other
-named obligation above is proved with only the standard axioms.
+The reductions proved here are complete. The only remaining proof hole is
+`RigidityHypotheses.exists_alignedHeightInputs` (the level-set height data HA2–HA3, HA4.1 and
+HA6.1 of the tilt-excess decay); every other named obligation above is proved with only the
+standard axioms.
 -/
 
 @[expose] public section
@@ -92,10 +94,10 @@ smooth boundary chart (graph chart and weak minimal surface equation in
 theorem c1RegularSmoothHyp : C1RegularSmoothHyp :=
   c1RegularSmoothHyp_of_minimalSurface minimalSurface_contDiffOn_top
 
-/-- **Open obligation (planar case of GR4).** A minimizing cone in the plane whose boundary
-points other than the origin are `C¹` regular is a half-plane. -/
-theorem simonsHyp_two : SimonsHyp 2 := by
-  sorry
+/-- **Planar case of GR4.** A minimizing cone in the plane whose boundary points other than the
+origin are `C¹` regular is a half-plane (the chord argument, `PlanarMinimizingCones`). -/
+theorem simonsHyp_two : SimonsHyp 2 :=
+  Planar.simonsHyp_two_planar
 
 /-- Simons (blueprint GR1–GR4): for `2 ≤ k ≤ 7`, a minimizing cone in `Space k` whose boundary
 points other than the origin are `C¹` regular is a half-space (proved in `SimonsCone` for

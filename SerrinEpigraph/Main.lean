@@ -8,8 +8,8 @@ public import SerrinEpigraph.RigidityReduction
 # The three source targets
 
 The monotonicity theorem is proved. The two rigidity theorems are reduced, in
-`SerrinEpigraph.RigidityReduction`, to two remaining open statements (planar minimizing cones,
-and the level-set height data of the tilt-excess decay); they are not yet fully proved.
+`SerrinEpigraph.RigidityReduction`, to one remaining open statement (the level-set height data
+of the tilt-excess decay); they are not yet fully proved.
 Their reaction and boundedness assumptions include the source conversation and notes;
 see `docs/scope-correction.md`.
 -/

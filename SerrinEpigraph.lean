@@ -433,3 +433,6 @@ public import SerrinEpigraph.AlignedHeightDecomposition
 public import SerrinEpigraph.WeakGradientConvergence
 public import SerrinEpigraph.AlignedFluxOffPlane
 public import SerrinEpigraph.AlignedHeightCompactness
+public import SerrinEpigraph.AlignedFluxVertical
+public import SerrinEpigraph.PlanarConeChord
+public import SerrinEpigraph.PlanarMinimizingCones
