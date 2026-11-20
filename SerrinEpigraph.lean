@@ -423,3 +423,4 @@ public import SerrinEpigraph.DiffuseTiltDecay
 public import SerrinEpigraph.DiffuseHarmonicApproximation
 public import SerrinEpigraph.DiffusePlanarAlignment
 public import SerrinEpigraph.DiffuseNormalKinetic
+public import SerrinEpigraph.MinimizerGraphChart
