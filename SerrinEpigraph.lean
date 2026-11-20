@@ -436,3 +436,4 @@ public import SerrinEpigraph.AlignedHeightCompactness
 public import SerrinEpigraph.AlignedFluxVertical
 public import SerrinEpigraph.PlanarConeChord
 public import SerrinEpigraph.PlanarMinimizingCones
+public import SerrinEpigraph.AlignedCenterLimit
