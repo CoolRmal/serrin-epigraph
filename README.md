@@ -148,8 +148,11 @@ linear bound the argument works in every dimension.
 
 ChatGPT drafted the three statements in an unpublished conversation directed by the author;
 `docs/source` reproduces the answers. The author selected them for formalization and is
-responsible for them. As the drafted statements themselves indicate, the two rigidity theorems
-adapt published results:
+responsible for them. The project's research reports, which are not in this repository, were
+written by AI systems under the author's direction. They contain an informal proof of the
+monotonicity theorem by quotient moments, the method the Lean proof also uses, and the project
+note that records the reaction class ([comparison](docs/rigidity-gap.md)). As the drafted
+statements themselves indicate, the two rigidity theorems adapt published results:
 
 - N. Beuvin and A. Farina, *Serrin's overdetermined problems on epigraphs*,
   [arXiv:2502.04812](https://arxiv.org/abs/2502.04812). Their Theorem 2.1 proves the same
@@ -213,7 +216,8 @@ configuration.
 Lean is pinned to `v4.35.0-rc2`; Mathlib and transitive dependencies are locked in
 `lake-manifest.json`. Yongxi (Aaron) Lin is the human author and responsible maintainer.
 ChatGPT drafted the three statements in a conversation the author directed, and the images in
-`docs/source` reproduce those answers. AI agents
+`docs/source` reproduce those answers. AI systems also wrote the project's research reports,
+including an informal proof of the monotonicity theorem, under the author's direction. AI agents
 produced most of the development under the author's direction: Codex agents worked on the
 transcription, implementation and review, and Claude Code agents (Claude Opus 5.5) completed
 the two rigidity formalizations. The author checked that `Challenge.lean` states the intended

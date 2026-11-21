@@ -24,6 +24,10 @@ in a conversation directed by the author. `formalization.yaml` credits ChatGPT a
 to that source and as an automation method, and the README and the scope correction say the
 same. No Lean file changes.
 
+A last metadata commit adds that the project's research reports, outside this repository,
+were written by AI systems under the author's direction, including an informal proof of the
+monotonicity theorem by quotient moments.
+
 ## All three targets proved; three-kernel Comparator accepted
 
 Commit `d057a0d` closes the last proof hole of `RigidityReduction.lean`. The flux

@@ -13,8 +13,8 @@ $$
 f(s)=s-s^p,\qquad p>1,\qquad 0<u<1.
 $$
 
-The project note `reports/一般非线性的高阶商矩与Serrin刚性.md`, section 2,
-records the more general normalized conditions
+The project note `reports/一般非线性的高阶商矩与Serrin刚性.md`, section 2, written by AI systems
+under the author's direction, records the more general normalized conditions
 
 $$
 f\in C^1([0,1]),\quad f(s)>0\ (0<s<1),\quad

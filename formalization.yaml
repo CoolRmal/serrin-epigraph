@@ -39,6 +39,8 @@ sources:
     contributors:
       - name: "ChatGPT (OpenAI)"
         role: "Drafted the three statements, including the two rigidity corollaries and the reasoning and citations given for them, in a conversation directed by the author."
+      - name: "AI research assistants (not individually identified)"
+        role: "Wrote the project note and research reports behind the statements, including an informal quotient-moment proof of the monotonicity theorem, under the author's direction."
     location: "docs/source"
     relationship: "formalizes"
     note: >-
@@ -47,7 +49,11 @@ sources:
       relevant answers as images. The author selected the statements for
       formalization and is responsible for them. The reaction assumptions of
       the two rigidity theorems come from the same conversation and a project
-      note, as recorded in docs/scope-correction.md. The novelty of the
+      note, as recorded in docs/scope-correction.md. That note and the related
+      research reports, which are not in this repository, were written by AI
+      systems under the author's direction; the reports contain an informal
+      proof of the monotonicity theorem by quotient moments, the method the
+      Lean proof also uses (docs/rigidity-gap.md). The novelty of the
       statements has not been established by a literature search.
   - title: "Serrin's overdetermined problems on epigraphs"
     type: "paper"
@@ -126,6 +132,11 @@ automation:
       framework: "ChatGPT"
       tool_setup: "ChatGPT conversation titled “查找近期相关文献”, directed by the author."
       prompting_notes: "Drafted the three statements formalized here, including the two rigidity corollaries and their citations of Wang-Wei and Beuvin-Farina; docs/source reproduces the answers."
+    - method: "other"
+      models: []
+      framework: "AI research assistants (not individually identified)"
+      tool_setup: "Research reports and notes in the author's workspace, outside this repository, written at the author's direction."
+      prompting_notes: "Wrote the project note recording the reaction class of the rigidity theorems and the research reports, including an informal quotient-moment proof of the monotonicity theorem."
     - method: "agent"
       models: []
       framework: "Codex"
@@ -139,9 +150,11 @@ automation:
   notes: >-
     Yongxi (Aaron) Lin is the human author and responsible maintainer. ChatGPT
     drafted the three statements in a conversation the author directed
-    (docs/source). AI agents (Codex, then Claude Code) produced most of the
-    Lean development, the informal blueprint in docs/rigidity-proof and the
-    documentation, under the author's direction.
+    (docs/source). AI systems, also directed by the author, wrote the
+    project's research reports outside this repository, including an informal
+    proof of the monotonicity theorem. AI agents (Codex, then Claude Code)
+    produced most of the Lean development, the informal blueprint in
+    docs/rigidity-proof and the documentation, under the author's direction.
 
 fidelity:
   divergences: >-

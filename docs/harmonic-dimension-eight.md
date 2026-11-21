@@ -1,7 +1,7 @@
 # Harmonic rigidity in ambient dimension eight: source audit
 
 > Historical audit of the broader statement inferred from the cropped images.
-> The user has corrected that interpretation: reaction and boundedness conditions
+> The author has corrected that interpretation: reaction and boundedness conditions
 > in the original conversation also apply. See [scope correction](scope-correction.md).
 > The exclusions discussed below are not blockers for the corrected targets.
 
