@@ -146,7 +146,9 @@ review:
   notes: >-
     The author checked that Challenge.lean states the intended results,
     including the reaction assumptions restored in docs/scope-correction.md.
-    AI agents audited statement fidelity (docs/statement-audit.md). The proofs
-    are checked mechanically: the sandboxed three-kernel Comparator (Lean,
-    NanoDa, con-ron) accepted them. No independent human review of the proofs
-    is claimed.
+    An earlier AI audit, docs/statement-audit.md, checked the common
+    hypotheses and the shared definitions against the source images before
+    that correction; it is kept as a historical record and does not cover
+    RigidityHypotheses. The proofs are checked mechanically: the sandboxed
+    three-kernel Comparator (Lean, NanoDa, con-ron) accepted them. No
+    independent human review of the proofs is claimed.

@@ -1,6 +1,6 @@
 # 单侧线性界：锥约束、柱体排除与高维分类接口
 
-本文展开单侧线性界的传递、柱体排除和任意维有向极小锥分类，并在第 6 节接入其余各章已证明的平坦性与平移比较链条。几何基础来自 [BV 基础章](bv-minimizers.md) 和 [几何正则性章](gmt-regularity.md)。这是一份自然语言证明；对应 Lean 主定理仍须完成实现与内核验收。
+本文展开单侧线性界的传递、柱体排除和任意维有向极小锥分类，并在第 6 节接入其余各章已证明的平坦性与平移比较链条。几何基础来自 [BV 基础章](bv-minimizers.md) 和 [几何正则性章](gmt-regularity.md)。这是一份自然语言证明；对应的 Lean 主定理 `rigidity_of_oneSidedLinearBound` 已在提交 `d057a0d` 中证明，并通过三核 Comparator。
 
 ## 1. 约定与输入
 
@@ -383,7 +383,7 @@ H7 的结论先涉及放大极限。返回原解使用已经逐章展开的链�
 
 [Beuvin–Farina, Theorem 2.1](https://arxiv.org/html/2502.04812v2#S2) 是相应单侧图形结论的文献定位，允许本文的一阶图形与闭包一阶解正则性。反应项在一以上的辅助延拓已由 [低维章 L0](low-dimensional.md) 逐项核验。本项目采用上段各章的证明，不以调用该文主定理代替分类和返回原解的环节。
 
-自然语言结论因此为原目标的仿射一维性。Lean 中仍须分别实现这条链的各接口，最终输出 `IsAffineOneDimensional`；极限相位分类与原解识别仍是不同的形式化模块。
+自然语言结论因此为原目标的仿射一维性。Lean 中这条链的各接口已分别实现，最终输出 `IsAffineOneDimensional`；极限相位分类与原解识别是不同的形式化模块。
 
 ## 7. 高维分支的形式化顺序及验收
 
@@ -393,9 +393,9 @@ H7 的结论先涉及放大极限。返回原解使用已经逐章展开的链�
 | H2 | 全局下线性界、同一局部积分极限 | 下锥约束，几乎处处 | 已有 `OneSidedPhaseLimit.lean`；保持同一个相位 |
 | H3 | 全局上线性界、H1、同一极限 | 上锥包含，几乎处处 | 已有相关结果；不得仅用域的包含代替解的收敛 |
 | H4–H6 | 锥约束、平移不变 | 柱体排除 | `NoncylindricalPhase.lean` 已证明 |
-| G | BV、GR 及第 5A 节 A–E | 半空间或柱体 | 自然语言证明已展开；逐接口实现 Lean |
-| H7 | G、H6 | 同一相位为半空间 | 本章已给出拼接；Lean 待实现 |
-| F | 相位半空间、原解极小性及反应条件 | 原解一维，原域半空间 | 第 6 节所列跨章链条已证明；Lean 待实现 |
-| T3 | H7、F、仿射坐标换算 | `rigidity_of_oneSidedLinearBound` | 自然语言证明已接合；主定理尚未通过 Lean 验收 |
+| G | BV、GR 及第 5A 节 A–E | 半空间或柱体 | Lean：`IsDirectedMinimizingCone.halfspace_or_verticalInvariant` |
+| H7 | G、H6 | 同一相位为半空间 | Lean：由 G 与 `not_vertical_invariant_of_nontrivial_oneSided_cone` 在 `RigidityReduction.lean` 中拼接 |
+| F | 相位半空间、原解极小性及反应条件 | 原解一维，原域半空间 | Lean：`RigidityHypotheses.isAffineOneDimensional_of_halfspace_limit` |
+| T3 | H7、F、仿射坐标换算 | `rigidity_of_oneSidedLinearBound` | Lean 已证明，三核 Comparator 通过（提交 `d057a0d`） |
 
 形式化验收仍须分别检查：原假设未被加强；所有尺度与相位相同；不引入额外的光滑极限假设；各跨章结论均实现为证明体；最终主定理无 `sorry` 且公理审计只含标准三公理。

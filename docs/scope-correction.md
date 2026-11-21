@@ -31,10 +31,11 @@ The earlier investigations of the zero reaction, flat equilibria and unbounded
 solutions concern a broader problem that was mistakenly substituted for this
 one. They are research notes, not blockers for the corrected task.
 
-## Remaining work
+## Status
 
-The monotonicity proof is complete. The two rigidity proofs still contain proof
-holes. Restoring assumptions does not formalize the classification theorems:
-the analytic and geometric arguments underlying the cited Wang–Wei and
-Beuvin–Farina results still need Lean proofs. No external theorem is admitted
-as an axiom. Full Comparator acceptance and Palomar registration remain required.
+All three targets, including both rigidity theorems under these restored
+assumptions, are proved in Lean with only the standard axioms (commit `d057a0d`),
+and the sandboxed three-kernel Comparator accepted them. The development proves
+the analytic and geometric arguments it needs instead of citing the Wang–Wei or
+Beuvin–Farina theorems: no external theorem is admitted as an axiom. See the
+[verification record](verification.md).

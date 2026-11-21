@@ -1,5 +1,10 @@
 # An informal variational reduction under the exact hypotheses
 
+> **Historical note.** This argument was written before the rigidity theorems were proved in
+> Lean (commit `d057a0d`). Its remarks about what the project has or has not implemented
+> describe the project at the time of writing; see the [README](../README.md) and the
+> [verification record](verification.md) for the current state.
+
 This is a mathematical argument, **not a Lean proof**. It uses the proved
 strict vertical monotonicity and reaction-sign reduction, followed by
 classical Harnack inequalities, interior elliptic compactness, positive

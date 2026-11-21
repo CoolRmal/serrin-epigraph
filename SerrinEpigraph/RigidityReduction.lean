@@ -26,9 +26,9 @@ public import SerrinEpigraph.AlignedFluxVertical
 public import SerrinEpigraph.AlignedFluxCalibrationDensity
 
 /-!
-# Reduction of the two rigidity targets to the remaining open statements
+# Assembly of the two rigidity theorems
 
-This module isolates the remaining mathematical content of the two rigidity theorems.
+This module assembles the two rigidity theorems from the results listed below.
 
 * `IsDirectedMinimizingCone.halfspace_or_verticalInvariant` (blueprint `one-sided.md` §5A,
   `low-dimensional.md` G0–G2): a nontrivial, conical, vertically monotone local perimeter
@@ -300,7 +300,9 @@ theorem RigidityHypotheses.isAffineOneDimensional_of_halfspace_limit
     (tendsto_local_indicator_of_ae_eq hEH hlocal)
   exact hr.isAffineOneDimensional_of_uniformBoundaryCoarseCone h he' hcone
 
-/-- Rigidity in ambient dimension at most eight, reduced to the three open obligations. -/
+/-- Rigidity in ambient dimension at most eight. The blow-down cone is a half-space or vertically
+invariant; in the second case the low-dimensional cone classification makes it a half-space too.
+The half-space flatness argument then concludes. -/
 theorem RigidityHypotheses.isAffineOneDimensional_of_le_eight
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ) (hdim : m + 1 ≤ 8) :
@@ -313,7 +315,9 @@ theorem RigidityHypotheses.isAffineOneDimensional_of_le_eight
   obtain ⟨e, he, hEH⟩ := hhalf
   exact hr.isAffineOneDimensional_of_halfspace_limit h hR hRt hlocal he hEH
 
-/-- Rigidity under a one-sided linear graph bound, reduced to the open obligations. -/
+/-- Rigidity under a one-sided linear graph bound, in every dimension. The bound excludes a
+vertically invariant blow-down cone, so the cone is a half-space, and the half-space flatness
+argument concludes. -/
 theorem RigidityHypotheses.isAffineOneDimensional_of_oneSidedLinearBound
     {m : ℕ} {g : Space m → ℝ} {u : Space (m + 1) → ℝ} {f : ℝ → ℝ} {κ : ℝ}
     (hr : RigidityHypotheses g u f) (h : Hypotheses g u f κ)

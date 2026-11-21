@@ -1,6 +1,12 @@
 # Proof obligations
 
-## Current remaining proof obligations
+> **Status (2026-11-20):** every obligation in this document has been discharged. All three
+> targets are proved with only the standard axioms (commit `d057a0d`) and accepted by the
+> sandboxed three-kernel Comparator; see the [verification record](verification.md). This file
+> is kept as the historical development log: its statements about open obligations, proof
+> holes and pending Comparator or Palomar steps describe the project before that commit.
+
+## Proof obligations before the rigidity proofs (historical)
 
 Both Main rigidity holes remain substantial mathematical dependencies, not
 pending compiler repairs. The source note invokes Wang–Wei and related geometric

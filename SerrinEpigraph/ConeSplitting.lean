@@ -909,7 +909,7 @@ theorem IsMinimizingCone.ae_eq_halfspace_of_vertical_invariant_of_lower {k : ℕ
   exact ⟨point e' 0, by rw [norm_point_zero, he'],
     hae.trans (preimage_horizontal_ae_eq_positiveHalfspace hT'e)⟩
 
-/-- The open obligation `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight` reduces,
+/-- The statement `IsDirectedMinimizingCone.halfspace_of_verticalInvariant_le_eight` reduces,
 via GR6, to the classification of minimizing cones one dimension lower. -/
 theorem IsDirectedMinimizingCone.halfspace_of_verticalInvariant_of_lower {m : ℕ}
     (hlow : ∀ T' : Set (Space m), IsMinimizingCone T' →

@@ -113,4 +113,4 @@ $$U(x+a)\ge U(x)\qquad(a\cdot e>0,\ x\in\mathbb R^n).$$
 
 ## 形式化边界
 
-原 Lean 签名保持不变。基础库入口、模块拆分、前驱和验收标准见 [执行计划](formalization-plan.md)。在新增证明进入 Lean 内核并通过完整 Comparator 之前，形式化状态仍是第一定理完成、两个刚性定理待完成；本文不改变这一事实。
+原 Lean 签名保持不变。基础库入口、模块拆分、前驱和验收标准见 [执行计划](formalization-plan.md)。新增证明已在提交 `d057a0d` 进入 Lean 内核并通过完整 Comparator：三个目标定理均已完成。

@@ -1,5 +1,22 @@
 # Verification record
 
+## Palomar preflight and status cleanup
+
+Commit `be17e83` records the author, maintainer, provenance and review status in
+`formalization.yaml`. Palomar's full mechanical preflight (the reusable PalomarSubmission
+workflow at `14aa8d6`, profile `palomar-standard-v1`) passed on that commit in
+[run 44820310654](https://github.com/CoolRmal/serrin-epigraph/actions/runs/44820310654):
+the Lean and NanoDa kernels accepted the three targets, and the con-ron replay accepted
+67192 declarations.
+
+The following commit changes only comments and documentation. The `Solution.lean` module
+documentation, two `RigidityReduction.lean` docstrings and its title, one `ConeSplitting.lean`
+docstring, and the status lines of the planning and blueprint documents had still described
+the rigidity theorems as unproved; they now agree with the completed proofs, and historical
+logs carry a dated note. No Lean statement or proof changes. `lake build Solution Challenge
++SerrinEpigraph` passed (4304 jobs) and `python3 scripts/check-proof-status.py` reports PASS
+for all three targets with only the standard axioms. No Palomar registration is claimed here.
+
 ## All three targets proved; three-kernel Comparator accepted
 
 Commit `d057a0d` closes the last proof hole of `RigidityReduction.lean`. The flux
