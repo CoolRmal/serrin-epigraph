@@ -16,6 +16,13 @@ the rigidity theorems as unproved; they now agree with the completed proofs, and
 logs carry a dated note. No Lean statement or proof changes. `lake build Solution Challenge
 +SerrinEpigraph` passed (4304 jobs) and `python3 scripts/check-proof-status.py` reports PASS
 for all three targets with only the standard axioms. No Palomar registration is claimed here.
+Palomar's full mechanical preflight also passed on that commit, `a2cfb54`
+([run 44881496981](https://github.com/CoolRmal/serrin-epigraph/actions/runs/44881496981)).
+
+A further documentation commit records how the statements were produced: ChatGPT drafted them
+in a conversation directed by the author. `formalization.yaml` credits ChatGPT as a contributor
+to that source and as an automation method, and the README and the scope correction say the
+same. No Lean file changes.
 
 ## All three targets proved; three-kernel Comparator accepted
 

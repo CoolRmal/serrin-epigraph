@@ -1,7 +1,8 @@
 # Restored reaction assumptions
 
-On 2026-11-13 the user corrected the interpretation of the cropped source images:
-the original conversation and project notes are part of the statement source.
+The source images in `docs/source` are cropped ChatGPT answers from a conversation directed by
+the author. On 2026-11-13 the author corrected their interpretation: the whole conversation and
+the project notes are part of the statement source.
 The previous claim that no boundedness or stable-equilibrium assumptions were
 intended was incorrect.
 

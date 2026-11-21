@@ -33,18 +33,22 @@ classification:
   msc2020: ["35J61", "35N25", "35B06", "35R35", "49Q05"]
 
 sources:
-  - title: "Epigraph monotonicity and rigidity statements (author's unpublished notes)"
+  - title: "Epigraph monotonicity and rigidity statements (unpublished ChatGPT conversation directed by the author)"
     type: "other"
     authors: ["Yongxi (Aaron) Lin"]
+    contributors:
+      - name: "ChatGPT (OpenAI)"
+        role: "Drafted the three statements, including the two rigidity corollaries and the reasoning and citations given for them, in a conversation directed by the author."
     location: "docs/source"
     relationship: "formalizes"
     note: >-
-      The author's unpublished notes state the three theorems. docs/source
-      reproduces them, and docs/scope-correction.md records the reaction
-      assumptions of the two rigidity theorems taken from the same notes. The
-      vertical monotonicity theorem is the author's own. Its novelty, and that
-      of the combined statements, has not been established by a literature
-      search.
+      ChatGPT drafted the three statements in an unpublished conversation that
+      the author directed, titled “查找近期相关文献”; docs/source reproduces the
+      relevant answers as images. The author selected the statements for
+      formalization and is responsible for them. The reaction assumptions of
+      the two rigidity theorems come from the same conversation and a project
+      note, as recorded in docs/scope-correction.md. The novelty of the
+      statements has not been established by a literature search.
   - title: "Serrin's overdetermined problems on epigraphs"
     type: "paper"
     authors: ["Nicolas Beuvin", "Alberto Farina"]
@@ -117,6 +121,11 @@ status:
 
 automation:
   methods:
+    - method: "other"
+      models: []
+      framework: "ChatGPT"
+      tool_setup: "ChatGPT conversation titled “查找近期相关文献”, directed by the author."
+      prompting_notes: "Drafted the three statements formalized here, including the two rigidity corollaries and their citations of Wang-Wei and Beuvin-Farina; docs/source reproduces the answers."
     - method: "agent"
       models: []
       framework: "Codex"
@@ -128,10 +137,11 @@ automation:
       tool_setup: "Local Lean/Lake, grep-based Mathlib search, parallel subagents and workflows with adversarial review of proof plans."
       prompting_notes: "Finish the formalization of the three Challenge theorems so that Comparator passes, working in the local checkout and pushing verified commits."
   notes: >-
-    Yongxi (Aaron) Lin is the human author and responsible maintainer. AI
-    agents (Codex, then Claude Code) produced most of the Lean development, the
-    informal blueprint in docs/rigidity-proof and the documentation, under the
-    author's direction.
+    Yongxi (Aaron) Lin is the human author and responsible maintainer. ChatGPT
+    drafted the three statements in a conversation the author directed
+    (docs/source). AI agents (Codex, then Claude Code) produced most of the
+    Lean development, the informal blueprint in docs/rigidity-proof and the
+    documentation, under the author's direction.
 
 fidelity:
   divergences: >-

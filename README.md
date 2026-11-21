@@ -1,9 +1,9 @@
 # Serrin epigraph monotonicity and rigidity
 
-A Lean 4 project depending on Mathlib that proves the three statements of the author's
-unpublished notes, reproduced as [images](docs/source). The
-[restored reaction assumptions](docs/scope-correction.md), taken from the same notes and the
-original conversation, apply to both rigidity targets. The two rigidity theorems adapt a
+A Lean 4 project depending on Mathlib that proves three statements drafted by ChatGPT in a
+conversation directed by the author, reproduced as [images](docs/source). The
+[restored reaction assumptions](docs/scope-correction.md), taken from the same conversation and
+a project note, apply to both rigidity targets. The two rigidity theorems adapt a
 theorem of Beuvin and Farina; see [sources and related work](#sources-and-related-work).
 
 **Lean status: all three theorems proved.** `SerrinEpigraph.verticalDerivative_pos`,
@@ -146,8 +146,10 @@ linear bound the argument works in every dimension.
 
 ## Sources and related work
 
-The three statements come from the author's unpublished notes. The vertical monotonicity
-theorem is the author's own. The two rigidity theorems adapt published results:
+ChatGPT drafted the three statements in an unpublished conversation directed by the author;
+`docs/source` reproduces the answers. The author selected them for formalization and is
+responsible for them. As the drafted statements themselves indicate, the two rigidity theorems
+adapt published results:
 
 - N. Beuvin and A. Farina, *Serrin's overdetermined problems on epigraphs*,
   [arXiv:2502.04812](https://arxiv.org/abs/2502.04812). Their Theorem 2.1 proves the same
@@ -209,12 +211,14 @@ configuration.
 ## Reproducibility and attribution
 
 Lean is pinned to `v4.35.0-rc2`; Mathlib and transitive dependencies are locked in
-`lake-manifest.json`. Yongxi (Aaron) Lin is the author of the three statements and the
-responsible maintainer; the images in `docs/source` reproduce the author's notes. AI agents
+`lake-manifest.json`. Yongxi (Aaron) Lin is the human author and responsible maintainer.
+ChatGPT drafted the three statements in a conversation the author directed, and the images in
+`docs/source` reproduce those answers. AI agents
 produced most of the development under the author's direction: Codex agents worked on the
 transcription, implementation and review, and Claude Code agents (Claude Opus 5.5) completed
 the two rigidity formalizations. The author checked that `Challenge.lean` states the intended
 results. No independent human review of the proofs is claimed.
 
-Code is licensed under Apache-2.0. The supplied source images retain their
-original attribution and rights; the code license does not assert ownership of them.
+Code is licensed under Apache-2.0. The images in `docs/source` reproduce ChatGPT answers from
+the author's conversation and are included as a provenance record; the code licence does not
+assert ownership of them.
