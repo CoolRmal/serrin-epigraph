@@ -104,7 +104,8 @@ status:
     All three statements are proved with standard axioms only. The sandboxed
     three-kernel Comparator (Lean, NanoDa, con-ron) accepted all three in CI on
     commit d057a0d. The proof of the third theorem does not use its dimension
-    hypothesis. Proof-development sorry counts exclude Challenge.
+    hypothesis. Proof-development sorry counts exclude Challenge. Commit
+    494822e is registered on Palomar as PALOMAR-2026-11-21-000019 (version 1).
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Classical.choice", "Quot.sound"]

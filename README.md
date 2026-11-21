@@ -17,6 +17,11 @@ and con-ron kernels on commit `d057a0d`
 ([run 44746773713](https://github.com/CoolRmal/serrin-epigraph/actions/runs/44746773713));
 see the [verification record](docs/verification.md).
 
+**Palomar:** the three theorems are registered as
+[PALOMAR-2026-11-21-000019](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-21-000019&version=1) (version 1, commit `494822e`). Palomar's own
+mechanical verification passed, and its automated editorial review identified no blocking
+problem; this is registration, not endorsement or human review.
+
 The [detailed mathematical proofs of both rigidity theorems](docs/rigidity-proof/theorems.md)
 and [formalization execution plan](docs/rigidity-proof/formalization-plan.md) are the
 informal blueprint of the Lean proof; see the

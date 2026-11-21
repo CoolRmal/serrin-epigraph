@@ -1,5 +1,23 @@
 # Verification record
 
+## Registered on Palomar as PALOMAR-2026-11-21-000019
+
+Commit `494822e` (configuration `comparator.json`, all three targets) was submitted to Palomar on
+2026-11-21 as submission `q9qbvtl8tvcv`, declaring a responsible author or maintainer.
+
+- Palomar's mechanical verification passed in
+  [PalomarRegistry/PalomarSubmission run 44888879106](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44888879106).
+  The Lean and NanoDa kernels accepted the three targets, and the con-ron replay accepted
+  the export.
+- The automated editorial review (`codex:gpt-6-sol`) identified no blocking problem, no
+  warnings and no requested changes. This is not endorsement and not human review.
+- With the author's consent, the result was registered as
+  [PALOMAR-2026-11-21-000019](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-21-000019&version=1), version 1. The source is preserved in
+  `PalomarArchive/CoolRmal--serrin-epigraph--10340c714b04` under the tag
+  `palomar/PALOMAR-2026-11-21-000019-v1/494822e27c536d515504bbb591ee64fe7d5c3777`.
+
+Later commits do not change the registered version; a new version needs a new submission.
+
 ## Palomar preflight and status cleanup
 
 Commit `be17e83` records the author, maintainer, provenance and review status in
